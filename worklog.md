@@ -1,5 +1,17 @@
 # Work Log
 
+## #8
+
+Created the items for the goal list as well as the carousel items for white
+cards to be used and added a couple more steps to the flow. Next I'll have to
+start tackling the voting system flow and then the winner portion. And that
+should be it. So 1 or two more sessions as I guess.
+
+Current progress:
+
+![Interface Design Session #3](./images/interface-design-3.png)
+
+
 ## #7
 
 Created most of the flow up until I needed custom messages for the goal. So now
