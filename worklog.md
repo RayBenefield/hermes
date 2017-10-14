@@ -1,5 +1,17 @@
 # Work Log
 
+## #10
+
+Finished up the last of the design for the interface. Including the winner
+presentation and the next goal. Everything should be good to go for jumping into
+coding now. So after a long break I'm going to jump back on and start working on
+the minimal portion of interacting with Facebook. But first a really long break.
+
+Final first draft of the interface:
+
+![Interface Design Session #5](./images/interface-design-5.png)
+
+
 ## #9
 
 Finally created the voting list symbol and started going through the whole

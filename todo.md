@@ -1,7 +1,5 @@
- - Interface Design
  - Setup node project
  - Setup Firebase project
  - Setup Babel
- - Install Sketch
  - Setup local firebase database
  - Setup Facebook Page for Dev
