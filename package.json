@@ -21,6 +21,7 @@
         "npm": ">=1.4.3"
     },
     "scripts": {
+        "dev": "nodemon --watch src/ --exec 'npm run build && firebase serve --only functions -p 8080'",
         "prebuild": "npm run clean",
         "build": "babel 'src' --out-dir 'functions' --copy-files --ignore 'node_modules'",
         "postbuild": "cd functions && yarn",
