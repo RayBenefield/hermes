@@ -1,5 +1,17 @@
 # Work Log
 
+## #5
+
+Finished up the last of the use cases for the domain and now I'm making plans
+for the interface design process. Should be a good time. I will have to probably
+create the list template, the message bubbles, the getting started page, and a
+few other things to really do it right.
+
+Below is the final first draft of use cases:
+
+![Use cases Session #5](./images/use-cases-4.jpg)
+
+
 ## #4
 
 Got through a good portion of the voting process and just need to finish up the
