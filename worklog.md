@@ -1,5 +1,17 @@
 # Work Log
 
+## #9
+
+Finally created the voting list symbol and started going through the whole
+voting flow. Shouldn't be long to finish the remaining votes and then it is just
+a matter of handling the winner and showing a new goal. After that it should be
+good.
+
+Current progress:
+
+![Interface Design Session #4](./images/interface-design-4.png)
+
+
 ## #8
 
 Created the items for the goal list as well as the carousel items for white
