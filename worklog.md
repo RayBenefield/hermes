@@ -1,5 +1,18 @@
 # Work Log
 
+## #4
+
+Got through a good portion of the voting process and just need to finish up the
+final portion so we can start on interface design. Still lots to do for the
+product side of things, but it is necessary before we start coding so we have a
+clear direction moving forward and everything is sort of pre-thought out.
+
+Current progress on the use cases:
+
+![Use Cases Session #4](./images/use-cases-3.jpg)
+
+
+
 ## #3
 
 So I realized during my walk that I needed to re-think how I was creating the
