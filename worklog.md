@@ -1,5 +1,13 @@
 # Work Log
 
+## #11
+
+Setup the node project for the functions. Set it up to work with a new firebase
+project. Also setup a script to easily run the functions locally while also
+refreshing for any changes that are made. Next is to setup a local firebase
+database and also setup the facebook endpoint to get to work.
+
+
 ## #10
 
 Finished up the last of the design for the interface. Including the winner
