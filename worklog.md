@@ -1,5 +1,16 @@
 # Work Log
 
+## #6
+
+I've officially started the interface design. I had to build the base templates
+for the android interface including the get started page and more. But next
+session I'm good to start creating the flow of the interface.
+
+The initial work for the interface design:
+
+![Interface Design Session #6](./images/interface-design-1.png)
+
+
 ## #5
 
 Finished up the last of the use cases for the domain and now I'm making plans
