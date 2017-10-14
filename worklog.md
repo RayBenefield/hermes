@@ -1,5 +1,16 @@
 # Work Log
 
+## #7
+
+Created most of the flow up until I needed custom messages for the goal. So now
+I'm creating the symbols needed for the different containers of data. Making
+solid progress though. Probably 3 more sessions for interface design.
+
+Current progress:
+
+![Interface Design Session #2](./images/interface-design-2.png)
+
+
 ## #6
 
 I've officially started the interface design. I had to build the base templates
@@ -8,7 +19,7 @@ session I'm good to start creating the flow of the interface.
 
 The initial work for the interface design:
 
-![Interface Design Session #6](./images/interface-design-1.png)
+![Interface Design Session #1](./images/interface-design-1.png)
 
 
 ## #5
@@ -20,7 +31,7 @@ few other things to really do it right.
 
 Below is the final first draft of use cases:
 
-![Use cases Session #5](./images/use-cases-4.jpg)
+![Use cases Session #4](./images/use-cases-4.jpg)
 
 
 ## #4
@@ -32,7 +43,7 @@ clear direction moving forward and everything is sort of pre-thought out.
 
 Current progress on the use cases:
 
-![Use Cases Session #4](./images/use-cases-3.jpg)
+![Use Cases Session #3](./images/use-cases-3.jpg)
 
 
 
@@ -50,7 +61,7 @@ Lunch.
 
 Current progress on the new use cases:
 
-![Use Cases Session #3](./images/use-cases-2.jpg)
+![Use Cases Session #2](./images/use-cases-2.jpg)
 
 
 ## #2
@@ -62,7 +73,7 @@ for the user and domain management.
 
 Current progress on use cases:
 
-![Use Cases Session #2](./images/use-cases-1.jpg)
+![Use Cases Session #1](./images/use-cases-1.jpg)
 
 
 ## #1

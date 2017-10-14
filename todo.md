@@ -1,4 +1,3 @@
- - Use case design
  - Interface Design
  - Setup node project
  - Setup Firebase project
