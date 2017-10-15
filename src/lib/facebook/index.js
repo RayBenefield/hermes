@@ -2,7 +2,7 @@
 import _ from 'lodash';
 import FbMessenger from 'fb-messenger';
 import promisify from 'es6-promisify';
-import transformers from './transformers';
+import * as transformers from './transformers'; // eslint-disable-line import/no-unresolved, import/extensions
 import { sequentialPromises } from '../utils';
 
 export default ({ verifytoken, accesstoken }) => {
