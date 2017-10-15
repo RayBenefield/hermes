@@ -1,4 +1,3 @@
- - Setup local firebase database
  - Setup Facebook Page for Dev
  - Setup Facebook verification endpoint
  - Setup Facebook echo endpoint

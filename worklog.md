@@ -1,5 +1,13 @@
 # Work Log
 
+## #12
+
+I was going to setup the firebase server local database, but it ultimately
+didn't work out. I couldn't get the server to be recognized by my local running
+function so for now I'm just gonna call it good. I'll just move on to doing
+Facebook integration.
+
+
 ## #11
 
 Setup the node project for the functions. Set it up to work with a new firebase
