@@ -1,5 +1,12 @@
 # Work Log
 
+## #26
+
+I'm painstakingly going through the messages file and changing everything to a
+domain message that can be worked with so when I actually start doing domain
+coding it will be dynamic.
+
+
 ## #25
 
 Started doing some refactoring for the facebook code and got decently far. Still
