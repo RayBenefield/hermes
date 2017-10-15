@@ -1,3 +1,4 @@
+import has from 'lodash/has';
 import FbMessenger from 'fb-messenger';
 
 export default ({ verifytoken }) => ({
@@ -7,7 +8,10 @@ export default ({ verifytoken }) => ({
             throw new Error('Failed validation. Make sure the validation tokens match.');
         }
     },
-    extractAction: ({ raw }) => raw.entry[0].messaging[0].message.text,
+    extractAction: ({ raw }) => {
+        if (has(raw, 'entry[0].messaging[0].message.text')) return 'text';
+        return 'unknown';
+    },
     extractSender: ({ raw }) => raw.entry[0].messaging[0].sender.id,
     sendText: (token, recipient, text) => {
         const messenger = new FbMessenger(token);

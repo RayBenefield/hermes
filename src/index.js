@@ -1,3 +1,4 @@
+import util from 'util';
 import express from 'express';
 import admin from 'firebase-admin';
 import transmute from 'transmutation';
@@ -9,7 +10,8 @@ const fb = configureFacebook(config.facebook);
 admin.initializeApp(config.firebase);
 
 const responses = {
-    hello: 'testing',
+    text: 'You are trying to text.',
+    unknown: 'No idea what you are doing!',
 };
 const response = ({ action }) => responses[action] || 'nothing';
 
@@ -18,7 +20,8 @@ router.post('/facebook', (req, res) => transmute({ raw: req.body })
     .extend('sender', fb.extractSender)
     .extend('action', fb.extractAction)
     .extend('message', response)
-    .log()
+    // eslint-disable-next-line no-console
+    .do(obj => console.log(util.inspect(obj, { showHidden: false, depth: null })))
     .then((results) => {
         res.sendStatus(200);
         fb.sendText(config.facebook.accesstoken, results.sender, results.message);
