@@ -1,11 +1,13 @@
 /* eslint-disable max-lines */
 export default {
-    text: {
-        type: 'text',
-        payload: {
-            text: 'You are trying to text.',
+    text: [
+        {
+            type: 'text',
+            payload: {
+                text: 'You are trying to text.',
+            },
         },
-    },
+    ],
     start: [
         {
             type: 'text',
@@ -20,12 +22,14 @@ export default {
             },
         },
     ],
-    queue: {
-        type: 'text',
-        payload: {
-            text: 'You have been added to the Queue. When it has 5 people we will start the game and let you know.',
+    queue: [
+        {
+            type: 'text',
+            payload: {
+                text: 'You have been added to the Queue. When it has 5 people we will start the game and let you know.',
+            },
         },
-    },
+    ],
     join: [
         {
             type: 'text',
@@ -47,51 +51,53 @@ export default {
             ],
         },
     ],
-    hand: {
-        type: 'carousel',
-        payload: [
-            {
-                title: 'Being a motherfucking sorcerer.',
-                image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
-            },
-            {
-                title: 'Winking at old people.',
-                image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
-            },
-            {
-                title: 'THE KOOL-AID MAN.',
-                image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
-            },
-            {
-                title: 'Hurricane Katrina.',
-                image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
-            },
-            {
-                title: 'Powerful thighs.',
-                image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
-            },
-            {
-                title: 'Vigorous jazz hands.',
-                image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
-            },
-            {
-                title: 'BEES?',
-                image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
-            },
-            {
-                title: 'Morgan Freeman\'s voice.',
-                image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
-            },
-            {
-                title: 'Racism.',
-                image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
-            },
-            {
-                title: 'Daddy issues.',
-                image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
-            },
-        ],
-    },
+    hand: [
+        {
+            type: 'carousel',
+            payload: [
+                {
+                    title: 'Being a motherfucking sorcerer.',
+                    image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
+                },
+                {
+                    title: 'Winking at old people.',
+                    image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
+                },
+                {
+                    title: 'THE KOOL-AID MAN.',
+                    image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
+                },
+                {
+                    title: 'Hurricane Katrina.',
+                    image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
+                },
+                {
+                    title: 'Powerful thighs.',
+                    image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
+                },
+                {
+                    title: 'Vigorous jazz hands.',
+                    image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
+                },
+                {
+                    title: 'BEES?',
+                    image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
+                },
+                {
+                    title: 'Morgan Freeman\'s voice.',
+                    image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
+                },
+                {
+                    title: 'Racism.',
+                    image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
+                },
+                {
+                    title: 'Daddy issues.',
+                    image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
+                },
+            ],
+        },
+    ],
     pick: [
         {
             type: 'text',
@@ -113,51 +119,53 @@ export default {
             },
         },
     ],
-    candidates: {
-        type: 'list',
-        payload: [
-            {
-                title: 'Vigorous jazz hands',
-                buttons: [
-                    {
-                        title: 'Best',
-                        type: 'postback',
-                        payload: 'vote',
-                    },
-                ],
-            },
-            {
-                title: 'Centaur Porn',
-                buttons: [
-                    {
-                        title: 'Best',
-                        type: 'postback',
-                        payload: 'vote',
-                    },
-                ],
-            },
-            {
-                title: 'Your Face',
-                buttons: [
-                    {
-                        title: 'Best',
-                        type: 'postback',
-                        payload: 'vote',
-                    },
-                ],
-            },
-            {
-                title: 'Barack Obama',
-                buttons: [
-                    {
-                        title: 'Best',
-                        type: 'postback',
-                        payload: 'vote',
-                    },
-                ],
-            },
-        ],
-    },
+    candidates: [
+        {
+            type: 'list',
+            payload: [
+                {
+                    title: 'Vigorous jazz hands',
+                    buttons: [
+                        {
+                            title: 'Best',
+                            type: 'postback',
+                            payload: 'vote',
+                        },
+                    ],
+                },
+                {
+                    title: 'Centaur Porn',
+                    buttons: [
+                        {
+                            title: 'Best',
+                            type: 'postback',
+                            payload: 'vote',
+                        },
+                    ],
+                },
+                {
+                    title: 'Your Face',
+                    buttons: [
+                        {
+                            title: 'Best',
+                            type: 'postback',
+                            payload: 'vote',
+                        },
+                    ],
+                },
+                {
+                    title: 'Barack Obama',
+                    buttons: [
+                        {
+                            title: 'Best',
+                            type: 'postback',
+                            payload: 'vote',
+                        },
+                    ],
+                },
+            ],
+        },
+    ],
     vote: [
         {
             type: 'text',
@@ -234,10 +242,4 @@ export default {
             ],
         },
     ],
-    unknown: {
-        type: 'text',
-        payload: {
-            text: 'No idea what you are doing!',
-        },
-    },
 };

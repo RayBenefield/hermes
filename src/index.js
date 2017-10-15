@@ -10,18 +10,19 @@ const config = functions.config();
 const fb = configureFacebook(config.facebook);
 admin.initializeApp(config.firebase);
 
-const respond = ({ action }) => messages[action] || 'nothing';
+const domain = ({ action }) => messages[action] || 'nothing';
 
 const router = express();
 router.post('/facebook', (req, res) => transmute({ raw: req.body })
     .extend('sender', fb.extractSender)
     .extend('action', fb.extractAction)
-    .extend('message', respond)
+    .extend('messages', domain)
+    .extend('facebookMessages', fb.transform)
     // eslint-disable-next-line no-console
     .do(obj => console.log(util.inspect(obj, { showHidden: false, depth: null })))
-    .then((results) => {
+    .then(({ sender, facebookMessages }) => {
         res.sendStatus(200);
-        fb.sendMessage(results.sender, results.message);
+        fb.sendMessage(sender, facebookMessages);
     })
 );
 router.get('/facebook', (req, res) => {

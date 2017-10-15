@@ -1,6 +1,5 @@
 /* eslint-disable max-lines */
 import _ from 'lodash';
-import transmute from 'transmutation';
 import FbMessenger from 'fb-messenger';
 import promisify from 'es6-promisify';
 import transformers from './transformers';
@@ -28,14 +27,11 @@ export default ({ verifytoken, accesstoken }) => {
             return 'unknown';
         },
         extractSender: ({ raw }) => raw.entry[0].messaging[0].sender.id,
+        transform: ({ messages }) => messages.map(
+            ({ type, payload }) => transformers[type](payload)
+        ),
         sendMessage: (recipient, message) => {
-            const send = msg => transmute(msg)
-                .extend('facebookTemplate', ({ type, payload }) =>
-                    transformers[type](payload)
-                )
-                .then(({ facebookTemplate }) =>
-                    promiseMessage(recipient, facebookTemplate)
-                );
+            const send = msg => promiseMessage(recipient, msg);
 
             if (!_.isArray(message)) return send(message).then();
 
