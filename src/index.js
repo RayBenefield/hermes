@@ -9,10 +9,13 @@ const fb = configureFacebook(config.facebook);
 admin.initializeApp(config.firebase);
 
 const router = express();
-router.post('/facebook', (req, res) => transmute()
-    .then(() => {
-        console.log(JSON.stringify(req.body, null, 4));
+router.post('/facebook', (req, res) => transmute({ raw: req.body })
+    .extend('sender', fb.extractSender)
+    .extend('action', fb.extractAction)
+    .then((results) => {
+        console.log(JSON.stringify(results, null, 4));
         res.sendStatus(200);
+        fb.sendText(config.facebook.accesstoken, results.sender, results.action);
     })
 );
 router.get('/facebook', (req, res) => {
