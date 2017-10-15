@@ -1,5 +1,13 @@
 # Work Log
 
+## #14
+
+I setup proper recognition of some postbacks and quick replies now. This will
+give me some flexibility in how I trigger the visuals for these messages. Right
+now the goal is to have all the pretty pictures done hopefully in a session or
+two and then we can start playing with the domain.
+
+
 ## #13
 
 Got the Facebook endpoints working smoothly and now I'm ready to start sending

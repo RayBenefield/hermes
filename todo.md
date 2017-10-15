@@ -1,5 +1,6 @@
- - Recognize a Get Started action
- - Recognize a Join a Game action
- - Recognize a Show Hand action
- - Recognize a Pick action
- - Recognize a Vote action
+ - Set proper visuals for Getting Started
+ - Set proper visuals for New Game
+ - Set proper visuals for Show Goal
+ - Set proper visuals for Show Hand
+ - Set proper visuals for Pick
+ - Set proper visuals for Vote
