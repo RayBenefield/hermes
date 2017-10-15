@@ -1,4 +1,4 @@
-import has from 'lodash/has';
+import _ from 'lodash';
 import FbMessenger from 'fb-messenger';
 import actions from '../data/actions';
 
@@ -10,11 +10,11 @@ export default ({ verifytoken }) => ({
         }
     },
     extractAction: ({ raw }) => {
-        if (has(raw, 'entry[0].messaging[0].message.quick_reply.payload')) {
+        if (_.has(raw, 'entry[0].messaging[0].message.quick_reply.payload')) {
             return raw.entry[0].messaging[0].message.quick_reply.payload;
         }
-        if (has(raw, 'entry[0].messaging[0].message.text')) return 'text';
-        if (has(raw, 'entry[0].messaging[0].postback.payload')) {
+        if (_.has(raw, 'entry[0].messaging[0].message.text')) return 'text';
+        if (_.has(raw, 'entry[0].messaging[0].postback.payload')) {
             return raw.entry[0].messaging[0].postback.payload;
         }
         return 'unknown';
@@ -22,13 +22,18 @@ export default ({ verifytoken }) => ({
     extractSender: ({ raw }) => raw.entry[0].messaging[0].sender.id,
     sendMessage: (token, recipient, message) => {
         const messenger = new FbMessenger(token);
-        switch (message.type) {
-            case 'text':
-                messenger.sendQuickRepliesMessage(recipient, message.payload.text, actions);
-                break;
-            default:
-                messenger.sendQuickRepliesMessage(recipient, JSON.stringify(message), actions);
-                break;
-        }
+        const send = (msg) => {
+            switch (msg.type) {
+                case 'text':
+                    messenger.sendQuickRepliesMessage(recipient, msg.payload.text, actions);
+                    break;
+                default:
+                    messenger.sendQuickRepliesMessage(recipient, JSON.stringify(msg), actions);
+                    break;
+            }
+        };
+
+        if (!_.isArray(message)) return send(message);
+        return _.forEach(message, send);
     },
 });
