@@ -48,6 +48,48 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "Set Persistent Menu",
+			"request": {
+				"url": {
+					"raw": "https://graph.facebook.com/v2.6/me/messenger_profile?access_token={{access-token}}",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"v2.6",
+						"me",
+						"messenger_profile"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "{{access-token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"persistent_menu\": [\n\t    {\n\t    \t\"locale\": \"default\",\n\t    \t\"composer_input_disabled\": true,\n\t    \t\"call_to_actions\": [\n\t\t        {\n\t\t        \t\"title\": \"Join a Game\",\n\t\t        \t\"type\": \"postback\",\n\t\t        \t\"payload\": \"queue\"\n\t\t        }\n\t\t    ]\n\t    }\n\t]\n}"
+				},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }
