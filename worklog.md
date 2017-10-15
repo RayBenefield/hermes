@@ -1,5 +1,13 @@
 # Work Log
 
+## #23
+
+Started the next block doing more domain design. Finished up the actions and
+events and then got started on figuring the relationships between each domain
+object explicitly. Once the relationships are figured out then I can work on the
+core data structure for everything.
+
+
 ## #22
 
 More in-depth domain design. About halfway through the design at this point and
