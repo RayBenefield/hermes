@@ -1,5 +1,12 @@
 # Work Log
 
+## #21
+
+Started diving a lot deeper into domain design, observing what kind of actions
+are needed, what kind of domain objects are involved in each piece of the
+system, as well as how they relate to each other. Still lots to go.
+
+
 ## #20
 
 Started working on engineering the domain for the game and how it interacts with
