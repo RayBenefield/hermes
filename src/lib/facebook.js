@@ -5,6 +5,11 @@ import promisify from 'es6-promisify';
 import actions from '../data/actions';
 import { sequentialPromises } from './utils';
 
+const createQuickReplies = ({ text }) => ({
+    text,
+    quick_replies: actions,
+});
+
 const createCard = ({ title, image }) => ({
     attachment: {
         type: 'template',
@@ -79,12 +84,13 @@ export default ({ verifytoken }) => ({
     sendMessage: (token, recipient, message) => {
         const messenger = new FbMessenger(token);
         const promiseMessage = promisify(messenger.sendMessage, messenger);
-        const promiseQuickReplies = promisify(messenger.sendQuickRepliesMessage, messenger);
 
         const send = (msg) => {
             switch (msg.type) {
                 case 'text':
-                    return promiseQuickReplies(recipient, msg.payload.text, actions);
+                    return promiseMessage(recipient, createQuickReplies({
+                        text: msg.payload.text,
+                    }));
                 case 'card':
                     return promiseMessage(recipient, createCard(msg.payload));
                 case 'carousel':
@@ -94,7 +100,9 @@ export default ({ verifytoken }) => ({
                 case 'list':
                     return promiseMessage(recipient, createList(msg.payload));
                 default:
-                    return promiseQuickReplies(recipient, JSON.stringify(msg), actions);
+                    return promiseMessage(recipient, createQuickReplies({
+                        text: JSON.stringify(msg),
+                    }));
             }
         };
 
