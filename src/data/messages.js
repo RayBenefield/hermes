@@ -54,9 +54,10 @@ export default {
             },
         },
         {
-            type: 'text',
+            type: 'card',
             payload: {
-                text: '<Picked Card>',
+                title: 'Being a motherfucking sorcerer.',
+                image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
             },
         },
         {

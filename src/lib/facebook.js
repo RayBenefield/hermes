@@ -1,6 +1,22 @@
+/* eslint-disable max-lines */
 import _ from 'lodash';
 import FbMessenger from 'fb-messenger';
 import actions from '../data/actions';
+
+const createCard = ({ title, image }) => ({
+    attachment: {
+        type: 'template',
+        payload: {
+            template_type: 'generic',
+            elements: [
+                {
+                    title,
+                    image_url: image,
+                },
+            ],
+        },
+    },
+});
 
 export default ({ verifytoken }) => ({
     verifyToken: (query) => {
@@ -26,6 +42,9 @@ export default ({ verifytoken }) => ({
             switch (msg.type) {
                 case 'text':
                     messenger.sendQuickRepliesMessage(recipient, msg.payload.text, actions);
+                    break;
+                case 'card':
+                    messenger.sendMessage(recipient, createCard(msg.payload));
                     break;
                 default:
                     messenger.sendQuickRepliesMessage(recipient, JSON.stringify(msg), actions);
