@@ -21,7 +21,7 @@ router.post('/facebook', (req, res) => transmute({ raw: req.body })
     .do(obj => console.log(util.inspect(obj, { showHidden: false, depth: null })))
     .then((results) => {
         res.sendStatus(200);
-        fb.sendMessage(config.facebook.accesstoken, results.sender, results.message);
+        fb.sendMessage(results.sender, results.message);
     })
 );
 router.get('/facebook', (req, res) => {
