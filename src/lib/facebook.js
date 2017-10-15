@@ -1,5 +1,6 @@
 import has from 'lodash/has';
 import FbMessenger from 'fb-messenger';
+import actions from '../data/actions';
 
 export default ({ verifytoken }) => ({
     verifyToken: (query) => {
@@ -9,6 +10,9 @@ export default ({ verifytoken }) => ({
         }
     },
     extractAction: ({ raw }) => {
+        if (has(raw, 'entry[0].messaging[0].message.quick_reply.payload')) {
+            return raw.entry[0].messaging[0].message.quick_reply.payload;
+        }
         if (has(raw, 'entry[0].messaging[0].message.text')) return 'text';
         if (has(raw, 'entry[0].messaging[0].postback.payload')) {
             return raw.entry[0].messaging[0].postback.payload;
@@ -18,6 +22,6 @@ export default ({ verifytoken }) => ({
     extractSender: ({ raw }) => raw.entry[0].messaging[0].sender.id,
     sendText: (token, recipient, text) => {
         const messenger = new FbMessenger(token);
-        messenger.sendTextMessage(recipient, text);
+        messenger.sendQuickRepliesMessage(recipient, text, actions);
     },
 });
