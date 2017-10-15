@@ -1,54 +1,41 @@
 /* eslint-disable max-lines */
 export default {
-    text: [
-        {
-            type: 'text',
-            payload: {
-                text: 'You are trying to text.',
-            },
-        },
-    ],
     start: [
         {
-            type: 'text',
-            payload: {
-                text: 'Hermes welcomes you!',
-            },
+            type: 'welcome-message',
         },
         {
-            type: 'text',
-            payload: {
-                text: 'Select "Join a Game" to begin.',
-            },
+            type: 'instructions-message',
         },
     ],
     queue: [
         {
-            type: 'text',
+            type: 'queue-joined-message',
             payload: {
-                text: 'You have been added to the Queue. When it has 5 people we will start the game and let you know.',
+                numberOfPeople: 3,
             },
         },
     ],
     join: [
         {
-            type: 'text',
+            type: 'game-started-message',
             payload: {
-                text: 'A game has started Jill!\nYour adversaries are:\n\n - Jack\n - Jenn\n - Jim\n - Jess',
+                player: 'Jill',
+                players: [
+                    'Jack',
+                    'Jenn',
+                    'Jim',
+                    'Jess',
+                ],
             },
         },
         {
-            type: 'header-list',
-            payload: [
-                {
-                    title: '________, the latest Facebook craze.',
-                    image: 'http://b.basemaps.cartocdn.com/dark_all/11/604/771.png',
+            type: 'new-goal-message',
+            payload: {
+                card: {
+                    contents: '________, the latest Facebook craze.',
                 },
-                {
-                    title: '<Winner here>',
-                    subtitle: '<Winner here>',
-                },
-            ],
+            },
         },
     ],
     hand: [
