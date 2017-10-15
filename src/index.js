@@ -12,10 +12,13 @@ admin.initializeApp(config.firebase);
 const responses = {
     text: 'You are trying to text.',
     start: 'Welcome good sir, thank you for starting.',
+    queue: 'We\'ve added you to the queue.',
     join: 'We set you up in a game.',
     hand: 'Here\'s your hand.',
     pick: 'Good choice.',
+    candidates: 'Here are the candidates.',
     vote: 'We hope you win.',
+    winner: 'You are the winner.',
     unknown: 'No idea what you are doing!',
 };
 const response = ({ action }) => responses[action] || 'nothing';
