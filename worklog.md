@@ -1,5 +1,13 @@
 # Work Log
 
+## #13
+
+Got the Facebook endpoints working smoothly and now I'm ready to start sending
+mocked Facebook messages based on actions. Shouldn't be too bad, but I haven't
+worked with persistent menus or the getting started button yet, so I may hit a
+couple roadblocks.
+
+
 ## #12
 
 I was going to setup the firebase server local database, but it ultimately

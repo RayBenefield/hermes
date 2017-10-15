@@ -1,3 +1,5 @@
- - Setup Facebook Page for Dev
- - Setup Facebook verification endpoint
- - Setup Facebook echo endpoint
+ - Recognize a Get Started action
+ - Recognize a Join a Game action
+ - Recognize a Show Hand action
+ - Recognize a Pick action
+ - Recognize a Vote action
