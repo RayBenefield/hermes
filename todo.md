@@ -1,5 +1,3 @@
  - Setup testing for domain
- - Clean up Facebook code
-     - Remove quick reply specific call
-     - Get rid of the switch statement
+ - Change the Facebook transformers to react to Domain Messages instead
  - Convert data files to json

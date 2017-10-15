@@ -1,5 +1,12 @@
 # Work Log
 
+## #25
+
+Started doing some refactoring for the facebook code and got decently far. Still
+have some to go and I need to change it to transform based on domain event types
+rather than what we are currently doing. Quick break.
+
+
 ## #24
 
 Finally got back into things. I had to take like a 3 hour break in order to rest
