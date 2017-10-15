@@ -1,5 +1,12 @@
 # Work Log
 
+## #16
+
+Finally got the generic card to work for when you are picking a card. Now I need
+to start work on the list template, cuz that one is crucial for the goal and the
+voting. So that is my next target.
+
+
 ## #15
 
 Setup the placeholder messages for the various actions. Also figured out how to

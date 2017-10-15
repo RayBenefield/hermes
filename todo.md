@@ -1,6 +1,5 @@
  - Set proper visuals for Joined Game
  - Set proper visuals for Show Hand
- - Set proper visuals for Pick
  - Set proper visuals for Show Candidates
  - Set proper visuals for Vote
  - Set proper visuals for Winner
