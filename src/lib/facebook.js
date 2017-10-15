@@ -1,7 +1,14 @@
 /* eslint-disable max-lines */
 import _ from 'lodash';
 import FbMessenger from 'fb-messenger';
+import promisify from 'es6-promisify';
 import actions from '../data/actions';
+
+const promiseSerial = funcs => funcs
+    .reduce((promise, func) =>
+        promise.then(result => func().then(Array.prototype.concat.bind(result))),
+        Promise.resolve([])
+    );
 
 const createCard = ({ title, image }) => ({
     attachment: {
@@ -76,30 +83,30 @@ export default ({ verifytoken }) => ({
     extractSender: ({ raw }) => raw.entry[0].messaging[0].sender.id,
     sendMessage: (token, recipient, message) => {
         const messenger = new FbMessenger(token);
+        const promiseMessage = promisify(messenger.sendMessage, messenger);
+        const promiseQuickReplies = promisify(messenger.sendQuickRepliesMessage, messenger);
+
         const send = (msg) => {
             switch (msg.type) {
                 case 'text':
-                    messenger.sendQuickRepliesMessage(recipient, msg.payload.text, actions);
-                    break;
+                    return promiseQuickReplies(recipient, msg.payload.text, actions);
                 case 'card':
-                    messenger.sendMessage(recipient, createCard(msg.payload));
-                    break;
+                    return promiseMessage(recipient, createCard(msg.payload));
                 case 'carousel':
-                    messenger.sendMessage(recipient, createCarousel(msg.payload));
-                    break;
+                    return promiseMessage(recipient, createCarousel(msg.payload));
                 case 'header-list':
-                    messenger.sendMessage(recipient, createHeaderList(msg.payload));
-                    break;
+                    return promiseMessage(recipient, createHeaderList(msg.payload));
                 case 'list':
-                    messenger.sendMessage(recipient, createList(msg.payload));
-                    break;
+                    return promiseMessage(recipient, createList(msg.payload));
                 default:
-                    messenger.sendQuickRepliesMessage(recipient, JSON.stringify(msg), actions);
-                    break;
+                    return promiseQuickReplies(recipient, JSON.stringify(msg), actions);
             }
         };
 
-        if (!_.isArray(message)) return send(message);
-        return _.forEach(message, send);
+        if (!_.isArray(message)) {
+            return send(message).then(() => console.log('sent one')); // eslint-disable-line no-console
+        }
+        return promiseSerial(message.map(msg => () => send(msg)))
+            .then(() => console.log('done with all')); // eslint-disable-line no-console
     },
 });
