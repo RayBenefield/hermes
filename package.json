@@ -23,10 +23,10 @@
     "scripts": {
         "dev": "nodemon --watch src/ --exec 'npm run build && firebase serve --only functions -p 8080'",
         "prebuild": "npm run clean",
-        "build": "babel 'src' --out-dir 'functions' --copy-files --ignore 'node_modules'",
+        "build": "babel 'src' --out-dir 'functions' --copy-files --ignore 'node_modules' && firebase functions:config:get > functions/.runtimeconfig.json",
         "postbuild": "cd functions && yarn",
         "deploy": "yarn build && firebase deploy",
-        "clean": "rimraf dist",
+        "clean": "rimraf functions/",
         "lint": "eslint -c .eslintrc.json src/",
         "test": "babel-tape-runner test/{,**/}*.js | tap-spec",
         "sloc": "echo 'Lines of source code: ' && sloc src/ --exclude node_modules -f json | jq '.summary.source'",
