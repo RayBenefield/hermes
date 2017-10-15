@@ -11,6 +11,7 @@ admin.initializeApp(config.firebase);
 
 const responses = {
     text: 'You are trying to text.',
+    start: 'Welcome good sir, thank you for starting.',
     unknown: 'No idea what you are doing!',
 };
 const response = ({ action }) => responses[action] || 'nothing';

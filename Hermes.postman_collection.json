@@ -1,0 +1,53 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Hermes",
+		"_postman_id": "1ae3c3ad-d526-b597-4024-dd4d3d5dd2fa",
+		"description": "Cards Against Humanity in Facebook Messenger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Set Getting Started Payload",
+			"request": {
+				"url": {
+					"raw": "https://graph.facebook.com/v2.6/me/thread_settings?access_token={{access-token}}",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"v2.6",
+						"me",
+						"thread_settings"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "{{access-token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"setting_type\":\"call_to_actions\",\n    \"thread_state\":\"new_thread\",\n\t\"call_to_actions\":[\n\t\t{\n\t\t\t\"payload\": \"start\"\n\t\t}\n\t]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -10,6 +10,9 @@ export default ({ verifytoken }) => ({
     },
     extractAction: ({ raw }) => {
         if (has(raw, 'entry[0].messaging[0].message.text')) return 'text';
+        if (has(raw, 'entry[0].messaging[0].postback.payload')) {
+            return raw.entry[0].messaging[0].postback.payload;
+        }
         return 'unknown';
     },
     extractSender: ({ raw }) => raw.entry[0].messaging[0].sender.id,
