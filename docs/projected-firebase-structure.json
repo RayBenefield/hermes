@@ -1,0 +1,107 @@
+{
+    "players": {
+        "${platform}": {
+            "${leadId}": {
+                "playerId": "<uuid>",
+                "firstName": "blah"
+            }
+        }
+    },
+    "queue": [
+        "${pushKey}": "${playerId}"
+    ],
+    "games": {
+        "${gameId}": {
+            "createdAt": "<datetime>",
+            "players": [
+                "${playerId}",
+                "${playerId}"
+            ],
+            "rounds": [
+                "${roundId}",
+                "${roundId}"
+            ]
+        }
+    },
+    "hands": {
+        "${gameId}": {
+            "${playerId}": {
+                "newCards": [
+                    "<whitecard>"
+                ],
+                "cards": [
+                    "<whitecard>"
+                ]
+            }
+        }
+    },
+    "rounds": {
+        "${roundId}": {
+            "gameId": "${gameId}",
+            "goal": {
+                "card": "<blackcard>",
+                "winner": "<whitecard>",
+                "candidates": [
+                    "${candidateId}",
+                    "${candidateId}",
+                    "${candidateId}",
+                    "${candidateId}",
+                    "${candidateId}"
+                ]
+            }
+        }
+    },
+    "candidates": {
+        "${roundId}": [
+            "${candidateId}": [
+                {
+                    "slot": 0,
+                    "card": "<whitecard>"
+                }
+            ]
+        ]
+    },
+    "ranked": {
+        "${roundId}": {
+            "${playerId}": [
+                "${candidateId}",
+                "${candidateId}",
+                "${candidateId}",
+                "${candidateId}"
+            ]
+        }
+    },
+    "blackCards": [
+        {
+            "type": "black",
+            "content": "_____, the latest Facebook craze.",
+            "expansion": "First",
+            "creator": "Cards Against Humanity",
+            "icon": "First-Edition",
+            "rules": [
+                "Pick 2",
+                "Pick 3, Draw 1"
+            ],
+            "slots": [
+                {
+                    "location": "answer"
+                },
+                {
+                    "location": {
+                        "start": 5,
+                        "end": 10
+                    }
+                }
+            ]
+        }
+    ],
+    "whiteCards": [
+        {
+            "type": "white",
+            "content": "Being a fucking sorcerer",
+            "expansion": "First",
+            "creator": "Cards Against Humanity",
+            "icon": "First-Edition"
+        }
+    ]
+}
