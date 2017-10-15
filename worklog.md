@@ -1,5 +1,22 @@
 # Work Log
 
+## #24
+
+Finally got back into things. I had to take like a 3 hour break in order to rest
+up as I worked way too hard yesterday squeezing out 18 sessions when normally I
+should be doing 8-12. So now I'm back into things and ready to start coding, I
+just had to wrap up the domain design that I was doing. I need to make sure that
+I'm not stuck on the perfection details of a design, I just need to move forward
+and start working. That's what I'm doing next session.
+
+Here are the artifacts from the Domain Design not perfect but good enough to
+guide me:
+
+![Domain Actions & Events](./images/domain-actions-events.jpg)
+
+![Domain Relationships](./images/domain-relationships.jpg)
+
+
 ## #23
 
 Started the next block doing more domain design. Finished up the actions and

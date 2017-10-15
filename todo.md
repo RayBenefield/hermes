@@ -1,6 +1,5 @@
- - Design Domain
+ - Setup testing for domain
  - Clean up Facebook code
      - Remove quick reply specific call
      - Get rid of the switch statement
  - Convert data files to json
- - Setup system to send messages in order
