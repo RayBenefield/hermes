@@ -8,14 +8,20 @@ const config = functions.config();
 const fb = configureFacebook(config.facebook);
 admin.initializeApp(config.firebase);
 
+const responses = {
+    hello: 'testing',
+};
+const response = ({ action }) => responses[action] || 'nothing';
+
 const router = express();
 router.post('/facebook', (req, res) => transmute({ raw: req.body })
     .extend('sender', fb.extractSender)
     .extend('action', fb.extractAction)
+    .extend('message', response)
+    .log()
     .then((results) => {
-        console.log(JSON.stringify(results, null, 4));
         res.sendStatus(200);
-        fb.sendText(config.facebook.accesstoken, results.sender, results.action);
+        fb.sendText(config.facebook.accesstoken, results.sender, results.message);
     })
 );
 router.get('/facebook', (req, res) => {
