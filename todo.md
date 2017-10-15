@@ -1,6 +1,6 @@
- - Set proper visuals for Getting Started
- - Set proper visuals for New Game
- - Set proper visuals for Show Goal
+ - Set proper visuals for Joined Game
  - Set proper visuals for Show Hand
  - Set proper visuals for Pick
+ - Set proper visuals for Show Candidates
  - Set proper visuals for Vote
+ - Set proper visuals for Winner

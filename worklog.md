@@ -1,5 +1,13 @@
 # Work Log
 
+## #15
+
+Setup the placeholder messages for the various actions. Also figured out how to
+setup a persitent menu. I now need to setup support for an array of messages or
+a single object. Then I can split up the placeholder system without using double
+new lines.
+
+
 ## #14
 
 I setup proper recognition of some postbacks and quick replies now. This will
