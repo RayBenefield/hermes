@@ -98,7 +98,7 @@ export default ({ verifytoken }) => ({
             }
         };
 
-        if (!_.isArray(message)) send(message).then();
+        if (!_.isArray(message)) return send(message).then();
 
         const messagePromises = message.map(msg => () => send(msg));
         return sequentialPromises(messagePromises).then();
