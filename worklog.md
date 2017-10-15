@@ -1,5 +1,19 @@
 # Work Log
 
+## #19
+
+Back to coding today. I started out by fixing a major issue where messages were
+all sent at the same time and as a result did not show up in the right order. So
+I implemented a solution I found here:
+https://hackernoon.com/functional-javascript-resolving-promises-sequentially-7aac18c4431e,
+and it worked like a charm. Then I did a bit of refactoring to clean it up.
+Today I need to spend a lot of time on planning out the engineering effort and
+separating Facebook rendering responsibilities from the actual domain itself. I
+have to think of this in terms of the domain being its own server. Even though I
+won't be splitting it off since I'm running small efficient nanoservices. Time
+for a break.
+
+
 ## #18
 
 WOOT!!! I finally got the visuals mostly done all the way through for all of the
