@@ -1,5 +1,12 @@
 # Work Log
 
+## #22
+
+More in-depth domain design. About halfway through the design at this point and
+have a good amount of coverage on the events/actions that are happening in the
+system So far it has filled in a lot of implementation gaps. Off to breakfast.
+
+
 ## #21
 
 Started diving a lot deeper into domain design, observing what kind of actions
