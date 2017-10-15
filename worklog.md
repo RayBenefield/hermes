@@ -1,5 +1,12 @@
 # Work Log
 
+## #20
+
+Started working on engineering the domain for the game and how it interacts with
+outside platforms like Facebook. This will be important for ensuring that we
+test the right things and we keep the logic in the right places. Quick break.
+
+
 ## #19
 
 Back to coding today. I started out by fixing a major issue where messages were
