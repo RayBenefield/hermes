@@ -20,8 +20,15 @@ export default ({ verifytoken }) => ({
         return 'unknown';
     },
     extractSender: ({ raw }) => raw.entry[0].messaging[0].sender.id,
-    sendText: (token, recipient, text) => {
+    sendMessage: (token, recipient, message) => {
         const messenger = new FbMessenger(token);
-        messenger.sendQuickRepliesMessage(recipient, text, actions);
+        switch (message.type) {
+            case 'text':
+                messenger.sendQuickRepliesMessage(recipient, message.payload.text, actions);
+                break;
+            default:
+                messenger.sendQuickRepliesMessage(recipient, JSON.stringify(message), actions);
+                break;
+        }
     },
 });
