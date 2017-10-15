@@ -34,10 +34,17 @@ export default {
             },
         },
         {
-            type: 'text',
-            payload: {
-                text: '<Goal Card>',
-            },
+            type: 'header-list',
+            payload: [
+                {
+                    title: '________, the latest Facebook craze.',
+                    image: 'http://b.basemaps.cartocdn.com/dark_all/11/604/771.png',
+                },
+                {
+                    title: '<Winner here>',
+                    subtitle: '<Winner here>',
+                },
+            ],
         },
     ],
     hand: {
@@ -107,10 +114,49 @@ export default {
         },
     ],
     candidates: {
-        type: 'text',
-        payload: {
-            text: '<Voting List>',
-        },
+        type: 'list',
+        payload: [
+            {
+                title: 'Vigorous jazz hands',
+                buttons: [
+                    {
+                        title: 'Best',
+                        type: 'postback',
+                        payload: 'vote',
+                    },
+                ],
+            },
+            {
+                title: 'Centaur Porn',
+                buttons: [
+                    {
+                        title: 'Best',
+                        type: 'postback',
+                        payload: 'vote',
+                    },
+                ],
+            },
+            {
+                title: 'Your Face',
+                buttons: [
+                    {
+                        title: 'Best',
+                        type: 'postback',
+                        payload: 'vote',
+                    },
+                ],
+            },
+            {
+                title: 'Barack Obama',
+                buttons: [
+                    {
+                        title: 'Best',
+                        type: 'postback',
+                        payload: 'vote',
+                    },
+                ],
+            },
+        ],
     },
     vote: [
         {
@@ -120,10 +166,25 @@ export default {
             },
         },
         {
-            type: 'text',
-            payload: {
-                text: '<Vote List>',
-            },
+            type: 'list',
+            payload: [
+                {
+                    title: 'Vigorous jazz hands',
+                    image: 'http://d2trtkcohkrm90.cloudfront.net/images/emoji/apple/ios-10/256/1st-place-medal.png',
+                },
+                {
+                    title: 'Centaur Porn',
+                    image: 'http://d2trtkcohkrm90.cloudfront.net/images/emoji/apple/ios-10/256/2nd-place-medal.png',
+                },
+                {
+                    title: 'Your Face',
+                    image: 'http://d2trtkcohkrm90.cloudfront.net/images/emoji/apple/ios-10/256/3rd-place-medal.png',
+                },
+                {
+                    title: 'Barack Obama',
+                    subtitle: 'Loser',
+                },
+            ],
         },
         {
             type: 'text',
@@ -140,10 +201,18 @@ export default {
             },
         },
         {
-            type: 'text',
-            payload: {
-                text: '<Winner Card>',
-            },
+            type: 'header-list',
+            payload: [
+                {
+                    title: '________, the latest Facebook craze.',
+                    image: 'http://b.basemaps.cartocdn.com/dark_all/11/604/771.png',
+                },
+                {
+                    title: 'Being a motherfucking sorcerer.',
+                    subtitle: 'By: Jill (YOU)',
+                    image: 'http://d2trtkcohkrm90.cloudfront.net/images/emoji/apple/ios-10/256/1st-place-medal.png',
+                },
+            ],
         },
         {
             type: 'text',
@@ -152,10 +221,17 @@ export default {
             },
         },
         {
-            type: 'text',
-            payload: {
-                text: '<Next Goal Card>',
-            },
+            type: 'header-list',
+            payload: [
+                {
+                    title: 'How am I maintaining my relationship status?',
+                    image: 'http://b.basemaps.cartocdn.com/dark_all/11/604/771.png',
+                },
+                {
+                    title: '<Winner here>',
+                    subtitle: '<Winner here>',
+                },
+            ],
         },
     ],
     unknown: {

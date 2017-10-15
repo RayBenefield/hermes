@@ -38,6 +38,24 @@ const createCarousel = cards => ({
     },
 });
 
+const createList = (cards, style = 'compact') => ({
+    attachment: {
+        type: 'template',
+        payload: {
+            template_type: 'list',
+            top_element_style: style,
+            elements: _.map(cards, ({ title, subtitle, image, buttons }) => ({
+                title,
+                subtitle: subtitle || null,
+                image_url: image || null,
+                buttons: buttons || null,
+            })),
+        },
+    },
+});
+
+const createHeaderList = cards => createList(cards, 'large');
+
 export default ({ verifytoken }) => ({
     verifyToken: (query) => {
         if (query['hub.mode'] !== 'subscribe'
@@ -68,6 +86,12 @@ export default ({ verifytoken }) => ({
                     break;
                 case 'carousel':
                     messenger.sendMessage(recipient, createCarousel(msg.payload));
+                    break;
+                case 'header-list':
+                    messenger.sendMessage(recipient, createHeaderList(msg.payload));
+                    break;
+                case 'list':
+                    messenger.sendMessage(recipient, createList(msg.payload));
                     break;
                 default:
                     messenger.sendQuickRepliesMessage(recipient, JSON.stringify(msg), actions);
