@@ -1,5 +1,13 @@
 # Work Log
 
+## #17
+
+Finished up the work for the carousel for showing a hand. Took a little bit to
+realize that I was messing up syntax somewhere, but I got it. Next will be
+tackling the two different kinds of lists at the same time and hopefully
+finishing up the visuals for all of the actions.
+
+
 ## #16
 
 Finally got the generic card to work for when you are picking a card. Now I need
