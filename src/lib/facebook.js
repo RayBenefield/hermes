@@ -63,6 +63,14 @@ const createList = (cards, style = 'compact') => ({
 
 const createHeaderList = cards => createList(cards, 'large');
 
+const transformers = {
+    text: createQuickReplies,
+    card: createCard,
+    carousel: createCarousel,
+    'header-list': createHeaderList,
+    list: createList,
+};
+
 export default ({ verifytoken }) => ({
     verifyToken: (query) => {
         if (query['hub.mode'] !== 'subscribe'
@@ -85,26 +93,8 @@ export default ({ verifytoken }) => ({
         const messenger = new FbMessenger(token);
         const promiseMessage = promisify(messenger.sendMessage, messenger);
 
-        const send = (msg) => {
-            switch (msg.type) {
-                case 'text':
-                    return promiseMessage(recipient, createQuickReplies({
-                        text: msg.payload.text,
-                    }));
-                case 'card':
-                    return promiseMessage(recipient, createCard(msg.payload));
-                case 'carousel':
-                    return promiseMessage(recipient, createCarousel(msg.payload));
-                case 'header-list':
-                    return promiseMessage(recipient, createHeaderList(msg.payload));
-                case 'list':
-                    return promiseMessage(recipient, createList(msg.payload));
-                default:
-                    return promiseMessage(recipient, createQuickReplies({
-                        text: JSON.stringify(msg),
-                    }));
-            }
-        };
+        const send = msg =>
+            promiseMessage(recipient, transformers[msg.type](msg.payload));
 
         if (!_.isArray(message)) return send(message).then();
 
