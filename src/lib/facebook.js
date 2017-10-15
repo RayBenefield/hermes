@@ -18,6 +18,26 @@ const createCard = ({ title, image }) => ({
     },
 });
 
+const createCarousel = cards => ({
+    attachment: {
+        type: 'template',
+        payload: {
+            template_type: 'generic',
+            elements: _.map(cards, ({ title, image }) => ({
+                title,
+                image_url: image,
+                buttons: [
+                    {
+                        type: 'postback',
+                        title: 'Pick',
+                        payload: 'pick',
+                    },
+                ],
+            })),
+        },
+    },
+});
+
 export default ({ verifytoken }) => ({
     verifyToken: (query) => {
         if (query['hub.mode'] !== 'subscribe'
@@ -45,6 +65,9 @@ export default ({ verifytoken }) => ({
                     break;
                 case 'card':
                     messenger.sendMessage(recipient, createCard(msg.payload));
+                    break;
+                case 'carousel':
+                    messenger.sendMessage(recipient, createCarousel(msg.payload));
                     break;
                 default:
                     messenger.sendQuickRepliesMessage(recipient, JSON.stringify(msg), actions);

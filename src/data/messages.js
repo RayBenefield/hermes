@@ -41,10 +41,49 @@ export default {
         },
     ],
     hand: {
-        type: 'text',
-        payload: {
-            text: '<Hand Carousel>',
-        },
+        type: 'carousel',
+        payload: [
+            {
+                title: 'Being a motherfucking sorcerer.',
+                image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
+            },
+            {
+                title: 'Winking at old people.',
+                image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
+            },
+            {
+                title: 'THE KOOL-AID MAN.',
+                image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
+            },
+            {
+                title: 'Hurricane Katrina.',
+                image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
+            },
+            {
+                title: 'Powerful thighs.',
+                image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
+            },
+            {
+                title: 'Vigorous jazz hands.',
+                image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
+            },
+            {
+                title: 'BEES?',
+                image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
+            },
+            {
+                title: 'Morgan Freeman\'s voice.',
+                image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
+            },
+            {
+                title: 'Racism.',
+                image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
+            },
+            {
+                title: 'Daddy issues.',
+                image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
+            },
+        ],
     },
     pick: [
         {
