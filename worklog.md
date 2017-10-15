@@ -1,5 +1,19 @@
 # Work Log
 
+## #18
+
+WOOT!!! I finally got the visuals mostly done all the way through for all of the
+major actions and events. Now I can just clean up the Facebook library and start
+working on the actual domain logic that will support all of this. Tomorrow will
+be a good day and I'll have a very powerful visual system already setup for all
+of this. WOOT!!!
+
+Here are a couple of shots from mobile (ignore the order of the messages):
+
+![Black Cards](./images/mobile-cards.png)
+![Votes](./images/voter-list.png)
+
+
 ## #17
 
 Finished up the work for the carousel for showing a hand. Took a little bit to

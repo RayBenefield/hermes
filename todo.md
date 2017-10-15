@@ -1,4 +1,3 @@
- - Set proper visuals for Joined Game
- - Set proper visuals for Show Candidates
- - Set proper visuals for Vote
- - Set proper visuals for Winner
+ - Clean up Facebook code
+ - Convert data files to json
+ - Setup system to send messages in order
