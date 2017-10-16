@@ -27,9 +27,9 @@ export default ({ verifytoken, accesstoken }) => {
             return 'unknown';
         },
         extractSender: ({ raw }) => raw.entry[0].messaging[0].sender.id,
-        transform: ({ messages }) => messages.map(
+        transform: ({ messages }) => _.flatten(messages.map(
             ({ type, payload }) => transformers[type](payload)
-        ),
+        )),
         sendMessage: (recipient, message) => {
             const send = msg => promiseMessage(recipient, msg);
 

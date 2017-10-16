@@ -40,69 +40,28 @@ export default {
     ],
     hand: [
         {
-            type: 'carousel',
-            payload: [
-                {
-                    title: 'Being a motherfucking sorcerer.',
-                    image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
-                },
-                {
-                    title: 'Winking at old people.',
-                    image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
-                },
-                {
-                    title: 'THE KOOL-AID MAN.',
-                    image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
-                },
-                {
-                    title: 'Hurricane Katrina.',
-                    image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
-                },
-                {
-                    title: 'Powerful thighs.',
-                    image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
-                },
-                {
-                    title: 'Vigorous jazz hands.',
-                    image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
-                },
-                {
-                    title: 'BEES?',
-                    image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
-                },
-                {
-                    title: 'Morgan Freeman\'s voice.',
-                    image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
-                },
-                {
-                    title: 'Racism.',
-                    image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
-                },
-                {
-                    title: 'Daddy issues.',
-                    image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
-                },
-            ],
+            type: 'show-hand-message',
+            payload: {
+                cards: [
+                    { contents: 'Being a motherfucking sorcerer.' },
+                    { contents: 'Winking at old people.' },
+                    { contents: 'THE KOOL-AID MAN.' },
+                    { contents: 'Hurricane Katrina.' },
+                    { contents: 'Powerful thighs.' },
+                    { contents: 'Vigorous jazz hands.' },
+                    { contents: 'BEES?' },
+                    { contents: 'Morgan Freeman\'s voice.' },
+                    { contents: 'Racism.' },
+                    { contents: 'Daddy issues.' },
+                ],
+            },
         },
     ],
     pick: [
         {
-            type: 'text',
+            type: 'card-selected-message',
             payload: {
-                text: 'You picked:',
-            },
-        },
-        {
-            type: 'card',
-            payload: {
-                title: 'Being a motherfucking sorcerer.',
-                image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
-            },
-        },
-        {
-            type: 'text',
-            payload: {
-                text: 'We\'ll let you know when your adversaries have selected their candidates.',
+                contents: 'Being a motherfucking sorcerer.',
             },
         },
     ],
