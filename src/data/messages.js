@@ -67,125 +67,54 @@ export default {
     ],
     candidates: [
         {
-            type: 'list',
-            payload: [
-                {
-                    title: 'Vigorous jazz hands',
-                    buttons: [
-                        {
-                            title: 'Best',
-                            type: 'postback',
-                            payload: 'vote',
-                        },
-                    ],
-                },
-                {
-                    title: 'Centaur Porn',
-                    buttons: [
-                        {
-                            title: 'Best',
-                            type: 'postback',
-                            payload: 'vote',
-                        },
-                    ],
-                },
-                {
-                    title: 'Your Face',
-                    buttons: [
-                        {
-                            title: 'Best',
-                            type: 'postback',
-                            payload: 'vote',
-                        },
-                    ],
-                },
-                {
-                    title: 'Barack Obama',
-                    buttons: [
-                        {
-                            title: 'Best',
-                            type: 'postback',
-                            payload: 'vote',
-                        },
-                    ],
-                },
-            ],
+            type: 'show-ranked-list',
+            payload: {
+                ranked: [
+                    { contents: 'Vigorous jazz hands' },
+                    { contents: 'Centaur Porn' },
+                ],
+                unranked: [
+                    { contents: 'Your Face' },
+                    { contents: 'Barack Obama' },
+                ],
+            },
         },
     ],
     vote: [
         {
-            type: 'text',
+            type: 'show-votes-message',
             payload: {
-                text: 'Here are your votes:',
+                ranked: [
+                    { contents: 'Vigorous jazz hands' },
+                    { contents: 'Centaur Porn' },
+                    { contents: 'Your Face' },
+                    { contents: 'Barack Obama' },
+                ],
             },
         },
         {
-            type: 'list',
-            payload: [
-                {
-                    title: 'Vigorous jazz hands',
-                    image: 'http://d2trtkcohkrm90.cloudfront.net/images/emoji/apple/ios-10/256/1st-place-medal.png',
-                },
-                {
-                    title: 'Centaur Porn',
-                    image: 'http://d2trtkcohkrm90.cloudfront.net/images/emoji/apple/ios-10/256/2nd-place-medal.png',
-                },
-                {
-                    title: 'Your Face',
-                    image: 'http://d2trtkcohkrm90.cloudfront.net/images/emoji/apple/ios-10/256/3rd-place-medal.png',
-                },
-                {
-                    title: 'Barack Obama',
-                    subtitle: 'Loser',
-                },
-            ],
-        },
-        {
-            type: 'text',
+            type: 'wait-for-votes-message',
             payload: {
-                text: 'Now we wait for the votes and we\'ll let you know when they are in.',
+                numberOfPeople: 2,
             },
         },
     ],
     winner: [
         {
-            type: 'text',
+            type: 'show-winner-message',
             payload: {
-                text: 'And the winner is…',
+                goal: { contents: '________, the latest Facebook craze.' },
+                winner: { contents: 'Being a motherfucking sorcerer.' },
+                player: { firstName: 'Jill' },
             },
         },
         {
-            type: 'header-list',
-            payload: [
-                {
-                    title: '________, the latest Facebook craze.',
-                    image: 'http://b.basemaps.cartocdn.com/dark_all/11/604/771.png',
-                },
-                {
-                    title: 'Being a motherfucking sorcerer.',
-                    subtitle: 'By: Jill (YOU)',
-                    image: 'http://d2trtkcohkrm90.cloudfront.net/images/emoji/apple/ios-10/256/1st-place-medal.png',
-                },
-            ],
-        },
-        {
-            type: 'text',
+            type: 'show-next-goal-message',
             payload: {
-                text: 'And now the next goal...',
+                card: {
+                    contents: 'How am I maintaining my relationship status?',
+                },
             },
-        },
-        {
-            type: 'header-list',
-            payload: [
-                {
-                    title: 'How am I maintaining my relationship status?',
-                    image: 'http://b.basemaps.cartocdn.com/dark_all/11/604/771.png',
-                },
-                {
-                    title: '<Winner here>',
-                    subtitle: '<Winner here>',
-                },
-            ],
         },
     ],
 };
