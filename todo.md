@@ -1,3 +1,2 @@
  - Setup testing for domain
- - Change the Facebook transformers to react to Domain Messages instead
  - Convert data files to json

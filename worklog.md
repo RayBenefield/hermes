@@ -1,5 +1,13 @@
 # Work Log
 
+## #27
+
+Finished the last of the messages. They are now all domain messages rather than
+facebook based messages. So the domain is now setup to be handled dynamically by
+the facebook system so should be fairly easy to do the domain now and expect
+clean output. WOOT!! So happy to be done with that.
+
+
 ## #26
 
 I'm painstakingly going through the messages file and changing everything to a
