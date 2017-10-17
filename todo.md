@@ -1,2 +1,3 @@
+ - Setup proper payloads for the messages now
  - Setup testing for domain
  - Convert data files to json
