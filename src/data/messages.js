@@ -1,13 +1,5 @@
 /* eslint-disable max-lines */
 export default {
-    start: () => ({ messages: [
-        {
-            type: 'welcome-message',
-        },
-        {
-            type: 'instructions-message',
-        },
-    ] }),
     queue: () => ({ messages: [
         {
             type: 'queue-joined-message',
