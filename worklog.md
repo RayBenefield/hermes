@@ -1,5 +1,14 @@
 # Work Log
 
+## #29
+
+Another painful session of trying to get things working with transmutation the
+first go around. Since it is a new package that I designed and haven't used as
+much in the field yet I'm still trying to figure out the best patterns to use
+for it. I think ultimately with modifications it will work out, but it is still
+a very painful process as I try to learn everything.
+
+
 ## #28
 
 Painfully setup the testing system. I don't know why I'm so terrible at it and
