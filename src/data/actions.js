@@ -2,7 +2,7 @@ export default [
     {
         content_type: 'text',
         title: 'Get Started',
-        payload: 'start',
+        payload: 'login',
     },
     {
         content_type: 'text',

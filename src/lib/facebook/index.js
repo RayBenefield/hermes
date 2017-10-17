@@ -26,7 +26,10 @@ export default ({ verifytoken, accesstoken }) => {
             }
             return 'unknown';
         },
-        extractSender: ({ raw }) => raw.entry[0].messaging[0].sender.id,
+        extractLead: ({ raw }) => ({
+            id: raw.entry[0].messaging[0].sender.id,
+            platform: 'facebook',
+        }),
         transform: ({ messages }) => _.flatten(messages.map(
             ({ type, payload }) => transformers[type](payload)
         )),

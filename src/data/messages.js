@@ -1,22 +1,22 @@
 /* eslint-disable max-lines */
 export default {
-    start: [
+    start: () => ({ messages: [
         {
             type: 'welcome-message',
         },
         {
             type: 'instructions-message',
         },
-    ],
-    queue: [
+    ] }),
+    queue: () => ({ messages: [
         {
             type: 'queue-joined-message',
             payload: {
                 numberOfPeople: 3,
             },
         },
-    ],
-    join: [
+    ] }),
+    join: () => ({ messages: [
         {
             type: 'game-started-message',
             payload: {
@@ -37,8 +37,8 @@ export default {
                 },
             },
         },
-    ],
-    hand: [
+    ] }),
+    hand: () => ({ messages: [
         {
             type: 'show-hand-message',
             payload: {
@@ -56,16 +56,16 @@ export default {
                 ],
             },
         },
-    ],
-    pick: [
+    ] }),
+    pick: () => ({ messages: [
         {
             type: 'card-selected-message',
             payload: {
                 contents: 'Being a motherfucking sorcerer.',
             },
         },
-    ],
-    candidates: [
+    ] }),
+    candidates: () => ({ messages: [
         {
             type: 'show-ranked-list',
             payload: {
@@ -79,8 +79,8 @@ export default {
                 ],
             },
         },
-    ],
-    vote: [
+    ] }),
+    vote: () => ({ messages: [
         {
             type: 'show-votes-message',
             payload: {
@@ -98,8 +98,8 @@ export default {
                 numberOfPeople: 2,
             },
         },
-    ],
-    winner: [
+    ] }),
+    winner: () => ({ messages: [
         {
             type: 'show-winner-message',
             payload: {
@@ -116,5 +116,5 @@ export default {
                 },
             },
         },
-    ],
+    ] }),
 };
