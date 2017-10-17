@@ -6,7 +6,7 @@ const loadDB = (local = {}) => ({
     get: key => local[key],
 });
 
-describe('Welcome', (it) => {
+describe('Login', (it) => {
     it('sends back a welcome message and instructions message', (assert) => {
         // Given
         const db = loadDB();
@@ -16,15 +16,13 @@ describe('Welcome', (it) => {
         };
 
         // When
-        const result = domain({ db }).welcome({ lead });
-
-        // Then
-        assert.deepEqual(result, {
-            messages: [
-                { type: 'welcome-message' },
-                { type: 'instructions-message' },
-            ],
-        });
+        domain({ db }).login({ lead })
+            .then((result) => {
+                assert.deepEqual(result.messages, [
+                    { type: 'welcome-message' },
+                    { type: 'instructions-message' },
+                ]);
+            });
     });
 
     it('adds a new player to the database', (assert) => {
@@ -36,12 +34,12 @@ describe('Welcome', (it) => {
         };
 
         // When
-        domain({ db }).welcome({ lead });
-
-        // Then
-        assert.deepEqual(
-            db.get('players/facebook/123456'),
-            lead
-        );
+        domain({ db }).login({ lead })
+            .then(() => {
+                assert.deepEqual(
+                    db.get('players/facebook/123456'),
+                    lead
+                );
+            });
     });
 });
