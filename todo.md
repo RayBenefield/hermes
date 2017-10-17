@@ -1,5 +1,4 @@
  - Setup proper payloads for the messages now
- - Flesh out the login domain action
  - Flesh out the join-game domain action
  - Flesh out the show-hand domain action
  - Flesh out the pick-card-for-slot domain action

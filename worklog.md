@@ -1,5 +1,15 @@
 # Work Log
 
+## #30
+
+Figured out a solid way to do some error handling type checking. So now on login
+if you already have a player then it will welcome you back instead of doing a
+regular welcome for new players. I also did a bit of refactoring to make it a
+tad cleaner. I've removed the start stub message and the goal will be to
+completely remove all of the stub messages to ensure that we have completed the
+domain.
+
+
 ## #29
 
 Another painful session of trying to get things working with transmutation the
