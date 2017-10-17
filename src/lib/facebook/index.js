@@ -31,7 +31,10 @@ export default ({ verifytoken, accesstoken }) => {
             platform: 'facebook',
         }),
         transform: ({ messages }) => _.flatten(messages.map(
-            ({ type, payload }) => transformers[type](payload)
+            ({ type, payload }) => {
+                if (type in transformers) return transformers[type](payload);
+                return transformers.text({ text: `There's no message setup for [${type}]` });
+            }
         )),
         sendMessage: (recipient, message) => {
             const send = msg => promiseMessage(recipient, msg);
