@@ -1,3 +1,11 @@
  - Setup proper payloads for the messages now
- - Setup testing for domain
+ - Flesh out the login domain action
+ - Flesh out the join-game domain action
+ - Flesh out the show-hand domain action
+ - Flesh out the pick-card-for-slot domain action
+ - Flesh out the vote domain action
+ - Flesh out the queue-joined domain action
+ - Flesh out the round-started domain action
+ - Flesh out the candidates-submitted domain action
+ - Flesh out the votes-submitted domain action
  - Convert data files to json

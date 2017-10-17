@@ -1,5 +1,12 @@
 # Work Log
 
+## #28
+
+Painfully setup the testing system. I don't know why I'm so terrible at it and
+it hurt my brain for now reason. Anyways, now I have a decent pattern to go by
+so time to move forward with that and start fleshing out the domain.
+
+
 ## #27
 
 Finished the last of the messages. They are now all domain messages rather than
