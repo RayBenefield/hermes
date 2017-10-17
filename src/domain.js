@@ -2,13 +2,23 @@ import transmute from 'transmutation';
 
 export default ({ db }) => ({
     login: transmute()
-        .do(({ lead }) => db.set(`players/${lead.platform}/${lead.id}`, lead))
-        .extend('messages', [
-            {
-                type: 'welcome-message',
-            },
-            {
-                type: 'instructions-message',
-            },
-        ]),
+        .extend('player', ({ lead }) => db.get(`players/${lead.platform}/${lead.id}`))
+        .switch('player', {
+            undefined: transmute()
+                .do(({ lead }) => db.set(`players/${lead.platform}/${lead.id}`, lead))
+                .extend('messages', [
+                    {
+                        type: 'welcome-message',
+                    },
+                    {
+                        type: 'instructions-message',
+                    },
+                ]),
+            _default: transmute()
+                .extend('messages', [
+                    {
+                        type: 'welcome-back-message',
+                    },
+                ]),
+        }),
 });

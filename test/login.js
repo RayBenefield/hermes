@@ -42,4 +42,23 @@ describe('Login', (it) => {
                 );
             });
     });
+
+    it('welcomes back a player that already exists', (assert) => {
+        // Given
+        const lead = {
+            platform: 'facebook',
+            id: 123456,
+        };
+        const db = loadDB({
+            'players/facebook/123456': lead,
+        });
+
+        // When
+        domain({ db }).login({ lead })
+            .then((result) => {
+                assert.deepEqual(result.messages, [
+                    { type: 'welcome-back-message' },
+                ]);
+            });
+    });
 });
