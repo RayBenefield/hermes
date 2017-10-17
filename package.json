@@ -35,7 +35,6 @@
         "minor": "npm version minor -m 'v%s' && js-beautify -r package.json && git commit -a --amend --no-edit",
         "major": "npm version major -m 'v%s' && js-beautify -r package.json && git commit -a --amend --no-edit",
         "postinstall": "node -e \"var s='../src',d='node_modules/src',fs=require('fs');fs.exists(d,function(e){e||fs.symlinkSync(s,d,'dir')});\""
-
     },
     "dependencies": {},
     "devDependencies": {

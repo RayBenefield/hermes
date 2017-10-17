@@ -1,13 +1,47 @@
 import describe from 'tape-bdd';
 import domain from 'src/domain'; // eslint-disable-line
 
+const loadDB = (local = {}) => ({
+    set: (key, val) => { local[key] = val; },
+    get: key => local[key],
+});
+
 describe('Welcome', (it) => {
-    it('sends back a welcome message and instructions message', assert => assert
-        .deepEqual(domain().welcome(), {
+    it('sends back a welcome message and instructions message', (assert) => {
+        // Given
+        const db = loadDB();
+        const lead = {
+            platform: 'facebook',
+            id: 123456,
+        };
+
+        // When
+        const result = domain({ db }).welcome({ lead });
+
+        // Then
+        assert.deepEqual(result, {
             messages: [
                 { type: 'welcome-message' },
                 { type: 'instructions-message' },
             ],
-        })
-    );
+        });
+    });
+
+    it('adds a new player to the database', (assert) => {
+        // Given
+        const db = loadDB();
+        const lead = {
+            platform: 'facebook',
+            id: 123456,
+        };
+
+        // When
+        domain({ db }).welcome({ lead });
+
+        // Then
+        assert.deepEqual(
+            db.get('players/facebook/123456'),
+            lead
+        );
+    });
 });
