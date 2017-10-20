@@ -1,5 +1,14 @@
 # Work Log
 
+## #31
+
+Refactored the domain stuff to do proper unit testing instead of injecting the
+database. We should be gathering the context on a per action basis prior to
+calling the domain logic, then afterwards saving the context that needs to be
+saved based on what the domain spits out. Next I just have to replicate the
+saving portion and it should be all good to get back into domain logic again.
+
+
 ## #30
 
 Figured out a solid way to do some error handling type checking. So now on login
