@@ -49,4 +49,24 @@ describe('Join Queue', (it) => {
             },
         ]);
     });
+
+    it('should inform the player when they are already in the queue', (assert) => {
+        // Given
+        const queue = { 123456: { id: '123456' } };
+        const player = { id: '123456' };
+
+        // When
+        const messages = joinQueue({ player, queue });
+
+        // Then
+        assert.deepEqual(messages, [
+            {
+                type: 'already-in-queue-message',
+                payload: {
+                    player,
+                    queue,
+                },
+            },
+        ]);
+    });
 });

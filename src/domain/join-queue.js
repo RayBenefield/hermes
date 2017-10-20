@@ -1,4 +1,16 @@
 export default ({ player, queue }) => {
+    if (player.id in queue) {
+        return [
+            {
+                type: 'already-in-queue-message',
+                payload: {
+                    queue,
+                    player,
+                },
+            },
+        ];
+    }
+
     if (Object.keys(queue).length === 4) {
         return [
             {
