@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import util from 'util';
 import express from 'express';
 import admin from 'firebase-admin';
 import transmute from 'transmutation';
@@ -9,6 +8,7 @@ import * as domain from './domain'; // eslint-disable-line import/no-unresolved,
 import configureContext from './context';
 import configureDb from './lib/db';
 import messages from './data/messages';
+import { logAll } from './lib/utils';
 
 const config = functions.config();
 admin.initializeApp(config.firebase);
@@ -34,7 +34,7 @@ router.post('/facebook', (req, res) => transmute({ raw: req.body })
     ))
     .extend('facebookMessages', fb.transform)
     // eslint-disable-next-line no-console
-    .do(obj => console.log(util.inspect(obj, { showHidden: false, depth: null })))
+    .do(logAll)
     .then(({ lead: { id }, facebookMessages }) =>
         fb.sendMessage(id, facebookMessages))
 );
