@@ -8,7 +8,7 @@ export default ({ cards }) => carousel(
             {
                 type: 'postback',
                 title: 'Pick',
-                payload: 'pick',
+                payload: 'action: pick',
             },
         ],
     }))

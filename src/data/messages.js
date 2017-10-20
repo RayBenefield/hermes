@@ -57,7 +57,7 @@ export default {
             },
         },
     ],
-    candidates: [
+    candidates: () => [
         {
             type: 'show-ranked-list',
             payload: {

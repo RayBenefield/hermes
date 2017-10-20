@@ -19,7 +19,7 @@ export default ({ unranked = [], ranked = [] }) => list(_.flatten([
             {
                 title: 'Best',
                 type: 'postback',
-                payload: 'vote',
+                payload: 'action: vote',
             },
         ],
     })),
