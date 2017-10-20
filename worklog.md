@@ -1,5 +1,16 @@
 # Work Log
 
+## #33
+
+So I refactored the login action in the domain into its own file now and I'm
+using babel wildcard to load it in. Refactored a few things around that to make
+everything just a tad cleaner as we move forward. I wanted to get rid of
+transmutation wherever I could and fallback to true functions. Next I'm going to
+refactor the quick replies and the payloads in general to handle not just action
+type but also payloads for the action. Started playing around with that at first
+and then broke all the things.
+
+
 ## #32
 
 Re-added the saving of the context after the domain rules kick in. Explored
