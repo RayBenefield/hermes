@@ -26,11 +26,12 @@ router.post('/facebook', (req, res) => transmute({ raw: req.body })
     .extend('lead', fb.extractLead)
     .extend('action', fb.extractAction)
     .switch('action', getContext)
-    .switch('action', enterDomain)
+    .extend('messages', transmute()
+        .switch('action', enterDomain))
     .do(stream => Promise.all(
-        stream.messages.map(msg => transmute(msg).switch('type', saveContext))
+        stream.messages.map(msg =>
+            transmute(msg).switch('type', saveContext))
     ))
-    .switch('message', saveContext)
     .extend('facebookMessages', fb.transform)
     // eslint-disable-next-line no-console
     .do(obj => console.log(util.inspect(obj, { showHidden: false, depth: null })))
