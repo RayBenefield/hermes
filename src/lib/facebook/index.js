@@ -1,5 +1,6 @@
 /* eslint-disable max-lines */
 import _ from 'lodash';
+import yaml from 'js-yaml';
 import FbMessenger from 'fb-messenger';
 import promisify from 'es6-promisify';
 import * as transformers from './transformers'; // eslint-disable-line import/no-unresolved, import/extensions
@@ -16,15 +17,15 @@ export default ({ verifytoken, accesstoken }) => {
                 throw new Error('Failed validation. Make sure the validation tokens match.');
             }
         },
-        extractAction: ({ raw }) => {
+        extractActionWithPayload: ({ raw }) => {
             if (_.has(raw, 'entry[0].messaging[0].message.quick_reply.payload')) {
-                return raw.entry[0].messaging[0].message.quick_reply.payload;
+                return yaml.safeLoad(raw.entry[0].messaging[0].message.quick_reply.payload);
             }
             if (_.has(raw, 'entry[0].messaging[0].message.text')) return 'text';
             if (_.has(raw, 'entry[0].messaging[0].postback.payload')) {
-                return raw.entry[0].messaging[0].postback.payload;
+                return yaml.safeLoad(raw.entry[0].messaging[0].postback.payload);
             }
-            return 'unknown';
+            return { action: 'unknown' };
         },
         extractLead: ({ raw }) => ({
             id: raw.entry[0].messaging[0].sender.id,

@@ -2,41 +2,41 @@ export default [
     {
         content_type: 'text',
         title: 'Get Started',
-        payload: 'login',
+        payload: 'action: login',
     },
     {
         content_type: 'text',
         title: 'Join Queue',
-        payload: 'queue',
+        payload: 'action: queue',
     },
     {
         content_type: 'text',
         title: 'Join a Game',
-        payload: 'join',
+        payload: 'action: join',
     },
     {
         content_type: 'text',
         title: 'Show Hand',
-        payload: 'hand',
+        payload: 'action: hand',
     },
     {
         content_type: 'text',
         title: 'Pick',
-        payload: 'pick',
+        payload: 'action: pick',
     },
     {
         content_type: 'text',
         title: 'Show Candidates',
-        payload: 'candidates',
+        payload: 'action: candidates',
     },
     {
         content_type: 'text',
         title: 'Vote',
-        payload: 'vote',
+        payload: 'action: vote',
     },
     {
         content_type: 'text',
         title: 'Show Winner',
-        payload: 'winner',
+        payload: 'action: winner',
     },
 ];

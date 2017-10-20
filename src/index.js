@@ -24,7 +24,7 @@ const router = express();
 router.post('/facebook', (req, res) => transmute({ raw: req.body })
     .do(() => res.sendStatus(200))
     .extend('lead', fb.extractLead)
-    .extend('action', fb.extractAction)
+    .extend(fb.extractActionWithPayload)
     .switch('action', getContext)
     .extend('messages', transmute()
         .switch('action', enterDomain))
