@@ -1,5 +1,14 @@
 # Work Log
 
+## #35
+
+Started fleshing out the domain started with joining a queue. Not too bad so
+far, but right now I'm trying to figure out exactly how I want to handle these
+things. Mainly because right now I'm trying to figure out if I want a database
+trigger for joining the queue or just handle it as soon as the event comes in.
+I'll figure it out on my break.
+
+
 ## #34
 
 Setup the payloads for the menu items, quick replies, and postback buttons to
