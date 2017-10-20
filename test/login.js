@@ -10,16 +10,16 @@ describe('Login', (it) => {
         };
 
         // When
-        domain.login({ lead })
-            .then((result) => {
-                assert.deepEqual(result.messages, [
-                    {
-                        type: 'welcome-message',
-                        payload: lead,
-                    },
-                    { type: 'instructions-message' },
-                ]);
-            });
+        const result = domain.login({ lead });
+
+        // Then
+        assert.deepEqual(result, [
+            {
+                type: 'welcome-message',
+                payload: lead,
+            },
+            { type: 'instructions-message' },
+        ]);
     });
 
     it('welcomes back a player that already exists', (assert) => {
@@ -34,17 +34,17 @@ describe('Login', (it) => {
         };
 
         // When
-        domain.login({ player, lead })
-            .then((result) => {
-                assert.deepEqual(result.messages, [
-                    {
-                        type: 'welcome-back-message',
-                        payload: {
-                            lead,
-                            player,
-                        },
-                    },
-                ]);
-            });
+        const result = domain.login({ player, lead });
+
+        // Then
+        assert.deepEqual(result, [
+            {
+                type: 'welcome-back-message',
+                payload: {
+                    lead,
+                    player,
+                },
+            },
+        ]);
     });
 });
