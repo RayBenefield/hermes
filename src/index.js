@@ -5,7 +5,7 @@ import admin from 'firebase-admin';
 import transmute from 'transmutation';
 import * as functions from 'firebase-functions';
 import configureFacebook from './lib/facebook';
-import domain from './domain';
+import * as domain from './domain'; // eslint-disable-line import/no-unresolved, import/extensions
 import configureContext from './context';
 import configureDb from './lib/db';
 import messages from './data/messages';

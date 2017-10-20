@@ -1,5 +1,5 @@
 import describe from 'tape-bdd';
-import domain from 'src/domain'; // eslint-disable-line
+import login from 'src/domain/login'; // eslint-disable-line import/no-extraneous-dependencies
 
 describe('Login', (it) => {
     it('sends back a welcome message and instructions message', (assert) => {
@@ -10,7 +10,7 @@ describe('Login', (it) => {
         };
 
         // When
-        const result = domain.login({ lead });
+        const result = login({ lead });
 
         // Then
         assert.deepEqual(result, [
@@ -34,7 +34,7 @@ describe('Login', (it) => {
         };
 
         // When
-        const result = domain.login({ player, lead });
+        const result = login({ player, lead });
 
         // Then
         assert.deepEqual(result, [
