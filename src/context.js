@@ -8,6 +8,7 @@ export default ({ db }) => ({
     },
     save: {
         'welcome-message': transmute()
-            .do(({ lead }) => db.set(`players/${lead.platform}/${lead.id}`, lead)),
+            .do(({ payload: lead }) =>
+                db.set(`players/${lead.platform}/${lead.id}`, lead)),
     },
 });

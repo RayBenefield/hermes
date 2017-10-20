@@ -28,10 +28,7 @@ router.post('/facebook', (req, res) => transmute({ raw: req.body })
     .switch('action', getContext)
     .switch('action', enterDomain)
     .do(stream => Promise.all(
-        stream.messages.map((msg) => {
-            if (_.has(saveContext, msg.type)) return saveContext[msg.type](stream);
-            return Promise.resolve(null);
-        })
+        stream.messages.map(msg => transmute(msg).switch('type', saveContext))
     ))
     .switch('message', saveContext)
     .extend('facebookMessages', fb.transform)
