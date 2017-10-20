@@ -1,4 +1,3 @@
- - Setup quick replies and parsing to handle action types and payloads
  - Setup proper payloads for the messages now
  - Flesh out the join-game domain action
  - Flesh out the show-hand domain action

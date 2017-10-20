@@ -1,5 +1,16 @@
 # Work Log
 
+## #34
+
+Setup the payloads for the menu items, quick replies, and postback buttons to
+use yaml since JSON is not supported as any sort of double quotes in the
+persistent menu won't work. So YAML is cleaner anyway and more succinct it
+should work out perfectly fine. I still have to figure out the actual dumping of
+yaml when using transformers to make the postback buttons for cards, but that
+shouldn't be too bad. Done with this deep block and next is to dive, for real
+this time, into the domain in the afternoon.
+
+
 ## #33
 
 So I refactored the login action in the domain into its own file now and I'm
