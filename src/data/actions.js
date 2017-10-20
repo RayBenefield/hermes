@@ -12,7 +12,7 @@ export default [
     {
         content_type: 'text',
         title: 'Join a Game',
-        payload: 'action: join',
+        payload: 'action: start',
     },
     {
         content_type: 'text',

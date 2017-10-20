@@ -8,7 +8,7 @@ export default {
             },
         },
     ],
-    join: () => [
+    start: () => [
         {
             type: 'game-started-message',
             payload: {
