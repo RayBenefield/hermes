@@ -1,5 +1,14 @@
 # Work Log
 
+## #32
+
+Re-added the saving of the context after the domain rules kick in. Explored
+things that need to be added to transmutation to make sure that it can clean up
+our code a bit and be more declarative. Next is to get back to tackling the
+actual domain rules so next will be adding players to the queue and hopefully my
+current logic around context management holds up for everything moving forward.
+
+
 ## #31
 
 Refactored the domain stuff to do proper unit testing instead of injecting the
