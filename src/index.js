@@ -15,7 +15,9 @@ admin.initializeApp(config.firebase);
 const db = configureDb(admin.database());
 
 const fb = configureFacebook(config.facebook);
-const getContext = configureContext({ db });
+const context = configureContext({ db });
+const getContext = context.get;
+const saveContext = context.save;
 const enterDomain = _.extend(messages, domain);
 
 const router = express();
@@ -25,6 +27,13 @@ router.post('/facebook', (req, res) => transmute({ raw: req.body })
     .extend('action', fb.extractAction)
     .switch('action', getContext)
     .switch('action', enterDomain)
+    .do(stream => Promise.all(
+        stream.messages.map((msg) => {
+            if (_.has(saveContext, msg.type)) return saveContext[msg.type](stream);
+            return Promise.resolve(null);
+        })
+    ))
+    .switch('message', saveContext)
     .extend('facebookMessages', fb.transform)
     // eslint-disable-next-line no-console
     .do(obj => console.log(util.inspect(obj, { showHidden: false, depth: null })))
