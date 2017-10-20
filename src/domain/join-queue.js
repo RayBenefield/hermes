@@ -11,12 +11,13 @@ export default ({ player, queue }) => {
         ];
     }
 
-    if (Object.keys(queue).length === 4) {
+    if (Object.keys(queue).length <= 3) {
         return [
             {
-                type: 'game-started-message',
+                type: 'queue-joined-message',
                 payload: {
-                    players: {
+                    player,
+                    queue: {
                         ...queue,
                         [player.id]: player,
                     },
@@ -27,10 +28,9 @@ export default ({ player, queue }) => {
 
     return [
         {
-            type: 'queue-joined-message',
+            type: 'game-started-message',
             payload: {
-                player,
-                queue: {
+                players: {
                     ...queue,
                     [player.id]: player,
                 },
