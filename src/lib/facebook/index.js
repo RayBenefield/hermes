@@ -38,7 +38,10 @@ export default ({ verifytoken, accesstoken }) => {
             }
         )),
         sendMessage: (recipient, message) => {
-            const send = msg => promiseMessage(recipient, msg);
+            const send = (msg) => {
+                if (msg) return promiseMessage(recipient, msg);
+                return null;
+            };
 
             if (!_.isArray(message)) return send(message).then();
 
