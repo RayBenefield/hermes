@@ -1,5 +1,14 @@
 # Work Log
 
+## #45
+
+Setup the initial round started trigger as well as setup a script that will
+allow me to delete a game real quickly whenever I so choose. Was actually really
+quick. Next thing to do is handle all of the side effects from rounds being
+created and then perhaps start working on the deck management and discard pile
+management to show some dynamic hand creation.
+
+
 ## #44
 
 Refactored out the triggers so it doesn't bloat the index file. I also added the
