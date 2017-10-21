@@ -1,19 +1,7 @@
 import _ from 'lodash';
 import uuid from 'uuid/v4';
 import transmute from 'transmutation';
-
-const hand = [
-    { contents: 'Being a motherfucking sorcerer.' },
-    { contents: 'Winking at old people.' },
-    { contents: 'THE KOOL-AID MAN.' },
-    { contents: 'Hurricane Katrina.' },
-    { contents: 'Powerful thighs.' },
-    { contents: 'Vigorous jazz hands.' },
-    { contents: 'BEES?' },
-    { contents: 'Morgan Freeman\'s voice.' },
-    { contents: 'Racism.' },
-    { contents: 'Daddy issues.' },
-];
+import hand from './data/white-deck';
 
 export default ({ db, fb }) => ({
     gameStarted: transmute()
@@ -40,4 +28,20 @@ export default ({ db, fb }) => ({
             const id = uuid();
             return db.set(`rounds/${game.id}/${id}`, { id });
         }),
+    roundStarted: transmute()
+        .extend('messages', () => [
+            {
+                type: 'new-goal-message',
+                payload: {
+                    card: { contents: '________, the latest Facebook craze.' },
+                },
+            },
+        ])
+        .extend('game', ({ game: { id } }) => db.get(`games/${id}`))
+        .extend('leads', ({ game: { players } }) => _.values(players))
+        .do(({ leads, messages: rawMessages }) => Promise.all(
+            leads.map((lead) => {
+                const facebookMessages = fb.transform({ lead, messages: rawMessages });
+                return fb.sendMessages(lead.id, facebookMessages);
+            }))),
 });

@@ -32,3 +32,8 @@ exports.gameStarted = functions.database.ref('/games/{id}')
         action: 'start',
         payload: event.data.val(),
     }));
+
+exports.roundStarted = functions.database.ref('/rounds/{gameId}/{id}')
+    .onCreate(event => triggers.roundStarted({
+        game: { id: event.params.gameId },
+    }));
