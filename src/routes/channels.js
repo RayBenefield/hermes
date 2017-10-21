@@ -1,6 +1,5 @@
 import express from 'express';
 import transmute from 'transmutation';
-import { logAll } from '../lib/utils';
 
 export default ({ fb, getContext, enterDomain, saveContext }) => {
     const router = express();
@@ -19,8 +18,6 @@ export default ({ fb, getContext, enterDomain, saveContext }) => {
                 transmute({ ...msg, player: stream.player }).switch('type', saveContext))
         ))
         .extend('facebookMessages', fb.transform)
-        // eslint-disable-next-line no-console
-        .do(logAll)
         .then(({ lead: { id }, facebookMessages }) =>
             fb.sendMessages(id, facebookMessages))
     );
