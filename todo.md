@@ -1,3 +1,4 @@
+ - Create script to delete a game
  - Removed Object.values as it is only in Node 7.0 and not Node 6.11.1 on
    Firebase Cloud Functions
  - Give each player a hand
