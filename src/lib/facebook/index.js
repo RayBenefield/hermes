@@ -44,9 +44,9 @@ export default ({ verifytoken, accesstoken }) => {
             }
             return { action: 'unknown' };
         },
-        transform: ({ messages }) => _.flatten(messages.map(
+        transform: ({ lead, messages }) => _.flatten(messages.map(
             ({ type, payload }) => {
-                if (type in transformers) return transformers[type](payload);
+                if (type in transformers) return transformers[type]({ ...payload, lead });
                 return transformers.text({ text: `There's no message setup for [${type}]` });
             }
         )),
