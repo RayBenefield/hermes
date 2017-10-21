@@ -51,8 +51,6 @@ export default ({ verifytoken, accesstoken }) => {
             }
         )),
         sendMessages: (recipient, message) => {
-            if (!_.isArray(message)) return sendFbMessage(recipient)(message).then();
-
             const messagePromises = message
                 .map(msg => () => sendFbMessage(recipient)(msg));
             return sequentialPromises(messagePromises).then();
