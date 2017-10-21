@@ -1,3 +1,5 @@
+ - Add a show hand button on the new goal
+ - Setup the Pick button to actually pick the right card
  - Create round side effects
  - Create discard pile for white deck
  - Create discard pile for black deck
