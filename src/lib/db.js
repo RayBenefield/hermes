@@ -4,7 +4,7 @@ export default db => ({
     set: (key, value = true) => db.ref(key).set(value),
     delete: (keys) => {
         const updates = {};
-        keys.map(key => updates[key] = null); // eslint-disable-line no-return-assign
+        keys.forEach(key => updates[key] = null); // eslint-disable-line no-return-assign
         return db.ref().update(updates);
     },
 });
