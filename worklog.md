@@ -1,5 +1,14 @@
 # Work Log
 
+## #44
+
+Refactored out the triggers so it doesn't bloat the index file. I also added the
+show hand domain service, it took no time at all which is awesome. And I also
+finished up the additional side effects that games create which includes
+creating a round and next is to start doing the round creation portion and doing
+everything for that. BREAK TIME!!!
+
+
 ## #43
 
 Modified the populate queue dev script to read from the database and add
