@@ -31,7 +31,7 @@ export default ({ player, queue = {} } = {}) => {
         {
             type: 'game-started-message',
             payload: {
-                acceptedPlayers: {
+                accepted_players: {
                     [player.id]: player,
                 },
                 players: {

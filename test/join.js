@@ -41,7 +41,7 @@ describe('Join Queue', (it) => {
             {
                 type: 'game-started-message',
                 payload: {
-                    acceptedPlayers: {
+                    accepted_players: {
                         [player.id]: player,
                     },
                     players: {

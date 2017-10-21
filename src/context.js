@@ -22,9 +22,9 @@ export default ({ db }) => ({
             .do(({ payload: { player } }) =>
                 db.set(`queue/${player.id}`, player)),
         'game-started-message': transmute()
-            .do(({ payload: { acceptedPlayers, players } }) => {
+            .do(({ payload: { accepted_players, players } }) => {
                 const id = uuid();
-                db.set(`games/${id}`, { id, players, acceptedPlayers });
+                db.set(`games/${id}`, { id, players, accepted_players });
                 db.delete(Object.values(players).map(player => `queue/${player.id}`));
             }),
     },
