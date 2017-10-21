@@ -2,18 +2,6 @@
 export default {
     start: () => [
         {
-            type: 'game-started-message',
-            payload: {
-                player: 'Jill',
-                players: [
-                    'Jack',
-                    'Jenn',
-                    'Jim',
-                    'Jess',
-                ],
-            },
-        },
-        {
             type: 'new-goal-message',
             payload: {
                 card: {
