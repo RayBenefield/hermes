@@ -5,3 +5,5 @@
  - Flesh out the round-started domain action
  - Flesh out the candidates-submitted domain action
  - Flesh out the votes-submitted domain action
+ - Make dev script to update persistent menu
+ - Make dev script to update getting started call to action

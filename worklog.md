@@ -1,5 +1,14 @@
 # Work Log
 
+## #39
+
+Did a bunch of refactoring to remove dependencies. I no longer require an
+external dependency for messaging in fb messenger now. I also removed lodash
+from being needed in the firebase db lib. Refactored how we were doing some of
+the Facebook message sending and removed a thing I didn't need. And next I'll
+start working on the fetching of profile information.
+
+
 ## #38
 
 Spent time to setup a dev script to populate the queue so it is easy to fill it
