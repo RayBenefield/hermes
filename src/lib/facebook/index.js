@@ -6,7 +6,7 @@ import * as transformers from './transformers'; // eslint-disable-line import/no
 import { sequentialPromises } from '../utils';
 
 export default ({ verifytoken, accesstoken }) => {
-    const promiseMessage = (recipient, message) => request({
+    const sendFbMessage = recipient => message => request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
         qs: { access_token: accesstoken },
         method: 'POST',
@@ -43,15 +43,11 @@ export default ({ verifytoken, accesstoken }) => {
                 return transformers.text({ text: `There's no message setup for [${type}]` });
             }
         )),
-        sendMessage: (recipient, message) => {
-            const send = (msg) => {
-                if (msg) return promiseMessage(recipient, msg);
-                return null;
-            };
+        sendMessages: (recipient, message) => {
+            if (!_.isArray(message)) return sendFbMessage(recipient)(message).then();
 
-            if (!_.isArray(message)) return send(message).then();
-
-            const messagePromises = message.map(msg => () => send(msg));
+            const messagePromises = message
+                .map(msg => () => sendFbMessage(recipient)(msg));
             return sequentialPromises(messagePromises).then();
         },
     };

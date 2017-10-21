@@ -36,7 +36,7 @@ router.post('/facebook', (req, res) => transmute({ raw: req.body })
     // eslint-disable-next-line no-console
     .do(logAll)
     .then(({ lead: { id }, facebookMessages }) =>
-        fb.sendMessage(id, facebookMessages))
+        fb.sendMessages(id, facebookMessages))
 );
 router.get('/facebook', (req, res) => {
     try { fb.verifyToken(req.query); } // eslint-disable-line brace-style
