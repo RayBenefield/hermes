@@ -1,5 +1,6 @@
 /* eslint-disable max-lines */
 import _ from 'lodash';
+import uuid from 'uuid/v4';
 import admin from 'firebase-admin';
 import transmute from 'transmutation';
 import * as functions from 'firebase-functions';
@@ -62,4 +63,8 @@ exports.gameStarted = functions.database.ref('/games/{id}')
             db.set(`games/${game.id}/notified_players`, players))
         .do(({ game, payload: { players } }) => Promise.all(_.values(players)
             .map(p => db.set(`hands/${game.id}/${p.id}`, hand))))
+        .do(({ game }) => {
+            const id = uuid();
+            return db.set(`rounds/${game.id}/${id}`, { id });
+        })
     );
