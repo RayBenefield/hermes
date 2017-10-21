@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import list from './list';
 
 const medals = [
@@ -8,7 +7,7 @@ const medals = [
     'http://d2trtkcohkrm90.cloudfront.net/images/emoji/apple/ios-10/256/pile-of-poo.png',
 ];
 
-export default ({ unranked = [], ranked = [] }) => list(_.flatten([
+export default ({ unranked = [], ranked = [] }) => list([].concat.apply([], [
     ranked.map(({ contents }, rank) => ({
         title: contents,
         imageUrl: medals[rank],
