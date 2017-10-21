@@ -1,5 +1,17 @@
 # Work Log
 
+## #42
+
+WOOT!!! I got sending a message to every other player working properly after a
+database trigger of a new game happening. I had to debug a lot because I didn't
+think about a missing feature in the Node.js version on Google Cloud Functions.
+I had to replace Object.values with lodash.values instead to act as a polyfill.
+It also doesn't update the game with the accepted players which needs to happen.
+The code ultimately is fairly sloppy and I think there is a better way to do it
+with transmutation, but this is a huge step up so I'm satisfied. First
+multiplayer functionality is awesome.
+
+
 ## #41
 
 I started re-organizing to prepare for a database cloud function, and then just
