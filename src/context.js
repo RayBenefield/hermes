@@ -1,3 +1,4 @@
+import uuid from 'uuid/v4';
 import transmute from 'transmutation';
 
 export default ({ db }) => ({
@@ -17,5 +18,11 @@ export default ({ db }) => ({
         'queue-joined-message': transmute()
             .do(({ payload: { player } }) =>
                 db.set(`queue/${player.id}`, player)),
+        'game-started-message': transmute()
+            .do(({ payload: { acceptedPlayers, players } }) => {
+                const id = uuid();
+                db.set(`games/${id}`, { id, players, acceptedPlayers });
+                db.delete(Object.values(players).map(player => `queue/${player.id}`));
+            }),
     },
 });

@@ -7,7 +7,7 @@ export default db => ({
     getByChild: (key, property, propValue) =>
         db.ref(key).orderByChild(property).equalTo(propValue).once('value')
             .then(snapshot => _.values(snapshot.val())),
-    del: keys => db.ref().update(_.fromPairs(
+    delete: keys => db.ref().update(_.fromPairs(
         keys.map(k => ([k, null]))
     )),
 });

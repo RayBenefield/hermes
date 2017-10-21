@@ -1,8 +1,8 @@
 import text from './text';
 
-export default ({ player, players }) => text({
-    text: `A game has started ${player}!
+export default ({ players }) => text({
+    text: `A game has started!
 Your adversaries are:
-${players.map(p => `\n - ${p}`)}
+${Object.values(players).map(p => `\n - ${p.name}`)}
 `,
 });
