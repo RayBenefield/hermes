@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import uuid from 'uuid/v4';
 import transmute from 'transmutation';
-import hand from './data/white-deck';
+import whiteDeck from './data/white-deck.json';
 
 export default ({ db, fb }) => ({
     gameStarted: transmute()
@@ -23,7 +23,9 @@ export default ({ db, fb }) => ({
         .do(({ game, payload: { players } }) => Promise.all(_.values(players)
             .map(p => db.set(`players/facebook/${p.id}/game`, game.id))))
         .do(({ game, payload: { players } }) => Promise.all(_.values(players)
-            .map(p => db.set(`hands/${game.id}/${p.id}`, hand))))
+            .map(p => ({ player: p }))
+            .map(p => ({ ...p, hand: whiteDeck.sort(() => 0.5 - Math.random()).slice(0, 10) }))
+            .map(({ player, hand }) => db.set(`hands/${game.id}/${player.id}`, hand))))
         .do(({ game }) => {
             const id = uuid();
             return db.set(`rounds/${game.id}/${id}`, { id });
