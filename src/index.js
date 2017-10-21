@@ -4,8 +4,8 @@ import admin from 'firebase-admin';
 import transmute from 'transmutation';
 import * as functions from 'firebase-functions';
 import configureFacebook from './lib/facebook';
-import * as domain from './domain'; // eslint-disable-line import/no-unresolved, import/extensions
-import configureContext from './context';
+import * as domain from './domain/services'; // eslint-disable-line import/no-unresolved, import/extensions
+import configureContext from './domain/context';
 import configureDb from './lib/db';
 import messages from './data/messages';
 import { logAll } from './lib/utils';

@@ -1,5 +1,5 @@
 import describe from 'tape-bdd';
-import login from 'src/domain/login'; // eslint-disable-line import/no-extraneous-dependencies
+import login from 'src/domain/services/login'; // eslint-disable-line import/no-extraneous-dependencies
 
 describe('Login', (it) => {
     it('sends back a welcome message and instructions message', (assert) => {

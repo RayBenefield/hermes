@@ -1,5 +1,5 @@
 import describe from 'tape-bdd';
-import join from 'src/domain/join'; // eslint-disable-line import/no-extraneous-dependencies
+import join from 'src/domain/services/join'; // eslint-disable-line import/no-extraneous-dependencies
 
 describe('Join Queue', (it) => {
     it('should add a player to the queue while reporting the size', (assert) => {
