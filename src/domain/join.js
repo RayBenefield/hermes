@@ -6,8 +6,7 @@ export default ({ player, queue = {} } = {}) => {
             {
                 type: 'already-in-queue-message',
                 payload: {
-                    queue,
-                    player,
+                    ...queue,
                 },
             },
         ];
