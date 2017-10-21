@@ -7,7 +7,7 @@ const medals = [
     'http://d2trtkcohkrm90.cloudfront.net/images/emoji/apple/ios-10/256/pile-of-poo.png',
 ];
 
-export default ({ unranked = [], ranked = [] }) => list([].concat.apply([], [
+export default ({ unranked = [], ranked = [] }) => list([].concat(...[
     ranked.map(({ contents }, rank) => ({
         title: contents,
         imageUrl: medals[rank],
