@@ -1,5 +1,13 @@
 # Work Log
 
+## #36
+
+Had to sit down and create email accounts for 4 additional "players". Took a
+while to do and then I created facebook accounts for them and added them as
+testers. I also realized that I needed logic for when a player doesn't exist yet
+so I also added that. I'll finish up the testing for joining the queue next.
+
+
 ## #35
 
 Started fleshing out the domain started with joining a queue. Not too bad so
