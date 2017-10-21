@@ -2,7 +2,9 @@
     "name": "hermes",
     "description": "Cards Against Humanity in Facebook Messenger",
     "dependencies": {
-        "firebase-admin": "~4.2.1"
+        "firebase-admin": "~4.2.1",
+        "inquirer": "^3.3.0",
+        "transmutation": "^0.0.16"
     },
     "private": true
 }
