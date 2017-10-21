@@ -15,6 +15,9 @@ export default ({ db }) => ({
         'welcome-message': transmute()
             .do(({ payload: lead }) =>
                 db.set(`players/${lead.platform}/${lead.id}`, lead)),
+        'welcome-back-message': transmute()
+            .do(({ payload: { lead } }) =>
+                db.set(`players/${lead.platform}/${lead.id}`, lead)),
         'queue-joined-message': transmute()
             .do(({ payload: { player } }) =>
                 db.set(`queue/${player.id}`, player)),

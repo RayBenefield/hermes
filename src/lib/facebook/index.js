@@ -15,6 +15,12 @@ export default ({ verifytoken, accesstoken }) => {
             message,
         },
     });
+    const getProfile = id => request({
+        method: 'GET',
+        url: `https://graph.facebook.com/v2.6/${id}`,
+        json: true,
+        qs: { access_token: accesstoken },
+    });
 
     return {
         verifyToken: (query) => {
@@ -23,6 +29,11 @@ export default ({ verifytoken, accesstoken }) => {
                 throw new Error('Failed validation. Make sure the validation tokens match.');
             }
         },
+        extractLead: ({ raw }) => ({
+            id: raw.entry[0].messaging[0].sender.id,
+            platform: 'facebook',
+        }),
+        enrichLead: ({ lead }) => getProfile(lead.id),
         extractActionWithPayload: ({ raw }) => {
             if (_.has(raw, 'entry[0].messaging[0].message.quick_reply.payload')) {
                 return yaml.safeLoad(raw.entry[0].messaging[0].message.quick_reply.payload);
@@ -33,10 +44,6 @@ export default ({ verifytoken, accesstoken }) => {
             }
             return { action: 'unknown' };
         },
-        extractLead: ({ raw }) => ({
-            id: raw.entry[0].messaging[0].sender.id,
-            platform: 'facebook',
-        }),
         transform: ({ messages }) => _.flatten(messages.map(
             ({ type, payload }) => {
                 if (type in transformers) return transformers[type](payload);
