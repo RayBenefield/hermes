@@ -1,5 +1,16 @@
 # Work Log
 
+## #41
+
+I started re-organizing to prepare for a database cloud function, and then just
+got sucked into refactoring in ALL the places. Was a lot of fun cleaning up and
+removing lodash where I could. The only thing I'm dependent on lodash for now is
+the has function which uses a json path for checking an object's existence. I
+might make a utility for that later to remove lodash as a dependency from the
+project. So next is setting up the database trigger to work as we need it to for
+messaging other players.
+
+
 ## #40
 
 Finished up the enriching of user profile data as well as used that data to

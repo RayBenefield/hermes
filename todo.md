@@ -1,3 +1,5 @@
+ - Create a has utility function to remove lodash as a dependency
+ - Send game started message to all remaining players
  - Flesh out the show-hand domain action
  - Flesh out the pick-card-for-slot domain action
  - Flesh out the vote domain action
