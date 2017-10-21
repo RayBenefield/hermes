@@ -10,6 +10,13 @@ export default ({ db }) => ({
             .extend('player', ({ lead }) =>
                 db.get(`players/${lead.platform}/${lead.id}`))
             .extend('queue', () => db.get('queue')),
+        hand: transmute()
+            .extend('player', ({ lead }) =>
+                db.get(`players/${lead.platform}/${lead.id}`))
+            .extend('game', ({ player }) =>
+                db.get(`games/${player.game}`))
+            .extend('hand', ({ player, game }) =>
+                db.get(`hands/${game.id}/${player.id}`)),
     },
     save: {
         'welcome-message': transmute()

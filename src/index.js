@@ -62,6 +62,8 @@ exports.gameStarted = functions.database.ref('/games/{id}')
         .do(({ game, payload: { players } }) =>
             db.set(`games/${game.id}/notified_players`, players))
         .do(({ game, payload: { players } }) => Promise.all(_.values(players)
+            .map(p => db.set(`players/facebook/${p.id}/game`, game.id))))
+        .do(({ game, payload: { players } }) => Promise.all(_.values(players)
             .map(p => db.set(`hands/${game.id}/${p.id}`, hand))))
         .do(({ game }) => {
             const id = uuid();
