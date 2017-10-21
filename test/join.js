@@ -41,6 +41,9 @@ describe('Join Queue', (it) => {
             {
                 type: 'game-started-message',
                 payload: {
+                    acceptedPlayers: {
+                        [player.id]: player,
+                    },
                     players: {
                         ...queue,
                         [player.id]: player,
@@ -63,8 +66,7 @@ describe('Join Queue', (it) => {
             {
                 type: 'already-in-queue-message',
                 payload: {
-                    player,
-                    queue,
+                    ...queue,
                 },
             },
         ]);
