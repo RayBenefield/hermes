@@ -69,4 +69,16 @@ describe('Join Queue', (it) => {
             },
         ]);
     });
+
+    it('should welcome a new player', (assert) => {
+        // Given
+
+        // When
+        const messages = join();
+
+        // Then
+        assert.deepEqual(messages, [
+            { type: 'player-does-not-exist-message' },
+        ]);
+    });
 });

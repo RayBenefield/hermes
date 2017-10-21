@@ -1,4 +1,6 @@
-export default ({ player, queue = {} }) => {
+export default ({ player, queue = {} } = {}) => {
+    if (!player) return [{ type: 'player-does-not-exist-message' }];
+
     if (player.id in queue) {
         return [
             {
