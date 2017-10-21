@@ -1,5 +1,15 @@
 # Work Log
 
+## #37
+
+Had to go through the motions and get everything setup to test adding all
+players to a game, which was a hassle, but I discovered a few things that needed
+changing like adding a test githook which is definitely needed. Next I need to
+start extracting profile information for each lead and updating it regularly so
+the information can be used for messages like player names for when a game is
+started. So next I'll start working on enriching leads.
+
+
 ## #36
 
 Had to sit down and create email accounts for 4 additional "players". Took a

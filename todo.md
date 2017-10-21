@@ -4,4 +4,3 @@
  - Flesh out the round-started domain action
  - Flesh out the candidates-submitted domain action
  - Flesh out the votes-submitted domain action
- - Convert data files to json
