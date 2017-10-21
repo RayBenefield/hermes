@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import admin from 'firebase-admin';
 import * as functions from 'firebase-functions';
 import configureFacebook from './lib/facebook';
@@ -16,7 +15,7 @@ const fb = configureFacebook(config.facebook);
 const context = configureContext({ db });
 const getContext = context.get;
 const saveContext = context.save;
-const enterDomain = _.extend(messages, domain);
+const enterDomain = { ...messages, ...domain };
 
 const channelRouter =
     configureChannelRouter({ fb, getContext, enterDomain, saveContext });
