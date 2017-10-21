@@ -57,8 +57,8 @@ export default {
             type: 'show-winner-message',
             payload: {
                 goal: { contents: '________, the latest Facebook craze.' },
-                winner: { contents: 'Being a motherfucking sorcerer.' },
-                player: { firstName: 'Jill' },
+                winner: { contents: '🏆 Being a motherfucking sorcerer.' },
+                player: { firstName: '🙋 Jill' },
             },
         },
         {

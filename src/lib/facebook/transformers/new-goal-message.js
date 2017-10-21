@@ -6,7 +6,7 @@ export default ({ card: { contents } }) => list([
         imageUrl: 'http://b.basemaps.cartocdn.com/dark_all/11/604/771.png',
     },
     {
-        title: '-',
-        subtitle: '-',
+        title: '🏆',
+        subtitle: '🙋',
     },
 ]);
