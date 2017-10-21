@@ -4,7 +4,6 @@
     "dependencies": {
         "es6-promisify": "^5.0.0",
         "express": "^4.15.4",
-        "fb-messenger": "^1.1.0",
         "firebase-admin": "~4.2.1",
         "firebase-functions": "^0.5.7",
         "js-yaml": "^3.10.0",

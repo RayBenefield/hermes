@@ -1,14 +1,20 @@
 /* eslint-disable max-lines */
 import _ from 'lodash';
 import yaml from 'js-yaml';
-import FbMessenger from 'fb-messenger';
-import promisify from 'es6-promisify';
+import request from 'request-promise-native';
 import * as transformers from './transformers'; // eslint-disable-line import/no-unresolved, import/extensions
 import { sequentialPromises } from '../utils';
 
 export default ({ verifytoken, accesstoken }) => {
-    const messenger = new FbMessenger(accesstoken);
-    const promiseMessage = promisify(messenger.sendMessage, messenger);
+    const promiseMessage = (recipient, message) => request({
+        url: 'https://graph.facebook.com/v2.6/me/messages',
+        qs: { access_token: accesstoken },
+        method: 'POST',
+        json: {
+            recipient: { id: recipient },
+            message,
+        },
+    });
 
     return {
         verifyToken: (query) => {
