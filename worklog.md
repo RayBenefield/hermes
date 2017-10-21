@@ -1,5 +1,13 @@
 # Work Log
 
+## #40
+
+Finished up the enriching of user profile data as well as used that data to
+populate the game started message that is being sent back to the lead. Also
+added in some logic that would filter out the lead player that this was being
+sent to.
+
+
 ## #39
 
 Did a bunch of refactoring to remove dependencies. I no longer require an

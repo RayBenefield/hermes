@@ -1,4 +1,3 @@
- - Enrich lead data with profile API
  - Flesh out the show-hand domain action
  - Flesh out the pick-card-for-slot domain action
  - Flesh out the vote domain action
