@@ -1,7 +1,6 @@
  - Create round side effects
  - Create discard pile for white deck
  - Create discard pile for black deck
- - Create black deck
  - Combine getContext, enterDomain, and saveContext into just domain
  - Create script to delete a game
  - Removed Object.values as it is only in Node 7.0 and not Node 6.11.1 on

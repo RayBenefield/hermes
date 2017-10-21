@@ -1,5 +1,14 @@
 # Work Log
 
+## #46
+
+Created a script to create the white and black decks for the game. Also setup
+the hand creation to grab random white cards for each player's hand. Still have
+to setup a discard pile to keep track of on a per game basis, but for the most
+part we should be good. Taking my deep block break. Be back in at most a few
+hours.
+
+
 ## #45
 
 Setup the initial round started trigger as well as setup a script that will
