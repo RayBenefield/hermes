@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import uuid from 'uuid/v4';
 import transmute from 'transmutation';
 
@@ -16,7 +17,8 @@ export default ({ db }) => ({
             .extend('game', ({ player }) =>
                 db.get(`games/${player.game}`))
             .extend('hand', ({ player, game }) =>
-                db.get(`hands/${game.id}/${player.id}`)),
+                db.get(`hands/${game.id}/${player.id}`)
+                    .then(h => _.values(h))),
     },
     save: {
         'welcome-message': transmute()
