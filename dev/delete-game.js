@@ -18,6 +18,7 @@ transmute({
     },
 })
     .extend('games', db.get('games'))
+    .do(({ games }) => { if (!games) throw new Error('No Games to Delete!'); })
     .extend('choices', ({ games }) => Object.values(games)
         .map(game => ({
             name: game.id,
@@ -36,4 +37,8 @@ transmute({
             .map(p => `players/facebook/${p.id}/game`)),
     ])
     .do(({ itemsToDelete }) => db.delete(itemsToDelete))
-    .then(() => process.exit(0));
+    .then(() => process.exit(0))
+    .catch((err) => {
+        console.log(err.message);
+        process.exit(0);
+    });
