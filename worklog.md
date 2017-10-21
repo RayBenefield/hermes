@@ -1,5 +1,15 @@
 # Work Log
 
+## #43
+
+Modified the populate queue dev script to read from the database and add
+directly from there instead using inquirer to allow the dev to choose users to
+add. Then also changed the property on the game object to notified players
+instead of accepted players to make more sense for the domain. Next I'll be
+making sure I create the things that need creating when a game starts next like
+a hand for each player and a round.
+
+
 ## #42
 
 WOOT!!! I got sending a message to every other player working properly after a

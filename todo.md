@@ -1,5 +1,7 @@
  - Removed Object.values as it is only in Node 7.0 and not Node 6.11.1 on
    Firebase Cloud Functions
+ - Give each player a hand
+ - Start a new round
  - Create a has utility function to remove lodash as a dependency
  - Flesh out the show-hand domain action
  - Flesh out the pick-card-for-slot domain action
