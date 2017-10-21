@@ -1,13 +1,5 @@
 /* eslint-disable max-lines */
 export default {
-    queue: () => [
-        {
-            type: 'queue-joined-message',
-            payload: {
-                numberOfPeople: 3,
-            },
-        },
-    ],
     start: () => [
         {
             type: 'game-started-message',

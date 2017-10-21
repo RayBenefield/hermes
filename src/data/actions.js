@@ -7,7 +7,7 @@ export default [
     {
         content_type: 'text',
         title: 'Join Queue',
-        payload: 'action: queue',
+        payload: 'action: join',
     },
     {
         content_type: 'text',
