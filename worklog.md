@@ -1,5 +1,13 @@
 # Work Log
 
+## #47
+
+Did some simple refactoring here and there. Moved triggers to their own files
+added some emoji to the goals. Added a show hand button to the goals. Added a
+pick payload to prepare for actual picking. Next I'll work on Round side effects
+which means making the black deck work.
+
+
 ## #46
 
 Created a script to create the white and black decks for the game. Also setup
