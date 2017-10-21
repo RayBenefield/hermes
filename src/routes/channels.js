@@ -16,7 +16,7 @@ export default ({ fb, getContext, enterDomain, saveContext }) => {
             .switch('action', enterDomain))
         .do(stream => Promise.all(
             stream.messages.map(msg =>
-                transmute(msg).switch('type', saveContext))
+                transmute({ ...msg, player: stream.player }).switch('type', saveContext))
         ))
         .extend('facebookMessages', fb.transform)
         // eslint-disable-next-line no-console

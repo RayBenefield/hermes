@@ -36,7 +36,7 @@ exports.gameStarted = functions.database.ref('/games/{id}')
                 payload,
             },
         ])
-        .extend('leads', ({ payload: { players, accepted_players: notified } }) =>
+        .extend('leads', ({ payload: { players, notified_players: notified } }) =>
             _.values(players).filter(({ id }) => !(id in notified)))
         .then(({ leads, messages: rawMessages }) => Promise.all(
             leads.map((lead) => {

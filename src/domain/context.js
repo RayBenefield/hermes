@@ -22,10 +22,14 @@ export default ({ db }) => ({
             .do(({ payload: { player } }) =>
                 db.set(`queue/${player.id}`, player)),
         'game-started-message': transmute()
-            .do(({ payload: { accepted_players, players } }) => {
+            .do(({ player, payload: { players } }) => {
                 const id = uuid();
-                db.set(`games/${id}`, { id, players, accepted_players });
-                db.delete(Object.values(players).map(player => `queue/${player.id}`));
+                db.set(`games/${id}`, {
+                    id,
+                    players,
+                    notified_players: { [player.id]: player },
+                });
+                db.delete(Object.values(players).map(p => `queue/${p.id}`));
             }),
     },
 });
