@@ -1,0 +1,8 @@
+{
+    "name": "hermes",
+    "description": "Cards Against Humanity in Facebook Messenger",
+    "dependencies": {
+        "firebase-admin": "~4.2.1"
+    },
+    "private": true
+}

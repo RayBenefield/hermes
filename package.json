@@ -21,6 +21,7 @@
         "npm": ">=1.4.3"
     },
     "scripts": {
+        "dev:populate-queue": "babel-node dev/populate-queue.js",
         "dev": "nodemon --watch src/ --exec 'npm run build && firebase serve --only functions -p 8080'",
         "prebuild": "npm run clean",
         "build": "babel 'src' --out-dir 'functions' --copy-files --ignore 'node_modules' && firebase functions:config:get > functions/.runtimeconfig.json",
