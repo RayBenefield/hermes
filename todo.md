@@ -1,3 +1,5 @@
+ - Removed Object.values as it is only in Node 7.0 and not Node 6.11.1 on
+   Firebase Cloud Functions
  - Create a has utility function to remove lodash as a dependency
  - Send game started message to all remaining players
  - Flesh out the show-hand domain action
