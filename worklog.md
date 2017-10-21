@@ -1,5 +1,17 @@
 # Work Log
 
+## #38
+
+Spent time to setup a dev script to populate the queue so it is easy to fill it
+with the test accounts and make a new game. Should speed up my development and
+will allow me to add more test scripts moving forward in the future. Done for
+the night, but tomorrow I will start working on actual game logic now that the
+queue system is actually working. At first I will start by enriching the lead
+data and adding it after every login. Night for now. I'm still on track to
+finish this weekend as long as I get 3 deep blocks in tomorrow and probably
+another 2-3 deep blocks on Sunday.
+
+
 ## #37
 
 Had to go through the motions and get everything setup to test adding all
