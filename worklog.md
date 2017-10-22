@@ -1,5 +1,11 @@
 # Work Log
 
+## #62
+
+Essentially the same as the prior session as I did a double. It was absolutely
+painful.
+
+
 ## #61
 
 I spent so long debugging the chain of events in order to properly get things
