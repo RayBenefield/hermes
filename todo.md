@@ -1,12 +1,11 @@
+ - Create script to populate candidates
  - Create discard pile for white deck
  - Create discard pile for black deck
  - Combine getContext, enterDomain, and saveContext into just domain
  - Removed Object.values as it is only in Node 7.0 and not Node 6.11.1 on
    Firebase Cloud Functions
  - Create a has utility function to remove lodash as a dependency
- - Flesh out the show-hand domain action
  - Flesh out the vote domain action
- - Flesh out the round-started domain action
  - Flesh out the candidates-submitted domain action
  - Flesh out the votes-submitted domain action
  - Make dev script to update persistent menu

@@ -1,5 +1,14 @@
 # Work Log
 
+## #51
+
+Did sort of a warm up session by just looking around and updating emojis on all
+of the cards to spruce it up a bit and add some motivation. Also started work on
+a script that will help me populate candidates quickly from player hands, this
+will be huge to speed up the manual testing portion. And then after that script
+I'll be working on the voting system. Of to a break for my first session.
+
+
 ## #50
 
 Got several scenarios with picking cards covered. Still gotta do some side
