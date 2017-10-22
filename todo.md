@@ -1,3 +1,5 @@
+ - Change payload to context
+ - Rethink the entire entities system
  - Fix the save Context system to not only be based on the message that it is
    getting and instead use the stream
  - Refactor out the common prompt steps in all of the dev scripts

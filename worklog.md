@@ -1,5 +1,17 @@
 # Work Log
 
+## #61
+
+I spent so long debugging the chain of events in order to properly get things
+working and it was just utterly painful. I need to re-think the entire
+entity/context system to make sure that it doesn't create this much pain moving
+forward. I ended up doing essentially a double session because it was
+complicated and I spent so much time debugging. Another problem is that the
+error logging just wasn't there and I had to manually track down each error
+without a stack trace which is utterly painful. It might be babel-node it might
+be something else. I just don't want to suffer like that again.
+
+
 ## #60
 
 Finally got the voting trigger started now I need to handle the voting domain
