@@ -13,6 +13,23 @@ export default ({ db }) => {
         whiteDeck: ['whiteDeck', whiteDeck],
         pick: ['pick', ({ payload: { pick } }) => whiteDeck[pick]],
     };
+    const save = {
+        playerInfo: [({ payload: lead }) => db.set(`players/${lead.platform}/${lead.id}`, lead)],
+        toQueue: [({ payload: { player } }) => db.set(`queue/${player.id}`, player)],
+        removalFromQueue: [({ payload: { players } }) => db.delete(Object.values(players).map(p => `queue/${p.id}`))],
+        newGame: [({ player, payload: { players } }) => {
+            const id = uuid();
+            db.set(`games/${id}`, {
+                id,
+                players,
+                notified_players: { [player.id]: player },
+            });
+        }],
+        selectedCandidate: [({ payload: { game, round, card }, player }) =>
+            db.set(`rounds/${game.id}/${round.id}/candidates/${player.id}`, card)],
+        removalOfCandidateFromHand: [({ payload: { game, card }, player }) =>
+            db.delete([`hands/${game.id}/${player.id}/cards/${card.id}`])],
+    };
 
     return {
         get: {
@@ -33,30 +50,15 @@ export default ({ db }) => {
                 .extend(...get.pick),
         },
         save: {
-            'welcome-message': transmute()
-            .do(({ payload: lead }) =>
-                db.set(`players/${lead.platform}/${lead.id}`, lead)),
-            'welcome-back-message': transmute()
-            .do(({ payload: { lead } }) =>
-                db.set(`players/${lead.platform}/${lead.id}`, lead)),
-            'queue-joined-message': transmute()
-            .do(({ payload: { player } }) =>
-                db.set(`queue/${player.id}`, player)),
+            'welcome-message': transmute().do(...save.playerInfo),
+            'welcome-back-message': transmute().do(...save.playerInfo),
+            'queue-joined-message': transmute().do(...save.toQueue),
             'game-started-message': transmute()
-            .do(({ player, payload: { players } }) => {
-                const id = uuid();
-                db.set(`games/${id}`, {
-                    id,
-                    players,
-                    notified_players: { [player.id]: player },
-                });
-                db.delete(Object.values(players).map(p => `queue/${p.id}`));
-            }),
+                .do(...save.newGame)
+                .do(...save.removalFromQueue),
             'card-selected-message': transmute()
-            .do(({ payload: { game, round, card }, player }) =>
-                db.set(`rounds/${game.id}/${round.id}/candidates/${player.id}`, card))
-            .do(({ payload: { game, card }, player }) =>
-                db.delete([`hands/${game.id}/${player.id}/cards/${card.id}`])),
+                .do(...save.selectedCandidate)
+                .do(...save.removalOfCandidateFromHand),
         },
     };
 };
