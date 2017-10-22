@@ -10,7 +10,9 @@ export default ({ db }) => ({
         allPlayers: ['players', db.get('players/facebook').then(_.values)],
         player: ['player', ({ lead }) => db.get(`players/${lead.platform}/${lead.id}`)],
         queue: ['queue', () => db.get('queue')],
-        game: ['game', ({ round, payload: { game } = {} }) => {
+        game: ['game', ({ games, round, payload: { game } = {} }) => {
+            if (game && games) return games.find(g => g.id === game);
+            if (round && games) return games.find(g => g.id === round.game);
             if (game) return db.get(`games/${game}`);
             if (round) return db.get(`games/${round.game}`);
             return undefined;
@@ -24,6 +26,9 @@ export default ({ db }) => ({
         players: ['players', ({ game: { players } }) => _.values(players)],
         unnotifiedPlayers: ['unnotifiedPlayers', ({ players, game: { notified_players: notified } }) =>
             players.filter(({ id }) => !(id in notified))],
+        latestRounds: ['rounds', ({ games }) => Promise.all(games
+            .map(g => [g.id, _.values(g.rounds)[0]])
+            .map(([game, round]) => db.get(`rounds/${game}/${round}`)))],
     },
     save: {
         queue: [({ queue }) => db.set('queue', queue)],
@@ -72,5 +77,10 @@ export default ({ db }) => ({
             ...(_.values(game.players)
                 .map(p => `players/facebook/${p.id}/games/${game.id}`)),
         ])],
+        candidatesForRound: [({ candidates, round }) => Promise.all(candidates
+            .map(candidate => Promise.all([
+                db.set(`rounds/${candidate.hand.game}/${round.id}/candidates/${candidate.hand.player}`, candidate.card),
+                db.delete([`hands/${candidate.hand.game}/${candidate.hand.player}/cards/${candidate.card.id}`]),
+            ])))],
     },
 });
