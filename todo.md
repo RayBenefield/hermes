@@ -1,4 +1,5 @@
- - Refactor triggers to use the new entities system
+ - Refactor the handsForPlayers saving system
+ - Refactor facebook to handle messages out to multiple leads
  - Refactor dev scripts to use the new entities system
  - Create trigger for voting
  - Add candidate list

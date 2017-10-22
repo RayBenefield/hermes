@@ -1,5 +1,18 @@
 # Work Log
 
+## #56
+
+Well the whole trigger system is now in compliance with the entities system
+which is awesome. I still need to refactor a complicated system used for hands
+for players, but it should be good. I also need to refactor the facebook library
+to be able to handle messages to multiple leads which includes transforming
+messages properly. But for now I should move on. I think I should still spend a
+session refactoring the dev scripts so I go into the final session with a
+completely cleaned up dev script system. Mainly because the dev scripts might
+just get more complicated due to being deeper in the relationship chain and use
+cases.
+
+
 ## #55
 
 Went in to start putting the entities system into place and ran into needing to
