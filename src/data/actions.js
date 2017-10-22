@@ -6,11 +6,6 @@ export default [
     },
     {
         content_type: 'text',
-        title: 'Show Candidates',
-        payload: 'action: candidates',
-    },
-    {
-        content_type: 'text',
         title: 'Vote',
         payload: 'action: vote',
     },
