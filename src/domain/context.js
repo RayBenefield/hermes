@@ -56,7 +56,7 @@ export default ({ db }) => {
             .do(({ payload: { game, round, card }, player }) =>
                 db.set(`rounds/${game.id}/${round.id}/candidates/${player.id}`, card))
             .do(({ payload: { game, card }, player }) =>
-                db.delete([`hands/${game.id}/${player.id}/${card.id}`], card)),
+                db.delete([`hands/${game.id}/${player.id}/cards/${card.id}`])),
         },
     };
 };
