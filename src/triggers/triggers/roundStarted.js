@@ -16,6 +16,7 @@ export default ({ db, fb }) => transmute()
         },
     ])
     .extend('leads', ({ game: { players } }) => _.values(players))
+    .do(({ game, round }) => db.push(`games/${game.id}/rounds`, round.id))
     .do(({ game, round, goal }) => db.set(`rounds/${game.id}/${round.id}/card`, goal))
     .do(({ leads, messages: rawMessages }) => Promise.all(
         leads.map((lead) => {

@@ -31,5 +31,5 @@ export default ({ db, fb }) => transmute()
         .map(({ player, hand }) => db.set(`hands/${game.id}/${player.id}`, hand))))
     .do(({ game }) => {
         const id = uuid();
-        return db.set(`rounds/${game.id}/${id}`, { id });
+        return db.set(`rounds/${game.id}/${id}`, { id, game: game.id });
     });
