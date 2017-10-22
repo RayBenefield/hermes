@@ -1,5 +1,4 @@
 /* eslint-disable max-lines */
-import _ from 'lodash';
 import uuid from 'uuid/v4';
 import transmute from 'transmutation';
 import whiteDeck from '../data/white-deck.json';
@@ -21,8 +20,7 @@ export default ({ db }) => ({
             .extend('round', ({ game, payload: { round } }) =>
                 db.get(`rounds/${game.id}/${round}`))
             .extend('hand', ({ player, game }) =>
-                db.get(`hands/${game.id}/${player.id}`)
-                    .then(h => _.values(h))),
+                db.get(`hands/${game.id}/${player.id}`)),
         pick: transmute()
             .extend('player', ({ lead }) =>
                 db.get(`players/${lead.platform}/${lead.id}`))

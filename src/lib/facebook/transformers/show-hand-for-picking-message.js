@@ -1,7 +1,8 @@
+import _ from 'lodash';
 import carousel from './carousel';
 
 export default ({ game, round, cards }) => carousel(
-    cards.map(({ id, contents }) => ({
+    _.values(cards).map(({ id, contents }) => ({
         title: `🃏 ${contents}`,
         image_url: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
         buttons: [

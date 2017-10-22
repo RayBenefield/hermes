@@ -6,7 +6,7 @@ export default ({ player = {}, game, round = {}, hand }) => {
                 payload: {
                     game,
                     round,
-                    cards: hand,
+                    cards: hand.cards,
                 },
             },
         ];
@@ -17,7 +17,7 @@ export default ({ player = {}, game, round = {}, hand }) => {
             {
                 type: 'show-hand-message',
                 payload: {
-                    cards: hand,
+                    cards: hand.cards,
                 },
             },
         ];
@@ -30,7 +30,7 @@ export default ({ player = {}, game, round = {}, hand }) => {
             payload: {
                 game,
                 round,
-                cards: hand,
+                cards: hand.cards,
             },
         },
     ];

@@ -28,7 +28,11 @@ export default ({ db, fb }) => transmute()
             player,
             hand: hand.reduce((h, c) => Object.assign(h, { [c.id]: c }), {}),
         }))
-        .map(({ player, hand }) => db.set(`hands/${game.id}/${player.id}`, hand))))
+        .map(({ player, hand }) => db.set(`hands/${game.id}/${player.id}`, {
+            game: game.id,
+            player: player.id,
+            cards: hand,
+        }))))
     .do(({ game }) => {
         const id = uuid();
         return db.set(`rounds/${game.id}/${id}`, { id, game: game.id });

@@ -4,7 +4,7 @@ import showHand from 'src/domain/services/hand'; // eslint-disable-line import/n
 describe('Show Hand', (it) => {
     it('should show the player their hand to pick a card', (assert) => {
         // Given
-        const hand = {
+        const hand = { cards: {
             0: { contents: 'Being a motherfucking sorcerer.' },
             1: { contents: 'Winking at old people.' },
             2: { contents: 'THE KOOL-AID MAN.' },
@@ -15,7 +15,7 @@ describe('Show Hand', (it) => {
             7: { contents: 'Morgan Freeman\'s voice.' },
             8: { contents: 'Racism.' },
             9: { contents: 'Daddy issues.' },
-        };
+        } };
         const game = {};
         const round = {};
 
@@ -29,7 +29,7 @@ describe('Show Hand', (it) => {
                 payload: {
                     game,
                     round,
-                    cards: hand,
+                    cards: hand.cards,
                 },
             },
         ]);
@@ -38,7 +38,7 @@ describe('Show Hand', (it) => {
     it('should show the player their hand without picking a card', (assert) => {
         // Given
         const player = { id: 123456 };
-        const hand = {
+        const hand = { cards: {
             0: { contents: 'Being a motherfucking sorcerer.' },
             1: { contents: 'Winking at old people.' },
             2: { contents: 'THE KOOL-AID MAN.' },
@@ -49,7 +49,7 @@ describe('Show Hand', (it) => {
             7: { contents: 'Morgan Freeman\'s voice.' },
             8: { contents: 'Racism.' },
             9: { contents: 'Daddy issues.' },
-        };
+        } };
         const game = {};
         const round = { candidates: { [player.id]: {} } };
 
@@ -60,9 +60,7 @@ describe('Show Hand', (it) => {
         assert.deepEqual(messages, [
             {
                 type: 'show-hand-message',
-                payload: {
-                    cards: hand,
-                },
+                payload: hand,
             },
         ]);
     });
