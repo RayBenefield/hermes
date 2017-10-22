@@ -1,5 +1,14 @@
 # Work Log
 
+## #60
+
+Finally got the voting trigger started now I need to handle the voting domain
+action in order to start creating a ranked list. This will probably involve some
+interesting things and I'm looking forward to it. After that the final thing
+will be creating a winner trigger and that will start a new round and hopefully
+properly start the entire cycle all over again.
+
+
 ## #59
 
 Got slowly back into things by trying to make the voting system trigger properly

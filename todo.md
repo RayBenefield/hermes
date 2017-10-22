@@ -3,7 +3,6 @@
  - Refactor out the common prompt steps in all of the dev scripts
  - Refactor the handsForPlayers saving system
  - Refactor facebook to handle messages out to multiple leads
- - Create trigger for voting
  - Create discard pile for white deck
  - Create discard pile for black deck
  - Combine getContext, enterDomain, and saveContext into just domain
