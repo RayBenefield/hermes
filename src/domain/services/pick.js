@@ -1,6 +1,10 @@
-export default ({ whiteDeck, pick }) => [
+export default ({ whiteDeck, game, round, pick }) => [
     {
         type: 'card-selected-message',
-        payload: whiteDeck[pick.id],
+        payload: {
+            game,
+            round,
+            card: whiteDeck[pick.id],
+        },
     },
 ];

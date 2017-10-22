@@ -6,15 +6,21 @@ describe('Pick Card', (it) => {
         // Given
         const pick = { id: 0, contents: 'White Card' };
         const whiteDeck = [pick];
+        const game = {};
+        const round = {};
 
         // When
-        const messages = pickCard({ whiteDeck, pick });
+        const messages = pickCard({ game, round, whiteDeck, pick });
 
         // Then
         assert.deepEqual(messages, [
             {
                 type: 'card-selected-message',
-                payload: pick,
+                payload: {
+                    game,
+                    round,
+                    card: pick,
+                },
             },
         ]);
     });

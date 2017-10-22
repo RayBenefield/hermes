@@ -24,6 +24,8 @@ export default ({ db }) => ({
                 db.get(`hands/${game.id}/${player.id}`)
                     .then(h => _.values(h))),
         pick: transmute()
+            .extend('player', ({ lead }) =>
+                db.get(`players/${lead.platform}/${lead.id}`))
             .extend('game', ({ payload: { game } }) =>
                 db.get(`games/${game}`))
             .extend('round', ({ game, payload: { round } }) =>
@@ -51,5 +53,8 @@ export default ({ db }) => ({
                 });
                 db.delete(Object.values(players).map(p => `queue/${p.id}`));
             }),
+        'card-selected-message': transmute()
+            .do(({ payload: { game, round, card }, player }) =>
+                db.set(`rounds/${game.id}/${round.id}/candidates/${player.id}`, card)),
     },
 });
