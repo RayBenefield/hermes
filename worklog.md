@@ -1,5 +1,14 @@
 # Work Log
 
+## #52
+
+This is a complicated dev script that I'm working on as it involves a lot of
+relationships. I've got it selecting the goal to populate and now asking which
+players to populate with and then I need to grab their hands and remove a random
+card from it and add it as a candidate for that round. Tis sooo much work, but
+it should be valuable.
+
+
 ## #51
 
 Did sort of a warm up session by just looking around and updating emojis on all
