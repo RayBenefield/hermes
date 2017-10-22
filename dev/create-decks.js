@@ -16,6 +16,7 @@ transmute({
         })))
     .extend('black', ({ raw }) => raw
         .filter(c => c.cardType === 'Q')
+        .filter(c => c.numAnswers === 1)
         .map((c, id) => ({
             id,
             contents: c.text,
