@@ -1,3 +1,4 @@
+ - Refactor dev scripts to use the new entities system
  - Create trigger for voting
  - Add candidate list
  - Create discard pile for white deck

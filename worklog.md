@@ -1,5 +1,15 @@
 # Work Log
 
+## #54
+
+Did some serious re-thinking of how I'm accessing the entities database both in
+gathering context as well as saving side effects and found a much cleaner way to
+write the system and I'm actually very happy with how it came out. I think
+eventually it will lead to a very strong way to define domain relationships in
+the far future, but that is kind of too forward thinking for now. Just going to
+take my deep block break so I'll be back in like an 2.5 hours.
+
+
 ## #53
 
 Finally finished this ridiculously complicate dev script to populate random
