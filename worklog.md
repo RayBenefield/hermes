@@ -1,5 +1,14 @@
 # Work Log
 
+## #50
+
+Got several scenarios with picking cards covered. Still gotta do some side
+effects for picking a card, especially for voting and stuff, but I'm really
+close now. Going to finish for the night and I'll pick all this up in the
+morning. The domain is going smoothly, I should easily be able to finish the
+core logic tomorrow with 3 deep blocks available. Looking forward to it.
+
+
 ## #49
 
 Setup the system to handle multiple games now and setting up all of the
