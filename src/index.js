@@ -28,12 +28,12 @@ exports.channels = functions.https.onRequest(channelRouter);
 
 exports.gameStarted = functions.database.ref('/games/{id}')
     .onCreate(event => triggers.gameStarted({
-        game: event.data.val(),
         action: 'start',
+        game: event.data.val(),
     }));
 
 exports.roundStarted = functions.database.ref('/rounds/{gameId}/{id}')
     .onCreate(event => triggers.roundStarted({
-        round: { id: event.params.id },
-        game: { id: event.params.gameId },
+        action: 'round',
+        round: event.data.val(),
     }));
