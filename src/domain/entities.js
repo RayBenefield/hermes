@@ -5,7 +5,11 @@ export default ({ db }) => ({
     get: {
         player: ['player', ({ lead }) => db.get(`players/${lead.platform}/${lead.id}`)],
         queue: ['queue', () => db.get('queue')],
-        game: ['game', ({ payload: { game } }) => db.get(`games/${game}`)],
+        game: ['game', ({ round, payload: { game } = {} }) => {
+            if (game) return db.get(`games/${game}`);
+            if (round) return db.get(`games/${round.game}`);
+            return undefined;
+        }],
         round: ['round', ({ game, payload: { round } }) => db.get(`rounds/${game.id}/${round}`)],
         hand: ['hand', ({ player, game }) => db.get(`hands/${game.id}/${player.id}`)],
         whiteDeck: ['whiteDeck', whiteDeck],
