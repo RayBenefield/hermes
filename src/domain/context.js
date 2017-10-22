@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 import _ from 'lodash';
 import uuid from 'uuid/v4';
 import transmute from 'transmutation';
@@ -17,11 +18,18 @@ export default ({ db }) => ({
                 db.get(`players/${lead.platform}/${lead.id}`))
             .extend('game', ({ payload: { game } }) =>
                 db.get(`games/${game}`))
+            .extend('round', ({ game, payload: { round } }) =>
+                db.get(`rounds/${game.id}/${round}`))
             .extend('hand', ({ player, game }) =>
                 db.get(`hands/${game.id}/${player.id}`)
                     .then(h => _.values(h))),
         pick: transmute()
-            .extend('whiteDeck', whiteDeck),
+            .extend('game', ({ payload: { game } }) =>
+                db.get(`games/${game}`))
+            .extend('round', ({ game, payload: { round } }) =>
+                db.get(`rounds/${game.id}/${round}`))
+            .extend('whiteDeck', whiteDeck)
+            .extend('pick', ({ payload: { pick } }) => whiteDeck[pick]),
     },
     save: {
         'welcome-message': transmute()

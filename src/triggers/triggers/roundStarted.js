@@ -5,12 +5,13 @@ import blackDeck from '../../data/black-deck.json';
 export default ({ db, fb }) => transmute()
     .extend('game', ({ game: { id } }) => db.get(`games/${id}`))
     .extend('goal', () => blackDeck.sort(() => 0.5 - Math.random()).slice(0, 1)[0])
-    .extend('messages', ({ game, goal }) => [
+    .extend('messages', ({ round, game, goal }) => [
         {
             type: 'new-goal-message',
             payload: {
-                card: goal,
                 game,
+                round,
+                card: goal,
             },
         },
     ])

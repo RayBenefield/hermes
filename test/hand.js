@@ -16,15 +16,19 @@ describe('Show Hand', (it) => {
             8: { contents: 'Racism.' },
             9: { contents: 'Daddy issues.' },
         };
+        const game = {};
+        const round = {};
 
         // When
-        const messages = showHand({ hand });
+        const messages = showHand({ game, round, hand });
 
         // Then
         assert.deepEqual(messages, [
             {
                 type: 'show-hand-message',
                 payload: {
+                    game,
+                    round,
                     cards: hand,
                 },
             },
