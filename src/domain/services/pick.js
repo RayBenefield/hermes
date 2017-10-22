@@ -39,8 +39,10 @@ export default ({ player = {}, whiteDeck, game, round = {}, pick }) => {
 
     if (_.values(round.candidates).length === 4) {
         messages.push({
-            type: 'show-ranked-list',
+            type: 'candidates-ready-message',
             payload: {
+                round,
+                pick,
                 unranked: _.values(round.candidates),
             },
         });

@@ -86,5 +86,15 @@ export default ({ db }) => ({
             db.set(`rounds/${candidate.game}/${round.id}/candidates/${candidate.player}`, candidate.card)],
         removedCandidateFromHand: [({ candidate }) =>
             db.delete([`hands/${candidate.game}/${candidate.player}/cards/${candidate.card.id}`])],
+        candidateList: [({ player, payload: { pick, round } }) =>
+            db.set(`candidates/${round.game}/${round.id}/`, {
+                notified_players: {
+                    [player.id]: true,
+                },
+                cards: {
+                    ...round.candidates,
+                    [player.id]: pick,
+                },
+            })],
     },
 });

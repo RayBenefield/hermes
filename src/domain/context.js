@@ -33,6 +33,8 @@ export default ({ db }) => {
             'card-selected-message': transmute()
                 .do(...save.selectedCandidate)
                 .do(...save.removalOfCandidateFromHand),
+            'candidates-ready-message': transmute()
+                .do(...save.candidateList),
         },
     };
 };

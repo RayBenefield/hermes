@@ -82,8 +82,10 @@ describe('Pick Card', (it) => {
                 },
             },
             {
-                type: 'show-ranked-list',
+                type: 'candidates-ready-message',
                 payload: {
+                    round,
+                    pick,
                     unranked: [
                         pick,
                         pick,
