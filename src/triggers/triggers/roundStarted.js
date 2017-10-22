@@ -1,12 +1,14 @@
 import _ from 'lodash';
 import transmute from 'transmutation';
+import blackDeck from '../../data/black-deck.json';
 
 export default ({ db, fb }) => transmute()
-    .extend('messages', () => [
+    .extend('goal', () => blackDeck.sort(() => 0.5 - Math.random()).slice(0, 1)[0])
+    .extend('messages', ({ goal }) => [
         {
             type: 'new-goal-message',
             payload: {
-                card: { contents: '________, the latest Facebook craze.' },
+                card: goal,
             },
         },
     ])
