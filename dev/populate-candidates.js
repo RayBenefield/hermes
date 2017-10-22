@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import transmute from 'transmutation';
 import { prompt } from 'inquirer';
 import admin from 'firebase-admin';
@@ -37,10 +36,6 @@ const getPlayerAnswers = ['playerAnswers', ({ playerPrompts }) =>
 const getHands = ['hands', ({ game, playerAnswers: { playersToChooseFor } }) => Promise.all(
         playersToChooseFor.map(player =>
             db.get(`hands/${game.id}/${player}`)))];
-const getCandidates = ['candidates', ({ hands }) => hands.map(hand => ({
-    hand,
-    card: _.values(hand.cards).sort(() => 0.5 - Math.random()).slice(0, 1)[0],
-}))];
 
 transmute({
     template: {
@@ -67,10 +62,15 @@ transmute({
     .extend(...getPlayerPrompts)
     .extend(...getPlayerAnswers)
     .extend(...getHands)
-    .extend(...getCandidates)
-    .do(({ candidates }) => {
+    .extend(...get.randomCandidates)
+    .do(({ round, candidates }) => {
         console.log('Picked the following cards:');
         candidates.map(c => console.log(c.card.contents));
+        return Promise.all(
+            candidates.map(candidate => Promise.all([
+                save.candidateForRound[0]({ candidate, round }),
+                save.removedCandidateFromHand[0]({ candidate }),
+            ]))
+        );
     })
-    .do(...save.candidatesForRound)
     .then(() => process.exit(0));

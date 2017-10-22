@@ -29,6 +29,11 @@ export default ({ db }) => ({
         latestRounds: ['rounds', ({ games }) => Promise.all(games
             .map(g => [g.id, _.values(g.rounds)[0]])
             .map(([game, round]) => db.get(`rounds/${game}/${round}`)))],
+        randomCandidates: ['candidates', ({ hands }) => hands.map(hand => ({
+            game: hand.game,
+            player: hand.player,
+            card: _.values(hand.cards).sort(() => 0.5 - Math.random()).slice(0, 1)[0],
+        }))],
     },
     save: {
         queue: [({ queue }) => db.set('queue', queue)],
@@ -77,10 +82,9 @@ export default ({ db }) => ({
             ...(_.values(game.players)
                 .map(p => `players/facebook/${p.id}/games/${game.id}`)),
         ])],
-        candidatesForRound: [({ candidates, round }) => Promise.all(candidates
-            .map(candidate => Promise.all([
-                db.set(`rounds/${candidate.hand.game}/${round.id}/candidates/${candidate.hand.player}`, candidate.card),
-                db.delete([`hands/${candidate.hand.game}/${candidate.hand.player}/cards/${candidate.card.id}`]),
-            ])))],
+        candidateForRound: [({ candidate, round }) =>
+            db.set(`rounds/${candidate.game}/${round.id}/candidates/${candidate.player}`, candidate.card)],
+        removedCandidateFromHand: [({ candidate }) =>
+            db.delete([`hands/${candidate.game}/${candidate.player}/cards/${candidate.card.id}`])],
     },
 });
