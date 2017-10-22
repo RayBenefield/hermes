@@ -6,6 +6,7 @@ import blackDeck from '../data/black-deck.json';
 
 export default ({ db }) => ({
     get: {
+        allGames: ['games', db.get('games').then(_.values)],
         allPlayers: ['players', db.get('players/facebook').then(_.values)],
         player: ['player', ({ lead }) => db.get(`players/${lead.platform}/${lead.id}`)],
         queue: ['queue', () => db.get('queue')],
@@ -64,5 +65,12 @@ export default ({ db }) => ({
             const id = uuid();
             return db.set(`rounds/${game.id}/${id}`, { id, game: game.id });
         }],
+        deletedGame: [({ game }) => db.delete([
+            `games/${game.id}`,
+            `hands/${game.id}`,
+            `rounds/${game.id}`,
+            ...(_.values(game.players)
+                .map(p => `players/facebook/${p.id}/games/${game.id}`)),
+        ])],
     },
 });
