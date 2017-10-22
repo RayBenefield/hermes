@@ -1,4 +1,3 @@
- - Create round side effects
  - Create discard pile for white deck
  - Create discard pile for black deck
  - Combine getContext, enterDomain, and saveContext into just domain
@@ -6,7 +5,6 @@
    Firebase Cloud Functions
  - Create a has utility function to remove lodash as a dependency
  - Flesh out the show-hand domain action
- - Flesh out the pick-card-for-slot domain action
  - Flesh out the vote domain action
  - Flesh out the round-started domain action
  - Flesh out the candidates-submitted domain action

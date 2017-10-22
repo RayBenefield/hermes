@@ -1,5 +1,14 @@
 # Work Log
 
+## #48
+
+Fixed up the round side effects and I am now storing the goal for the round that
+is picked from the black deck. I also setup the pick action to work
+appropriately. I still need to save the side effects for the pick action to
+start the candidate voting process. I think next round I need to invest in
+managing multiple games so I can scale a bit easier.
+
+
 ## #47
 
 Did some simple refactoring here and there. Moved triggers to their own files
