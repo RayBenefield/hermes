@@ -21,6 +21,7 @@
         "npm": ">=1.4.3"
     },
     "scripts": {
+        "dev:populate-candidates": "babel-node dev/populate-candidates.js",
         "dev:create-decks": "babel-node dev/create-decks.js",
         "dev:delete-game": "babel-node dev/delete-game.js",
         "dev:populate-queue": "babel-node dev/populate-queue.js",

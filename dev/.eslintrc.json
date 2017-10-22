@@ -1,6 +1,8 @@
 {
     "extends": "../.eslintrc.json",
     "rules": {
-        "no-console": 0
+        "no-console": 0,
+        "max-lines": 0,
+        "max-len": 0
     }
 }
