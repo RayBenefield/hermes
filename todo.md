@@ -1,4 +1,5 @@
- - Create script to populate candidates
+ - Create trigger for voting
+ - Add candidate list
  - Create discard pile for white deck
  - Create discard pile for black deck
  - Combine getContext, enterDomain, and saveContext into just domain

@@ -1,5 +1,16 @@
 # Work Log
 
+## #53
+
+Finally finished this ridiculously complicate dev script to populate random
+picks for each player selected. But it works now and I'm happy with it. Next
+thing to do is actually create the candidate list to trigger the start of
+voting. But I think I really need to spend some time trying to refactor the dev
+scripts, the context, and a couple other things mainly dealing with cleaning up
+fetching and storing in the database because there is a lot of very difficult to
+read closures everywhere.
+
+
 ## #52
 
 This is a complicated dev script that I'm working on as it involves a lot of
