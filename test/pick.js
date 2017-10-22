@@ -24,4 +24,28 @@ describe('Pick Card', (it) => {
             },
         ]);
     });
+
+    it('should not let a player add a new candidate', (assert) => {
+        // Given
+        const player = { id: 123456 };
+        const pick = { id: 0, contents: 'White Card' };
+        const whiteDeck = [pick];
+        const game = {};
+        const round = { candidates: { [player.id]: pick } };
+
+        // When
+        const messages = pickCard({ player, game, round, whiteDeck, pick });
+
+        // Then
+        assert.deepEqual(messages, [
+            {
+                type: 'card-already-selected-message',
+                payload: {
+                    game,
+                    round,
+                    card: pick,
+                },
+            },
+        ]);
+    });
 });
