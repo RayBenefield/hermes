@@ -1,8 +1,9 @@
+ - Fix the save Context system to not only be based on the message that it is
+   getting and instead use the stream
  - Refactor out the common prompt steps in all of the dev scripts
  - Refactor the handsForPlayers saving system
  - Refactor facebook to handle messages out to multiple leads
  - Create trigger for voting
- - Add candidate list
  - Create discard pile for white deck
  - Create discard pile for black deck
  - Combine getContext, enterDomain, and saveContext into just domain

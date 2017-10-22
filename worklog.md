@@ -1,5 +1,12 @@
 # Work Log
 
+## #59
+
+Got slowly back into things by trying to make the voting system trigger properly
+with a candidates list. Took a bit to figure out something, but I gotz it now.
+Next is to create a new database trigger for the voting system.
+
+
 ## #58
 
 Refactored the populate candidates script... I was definitely right in how
