@@ -34,7 +34,7 @@ transmute({
         `hands/${game.id}`,
         `rounds/${game.id}`,
         ...(Object.values(game.players)
-            .map(p => `players/facebook/${p.id}/game`)),
+            .map(p => `players/facebook/${p.id}/games/${game.id}`)),
     ]))))
     .do(({ itemsToDelete }) => db.delete(itemsToDelete))
     .then(() => process.exit(0))

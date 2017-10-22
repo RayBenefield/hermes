@@ -15,8 +15,8 @@ export default ({ db }) => ({
         hand: transmute()
             .extend('player', ({ lead }) =>
                 db.get(`players/${lead.platform}/${lead.id}`))
-            .extend('game', ({ player }) =>
-                db.get(`games/${player.game}`))
+            .extend('game', ({ payload: { game } }) =>
+                db.get(`games/${game}`))
             .extend('hand', ({ player, game }) =>
                 db.get(`hands/${game.id}/${player.id}`)
                     .then(h => _.values(h))),

@@ -20,7 +20,7 @@ export default ({ db, fb }) => transmute()
     .do(({ game, payload: { players } }) =>
         db.set(`games/${game.id}/notified_players`, players))
     .do(({ game, payload: { players } }) => Promise.all(_.values(players)
-        .map(p => db.set(`players/facebook/${p.id}/game`, game.id))))
+        .map(p => db.set(`players/facebook/${p.id}/games/${game.id}`))))
     .do(({ game, payload: { players } }) => Promise.all(_.values(players)
         .map(p => ({ player: p }))
         .map(p => ({ ...p, hand: whiteDeck.sort(() => 0.5 - Math.random()).slice(0, 10) }))
