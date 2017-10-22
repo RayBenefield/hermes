@@ -7,5 +7,4 @@ export default ({ card: pick }) => [
         title: pick.contents,
         image: 'http://homepages.neiu.edu/~whuang2/cs300/images/white.png',
     }),
-    text({ text: 'We\'ll let you know when your adversaries have selected their candidates.' }),
 ];
