@@ -2,7 +2,7 @@ import transmute from 'transmutation';
 import configureEntities from '../../domain/entities';
 
 export default ({ db, fb }) => {
-    const { get } = configureEntities({ db });
+    const { get, save } = configureEntities({ db });
 
     return transmute()
         .extend(...get.game)
@@ -15,8 +15,8 @@ export default ({ db, fb }) => {
                 payload: { game, round, card },
             },
         ])
-        .do(({ game, round }) => db.push(`games/${game.id}/rounds`, round.id))
-        .do(({ game, round, card }) => db.set(`rounds/${game.id}/${round.id}/card`, card))
+        .do(...save.roundForGame)
+        .do(...save.goalForRound)
         .do(({ players, messages }) => Promise.all(
             players.map(lead => transmute({ lead, messages })
                 .extend('facebookMessages', fb.transform)
