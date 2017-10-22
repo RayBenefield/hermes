@@ -4,7 +4,7 @@ import transmute from 'transmutation';
 import whiteDeck from '../data/white-deck.json';
 
 export default ({ db }) => {
-    const entities = {
+    const get = {
         player: ['player', ({ lead }) => db.get(`players/${lead.platform}/${lead.id}`)],
         queue: ['queue', () => db.get('queue')],
         game: ['game', ({ payload: { game } }) => db.get(`games/${game}`)],
@@ -16,21 +16,21 @@ export default ({ db }) => {
 
     return {
         get: {
-            login: transmute().extend(...entities.player),
+            login: transmute().extend(...get.player),
             join: transmute()
-                .extend(...entities.player)
-                .extend(...entities.queue),
+                .extend(...get.player)
+                .extend(...get.queue),
             hand: transmute()
-                .extend(...entities.player)
-                .extend(...entities.game)
-                .extend(...entities.round)
-                .extend(...entities.hand),
+                .extend(...get.player)
+                .extend(...get.game)
+                .extend(...get.round)
+                .extend(...get.hand),
             pick: transmute()
-                .extend(...entities.player)
-                .extend(...entities.game)
-                .extend(...entities.round)
-                .extend(...entities.whiteDeck)
-                .extend(...entities.pick),
+                .extend(...get.player)
+                .extend(...get.game)
+                .extend(...get.round)
+                .extend(...get.whiteDeck)
+                .extend(...get.pick),
         },
         save: {
             'welcome-message': transmute()
