@@ -12,8 +12,8 @@ const db = configureDb(admin.database());
 
 transmute({
     template: {
-        type: 'list',
-        name: 'gameToDelete',
+        type: 'checkbox',
+        name: 'gamesToDelete',
         message: 'Which game should we delete?',
     },
 })
@@ -23,19 +23,19 @@ transmute({
         .map(game => ({
             name: game.id,
             value: game.id,
+            checked: true,
         }))
     )
     .extend('prompts', ({ template, choices }) => [{ ...template, choices }])
     .extend('answers', ({ prompts }) => prompt(prompts))
-    .extend('gameToDelete', ({ answers: { gameToDelete } }) => gameToDelete)
-    .extend('game', ({ games, gameToDelete }) => games[gameToDelete])
-    .extend('itemsToDelete', ({ game }) => [
+    .extend('gamesToDelete', ({ games, answers: { gamesToDelete } }) => gamesToDelete.map(id => games[id]))
+    .extend('itemsToDelete', ({ gamesToDelete }) => [].concat(...(gamesToDelete.map(game => [
         `games/${game.id}`,
         `hands/${game.id}`,
         `rounds/${game.id}`,
         ...(Object.values(game.players)
             .map(p => `players/facebook/${p.id}/game`)),
-    ])
+    ]))))
     .do(({ itemsToDelete }) => db.delete(itemsToDelete))
     .then(() => process.exit(0))
     .catch((err) => {
