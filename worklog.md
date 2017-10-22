@@ -1,5 +1,17 @@
 # Work Log
 
+## #55
+
+Went in to start putting the entities system into place and ran into needing to
+refactor the triggers properly. I believe I'll eventually have the triggers go
+through the same backbone as the rest of the system, but right now I have to
+slowly refactor it into a clean entities system. The plan is to use the "action"
+and "payload" system to properly setup the context and then use the domain to
+determine the messages and then divulge out into side effects. Seems to be an
+emerging pattern, that will happen soon. For now, probably a whole nother round
+of refactoring.
+
+
 ## #54
 
 Did some serious re-thinking of how I'm accessing the entities database both in
