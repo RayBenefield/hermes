@@ -1,5 +1,16 @@
 # Work Log
 
+## #49
+
+Setup the system to handle multiple games now and setting up all of the
+individual actions to be game and round based where necessary so we can start
+handling situations where a player tries to pick from early in the chat history.
+Next I'll be working on making sure that we are collecting all of the candidates
+that are necessary for a vote and if that goes smoothly then I'll start working
+on the voting system. The next session is the last in this deep block until
+tomorrow morning. Hopefully I get a good amount done.
+
+
 ## #48
 
 Fixed up the round side effects and I am now storing the goal for the round that

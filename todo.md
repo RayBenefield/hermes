@@ -1,3 +1,4 @@
+ - Check for gathering all of the candidates
  - Create discard pile for white deck
  - Create discard pile for black deck
  - Combine getContext, enterDomain, and saveContext into just domain
