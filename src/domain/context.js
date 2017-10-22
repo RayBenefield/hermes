@@ -26,7 +26,7 @@ export default ({ db }) => {
         save: {
             'welcome-message': transmute().do(...save.playerInfo),
             'welcome-back-message': transmute().do(...save.playerInfo),
-            'queue-joined-message': transmute().do(...save.toQueue),
+            'queue-joined-message': transmute().do(...save.playerToQueue),
             'game-started-message': transmute()
                 .do(...save.newGame)
                 .do(...save.removalFromQueue),

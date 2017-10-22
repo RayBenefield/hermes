@@ -6,6 +6,7 @@ import blackDeck from '../data/black-deck.json';
 
 export default ({ db }) => ({
     get: {
+        allPlayers: ['players', db.get('players/facebook').then(_.values)],
         player: ['player', ({ lead }) => db.get(`players/${lead.platform}/${lead.id}`)],
         queue: ['queue', () => db.get('queue')],
         game: ['game', ({ round, payload: { game } = {} }) => {
@@ -24,8 +25,9 @@ export default ({ db }) => ({
             players.filter(({ id }) => !(id in notified))],
     },
     save: {
+        queue: [({ queue }) => db.set('queue', queue)],
         playerInfo: [({ payload: lead }) => db.set(`players/${lead.platform}/${lead.id}`, lead)],
-        toQueue: [({ payload: { player } }) => db.set(`queue/${player.id}`, player)],
+        playerToQueue: [({ payload: { player } }) => db.set(`queue/${player.id}`, player)],
         removalFromQueue: [({ payload: { players } }) => db.delete(_.values(players).map(p => `queue/${p.id}`))],
         newGame: [({ player, payload: { players } }) => {
             const id = uuid();
