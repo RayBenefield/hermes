@@ -1,6 +1,6 @@
+ - Refactor out the common prompt steps in all of the dev scripts
  - Refactor the handsForPlayers saving system
  - Refactor facebook to handle messages out to multiple leads
- - Refactor dev scripts to use the new entities system
  - Create trigger for voting
  - Add candidate list
  - Create discard pile for white deck

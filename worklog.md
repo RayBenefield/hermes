@@ -1,5 +1,16 @@
 # Work Log
 
+## #58
+
+Refactored the populate candidates script... I was definitely right in how
+complicated it was and it really needed to happen and I snagged a couple of new
+entity management functions out of it like handling candidates. But now I'm good
+and I don't want to touch it no more. Next is to tackle the domain again and
+handle the voting system. Should be fun and hopefully next block I'll have a
+finished domain that I can play from the ground up. Looking forward to it, for
+now it is break time.
+
+
 ## #57
 
 Cleaned up two of the dev scripts with the entity system. The biggest most
