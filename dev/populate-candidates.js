@@ -57,7 +57,6 @@ transmute({
     .extend(...getAnswers)
     .extend(...getRound)
     .extend(...get.game)
-    .log()
     .extend(...getPlayerChoices)
     .extend(...getPlayerPrompts)
     .extend(...getPlayerAnswers)
