@@ -12,13 +12,13 @@ export default ({ db, fb }) => {
             },
         ])
         .extend(...get.players)
-        .extend(...get.unnotifiedPlayers)
+        .extend(...get.unnotifiedPlayersForGame)
         .do(({ unnotifiedPlayers, messages }) => Promise.all(
             unnotifiedPlayers.map(lead => transmute({ lead, messages })
                 .extend('facebookMessages', fb.transform)
                 .do(({ facebookMessages }) =>
                     fb.sendMessages(lead.id, facebookMessages)))))
-        .do(...save.notifiedAllPlayers)
+        .do(...save.notifiedAllPlayersOfGame)
         .do(...save.gameForPlayers)
         .do(...save.handsForPlayers)
         .do(...save.newRound);

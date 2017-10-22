@@ -37,3 +37,13 @@ exports.roundStarted = functions.database.ref('/rounds/{gameId}/{id}')
         action: 'round',
         round: event.data.val(),
     }));
+
+exports.votingStarted = functions.database.ref('/candidates/{gameId}/{roundId}')
+    .onCreate(event => triggers.voteStarted({
+        action: 'round',
+        candidates: event.data.val(),
+        payload: {
+            game: event.params.gameId,
+            round: event.params.roundId,
+        },
+    }));
