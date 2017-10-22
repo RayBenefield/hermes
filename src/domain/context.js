@@ -55,6 +55,8 @@ export default ({ db }) => ({
             }),
         'card-selected-message': transmute()
             .do(({ payload: { game, round, card }, player }) =>
-                db.set(`rounds/${game.id}/${round.id}/candidates/${player.id}`, card)),
+                db.set(`rounds/${game.id}/${round.id}/candidates/${player.id}`, card))
+            .do(({ payload: { game, card }, player }) =>
+                db.delete([`hands/${game.id}/${player.id}/${card.id}`], card)),
     },
 });
