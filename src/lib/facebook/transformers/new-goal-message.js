@@ -6,7 +6,7 @@ export default ({ game, round, card: { contents } }) => list([
         imageUrl: 'http://b.basemaps.cartocdn.com/dark_all/11/604/771.png',
         buttons: [
             {
-                title: 'Show Hand',
+                title: '🙏 Show Hand',
                 type: 'postback',
                 payload: `action: hand\npayload:\n game: ${game.id}\n round: ${round.id}`,
             },
