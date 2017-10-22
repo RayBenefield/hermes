@@ -1,5 +1,15 @@
 # Work Log
 
+## #57
+
+Cleaned up two of the dev scripts with the entity system. The biggest most
+complicate dev script however is still yet to come so I'll spend the entire next
+session refactoring that. Which I'm not really looking forward to, but it needs
+to be done. I was really hoping to continue the domain development for voting
+this block, but probably not going to happen since I need this refactoring to go
+forward.
+
+
 ## #56
 
 Well the whole trigger system is now in compliance with the entities system
