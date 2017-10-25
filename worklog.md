@@ -1,5 +1,12 @@
 # Work Log
 
+## #67
+
+Finished up the whole path with flattening things next I just need to flatten
+the card structure now and I can probably move forward with functionality with
+voting and do that next block.
+
+
 ## #66
 
 Continued going through the process of cleaning up the entire system to scrap
