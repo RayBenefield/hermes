@@ -7,18 +7,18 @@ const medals = [
     'https://emojipedia-us.s3.amazonaws.com/thumbs/240/facebook/111/pile-of-poo_1f4a9.png',
 ];
 
-export default ({ unranked = [], ranked = [] }) => list([].concat(...[
+export default ({ game, round, unranked = [], ranked = [] }) => list([].concat(...[
     ranked.map(({ contents }, rank) => ({
         title: contents,
         imageUrl: medals[rank],
     })),
-    unranked.map(({ contents }) => ({
+    unranked.map(({ id, contents }) => ({
         title: contents,
         buttons: [
             {
                 title: '🔘 Best',
                 type: 'postback',
-                payload: 'action: vote',
+                payload: `action: vote\npayload:\n vote: ${id}\n round: ${round}\n game: ${game}`,
             },
         ],
     })),

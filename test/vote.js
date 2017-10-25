@@ -6,26 +6,31 @@ describe('Vote For', (it) => {
         // Given
         const votes = [];
         const vote = { id: 1, contents: 'voted' };
-        const candidates = [
-            { id: 1, contents: 'voted' },
-            { id: 2, contents: 'voted 2' },
-            { id: 3, contents: 'voted 3' },
-            { id: 4, contents: 'voted 4' },
-        ];
+        const candidates = {
+            '0': { id: 1, contents: 'voted' },
+            '1': { id: 2, contents: 'voted 2' },
+            '2': { id: 3, contents: 'voted 3' },
+            '3': { id: 4, contents: 'voted 4' },
+        };
+        const game = { id: 0 };
+        const round = { id: 0, candidates };
         const unranked = [
             { id: 2, contents: 'voted 2' },
             { id: 3, contents: 'voted 3' },
             { id: 4, contents: 'voted 4' },
         ];
+        const player = { id: 0 };
 
         // When
-        const messages = voteFor({ vote, votes, candidates });
+        const messages = voteFor({ player, vote, votes, game, round });
 
         // Then
         assert.deepEqual(messages, [
             {
                 type: 'show-ranked-list',
                 payload: {
+                    game: game.id,
+                    round: round.id,
                     ranked: [vote],
                     unranked,
                 },
@@ -39,12 +44,14 @@ describe('Vote For', (it) => {
             { id: 3, contents: 'voted 3' },
         ];
         const vote = { id: 1, contents: 'voted' };
-        const candidates = [
-            { id: 1, contents: 'voted' },
-            { id: 2, contents: 'voted 2' },
-            { id: 3, contents: 'voted 3' },
-            { id: 4, contents: 'voted 4' },
-        ];
+        const candidates = {
+            '0': { id: 1, contents: 'voted' },
+            '1': { id: 2, contents: 'voted 2' },
+            '2': { id: 3, contents: 'voted 3' },
+            '3': { id: 4, contents: 'voted 4' },
+        };
+        const game = { id: 0 };
+        const round = { id: 0, candidates };
         const ranked = [
             { id: 3, contents: 'voted 3' },
             { id: 1, contents: 'voted' },
@@ -55,13 +62,15 @@ describe('Vote For', (it) => {
         ];
 
         // When
-        const messages = voteFor({ vote, votes, candidates });
+        const messages = voteFor({ vote, votes, game, round });
 
         // Then
         assert.deepEqual(messages, [
             {
                 type: 'show-ranked-list',
                 payload: {
+                    game: game.id,
+                    round: round.id,
                     ranked,
                     unranked,
                 },
@@ -76,12 +85,14 @@ describe('Vote For', (it) => {
             { id: 4, contents: 'voted 4' },
         ];
         const vote = { id: 1, contents: 'voted' };
-        const candidates = [
-            { id: 1, contents: 'voted' },
-            { id: 2, contents: 'voted 2' },
-            { id: 3, contents: 'voted 3' },
-            { id: 4, contents: 'voted 4' },
-        ];
+        const game = { id: 0 };
+        const candidates = {
+            '0': { id: 1, contents: 'voted' },
+            '1': { id: 2, contents: 'voted 2' },
+            '2': { id: 3, contents: 'voted 3' },
+            '3': { id: 4, contents: 'voted 4' },
+        };
+        const round = { id: 0, candidates };
         const ranked = [
             { id: 3, contents: 'voted 3' },
             { id: 4, contents: 'voted 4' },
@@ -90,7 +101,7 @@ describe('Vote For', (it) => {
         ];
 
         // When
-        const messages = voteFor({ vote, votes, candidates });
+        const messages = voteFor({ vote, votes, game, round });
 
         // Then
         assert.deepEqual(messages, [

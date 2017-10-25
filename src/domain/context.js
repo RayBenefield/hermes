@@ -22,6 +22,11 @@ export default ({ db }) => {
                 .extend(...get.round)
                 .extend(...get.whiteDeck)
                 .extend(...get.pick),
+            vote: transmute()
+                .extend(...get.player)
+                .extend(...get.round)
+                .extend(...get.game)
+                .extend(...get.vote),
         },
         save: {
             'welcome-message': transmute().do(...save.playerInfo),

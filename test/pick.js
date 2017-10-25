@@ -6,8 +6,8 @@ describe('Pick Card', (it) => {
         // Given
         const pick = { id: 0, contents: 'White Card' };
         const whiteDeck = [pick];
-        const game = {};
-        const round = {};
+        const game = { id: 0 };
+        const round = { id: 0 };
 
         // When
         const messages = pickCard({ game, round, whiteDeck, pick });
@@ -17,8 +17,6 @@ describe('Pick Card', (it) => {
             {
                 type: 'card-selected-message',
                 payload: {
-                    game,
-                    round,
                     card: pick,
                 },
             },
@@ -31,8 +29,9 @@ describe('Pick Card', (it) => {
         const player = { id: 123456 };
         const pick = { id: 0, contents: 'White Card' };
         const whiteDeck = [pick];
-        const game = {};
-        const round = { candidates: { [player.id]: pick } };
+        const game = { id: 0 };
+        const candidates = { [player.id]: pick };
+        const round = { id: 0, candidates };
 
         // When
         const messages = pickCard({ player, game, round, whiteDeck, pick });
@@ -42,8 +41,6 @@ describe('Pick Card', (it) => {
             {
                 type: 'card-already-selected-message',
                 payload: {
-                    game,
-                    round,
                     card: pick,
                 },
             },
@@ -60,13 +57,14 @@ describe('Pick Card', (it) => {
         const player5 = { id: 567890 };
         const pick = { id: 0, contents: 'White Card' };
         const whiteDeck = [pick];
-        const game = {};
-        const round = { candidates: {
+        const game = { id: 0 };
+        const candidates = {
             [player2.id]: pick,
             [player3.id]: pick,
             [player4.id]: pick,
             [player5.id]: pick,
-        } };
+        };
+        const round = { id: 3, candidates };
 
         // When
         const messages = pickCard({ player: player1, game, round, whiteDeck, pick });
@@ -76,15 +74,15 @@ describe('Pick Card', (it) => {
             {
                 type: 'card-selected-message',
                 payload: {
-                    game,
-                    round,
                     card: pick,
                 },
             },
             {
                 type: 'candidates-ready-message',
                 payload: {
-                    round,
+                    game: game.id,
+                    round: round.id,
+                    candidates,
                     pick,
                     unranked: [
                         pick,

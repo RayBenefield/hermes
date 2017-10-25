@@ -15,6 +15,7 @@ export default ({ db, fb }) => {
                     {
                         type: 'candidates-ready-message',
                         payload: {
+                            round: { id: candidates.round },
                             unranked: _.values(
                                 _.pickBy(candidates.cards, (card, player) => player !== lead.id)
                             ),

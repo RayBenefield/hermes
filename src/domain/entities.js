@@ -10,18 +10,23 @@ export default ({ db }) => ({
         allPlayers: ['players', db.get('players/facebook').then(_.values)],
         player: ['player', ({ lead }) => db.get(`players/${lead.platform}/${lead.id}`)],
         queue: ['queue', () => db.get('queue')],
-        game: ['game', ({ games, round, payload: { game } = {} }) => {
-            if (game && games) return games.find(g => g.id === game);
+        game: ['game', ({ games, round, payload: { game: gameId } = {} }) => {
+            if (gameId && games) return games.find(g => g.id === gameId);
             if (round && games) return games.find(g => g.id === round.game);
-            if (game) return db.get(`games/${game}`);
+            if (gameId) return db.get(`games/${gameId}`);
             if (round) return db.get(`games/${round.game}`);
             return undefined;
         }],
-        round: ['round', ({ game, payload: { round } }) => db.get(`rounds/${game.id}/${round}`)],
+        round: ['round', ({ game, payload: { round: roundId, game: gameId } }) => {
+            if (roundId && game) return db.get(`rounds/${game.id}/${roundId}`);
+            if (roundId && gameId) return db.get(`rounds/${gameId}/${roundId}`);
+            return undefined;
+        }],
         hand: ['hand', ({ player, game }) => db.get(`hands/${game.id}/${player.id}`)],
         whiteDeck: ['whiteDeck', whiteDeck],
         blackDeck: ['blackDeck', blackDeck],
         pick: ['pick', ({ payload: { pick } }) => whiteDeck[pick]],
+        vote: ['vote', ({ payload: { vote } }) => whiteDeck[vote]],
         card: ['card', () => blackDeck.sort(() => 0.5 - Math.random()).slice(0, 1)[0]],
         players: ['players', ({ game: { players } }) => _.values(players)],
         unnotifiedPlayersForGame: ['unnotifiedPlayers', ({ players, game: { notified_players: notified } }) =>
@@ -53,9 +58,9 @@ export default ({ db }) => ({
         roundForGame: [({ game, round }) => db.push(`games/${game.id}/rounds`, round.id)],
         goalForRound: [({ game, round, card }) => db.set(`rounds/${game.id}/${round.id}/card`, card)],
         selectedCandidate: [({ payload: { game, round, card }, player }) =>
-            db.set(`rounds/${game.id}/${round.id}/candidates/${player.id}`, card)],
+            db.set(`rounds/${game}/${round}/candidates/${player.id}`, card)],
         removalOfCandidateFromHand: [({ payload: { game, card }, player }) =>
-            db.delete([`hands/${game.id}/${player.id}/cards/${card.id}`])],
+            db.delete([`hands/${game}/${player.id}/cards/${card.id}`])],
         notifiedAllPlayersOfGame: [({ game: { id, players } }) =>
             db.set(`games/${id}/notified_players`, players)],
         notifiedAllPlayersOfVoting: [({ players, candidates: { round, game } }) =>
@@ -92,15 +97,15 @@ export default ({ db }) => ({
             db.set(`rounds/${candidate.game}/${round.id}/candidates/${candidate.player}`, candidate.card)],
         removedCandidateFromHand: [({ candidate }) =>
             db.delete([`hands/${candidate.game}/${candidate.player}/cards/${candidate.card.id}`])],
-        candidateList: [({ player, payload: { pick, round } }) =>
-            db.set(`candidates/${round.game}/${round.id}/`, {
-                game: round.game,
-                round: round.id,
+        candidateList: [({ player, payload: { candidates, pick, game, round } }) =>
+            db.set(`candidates/${game}/${round}/`, {
+                game,
+                round,
                 notified_players: {
                     [player.id]: true,
                 },
                 cards: {
-                    ...round.candidates,
+                    ...candidates,
                     [player.id]: pick,
                 },
             })],

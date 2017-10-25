@@ -1,14 +1,12 @@
 /* eslint-disable max-lines */
 import _ from 'lodash';
 
-export default ({ player = {}, whiteDeck, game, round = {}, pick }) => {
+export default ({ player = {}, whiteDeck, game = {}, round = {}, pick }) => {
     if (!round.candidates) {
         return [
             {
                 type: 'card-selected-message',
                 payload: {
-                    game,
-                    round,
                     card: whiteDeck[pick.id],
                 },
             },
@@ -21,8 +19,6 @@ export default ({ player = {}, whiteDeck, game, round = {}, pick }) => {
         messages.push({
             type: 'card-already-selected-message',
             payload: {
-                game,
-                round,
                 card: round.candidates[player.id],
             },
         });
@@ -30,8 +26,6 @@ export default ({ player = {}, whiteDeck, game, round = {}, pick }) => {
         messages.push({
             type: 'card-selected-message',
             payload: {
-                game,
-                round,
                 card: whiteDeck[pick.id],
             },
         });
@@ -41,8 +35,10 @@ export default ({ player = {}, whiteDeck, game, round = {}, pick }) => {
         messages.push({
             type: 'candidates-ready-message',
             payload: {
-                round,
-                pick,
+                game: game.id,
+                round: round.id,
+                pick: whiteDeck[pick.id],
+                candidates: round.candidates,
                 unranked: _.values(round.candidates),
             },
         });
