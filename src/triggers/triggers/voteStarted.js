@@ -7,7 +7,7 @@ export default ({ db, fb }) => {
 
     return transmute()
         .extend(...get.game)
-        .extend(...get.players)
+        .extend(...get.playersFromGame)
         .extend(...get.unnotifiedPlayersForVoting)
         .do(({ unnotifiedPlayers, candidates }) => Promise.all(
             unnotifiedPlayers.map(lead => transmute({ lead })

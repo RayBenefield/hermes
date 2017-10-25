@@ -29,15 +29,23 @@ export default ({ db }) => ({
                 ...hand,
                 cards: _.keys(hand.cards).map(c => whiteDeck[c]),
             }))],
+        hands: ['hands', ({ game, players }) => Promise.all(players
+            .map(player => db.get(`hands/${game.id}/${player.id}`)
+                .then(hand => ({
+                    ...hand,
+                    cards: _.keys(hand.cards).map(c => whiteDeck[c]),
+                }))))],
         whiteDeck: ['whiteDeck', whiteDeck],
         blackDeck: ['blackDeck', blackDeck],
         pick: ['pick', ({ payload: { pick } }) => whiteDeck[pick]],
         vote: ['vote', ({ payload: { vote } }) => whiteDeck[vote]],
         card: ['card', () => blackDeck.sort(() => 0.5 - Math.random()).slice(0, 1)[0]],
-        players: ['players', ({ game: { players } }) => Promise.all(_.keys(players)
+        playersFromGame: ['players', ({ game: { players } }) => Promise.all(_.keys(players)
             .map(p => db.get(`players/facebook/${p}`)))],
+        playersFromPayload: ['players', ({ payload: { players } }) => Promise.all(players
+            .map(player => db.get(`players/facebook/${player}`)))],
         unnotifiedPlayersForGame: ['unnotifiedPlayers', ({ players, game: { notified_players: notified } }) =>
-            players.filter(({ id }) => !(_.includes(notified, id)))],
+            players.filter(({ id }) => !(_.includes(_.keys(notified), id)))],
         unnotifiedPlayersForVoting: ['unnotifiedPlayers', ({ players, candidates: { notified_players: notified } }) =>
             players.filter(({ id }) => !(id in notified))],
         latestRounds: ['rounds', ({ games }) => Promise.all(games

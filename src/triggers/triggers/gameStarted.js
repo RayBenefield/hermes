@@ -5,13 +5,18 @@ export default ({ db, fb }) => {
     const { get, save } = configureEntites({ db });
 
     return transmute()
-        .extend('messages', ({ game }) => [
+        .extend(...get.playersFromGame)
+        .extend('messages', ({ players }) => [
             {
                 type: 'game-started-message',
-                payload: game,
+                payload: {
+                    players: players.map(player => ({
+                        id: player.id,
+                        first_name: player.first_name,
+                    })),
+                },
             },
         ])
-        .extend(...get.players)
         .extend(...get.unnotifiedPlayersForGame)
         .do(({ unnotifiedPlayers, messages }) => Promise.all(
             unnotifiedPlayers.map(lead => transmute({ lead, messages })

@@ -8,7 +8,7 @@ export default ({ db, fb }) => {
         .extend(...get.game)
         .extend(...get.blackDeck)
         .extend(...get.card)
-        .extend(...get.players)
+        .extend(...get.playersFromGame)
         .extend('messages', ({ round, game, card }) => [
             {
                 type: 'new-goal-message',

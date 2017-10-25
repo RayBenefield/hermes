@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import transmute from 'transmutation';
 import { prompt } from 'inquirer';
 import admin from 'firebase-admin';
@@ -22,7 +23,7 @@ const getPrompts = ['prompts', ({ template, choices }) => [{ ...template, choice
 const getAnswers = ['answers', ({ prompts }) => prompt(prompts)];
 const getRound = ['round', ({ rounds, answers: { roundToPopulate } }) =>
     rounds.find(r => r.id === roundToPopulate)];
-const getPlayerChoices = ['playerChoices', ({ game }) => Object.values(game.players)
+const getPlayerChoices = ['playerChoices', ({ players }) => players
     .map(player => ({
         name: `${player.first_name} ${player.last_name}`,
         value: player.id,
@@ -33,9 +34,11 @@ const getPlayerPrompts = ['playerPrompts', ({ playerTemplate, playerChoices }) =
     [{ ...playerTemplate, choices: playerChoices }]];
 const getPlayerAnswers = ['playerAnswers', ({ playerPrompts }) =>
     prompt(playerPrompts)];
-const getHands = ['hands', ({ game, playerAnswers: { playersToChooseFor } }) => Promise.all(
-        playersToChooseFor.map(player =>
-            db.get(`hands/${game.id}/${player}`)))];
+const getPlayerIds = ['payload.players', ({ game }) => _.keys(game.players)];
+const getHandsForPlayers = ['hands', ({ game, players, playerAnswers: { playersToChooseFor } }) => get.hands[1]({
+    players: _.filter(players, player => _.includes(playersToChooseFor, player.id)),
+    game,
+})];
 
 transmute({
     template: {
@@ -57,10 +60,12 @@ transmute({
     .extend(...getAnswers)
     .extend(...getRound)
     .extend(...get.game)
+    .extend(...getPlayerIds)
+    .extend(...get.playersFromPayload)
     .extend(...getPlayerChoices)
     .extend(...getPlayerPrompts)
     .extend(...getPlayerAnswers)
-    .extend(...getHands)
+    .extend(...getHandsForPlayers)
     .extend(...get.randomCandidates)
     .do(({ round, candidates }) => {
         console.log('Picked the following cards:');
