@@ -8,6 +8,7 @@ import configureDb from './lib/db';
 import messages from './data/messages';
 import configureChannelRouter from './routes/channels';
 import configureTriggers from './triggers';
+import './pretty-errors';
 
 const config = functions.config();
 admin.initializeApp(config.firebase);
