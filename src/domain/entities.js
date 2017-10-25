@@ -105,8 +105,8 @@ export default ({ db }) => ({
             `hands/${game.id}`,
             `rounds/${game.id}`,
             `candidates/${game.id}`,
-            ...(_.values(game.players)
-                .map(p => `players/facebook/${p.id}/games/${game.id}`)),
+            ...(_.keys(game.players)
+                .map(p => `players/facebook/${p}/games/${game.id}`)),
         ])],
         candidateForRound: [({ candidate, round }) =>
             db.set(`rounds/${candidate.game}/${round.id}/candidates/${candidate.player}`, candidate.card)],
