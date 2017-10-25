@@ -33,6 +33,7 @@
         "deploy:database-triggers": "yarn build && firebase deploy --only functions:gameStarted,functions:roundStarted,functions:votingStarted",
         "clean": "rimraf functions/",
         "lint": "eslint -c .eslintrc.json src/",
+        "fix": "eslint -c .eslintrc.json src/ --fix",
         "test": "babel-tape-runner test/{,**/}*.js | tap-spec",
         "sloc": "echo 'Lines of source code: ' && sloc src/ --exclude node_modules -f json | jq '.summary.source'",
         "watch": "nodemon --exec npm-run-all test lint sloc",
