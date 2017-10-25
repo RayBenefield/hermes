@@ -10,7 +10,8 @@ export default ({ db }) => {
             login: transmute().extend(...get.player),
             join: transmute()
                 .extend(...get.player)
-                .extend(...get.queue),
+                .extend(...get.queue)
+                .extend(...get.allPlayersInQueue),
             hand: transmute()
                 .extend(...get.player)
                 .extend(...get.game)

@@ -26,15 +26,21 @@ describe('Join Queue', (it) => {
     it('should start a game when a player is added to a full queue', (assert) => {
         // Given
         const queue = [
-            '123456',
             '234567',
             '345678',
             '456789',
+            '567890',
         ];
-        const player = { id: '567890' };
+        const player = { id: '123456', first_name: 'First' };
+        const players = [
+            { id: '234567', first_name: 'Second' },
+            { id: '345678', first_name: 'Third' },
+            { id: '456789', first_name: 'Fourth' },
+            { id: '567890', first_name: 'Fifth' },
+        ];
 
         // When
-        const messages = join({ player, queue });
+        const messages = join({ player, players, queue });
 
         // Then
         assert.deepEqual(messages, [
@@ -42,8 +48,8 @@ describe('Join Queue', (it) => {
                 type: 'game-started-message',
                 payload: {
                     players: [
-                        ...queue,
-                        player.id,
+                        player,
+                        ...players,
                     ],
                 },
             },

@@ -1,4 +1,4 @@
-export default ({ player, queue = [] } = {}) => {
+export default ({ player, players, queue = [] } = {}) => {
     if (!player) return [{ type: 'player-does-not-exist-message' }];
 
     if (queue.includes(player.id)) {
@@ -25,13 +25,20 @@ export default ({ player, queue = [] } = {}) => {
         ];
     }
 
+    const playersInGame = players
+        .filter(({ id }) => queue.includes(id))
+        .map(p => ({
+            id: p.id,
+            first_name: p.first_name,
+        }));
+
     return [
         {
             type: 'game-started-message',
             payload: {
                 players: [
-                    ...queue,
-                    player.id,
+                    player,
+                    ...playersInGame,
                 ],
             },
         },
