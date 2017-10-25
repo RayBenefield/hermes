@@ -1,5 +1,19 @@
 # Work Log
 
+## #63
+
+Slowly getting back into things as I was emotionally blocked from moving forward
+because of how difficult things were to track down and realize what was wrong. I
+need to sit down and refactor so many things to get things smooth again. But for
+now, just small things. I started by making errors easier to track down using
+pretty-error. I never had a handler for unhandled promises before, but now I
+do... so that definitely helps. Didn't even realize I needed one. So now it
+should be much easier to track down issues. Next I need to explore finishing up
+this initial vote system and then when that is done, start cleaning up the
+domain model to make actually proper sense. In particular the first thing I want
+to do is flatten the player model across the database. Break time!
+
+
 ## #62
 
 Essentially the same as the prior session as I did a double. It was absolutely

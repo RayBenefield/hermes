@@ -1,3 +1,6 @@
+ - Change the word Payload in the domain message structure to be context instead
+ - Added automatic prettification in Vim
+ - Flatten the Player object
  - Change payload to context
  - Rethink the entire entities system
  - Fix the save Context system to not only be based on the message that it is
