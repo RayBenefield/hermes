@@ -30,9 +30,10 @@ export default ({ db }) => ({
         pick: ['pick', ({ payload: { pick } }) => whiteDeck[pick]],
         vote: ['vote', ({ payload: { vote } }) => whiteDeck[vote]],
         card: ['card', () => blackDeck.sort(() => 0.5 - Math.random()).slice(0, 1)[0]],
-        players: ['players', ({ game: { players } }) => _.values(players)],
+        players: ['players', ({ game: { players } }) => Promise.all(_.keys(players)
+            .map(p => db.get(`players/facebook/${p}`)))],
         unnotifiedPlayersForGame: ['unnotifiedPlayers', ({ players, game: { notified_players: notified } }) =>
-            players.filter(({ id }) => !(id in notified))],
+            players.filter(({ id }) => !(_.includes(notified, id)))],
         unnotifiedPlayersForVoting: ['unnotifiedPlayers', ({ players, candidates: { notified_players: notified } }) =>
             players.filter(({ id }) => !(id in notified))],
         latestRounds: ['rounds', ({ games }) => Promise.all(games
@@ -63,8 +64,8 @@ export default ({ db }) => ({
             db.set(`rounds/${game}/${round}/candidates/${player.id}`, card)],
         removalOfCandidateFromHand: [({ payload: { game, card }, player }) =>
             db.delete([`hands/${game}/${player.id}/cards/${card.id}`])],
-        notifiedAllPlayersOfGame: [({ game: { id, players } }) =>
-            db.set(`games/${id}/notified_players`, players)],
+        notifiedAllPlayersOfGame: [({ players, game: { id } }) =>
+            db.set(`games/${id}/notified_players`, players.reduce((a, p) => Object.assign(a, { [p.id]: true }), {}))],
         notifiedAllPlayersOfVoting: [({ players, candidates: { round, game } }) =>
             db.set(`candidates/${game}/${round}/notified_players`, players.reduce((all, curr) =>
                 Object.assign(all, { [curr.id]: true }), {}))],
@@ -76,7 +77,7 @@ export default ({ db }) => ({
             .map(p => ({ ...p, hand: whiteDeck.sort(() => 0.5 - Math.random()).slice(0, 10) }))
             .map(({ player, hand }) => ({
                 player,
-                hand: hand.reduce((h, c) => Object.assign(h, { [c.id]: c }), {}),
+                hand: hand.reduce((h, c) => Object.assign(h, { [c.id]: true }), {}),
             }))
             .map(({ player, hand }) => db.set(`hands/${id}/${player.id}`, {
                 game: id,
