@@ -1,14 +1,10 @@
+ - Set the environment variable to determine how to log (colors are printed
+   while running in Firebase)
  - Make sure everything in a domain message return is just an id where possible
    for context
- - The context/entities system should have access to the entire snowball, not
-   just the payload, otherwise the payload is affected when it shouldn't need to
  - Change the word Payload in the domain message structure to be context instead
  - Added automatic prettification in Vim
- - Flatten the Card object
  - Change payload to context
- - Rethink the entire entities system
- - Fix the save Context system to not only be based on the message that it is
-   getting and instead use the stream
  - Refactor out the common prompt steps in all of the dev scripts
  - Refactor the handsForPlayers saving system
  - Refactor facebook to handle messages out to multiple leads

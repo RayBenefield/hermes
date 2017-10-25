@@ -1,5 +1,13 @@
 # Work Log
 
+## #68
+
+Finished up the flatting of the card structure. There are still a couple of
+things that I should look into and refactor and standardize, but for the most
+part things are definitely better than they were. The stack traces have made a
+huge difference on tracking down issues.
+
+
 ## #67
 
 Finished up the whole path with flattening things next I just need to flatten
