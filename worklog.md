@@ -1,5 +1,13 @@
 # Work Log
 
+## #65
+
+Started refactoring how players objects are handled across the entire system.
+Preventing the player object from being duplicated everywhere which encourages
+me to deeply access data that I shouldn't. Next will be to adjust the message
+sent back when a player starts a game.
+
+
 ## #64
 
 Finished the work necessary to make the vote action work without side effects
