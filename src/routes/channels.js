@@ -15,7 +15,7 @@ export default ({ fb, getContext, enterDomain, saveContext }) => {
             .switch('action', enterDomain))
         .do(stream => Promise.all(
             stream.messages.map(msg =>
-                transmute({ ...msg, player: stream.player }).switch('type', saveContext))
+                transmute({ ...stream, ...msg }).switch('type', saveContext))
         ))
         .extend('facebookMessages', fb.transform)
         .then(({ lead: { id }, facebookMessages }) =>

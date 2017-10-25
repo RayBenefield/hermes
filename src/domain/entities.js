@@ -64,10 +64,10 @@ export default ({ db }) => ({
         }],
         roundForGame: [({ game, round }) => db.push(`games/${game.id}/rounds`, round.id)],
         goalForRound: [({ game, round, card }) => db.set(`rounds/${game.id}/${round.id}/card`, card)],
-        selectedCandidate: [({ payload: { game, round, card }, player }) =>
-            db.set(`rounds/${game}/${round}/candidates/${player.id}`, card)],
-        removalOfCandidateFromHand: [({ payload: { game, card }, player }) =>
-            db.delete([`hands/${game}/${player.id}/cards/${card.id}`])],
+        selectedCandidate: [({ player, round, game, payload: { card } }) =>
+            db.set(`rounds/${game.id}/${round.id}/candidates/${player.id}`, card)],
+        removalOfCandidateFromHand: [({ player, game, payload: { card } }) =>
+            db.delete([`hands/${game.id}/${player.id}/cards/${card.id}`])],
         notifiedAllPlayersOfGame: [({ players, game: { id } }) =>
             db.set(`games/${id}/notified_players`, players.reduce((a, p) => Object.assign(a, { [p.id]: true }), {}))],
         notifiedAllPlayersOfVoting: [({ players, candidates: { round, game } }) =>
