@@ -1,5 +1,14 @@
 # Work Log
 
+## #66
+
+Continued going through the process of cleaning up the entire system to scrap
+out unflattened objects. I still need to go through and completely flatten the
+cards, but for now I think things are going well. I just need to move all the
+way through the candidate process back to voting and then go through and clean
+up a few more things.
+
+
 ## #65
 
 Started refactoring how players objects are handled across the entire system.

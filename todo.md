@@ -4,7 +4,7 @@
    just the payload, otherwise the payload is affected when it shouldn't need to
  - Change the word Payload in the domain message structure to be context instead
  - Added automatic prettification in Vim
- - Flatten the Player object
+ - Flatten the Card object
  - Change payload to context
  - Rethink the entire entities system
  - Fix the save Context system to not only be based on the message that it is
