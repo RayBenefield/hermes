@@ -9,7 +9,7 @@ export default ({ db }) => ({
         allGames: ['games', db.get('games').then(_.values)],
         allPlayers: ['players', db.get('players/facebook').then(_.values)],
         player: ['player', ({ lead }) => db.get(`players/${lead.platform}/${lead.id}`)],
-        queue: ['queue', () => db.get('queue')],
+        queue: ['queue', () => db.get('queue').then(_.keys)],
         game: ['game', ({ games, round, payload: { game: gameId } = {} }) => {
             if (gameId && games) return games.find(g => g.id === gameId);
             if (round && games) return games.find(g => g.id === round.game);
@@ -43,16 +43,16 @@ export default ({ db }) => ({
         }))],
     },
     save: {
-        queue: [({ queue }) => db.set('queue', queue)],
+        queue: [({ queue }) => db.set('queue', queue.reduce((q, p) => Object.assign(q, { [p]: true }), {}))],
         playerInfo: [({ payload: lead }) => db.set(`players/${lead.platform}/${lead.id}`, lead)],
-        playerToQueue: [({ payload: { player } }) => db.set(`queue/${player.id}`, player)],
-        removalFromQueue: [({ payload: { players } }) => db.delete(_.values(players).map(p => `queue/${p.id}`))],
+        playerToQueue: [({ payload: { player } }) => db.set(`queue/${player}`)],
+        removalFromQueue: [({ payload: { players } }) => db.delete(players.map(p => `queue/${p}`))],
         newGame: [({ player, payload: { players } }) => {
             const id = uuid();
             db.set(`games/${id}`, {
                 id,
-                players,
-                notified_players: { [player.id]: player },
+                players: players.reduce((a, p) => Object.assign(a, { [p]: true }), {}),
+                notified_players: { [player.id]: true },
             });
         }],
         roundForGame: [({ game, round }) => db.push(`games/${game.id}/rounds`, round.id)],

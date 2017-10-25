@@ -1,13 +1,11 @@
-export default ({ player, queue = {} } = {}) => {
+export default ({ player, queue = [] } = {}) => {
     if (!player) return [{ type: 'player-does-not-exist-message' }];
 
-    if (player.id in queue) {
+    if (queue.includes(player.id)) {
         return [
             {
                 type: 'already-in-queue-message',
-                payload: {
-                    ...queue,
-                },
+                payload: { queue },
             },
         ];
     }
@@ -17,11 +15,11 @@ export default ({ player, queue = {} } = {}) => {
             {
                 type: 'queue-joined-message',
                 payload: {
-                    player,
-                    queue: {
+                    player: player.id,
+                    queue: [
                         ...queue,
-                        [player.id]: player,
-                    },
+                        player.id,
+                    ],
                 },
             },
         ];
@@ -31,10 +29,10 @@ export default ({ player, queue = {} } = {}) => {
         {
             type: 'game-started-message',
             payload: {
-                players: {
+                players: [
                     ...queue,
-                    [player.id]: player,
-                },
+                    player.id,
+                ],
             },
         },
     ];

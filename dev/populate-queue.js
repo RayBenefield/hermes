@@ -24,8 +24,7 @@ const getPrompts = ['prompts', ({ template, choices }) => [{ ...template, choice
 const getAnswers = ['answers', ({ prompts }) => prompt(prompts)];
 const getQueue = ['queue', ({ players, answers: { queue } }) => players
     .filter(p => queue.includes(p.id))
-    .reduce((newQueue, player) =>
-        Object.assign(newQueue, { [player.id]: player }), {})];
+    .map(p => p.id)];
 
 transmute({
     template: {

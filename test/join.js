@@ -4,9 +4,9 @@ import join from 'src/domain/services/join'; // eslint-disable-line import/no-ex
 describe('Join Queue', (it) => {
     it('should add a player to the queue while reporting the size', (assert) => {
         // Given
-        const queue = {};
+        const queue = [];
         const player = { id: '123456' };
-        const expectedQueue = { 123456: { id: '123456' } };
+        const expectedQueue = ['123456'];
 
         // When
         const messages = join({ player, queue });
@@ -16,7 +16,7 @@ describe('Join Queue', (it) => {
             {
                 type: 'queue-joined-message',
                 payload: {
-                    player,
+                    player: player.id,
                     queue: expectedQueue,
                 },
             },
@@ -25,12 +25,12 @@ describe('Join Queue', (it) => {
 
     it('should start a game when a player is added to a full queue', (assert) => {
         // Given
-        const queue = {
-            123456: { id: '123456' },
-            234567: { id: '234567' },
-            345678: { id: '345678' },
-            456789: { id: '456789' },
-        };
+        const queue = [
+            '123456',
+            '234567',
+            '345678',
+            '456789',
+        ];
         const player = { id: '567890' };
 
         // When
@@ -41,10 +41,10 @@ describe('Join Queue', (it) => {
             {
                 type: 'game-started-message',
                 payload: {
-                    players: {
+                    players: [
                         ...queue,
-                        [player.id]: player,
-                    },
+                        player.id,
+                    ],
                 },
             },
         ]);
@@ -52,7 +52,7 @@ describe('Join Queue', (it) => {
 
     it('should inform the player when they are already in the queue', (assert) => {
         // Given
-        const queue = { 123456: { id: '123456' } };
+        const queue = ['123456'];
         const player = { id: '123456' };
 
         // When
@@ -63,7 +63,7 @@ describe('Join Queue', (it) => {
             {
                 type: 'already-in-queue-message',
                 payload: {
-                    ...queue,
+                    queue,
                 },
             },
         ]);
