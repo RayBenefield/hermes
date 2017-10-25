@@ -67,13 +67,13 @@ transmute({
     .extend(...getPlayerAnswers)
     .extend(...getHandsForPlayers)
     .extend(...get.randomCandidates)
-    .do(({ round, candidates }) => {
+    .do(({ game, round, candidates }) => {
         console.log('Picked the following cards:');
         candidates.map(c => console.log(c.card.contents));
         return Promise.all(
-            candidates.map(candidate => Promise.all([
-                save.candidateForRound[0]({ candidate, round }),
-                save.removedCandidateFromHand[0]({ candidate }),
+            candidates.map(({ player, card }) => Promise.all([
+                save.selectedCandidate[0]({ player: { id: player }, round, game, payload: { card } }),
+                save.removedCandidateFromHand[0]({ player: { id: player }, round, game, payload: { card } }),
             ]))
         );
     })

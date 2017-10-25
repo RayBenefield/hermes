@@ -57,17 +57,16 @@ describe('Pick Card', (it) => {
         const player5 = { id: 567890 };
         const pick = { id: 0, contents: 'White Card' };
         const whiteDeck = [pick];
-        const game = { id: 0 };
         const candidates = {
-            [player2.id]: pick,
-            [player3.id]: pick,
-            [player4.id]: pick,
-            [player5.id]: pick,
+            [player2.id]: pick.id,
+            [player3.id]: pick.id,
+            [player4.id]: pick.id,
+            [player5.id]: pick.id,
         };
         const round = { id: 3, candidates };
 
         // When
-        const messages = pickCard({ player: player1, game, round, whiteDeck, pick });
+        const messages = pickCard({ player: player1, round, whiteDeck, pick });
 
         // Then
         assert.deepEqual(messages, [
@@ -80,9 +79,6 @@ describe('Pick Card', (it) => {
             {
                 type: 'candidates-ready-message',
                 payload: {
-                    game: game.id,
-                    round: round.id,
-                    candidates,
                     pick,
                     unranked: [
                         pick,

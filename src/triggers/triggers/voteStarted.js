@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import transmute from 'transmutation';
 import configureEntites from '../../domain/entities';
+import whiteDeck from '../../data/white-deck.json';
 
 export default ({ db, fb }) => {
     const { get, save } = configureEntites({ db });
@@ -9,16 +10,15 @@ export default ({ db, fb }) => {
         .extend(...get.game)
         .extend(...get.playersFromGame)
         .extend(...get.unnotifiedPlayersForVoting)
-        .do(({ unnotifiedPlayers, candidates }) => Promise.all(
+        .do(({ unnotifiedPlayers, candidates: { candidates } }) => Promise.all(
             unnotifiedPlayers.map(lead => transmute({ lead })
                 .extend('messages', () => [
                     {
                         type: 'candidates-ready-message',
                         payload: {
-                            round: { id: candidates.round },
                             unranked: _.values(
-                                _.pickBy(candidates.cards, (card, player) => player !== lead.id)
-                            ),
+                                _.pickBy(candidates, (card, player) => player !== lead.id)
+                            ).map(c => whiteDeck[c]),
                         },
                     },
                 ])

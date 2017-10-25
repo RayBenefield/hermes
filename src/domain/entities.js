@@ -72,8 +72,6 @@ export default ({ db }) => ({
         }],
         roundForGame: [({ game, round }) => db.push(`games/${game.id}/rounds`, round.id)],
         goalForRound: [({ game, round, card }) => db.set(`rounds/${game.id}/${round.id}/card`, card)],
-        selectedCandidate: [({ player, round, game, payload: { card } }) =>
-            db.set(`rounds/${game.id}/${round.id}/candidates/${player.id}`, card)],
         removalOfCandidateFromHand: [({ player, game, payload: { card } }) =>
             db.delete([`hands/${game.id}/${player.id}/cards/${card.id}`])],
         notifiedAllPlayersOfGame: [({ players, game: { id } }) =>
@@ -108,20 +106,20 @@ export default ({ db }) => ({
             ...(_.keys(game.players)
                 .map(p => `players/facebook/${p}/games/${game.id}`)),
         ])],
-        candidateForRound: [({ candidate, round }) =>
-            db.set(`rounds/${candidate.game}/${round.id}/candidates/${candidate.player}`, candidate.card)],
-        removedCandidateFromHand: [({ candidate }) =>
-            db.delete([`hands/${candidate.game}/${candidate.player}/cards/${candidate.card.id}`])],
-        candidateList: [({ player, payload: { candidates, pick, game, round } }) =>
-            db.set(`candidates/${game}/${round}/`, {
-                game,
-                round,
+        selectedCandidate: [({ player, round, game, payload: { card } }) =>
+            db.set(`rounds/${game.id}/${round.id}/candidates/${player.id}`, card.id)],
+        removedCandidateFromHand: [({ player, game, payload: { card } }) =>
+            db.delete([`hands/${game.id}/${player.id}/cards/${card.id}`])],
+        candidateList: [({ player, round, game, payload: { pick } }) =>
+            db.set(`candidates/${game.id}/${round.id}/`, {
+                game: game.id,
+                round: round.id,
                 notified_players: {
                     [player.id]: true,
                 },
-                cards: {
-                    ...candidates,
-                    [player.id]: pick,
+                candidates: {
+                    ...round.candidates,
+                    [player.id]: pick.id,
                 },
             })],
     },
