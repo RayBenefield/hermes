@@ -24,7 +24,11 @@ export default ({ db }) => ({
             if (roundId && gameId) return db.get(`rounds/${gameId}/${roundId}`);
             return undefined;
         }],
-        hand: ['hand', ({ player, game }) => db.get(`hands/${game.id}/${player.id}`)],
+        hand: ['hand', ({ player, game }) => db.get(`hands/${game.id}/${player.id}`)
+            .then(hand => ({
+                ...hand,
+                cards: _.keys(hand.cards).map(c => whiteDeck[c]),
+            }))],
         whiteDeck: ['whiteDeck', whiteDeck],
         blackDeck: ['blackDeck', blackDeck],
         pick: ['pick', ({ payload: { pick } }) => whiteDeck[pick]],
