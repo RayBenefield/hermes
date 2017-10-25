@@ -1,5 +1,14 @@
 # Work Log
 
+## #64
+
+Finished the work necessary to make the vote action work without side effects
+now. Now that that is working I can put focus on actual refactoring of the
+system in the ways that it needs to work. There are a lot of places where
+standards would clear things up. I think I'm going to stop here for now and
+think on things for a clear path forward. And I'm exhausted.
+
+
 ## #63
 
 Slowly getting back into things as I was emotionally blocked from moving forward
