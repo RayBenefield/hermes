@@ -22,7 +22,7 @@ const enterDomain = { ...messages, ...domain };
 
 const channelRouter =
     configureChannelRouter({ fb, getContext, enterDomain, saveContext });
-const triggers = configureTriggers({ db, fb });
+const triggers = configureTriggers({ db, fb, getContext, enterDomain, saveContext });
 
 // Handle incoming messages
 exports.channels = functions.https.onRequest(channelRouter);
@@ -41,10 +41,10 @@ exports.roundStarted = functions.database.ref('/rounds/{gameId}/{id}')
 
 exports.votingStarted = functions.database.ref('/candidates/{gameId}/{roundId}')
     .onCreate(event => triggers.voteStarted({
-        action: 'round',
-        candidates: event.data.val(),
+        action: 'candidates',
         payload: {
             game: event.params.gameId,
             round: event.params.roundId,
+            notified: event.data.val().notified_players,
         },
     }));

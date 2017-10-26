@@ -47,7 +47,7 @@ export default ({ db }) => ({
             .map(player => db.get(`players/facebook/${player}`)))],
         unnotifiedPlayersForGame: ['unnotifiedPlayers', ({ players, game: { notified_players: notified } }) =>
             players.filter(({ id }) => !(_.includes(_.keys(notified), id)))],
-        unnotifiedPlayersForVoting: ['unnotifiedPlayers', ({ players, candidates: { notified_players: notified } }) =>
+        unnotifiedPlayersForVoting: ['unnotifiedPlayers', ({ players, payload: { notified } }) =>
             players.filter(({ id }) => !(id in notified))],
         latestRounds: ['rounds', ({ games }) => Promise.all(games
             .map(g => [g.id, _.values(g.rounds)[0]])
@@ -77,8 +77,8 @@ export default ({ db }) => ({
             db.delete([`hands/${game.id}/${player.id}/cards/${card.id}`])],
         notifiedAllPlayersOfGame: [({ players, game: { id } }) =>
             db.set(`games/${id}/notified_players`, players.reduce((a, p) => Object.assign(a, { [p.id]: true }), {}))],
-        notifiedAllPlayersOfVoting: [({ players, candidates: { round, game } }) =>
-            db.set(`candidates/${game}/${round}/notified_players`, players.reduce((all, curr) =>
+        notifiedAllPlayersOfVoting: [({ players, candidates, round, game }) =>
+            db.set(`candidates/${game.id}/${round.id}/notified_players`, players.reduce((all, curr) =>
                 Object.assign(all, { [curr.id]: true }), {}))],
         gameForPlayers: [({ players, game: { id } }) => Promise.all(
             players.map(player =>
