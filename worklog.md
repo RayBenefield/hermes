@@ -1,5 +1,14 @@
 # Work Log
 
+## #71
+
+Had to go update **transmutation** in order to support iterating over an array
+field in the snowball. This will ensure that I can do things for like all
+players or all actions or something. This will definitely be useful moving
+forward. I finished up the addition of the extendEach, but I also need a doEach
+operator for side effects.
+
+
 ## #70
 
 Worked a double session so I'll just leave it at that.
