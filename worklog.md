@@ -1,5 +1,10 @@
 # Work Log
 
+## #70
+
+Worked a double session so I'll just leave it at that.
+
+
 ## #69
 
 Ended up doing a double session to completely clean up all the side effects from
