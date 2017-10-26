@@ -16,18 +16,20 @@ export default ({ db }) => {
                 .extend(...get.player)
                 .extend(...get.game)
                 .extend(...get.round)
-                .extend(...get.hand),
+                .extend(...get.hand)
+                .extend(...get.candidates),
             pick: transmute()
                 .extend(...get.player)
                 .extend(...get.game)
                 .extend(...get.round)
-                .extend(...get.whiteDeck)
-                .extend(...get.pick),
+                .extend(...get.pick)
+                .extend(...get.candidates),
             vote: transmute()
                 .extend(...get.player)
                 .extend(...get.round)
                 .extend(...get.game)
-                .extend(...get.vote),
+                .extend(...get.vote)
+                .extend(...get.candidates),
         },
         save: {
             'welcome-message': transmute().do(...save.playerInfo),

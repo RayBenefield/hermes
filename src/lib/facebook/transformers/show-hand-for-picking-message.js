@@ -9,7 +9,7 @@ export default ({ game, round, cards }) => carousel(
             {
                 type: 'postback',
                 title: '🔘 Pick',
-                payload: `action: pick\npayload:\n pick: ${id}\n game: ${game.id}\n round: ${round.id}`,
+                payload: `action: pick\npayload:\n pick: ${id}\n game: ${game}\n round: ${round}`,
             },
         ],
     }))

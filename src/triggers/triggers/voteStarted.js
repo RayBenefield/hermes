@@ -8,14 +8,17 @@ export default ({ db, fb }) => {
 
     return transmute()
         .extend(...get.game)
+        .extend(...get.round)
         .extend(...get.playersFromGame)
         .extend(...get.unnotifiedPlayersForVoting)
-        .do(({ unnotifiedPlayers, candidates: { candidates } }) => Promise.all(
+        .do(({ game, round, unnotifiedPlayers, candidates: { candidates } }) => Promise.all(
             unnotifiedPlayers.map(lead => transmute({ lead })
                 .extend('messages', () => [
                     {
                         type: 'candidates-ready-message',
                         payload: {
+                            game: game.id,
+                            round: round.id,
                             unranked: _.values(
                                 _.pickBy(candidates, (card, player) => player !== lead.id)
                             ).map(c => whiteDeck[c]),

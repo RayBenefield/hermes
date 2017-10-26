@@ -5,12 +5,11 @@ describe('Pick Card', (it) => {
     it('should return the picked card', (assert) => {
         // Given
         const pick = { id: 0, contents: 'White Card' };
-        const whiteDeck = [pick];
         const game = { id: 0 };
         const round = { id: 0 };
 
         // When
-        const messages = pickCard({ game, round, whiteDeck, pick });
+        const messages = pickCard({ game, round, pick });
 
         // Then
         assert.deepEqual(messages, [
@@ -28,13 +27,12 @@ describe('Pick Card', (it) => {
         // Given
         const player = { id: 123456 };
         const pick = { id: 0, contents: 'White Card' };
-        const whiteDeck = [pick];
         const game = { id: 0 };
         const candidates = { [player.id]: pick };
-        const round = { id: 0, candidates };
+        const round = { id: 0 };
 
         // When
-        const messages = pickCard({ player, game, round, whiteDeck, pick });
+        const messages = pickCard({ candidates, player, game, round, pick });
 
         // Then
         assert.deepEqual(messages, [
@@ -56,17 +54,17 @@ describe('Pick Card', (it) => {
         const player4 = { id: 456789 };
         const player5 = { id: 567890 };
         const pick = { id: 0, contents: 'White Card' };
-        const whiteDeck = [pick];
         const candidates = {
-            [player2.id]: pick.id,
-            [player3.id]: pick.id,
-            [player4.id]: pick.id,
-            [player5.id]: pick.id,
+            [player2.id]: pick,
+            [player3.id]: pick,
+            [player4.id]: pick,
+            [player5.id]: pick,
         };
-        const round = { id: 3, candidates };
+        const round = { id: 3 };
+        const game = { id: 0 };
 
         // When
-        const messages = pickCard({ player: player1, round, whiteDeck, pick });
+        const messages = pickCard({ candidates, player: player1, game, round, pick });
 
         // Then
         assert.deepEqual(messages, [
@@ -79,6 +77,8 @@ describe('Pick Card', (it) => {
             {
                 type: 'candidates-ready-message',
                 payload: {
+                    game: game.id,
+                    round: round.id,
                     pick,
                     unranked: [
                         pick,

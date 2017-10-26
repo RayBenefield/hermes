@@ -1,18 +1,18 @@
-export default ({ player = {}, game, round = {}, hand }) => {
-    if (!round.candidates) {
+export default ({ candidates, player = {}, game, round, hand }) => {
+    if (!candidates) {
         return [
             {
                 type: 'show-hand-for-picking-message',
                 payload: {
-                    game,
-                    round,
+                    game: game.id,
+                    round: round.id,
                     cards: hand.cards,
                 },
             },
         ];
     }
 
-    if (player.id in round.candidates) {
+    if (player.id in candidates) {
         return [
             {
                 type: 'show-hand-message',
@@ -28,8 +28,8 @@ export default ({ player = {}, game, round = {}, hand }) => {
         {
             type: 'show-hand-for-picking-message',
             payload: {
-                game,
-                round,
+                game: game.id,
+                round: round.id,
                 cards: hand.cards,
             },
         },

@@ -1,13 +1,13 @@
 import _ from 'lodash';
 
-export default ({ player, votes, vote, game, round: { id, candidates } }) => {
+export default ({ votes, vote, candidates, player, game, round }) => {
     if (_.isEmpty(votes)) {
         return [
             {
                 type: 'show-ranked-list',
                 payload: {
                     game: game.id,
-                    round: id,
+                    round: round.id,
                     ranked: [vote],
                     unranked: _.values(_.pickBy(candidates, (c, p) => p !== player.id))
                         .filter(c => c.id !== vote.id),
@@ -23,6 +23,8 @@ export default ({ player, votes, vote, game, round: { id, candidates } }) => {
             {
                 type: 'show-votes-message',
                 payload: {
+                    game: game.id,
+                    round: round.id,
                     ranked,
                 },
             },
@@ -35,7 +37,7 @@ export default ({ player, votes, vote, game, round: { id, candidates } }) => {
             type: 'show-ranked-list',
             payload: {
                 game: game.id,
-                round: id,
+                round: round.id,
                 ranked,
                 unranked: _.differenceBy(_.values(candidates), ranked, 'id'),
             },

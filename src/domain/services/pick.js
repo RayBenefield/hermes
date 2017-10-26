@@ -1,13 +1,13 @@
 /* eslint-disable max-lines */
 import _ from 'lodash';
 
-export default ({ player = {}, whiteDeck, round = {}, pick }) => {
-    if (!round.candidates) {
+export default ({ candidates, player = {}, pick, round, game }) => {
+    if (!candidates) {
         return [
             {
                 type: 'card-selected-message',
                 payload: {
-                    card: whiteDeck[pick.id],
+                    card: pick,
                 },
             },
             { type: 'wait-for-votes-message' },
@@ -15,28 +15,30 @@ export default ({ player = {}, whiteDeck, round = {}, pick }) => {
     }
 
     const messages = [];
-    if (player.id in round.candidates) {
+    if (player.id in candidates) {
         messages.push({
             type: 'card-already-selected-message',
             payload: {
-                card: round.candidates[player.id],
+                card: candidates[player.id],
             },
         });
     } else {
         messages.push({
             type: 'card-selected-message',
             payload: {
-                card: whiteDeck[pick.id],
+                card: pick,
             },
         });
     }
 
-    if (_.values(round.candidates).length === 4) {
+    if (_.values(candidates).length === 4) {
         messages.push({
             type: 'candidates-ready-message',
             payload: {
-                pick: whiteDeck[pick.id],
-                unranked: _.values(round.candidates).map(c => whiteDeck[c]),
+                game: game.id,
+                round: round.id,
+                pick,
+                unranked: _.values(candidates),
             },
         });
         return messages;

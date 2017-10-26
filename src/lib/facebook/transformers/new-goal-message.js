@@ -8,7 +8,7 @@ export default ({ game, round, card: { contents } }) => list([
             {
                 title: '🙏 Show Hand',
                 type: 'postback',
-                payload: `action: hand\npayload:\n game: ${game.id}\n round: ${round.id}`,
+                payload: `action: hand\npayload:\n game: ${game}\n round: ${round}`,
             },
         ],
     },

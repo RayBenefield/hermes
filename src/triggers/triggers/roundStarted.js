@@ -12,7 +12,11 @@ export default ({ db, fb }) => {
         .extend('messages', ({ round, game, card }) => [
             {
                 type: 'new-goal-message',
-                payload: { game, round, card },
+                payload: {
+                    game: game.id,
+                    round: round.id,
+                    card,
+                },
             },
         ])
         .do(...save.roundForGame)

@@ -29,6 +29,7 @@ export default ({ db }) => ({
                 ...hand,
                 cards: _.keys(hand.cards).map(c => whiteDeck[c]),
             }))],
+        candidates: ['candidates', ({ round }) => _.mapValues(round.candidates, candidate => whiteDeck[candidate])],
         hands: ['hands', ({ game, players }) => Promise.all(players
             .map(player => db.get(`hands/${game.id}/${player.id}`)
                 .then(hand => ({

@@ -16,8 +16,8 @@ describe('Show Hand', (it) => {
             8: { contents: 'Racism.' },
             9: { contents: 'Daddy issues.' },
         } };
-        const game = {};
-        const round = {};
+        const game = { id: 0 };
+        const round = { id: 0 };
 
         // When
         const messages = showHand({ game, round, hand });
@@ -27,8 +27,8 @@ describe('Show Hand', (it) => {
             {
                 type: 'show-hand-for-picking-message',
                 payload: {
-                    game,
-                    round,
+                    game: game.id,
+                    round: round.id,
                     cards: hand.cards,
                 },
             },
@@ -50,11 +50,12 @@ describe('Show Hand', (it) => {
             8: { contents: 'Racism.' },
             9: { contents: 'Daddy issues.' },
         } };
-        const game = {};
-        const round = { candidates: { [player.id]: {} } };
+        const game = { id: 0 };
+        const round = { id: 0 };
+        const candidates = { [player.id]: {} };
 
         // When
-        const messages = showHand({ player, game, round, hand });
+        const messages = showHand({ candidates, player, game, round, hand });
 
         // Then
         assert.deepEqual(messages, [
