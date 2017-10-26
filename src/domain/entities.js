@@ -77,7 +77,7 @@ export default ({ db }) => ({
             db.delete([`hands/${game.id}/${player.id}/cards/${card.id}`])],
         notifiedAllPlayersOfGame: [({ players, game: { id } }) =>
             db.set(`games/${id}/notified_players`, players.reduce((a, p) => Object.assign(a, { [p.id]: true }), {}))],
-        notifiedAllPlayersOfVoting: [({ players, candidates, round, game }) =>
+        notifiedAllPlayersOfVoting: [({ players, round, game }) =>
             db.set(`candidates/${game.id}/${round.id}/notified_players`, players.reduce((all, curr) =>
                 Object.assign(all, { [curr.id]: true }), {}))],
         gameForPlayers: [({ players, game: { id } }) => Promise.all(
