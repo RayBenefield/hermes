@@ -1,5 +1,13 @@
 # Work Log
 
+## #69
+
+Ended up doing a double session to completely clean up all the side effects from
+the refactoring of the domain, context, entity system. But ultimately it was
+worth and tracking down things wasn't so bad with stacktraces. And now that I
+have a standard, things should be solid again.
+
+
 ## #68
 
 Finished up the flatting of the card structure. There are still a couple of
