@@ -1,5 +1,15 @@
 # Work Log
 
+## #72
+
+WOOT!!! I finished the updates for **transmutation**, published and then
+immediately started incorporating. It actually worked perfectly as soon as I
+added it, I just need to adjust all of the logic in the trigger. But now I can
+go through and clean up all the trigger logic moving forward so that way it uses
+the same domain system as everything else, which is awesome. Done with this deep
+lock for now.
+
+
 ## #71
 
 Had to go update **transmutation** in order to support iterating over an array
