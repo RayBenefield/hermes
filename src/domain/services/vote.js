@@ -39,6 +39,7 @@ export default ({ votes, vote, candidates, player, game, round }) => {
         ];
     }
 
+    const otherCandidates = _.pickBy(candidates, (c, p) => p !== player.id);
     const ranked = [...votes, vote];
     return [
         {
@@ -50,7 +51,7 @@ export default ({ votes, vote, candidates, player, game, round }) => {
                     _.pickBy(candidates, c => c.id === vote.id)
                 )[0],
                 ranked,
-                unranked: _.differenceBy(_.values(candidates), ranked, 'id'),
+                unranked: _.differenceBy(_.values(otherCandidates), ranked, 'id'),
             },
         },
     ];

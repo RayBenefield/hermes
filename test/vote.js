@@ -9,12 +9,13 @@ describe('Vote For', (it) => {
     it('should return a new ranked list with the vote applied', (assert) => {
         // Given
         const votes = [];
-        const vote = { id: 1, contents: 'voted' };
+        const vote = { id: 5, contents: 'voted 5' };
         const candidates = {
             0: { id: 1, contents: 'voted' },
             1: { id: 2, contents: 'voted 2' },
             2: { id: 3, contents: 'voted 3' },
             3: { id: 4, contents: 'voted 4' },
+            4: { id: 5, contents: 'voted 5' },
         };
         const unranked = [
             { id: 2, contents: 'voted 2' },
@@ -32,7 +33,7 @@ describe('Vote For', (it) => {
                 payload: {
                     game: game.id,
                     round: round.id,
-                    vote: '0',
+                    vote: '4',
                     ranked: [vote],
                     unranked,
                 },
@@ -45,16 +46,17 @@ describe('Vote For', (it) => {
         const votes = [
             { id: 3, contents: 'voted 3' },
         ];
-        const vote = { id: 1, contents: 'voted' };
+        const vote = { id: 5, contents: 'voted 5' };
         const candidates = {
             0: { id: 1, contents: 'voted' },
             1: { id: 2, contents: 'voted 2' },
             2: { id: 3, contents: 'voted 3' },
             3: { id: 4, contents: 'voted 4' },
+            4: { id: 5, contents: 'voted 5' },
         };
         const ranked = [
             { id: 3, contents: 'voted 3' },
-            { id: 1, contents: 'voted' },
+            { id: 5, contents: 'voted 5' },
         ];
         const unranked = [
             { id: 2, contents: 'voted 2' },
@@ -71,7 +73,7 @@ describe('Vote For', (it) => {
                 payload: {
                     game: game.id,
                     round: round.id,
-                    vote: '0',
+                    vote: '4',
                     ranked,
                     unranked,
                 },
