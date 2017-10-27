@@ -1,5 +1,12 @@
 # Work Log
 
+## #73
+
+Finished up the logic for saving the votes cast. Next is to finish up the rules
+on winning which will result in changing votes to playerVotes and then checking
+to see if we have all the votes when the player is done voting themselves.
+
+
 ## #72
 
 WOOT!!! I finished the updates for **transmutation**, published and then
