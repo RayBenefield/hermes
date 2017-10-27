@@ -29,7 +29,8 @@ export default ({ db }) => {
                 .extend(...get.round)
                 .extend(...get.game)
                 .extend(...get.vote)
-                .extend(...get.candidates),
+                .extend(...get.candidates)
+                .extend(...get.votes),
         },
         save: {
             'welcome-message': transmute().do(...save.playerInfo),
@@ -43,6 +44,10 @@ export default ({ db }) => {
                 .do(...save.removalOfCandidateFromHand),
             'candidates-ready-message': transmute()
                 .do(...save.candidateList),
+            'show-ranked-list': transmute()
+                .do(...save.vote),
+            'show-votes-message': transmute()
+                .do(...save.vote),
         },
     };
 };

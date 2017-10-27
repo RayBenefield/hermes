@@ -40,6 +40,8 @@ export default ({ db }) => ({
         blackDeck: ['blackDeck', blackDeck],
         pick: ['pick', ({ payload: { pick } }) => whiteDeck[pick]],
         vote: ['vote', ({ payload: { vote } }) => whiteDeck[vote]],
+        votes: ['votes', ({ player, candidates, round: { votes } }) => _.values(votes[player.id])
+            .map(votedFor => candidates[votedFor])],
         card: ['card', () => blackDeck.sort(() => 0.5 - Math.random()).slice(0, 1)[0]],
         playersFromGame: ['players', ({ game: { players } }) => Promise.all(_.keys(players)
             .map(p => db.get(`players/facebook/${p}`)))],
@@ -123,5 +125,7 @@ export default ({ db }) => ({
                     [player.id]: pick.id,
                 },
             })],
+        vote: [({ player, round, game, payload: { vote } }) =>
+            db.push(`rounds/${game.id}/${round.id}/votes/${player.id}`, vote)],
     },
 });
