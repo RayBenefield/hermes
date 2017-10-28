@@ -1,5 +1,14 @@
 # Work Log
 
+## #76
+
+WE HAVE COMPLETED THE LOOP!!! Now that the winner is triggered, we notify all
+players of the winner, and then we start a new round to trigger the game loop
+all over again. TADA!!! Tomorrow I will just spend all day refactoring and
+cleaning up to perfect for passing on to other people. WOOT!!! :) Done for the
+night. SOOOO PUMPED!!!!
+
+
 ## #75
 
 Finished the work needed to actually decide the winner based on data in the
