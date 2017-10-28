@@ -1,3 +1,5 @@
+ - Combine services, getContext, enterDomain, and saveContext into just domain
+ - Setup initial integration testing system for domain
  - Use doEach now to save the context
  - Setup all triggers to use the domain, context, entity system
  - Set the environment variable to determine how to log (colors are printed
@@ -9,11 +11,8 @@
  - Refactor facebook to handle messages out to multiple leads
  - Create discard pile for white deck
  - Create discard pile for black deck
- - Combine services, getContext, enterDomain, and saveContext into just domain
  - Remove Object.values as it is only in Node 7.0 and not Node 6.11.1 on
    Firebase Cloud Functions
  - Create a has utility function to remove lodash as a dependency
- - Flesh out the candidates-submitted domain action
- - Flesh out the votes-submitted domain action
  - Make dev script to update persistent menu
  - Make dev script to update getting started call to action

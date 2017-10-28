@@ -1,5 +1,19 @@
 # Work Log
 
+## #77
+
+Finally figured a strong way to setup a local database in order to run tests
+locally and setup things on a dev environment as a whole. I still need to figure
+out exactly how to do things like run, dev scripts on the in-memory database,
+but I'm getting there. Luckily I could do a sort of local dev mode where I get
+quick replies that will allow me to manipulate the database. The thing also is
+that I don't have triggers working so I also have to figure out how to run the
+triggers as a result of running a local database. Should be a fun little game.
+But ultimately getting to the point where I can run an integration test is huge.
+So let's move forward from here towards refactoring the domain so it can be
+integration tested.
+
+
 ## #76
 
 WE HAVE COMPLETED THE LOOP!!! Now that the winner is triggered, we notify all
