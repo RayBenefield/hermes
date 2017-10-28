@@ -1,5 +1,15 @@
 # Work Log
 
+## #79
+
+Started exploring integration testing. I really want to use snapshots so I don't
+have to manually build the results for everything. So I'm exploring options.
+Snap-shot as a library isn't going to work for tape-bdd, however I may be able
+to get it to work with Ava, or even just use it with standard tape if they have
+the option. So I'll look into that next. One more for this deep block and then
+breakfast.
+
+
 ## #78
 
 I went through and pulled the domain into its own file so I can start running
