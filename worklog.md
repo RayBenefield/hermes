@@ -1,5 +1,12 @@
 # Work Log
 
+## #75
+
+Finished the work needed to actually decide the winner based on data in the
+database. Next is to save that winner to the database and inform all players,
+and then start a new round to trigger the cycle all over again.
+
+
 ## #74
 
 Added the winner domain logic necessary for when the last of the votes are in.

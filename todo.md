@@ -1,4 +1,4 @@
- - Script that will randomly commit votes for players
+ - Save the winner
  - Create a trigger for when the winner is decided
  - Use doEach now to save the context
  - Setup all triggers to use the domain, context, entity system
