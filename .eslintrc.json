@@ -3,8 +3,12 @@
     "plugins": [
         "react",
         "jsx-a11y",
-        "import"
+        "import",
+        "jest"
     ],
+    "env": {
+        "jest/globals": true
+    },
     "rules": {
         "indent": [
             "error",

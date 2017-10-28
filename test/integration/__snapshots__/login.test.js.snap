@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sends back a welcome message and instructions message 1`] = `
+Object {
+  "db": Object {
+    "players": Object {
+      "facebook": Object {
+        "123456": Object {
+          "id": 123456,
+          "platform": "facebook",
+        },
+      },
+    },
+  },
+  "results": Object {
+    "action": "login",
+    "lead": Object {
+      "id": 123456,
+      "platform": "facebook",
+    },
+    "messages": Array [
+      Object {
+        "payload": Object {
+          "id": 123456,
+          "platform": "facebook",
+        },
+        "type": "welcome-message",
+      },
+      Object {
+        "type": "instructions-message",
+      },
+    ],
+    "player": undefined,
+  },
+}
+`;
