@@ -1,11 +1,12 @@
 import flame from '@leonardvandriel/flame';
 import * as databases from './database'; // eslint-disable-line import/no-unresolved,import/extensions
+import uuid from '../utils/mock-uuid';
+import configureSave from '../utils/save-db';
 import configureDomain from '../../src/domain';
 import configureFlame from '../../src/lib/local-db';
-import configureSave from '../utils/save-db';
 
 const db = configureFlame(flame);
-const domain = configureDomain({ db });
+const domain = configureDomain({ db, uuid });
 const save = configureSave(flame); // eslint-disable-line no-unused-vars
 beforeEach(() => flame.loadDatabase(undefined));
 

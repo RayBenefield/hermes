@@ -1,4 +1,5 @@
 /* eslint-disable max-lines */
+import uuid from 'uuid/v4';
 import admin from 'firebase-admin';
 import * as functions from 'firebase-functions';
 import flame from '@leonardvandriel/flame';
@@ -17,7 +18,7 @@ const db = process.env.NODE_ENV === 'dev-local'
     : configureFirebaseDb(admin.database());
 
 const fb = configureFacebook(config.facebook);
-const domain = configureDomain({ db });
+const domain = configureDomain({ db, uuid });
 
 const channelRouter =
     configureChannelRouter({ fb, domain });

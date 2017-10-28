@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`add player to the queue 1`] = `
+Object {
+  "db": Object {
+    "players": Object {
+      "facebook": Object {
+        "123456": Object {
+          "id": 123456,
+          "platform": "facebook",
+        },
+      },
+    },
+    "queue": Object {
+      "123456": true,
+    },
+  },
+  "results": Object {
+    "action": "join",
+    "lead": Object {
+      "id": 123456,
+      "platform": "facebook",
+    },
+    "messages": Array [
+      Object {
+        "payload": Object {
+          "player": 123456,
+          "queue": Array [
+            123456,
+          ],
+        },
+        "type": "queue-joined-message",
+      },
+    ],
+    "player": Object {
+      "id": 123456,
+      "platform": "facebook",
+    },
+    "players": Array [],
+    "queue": Array [],
+  },
+}
+`;
+
+exports[`new game started from full queue 1`] = `
+Object {
+  "db": Object {
+    "games": Object {
+      "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx": Object {
+        "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "notified_players": Object {
+          "123456": true,
+        },
+        "players": Object {
+          "123456": true,
+        },
+      },
+    },
+    "players": Object {
+      "facebook": Object {
+        "123456": Object {
+          "id": 123456,
+          "platform": "facebook",
+        },
+        "234567": Object {
+          "id": 234567,
+          "platform": "facebook",
+        },
+        "345678": Object {
+          "id": 345678,
+          "platform": "facebook",
+        },
+        "456789": Object {
+          "id": 456789,
+          "platform": "facebook",
+        },
+        "567890": Object {
+          "id": 567890,
+          "platform": "facebook",
+        },
+      },
+    },
+    "queue": Object {
+      "234567": true,
+      "345678": true,
+      "456789": true,
+      "567890": true,
+    },
+  },
+  "results": Object {
+    "action": "join",
+    "lead": Object {
+      "id": 123456,
+      "platform": "facebook",
+    },
+    "messages": Array [
+      Object {
+        "payload": Object {
+          "players": Array [
+            Object {
+              "id": 123456,
+              "platform": "facebook",
+            },
+          ],
+        },
+        "type": "game-started-message",
+      },
+    ],
+    "player": Object {
+      "id": 123456,
+      "platform": "facebook",
+    },
+    "players": Array [
+      Object {
+        "id": 234567,
+        "platform": "facebook",
+      },
+      Object {
+        "id": 345678,
+        "platform": "facebook",
+      },
+      Object {
+        "id": 456789,
+        "platform": "facebook",
+      },
+      Object {
+        "id": 567890,
+        "platform": "facebook",
+      },
+    ],
+    "queue": Array [
+      "234567",
+      "345678",
+      "456789",
+      "567890",
+    ],
+  },
+}
+`;
+
+exports[`player already added to the queue 1`] = `
+Object {
+  "db": Object {
+    "players": Object {
+      "facebook": Object {
+        "123456": Object {
+          "id": 123456,
+          "platform": "facebook",
+        },
+      },
+    },
+    "queue": Object {
+      "123456": true,
+    },
+  },
+  "results": Object {
+    "action": "join",
+    "lead": Object {
+      "id": 123456,
+      "platform": "facebook",
+    },
+    "messages": Array [
+      Object {
+        "payload": Object {
+          "queue": Array [
+            "123456",
+          ],
+        },
+        "type": "already-in-queue-message",
+      },
+    ],
+    "player": Object {
+      "id": 123456,
+      "platform": "facebook",
+    },
+    "players": Array [
+      Object {
+        "id": 123456,
+        "platform": "facebook",
+      },
+    ],
+    "queue": Array [
+      "123456",
+    ],
+  },
+}
+`;
+
+exports[`player does not exist 1`] = `
+Object {
+  "db": null,
+  "results": Object {
+    "action": "join",
+    "lead": Object {
+      "id": 123456,
+      "platform": "facebook",
+    },
+    "messages": Array [
+      Object {
+        "type": "player-does-not-exist-message",
+      },
+    ],
+    "player": undefined,
+    "players": Array [],
+    "queue": Array [],
+  },
+}
+`;

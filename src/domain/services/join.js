@@ -1,7 +1,7 @@
 export default ({ player, players, queue = [] } = {}) => {
     if (!player) return [{ type: 'player-does-not-exist-message' }];
 
-    if (queue.includes(player.id)) {
+    if (queue.includes(player.id.toString())) {
         return [
             {
                 type: 'already-in-queue-message',

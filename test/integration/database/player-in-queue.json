@@ -1,0 +1,13 @@
+{
+    "players": {
+        "facebook": {
+            "123456": {
+                "platform": "facebook",
+                "id": 123456
+            }
+        }
+    },
+    "queue": {
+        "123456": true
+    }
+}

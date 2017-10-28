@@ -1,10 +1,9 @@
 /* eslint-disable max-lines */
 import _ from 'lodash';
-import uuid from 'uuid/v4';
 import whiteDeck from '../data/white-deck.json';
 import blackDeck from '../data/black-deck.json';
 
-export default ({ db }) => ({
+export default ({ db, uuid }) => ({
     get: {
         allGames: ['games', () => db.get('games').then(_.values)],
         allPlayers: ['players', () => db.get('players/facebook').then(_.values)],

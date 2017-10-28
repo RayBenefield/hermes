@@ -2,8 +2,8 @@
 import transmute from 'transmutation';
 import configureEntites from './entities';
 
-export default ({ db }) => {
-    const { get, save } = configureEntites({ db });
+export default ({ db, uuid }) => {
+    const { get, save } = configureEntites({ db, uuid });
 
     return {
         get: {

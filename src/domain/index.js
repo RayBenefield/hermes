@@ -7,8 +7,8 @@ export const services = enterDomain;
 export const setupContext = configureContext;
 export const setupEntities = configureEntities;
 
-export default ({ db }) => {
-    const context = configureContext({ db });
+export default ({ db, uuid }) => {
+    const context = configureContext({ db, uuid });
     const getContext = context.get;
     const saveContext = context.save;
 

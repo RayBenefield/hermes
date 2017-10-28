@@ -1,0 +1,32 @@
+{
+    "players": {
+        "facebook": {
+            "123456": {
+                "platform": "facebook",
+                "id": 123456
+            },
+            "234567": {
+                "platform": "facebook",
+                "id": 234567
+            },
+            "345678": {
+                "platform": "facebook",
+                "id": 345678
+            },
+            "456789": {
+                "platform": "facebook",
+                "id": 456789
+            },
+            "567890": {
+                "platform": "facebook",
+                "id": 567890
+            }
+        }
+    },
+    "queue": {
+        "234567": true,
+        "345678": true,
+        "456789": true,
+        "567890": true
+    }
+}
