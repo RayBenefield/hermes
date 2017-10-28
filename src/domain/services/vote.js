@@ -39,11 +39,12 @@ export default ({ playerVotes, vote, votes = [], candidates, player, players, ga
             },
         });
 
-        if (_.keys(votes).length === 4) {
+        if (_.keys(votes).length === 5) {
             const election = new Election({
                 candidates: _.map(players, p => p.id),
             });
 
+            votes[player.id].push(_.findKey(candidates, c => c.id === vote.id));
             _.forIn(votes, v => election.addBallot(v));
             const winnerId = irv(election);
             const winner = candidates[winnerId];

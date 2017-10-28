@@ -28,8 +28,10 @@ export default ({ db }) => {
                 .extend(...get.player)
                 .extend(...get.round)
                 .extend(...get.game)
+                .extend(...get.playersFromGame)
                 .extend(...get.vote)
                 .extend(...get.candidates)
+                .extend(...get.votes)
                 .extend(...get.playerVotes),
         },
         save: {

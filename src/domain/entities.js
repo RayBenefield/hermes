@@ -40,9 +40,13 @@ export default ({ db }) => ({
         blackDeck: ['blackDeck', blackDeck],
         pick: ['pick', ({ payload: { pick } }) => whiteDeck[pick]],
         vote: ['vote', ({ payload: { vote } }) => whiteDeck[vote]],
-        playerVotes: ['playerVotes', ({ player, candidates, round: { votes } }) => {
-            if (!votes) return [];
-            return _.values(votes[player.id])
+        votes: ['votes', ({ round: { votes } }) => {
+            if (!votes) return {};
+            return _.mapValues(votes, v => _.values(v));
+        }],
+        playerVotes: ['playerVotes', ({ player, candidates, votes }) => {
+            if (!votes[player.id]) return [];
+            return votes[player.id]
                 .map(votedFor => candidates[votedFor]);
         }],
         card: ['card', () => blackDeck.sort(() => 0.5 - Math.random()).slice(0, 1)[0]],
