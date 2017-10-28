@@ -1,5 +1,13 @@
 # Work Log
 
+## #74
+
+Added the winner domain logic necessary for when the last of the votes are in.
+Wasn't too bad implementing the caritat package which setup ranked choice
+voting, and it was all just minor details really. Next is to integrate the
+winner logic.
+
+
 ## #73
 
 Finished up the logic for saving the votes cast. Next is to finish up the rules
