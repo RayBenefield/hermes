@@ -6,8 +6,8 @@ import blackDeck from '../data/black-deck.json';
 
 export default ({ db }) => ({
     get: {
-        allGames: ['games', db.get('games').then(_.values)],
-        allPlayers: ['players', db.get('players/facebook').then(_.values)],
+        allGames: ['games', () => db.get('games').then(_.values)],
+        allPlayers: ['players', () => db.get('players/facebook').then(_.values)],
         player: ['player', ({ lead }) => db.get(`players/${lead.platform}/${lead.id}`)],
         queue: ['queue', () => db.get('queue').then(_.keys)],
         allPlayersInQueue: ['players', ({ queue }) => Promise.all(queue

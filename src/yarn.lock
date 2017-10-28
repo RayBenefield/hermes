@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@leonardvandriel/flame@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@leonardvandriel/flame/-/flame-0.0.4.tgz#d6b56a747f9b2849a5e94d5e7a0060817a82e81a"
+
 "@types/express-serve-static-core@*":
   version "4.0.53"
   resolved "https://registry.yarnpkg.com/@types/express-serve-static-core/-/express-serve-static-core-4.0.53.tgz#1723a35d1447f2c55e13c8721eab3448e42f4d82"

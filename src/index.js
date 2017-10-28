@@ -1,10 +1,12 @@
 /* eslint-disable max-lines */
 import admin from 'firebase-admin';
 import * as functions from 'firebase-functions';
+import flame from '@leonardvandriel/flame';
 import configureFacebook from './lib/facebook';
 import * as domain from './domain/services'; // eslint-disable-line import/no-unresolved, import/extensions
 import configureContext from './domain/context';
-import configureDb from './lib/db';
+import configureFlame from './lib/local-db';
+import configureFirebaseDb from './lib/db';
 import messages from './data/messages';
 import configureChannelRouter from './routes/channels';
 import configureTriggers from './triggers';
@@ -12,7 +14,9 @@ import './pretty-errors';
 
 const config = functions.config();
 admin.initializeApp(config.firebase);
-const db = configureDb(admin.database());
+const db = process.env.NODE_ENV === 'dev'
+    ? configureFlame(flame)
+    : configureFirebaseDb(admin.database());
 
 const fb = configureFacebook(config.facebook);
 const context = configureContext({ db });
