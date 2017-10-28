@@ -8,11 +8,11 @@ describe('Show Candidates', (it) => {
         const game = { id: 0 };
         const round = { id: 0 };
         const candidates = {
-            '0': { id: 1, contents: 'first' },
-            '1': { id: 2, contents: 'second' },
-            '2': { id: 3, contents: 'third' },
-            '3': { id: 4, contents: 'fourth' },
-            '4': { id: 5, contents: 'fifth' },
+            0: { id: 1, contents: 'first' },
+            1: { id: 2, contents: 'second' },
+            2: { id: 3, contents: 'third' },
+            3: { id: 4, contents: 'fourth' },
+            4: { id: 5, contents: 'fifth' },
         };
         const unranked = [
             { id: 2, contents: 'second' },
