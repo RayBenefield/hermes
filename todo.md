@@ -1,4 +1,4 @@
- - Setup initial integration testing system for domain
+ - Added integration testing for each of the domain services
  - Use doEach now to save the context
  - Setup all triggers to use the domain, context, entity system
  - Set the environment variable to determine how to log (colors are printed

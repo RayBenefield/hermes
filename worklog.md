@@ -1,5 +1,16 @@
 # Work Log
 
+## #80
+
+So I finally got a snapshot setup for integration testing working. I think it
+will work well moving forward. I think I may have to do some setup code here and
+there to clear out the database before each. Also I'm not a fan of rebuilding
+the functions directory and depending on that for integration testing, so blah,
+but I'll hopefully figure something out in the future. I'll just keep thinking
+on it. So next deep block is dedicated to decking out the integration suite so I
+can go through and cleanly refactor all the things.
+
+
 ## #79
 
 Started exploring integration testing. I really want to use snapshots so I don't
