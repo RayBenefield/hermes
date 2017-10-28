@@ -1,4 +1,3 @@
- - Combine services, getContext, enterDomain, and saveContext into just domain
  - Setup initial integration testing system for domain
  - Use doEach now to save the context
  - Setup all triggers to use the domain, context, entity system

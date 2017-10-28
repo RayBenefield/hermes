@@ -1,5 +1,13 @@
 # Work Log
 
+## #78
+
+I went through and pulled the domain into its own file so I can start running
+integration testing. The plan is to pass the action and payload into the domain
+and make sure that the right messages come out as well as the right data is
+saved to the database. So that's the next setup is playing with integration.
+
+
 ## #77
 
 Finally figured a strong way to setup a local database in order to run tests
