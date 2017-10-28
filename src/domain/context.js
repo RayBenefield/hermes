@@ -50,6 +50,9 @@ export default ({ db }) => {
                 .do(...save.vote),
             'show-votes-message': transmute()
                 .do(...save.vote),
+            'show-winner-message': transmute()
+                .do(...save.notifiedPlayerOfWinner)
+                .do(...save.winner),
         },
     };
 };

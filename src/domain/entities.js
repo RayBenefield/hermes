@@ -134,5 +134,9 @@ export default ({ db }) => ({
             })],
         vote: [({ player, round, game, payload: { vote } }) =>
             db.push(`rounds/${game.id}/${round.id}/votes/${player.id}`, vote)],
+        winner: [({ round, game, payload: { winner } }) =>
+            db.set(`rounds/${game.id}/${round.id}/winner`, winner.id)],
+        notifiedPlayerOfWinner: [({ player, round, game }) =>
+            db.set(`rounds/${game.id}/${round.id}/notified_players/${player.id}`)],
     },
 });
