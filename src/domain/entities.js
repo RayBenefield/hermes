@@ -74,7 +74,7 @@ export default ({ db }) => ({
     },
     save: {
         queue: [({ queue }) => db.set('queue', queue.reduce((q, p) => Object.assign(q, { [p]: true }), {}))],
-        playerInfo: [({ payload: lead }) => db.set(`players/${lead.platform}/${lead.id}`, lead)],
+        playerInfo: [({ lead }) => db.set(`players/${lead.platform}/${lead.id}`, lead)],
         playerToQueue: [({ payload: { player } }) => db.set(`queue/${player}`)],
         removalFromQueue: [({ payload: { players } }) => db.delete(players.map(p => `queue/${p.id}`))],
         newGame: [({ player, payload: { players } }) => {

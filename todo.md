@@ -23,8 +23,3 @@
 Given: Queue with player already in it
 When: Join the queue again
 Then: Returns message with number of players equal to 1 more than it should have
-
-## 2
-Given: Player already exists
-When: Player hits Get Started
-Then: An undefined is loaded into the players key of the database
