@@ -40,6 +40,7 @@
         "test:unit": "babel-tape-runner test/unit/{,**/}*.js | tap-spec",
         "sloc": "echo 'Lines of source code: ' && sloc src/ --exclude node_modules -f json | jq '.summary.source'",
         "watch": "nodemon --exec npm-run-all test:unit lint sloc",
+        "watch:integration": "nodemon --exec npm-run-all test lint sloc",
         "patch": "npm version patch -m 'v%s' && js-beautify -r package.json && git commit -a --amend --no-edit",
         "minor": "npm version minor -m 'v%s' && js-beautify -r package.json && git commit -a --amend --no-edit",
         "major": "npm version major -m 'v%s' && js-beautify -r package.json && git commit -a --amend --no-edit",
@@ -47,6 +48,7 @@
     },
     "dependencies": {},
     "devDependencies": {
+        "@leonardvandriel/flame": "^0.0.4",
         "babel-cli": "^6.24.1",
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
         "babel-plugin-wildcard": "^2.1.2",

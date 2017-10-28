@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@leonardvandriel/flame@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@leonardvandriel/flame/-/flame-0.0.4.tgz#d6b56a747f9b2849a5e94d5e7a0060817a82e81a"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
