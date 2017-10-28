@@ -14,6 +14,6 @@ export default ({ game, round, card: { contents } }) => list([
     },
     {
         title: '🏆',
-        subtitle: '🙋',
+        subtitle: 'By: 🙋',
     },
 ]);

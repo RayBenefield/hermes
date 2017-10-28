@@ -9,9 +9,9 @@ export default ({ goal, winner, player }) => [
             imageUrl: 'http://b.basemaps.cartocdn.com/dark_all/11/604/771.png',
         },
         {
-            title: winner.contents,
-            subtitle: `By: ${player.first_name}`,
-            imageUrl: 'http://d2trtkcohkrm90.cloudfront.net/images/emoji/apple/ios-10/256/1st-place-medal.png',
+            title: `🏆 ${winner.contents}`,
+            subtitle: `By: 🙋 ${player.first_name}`,
+            imageUrl: 'https://emojipedia-us.s3.amazonaws.com/thumbs/240/facebook/111/first-place-medal_1f947.png',
         },
     ]),
 ];
