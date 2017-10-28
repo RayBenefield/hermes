@@ -1,8 +1,8 @@
 import transmute from 'transmutation';
-import configureEntites from '../../domain/entities';
+import { services, setupEntities } from '../../domain';
 
-export default ({ db, fb, enterDomain }) => {
-    const { get, save } = configureEntites({ db });
+export default ({ db, fb }) => {
+    const { get, save } = setupEntities({ db });
 
     return transmute()
         .extend(...get.game)
@@ -15,7 +15,7 @@ export default ({ db, fb, enterDomain }) => {
                 .extend('lead', unnotifiedPlayer)
                 .extend('player', unnotifiedPlayer)
                 .extend('messages', transmute()
-                    .switch('action', enterDomain))
+                    .switch('action', services))
                 .extend('facebookMessages', fb.transform)
                 .do(({ lead, facebookMessages }) =>
                     fb.sendMessages(lead.id, facebookMessages)))

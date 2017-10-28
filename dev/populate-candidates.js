@@ -4,7 +4,7 @@ import { prompt } from 'inquirer';
 import admin from 'firebase-admin';
 import configureDb from '../src/lib/db';
 import privateKey from './private-key.json';
-import configureEntities from '../src/domain/entities';
+import { setupEntities } from '../src/domain';
 
 admin.initializeApp({
     credential: admin.credential.cert(privateKey),
@@ -12,7 +12,7 @@ admin.initializeApp({
 });
 const db = configureDb(admin.database());
 const testAccounts = ['1969918279691174', '2062932073720600', '1654450144625528', '1572553382787981'];
-const { get, save } = configureEntities({ db });
+const { get, save } = setupEntities({ db });
 
 const getChoices = ['choices', ({ rounds }) => rounds
     .map(round => ({

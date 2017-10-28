@@ -1,8 +1,8 @@
 import transmute from 'transmutation';
-import configureEntites from '../../domain/entities';
+import { setupEntities } from '../../domain';
 
 export default ({ db, fb }) => {
-    const { get, save } = configureEntites({ db });
+    const { get, save } = setupEntities({ db });
 
     return transmute()
         .extend(...get.playersFromGame)

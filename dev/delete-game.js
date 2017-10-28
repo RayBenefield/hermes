@@ -3,14 +3,14 @@ import { prompt } from 'inquirer';
 import admin from 'firebase-admin';
 import configureDb from '../src/lib/db';
 import privateKey from './private-key.json';
-import configureEntities from '../src/domain/entities';
+import { setupEntities } from '../src/domain';
 
 admin.initializeApp({
     credential: admin.credential.cert(privateKey),
     databaseURL: 'https://hermes-dev-1fc82.firebaseio.com',
 });
 const db = configureDb(admin.database());
-const { get, save } = configureEntities({ db });
+const { get, save } = setupEntities({ db });
 
 const getGameChoices = ['choices', ({ games }) => games
     .map(game => ({

@@ -1,8 +1,8 @@
 import transmute from 'transmutation';
-import configureEntites from '../../domain/entities';
+import { setupEntities } from '../../domain';
 
 export default ({ db, fb }) => {
-    const { get, save } = configureEntites({ db });
+    const { get, save } = setupEntities({ db });
 
     return transmute()
         .extend(...get.game)
@@ -11,7 +11,6 @@ export default ({ db, fb }) => {
         .extend(...get.playersFromGame)
         .extend(...get.winner)
         .extend(...get.winningPlayer)
-        .log('after winning player')
         .extend('messages', ({ winner, round, winningPlayer }) => [
             {
                 type: 'show-winner-message',
@@ -22,9 +21,7 @@ export default ({ db, fb }) => {
                 },
             },
         ])
-        .log('before unnotified')
         .extend(...get.unnotifiedPlayersForWinner)
-        .log('after unnotified')
         .do(({ unnotifiedPlayers, messages }) => Promise.all(
             unnotifiedPlayers.map(lead => transmute({ lead, messages })
                 .extend('facebookMessages', fb.transform)

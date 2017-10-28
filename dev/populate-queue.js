@@ -3,14 +3,14 @@ import { prompt } from 'inquirer';
 import admin from 'firebase-admin';
 import configureDb from '../src/lib/db';
 import privateKey from './private-key.json';
-import configureEntites from '../src/domain/entities';
+import { setupEntities } from '../src/domain';
 
 admin.initializeApp({
     credential: admin.credential.cert(privateKey),
     databaseURL: 'https://hermes-dev-1fc82.firebaseio.com',
 });
 const db = configureDb(admin.database());
-const { get, save } = configureEntites({ db });
+const { get, save } = setupEntities({ db });
 const testAccounts = ['1969918279691174', '2062932073720600', '1654450144625528', '1572553382787981'];
 
 const getChoices = ['choices', ({ players }) => players
