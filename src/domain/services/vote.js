@@ -1,7 +1,8 @@
 /* eslint-disable max-lines */
 import _ from 'lodash';
+import { Election, irv } from 'caritat';
 
-export default ({ playerVotes, vote, candidates, player, game, round }) => {
+export default ({ playerVotes, vote, votes = [], candidates, player, players, game, round }) => {
     if (_.isEmpty(playerVotes)) {
         return [
             {
@@ -24,19 +25,39 @@ export default ({ playerVotes, vote, candidates, player, game, round }) => {
         const otherCandidates = _.pickBy(candidates, (c, p) => p !== player.id);
         const base = [...playerVotes, vote];
         const ranked = [...base, ..._.differenceBy(_.values(otherCandidates), base, 'id')];
-        return [
-            {
-                type: 'show-votes-message',
-                payload: {
-                    game: game.id,
-                    round: round.id,
-                    vote: _.keys(
-                        _.pickBy(candidates, c => c.id === vote.id)
-                    )[0],
-                    ranked,
-                },
+        const messages = [];
+
+        messages.push({
+            type: 'show-votes-message',
+            payload: {
+                game: game.id,
+                round: round.id,
+                vote: _.keys(
+                    _.pickBy(candidates, c => c.id === vote.id)
+                )[0],
+                ranked,
             },
-        ];
+        });
+
+        if (_.keys(votes).length === 4) {
+            const election = new Election({
+                candidates: _.map(players, p => p.id),
+            });
+
+            _.forIn(votes, v => election.addBallot(v));
+            const winnerId = irv(election);
+            const winner = candidates[winnerId];
+
+            messages.push({
+                type: 'show-winner-message',
+                payload: {
+                    goal: round.card,
+                    winner,
+                    player: _.find(players, { id: winnerId }),
+                },
+            });
+        }
+        return messages;
     }
 
     const otherCandidates = _.pickBy(candidates, (c, p) => p !== player.id);

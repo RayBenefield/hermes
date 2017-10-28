@@ -10,7 +10,7 @@ export default ({ goal, winner, player }) => [
         },
         {
             title: winner.contents,
-            subtitle: `By: ${player.firstName}`,
+            subtitle: `By: ${player.first_name}`,
             imageUrl: 'http://d2trtkcohkrm90.cloudfront.net/images/emoji/apple/ios-10/256/1st-place-medal.png',
         },
     ]),

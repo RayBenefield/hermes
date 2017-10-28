@@ -163,6 +163,12 @@ bytes@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.0.0.tgz#d32815404d689699f85a4ea4fa8755dd13a96048"
 
+caritat@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/caritat/-/caritat-0.0.4.tgz#44eb4dc4bf111f6f0786067072cdc2aa5dd2a004"
+  dependencies:
+    lodash "^4.12.0"
+
 caseless@~0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
@@ -619,7 +625,7 @@ lodash.once@^4.0.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/lodash.once/-/lodash.once-4.1.1.tgz#0dd3971213c7c56df880977d504c88fb471a97ac"
 
-lodash@^4.13.1, lodash@^4.17.4, lodash@^4.6.1:
+lodash@^4.12.0, lodash@^4.13.1, lodash@^4.17.4, lodash@^4.6.1:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 

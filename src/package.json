@@ -2,6 +2,7 @@
     "name": "hermes",
     "description": "Cards Against Humanity in Facebook Messenger",
     "dependencies": {
+        "caritat": "^0.0.4",
         "es6-promisify": "^5.0.0",
         "express": "^4.15.4",
         "firebase-admin": "~4.2.1",
