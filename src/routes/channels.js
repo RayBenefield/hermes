@@ -1,7 +1,7 @@
 import express from 'express';
 import transmute from 'transmutation';
 
-export default ({ fb, getContext, enterDomain, saveContext }) => {
+export default ({ fb, domain }) => {
     const router = express();
     router.post('/facebook', (req, res) => transmute({ raw: req.body })
         .do(() => res.sendStatus(200))
@@ -10,13 +10,7 @@ export default ({ fb, getContext, enterDomain, saveContext }) => {
         .switch('action', {
             login: transmute().extend('lead', fb.enrichLead),
         })
-        .switch('action', getContext)
-        .extend('messages', transmute()
-            .switch('action', enterDomain))
-        .do(stream => Promise.all(
-            stream.messages.map(msg =>
-                transmute({ ...stream, ...msg }).switch('type', saveContext))
-        ))
+        .extend(domain)
         .extend('facebookMessages', fb.transform)
         .then(({ lead: { id }, facebookMessages }) =>
             fb.sendMessages(id, facebookMessages))

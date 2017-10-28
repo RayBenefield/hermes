@@ -3,8 +3,7 @@ import admin from 'firebase-admin';
 import * as functions from 'firebase-functions';
 import flame from '@leonardvandriel/flame';
 import configureFacebook from './lib/facebook';
-import * as enterDomain from './domain/services'; // eslint-disable-line import/no-unresolved, import/extensions
-import configureContext from './domain/context';
+import configureDomain from './domain';
 import configureFlame from './lib/local-db';
 import configureFirebaseDb from './lib/db';
 import configureChannelRouter from './routes/channels';
@@ -18,13 +17,11 @@ const db = process.env.NODE_ENV === 'dev-local'
     : configureFirebaseDb(admin.database());
 
 const fb = configureFacebook(config.facebook);
-const context = configureContext({ db });
-const getContext = context.get;
-const saveContext = context.save;
+const domain = configureDomain({ db });
 
 const channelRouter =
-    configureChannelRouter({ fb, getContext, enterDomain, saveContext });
-const triggers = configureTriggers({ db, fb, getContext, enterDomain, saveContext });
+    configureChannelRouter({ fb, domain });
+const triggers = configureTriggers({ db, fb, domain });
 
 // Handle incoming messages
 exports.channels = functions.https.onRequest(channelRouter);
