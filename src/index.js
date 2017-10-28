@@ -3,11 +3,10 @@ import admin from 'firebase-admin';
 import * as functions from 'firebase-functions';
 import flame from '@leonardvandriel/flame';
 import configureFacebook from './lib/facebook';
-import * as domain from './domain/services'; // eslint-disable-line import/no-unresolved, import/extensions
+import * as enterDomain from './domain/services'; // eslint-disable-line import/no-unresolved, import/extensions
 import configureContext from './domain/context';
 import configureFlame from './lib/local-db';
 import configureFirebaseDb from './lib/db';
-import messages from './data/messages';
 import configureChannelRouter from './routes/channels';
 import configureTriggers from './triggers';
 import './pretty-errors';
@@ -22,7 +21,6 @@ const fb = configureFacebook(config.facebook);
 const context = configureContext({ db });
 const getContext = context.get;
 const saveContext = context.save;
-const enterDomain = { ...messages, ...domain };
 
 const channelRouter =
     configureChannelRouter({ fb, getContext, enterDomain, saveContext });
