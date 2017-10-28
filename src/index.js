@@ -14,7 +14,7 @@ import './pretty-errors';
 
 const config = functions.config();
 admin.initializeApp(config.firebase);
-const db = process.env.NODE_ENV === 'dev'
+const db = process.env.NODE_ENV === 'dev-local'
     ? configureFlame(flame)
     : configureFirebaseDb(admin.database());
 
