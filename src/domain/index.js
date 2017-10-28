@@ -16,8 +16,6 @@ export default ({ db, uuid }) => {
         .switch('action', getContext)
         .extend('messages', transmute()
             .switch('action', enterDomain))
-        .do(stream => Promise.all(
-            stream.messages.map(msg =>
-                transmute({ ...stream, ...msg }).switch('type', saveContext))
-        ));
+        .do(stream => Promise.all(stream.messages.map(msg =>
+            transmute({ ...stream, ...msg }).switch('type', saveContext))));
 };

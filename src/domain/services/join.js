@@ -26,7 +26,7 @@ export default ({ player, players, queue = [] } = {}) => {
     }
 
     const playersInGame = players
-        .filter(({ id }) => queue.includes(id))
+        .filter(({ id }) => queue.includes(id.toString()))
         .map(p => ({
             id: p.id,
             first_name: p.first_name,

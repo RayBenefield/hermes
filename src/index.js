@@ -1,8 +1,9 @@
 /* eslint-disable max-lines */
 import uuid from 'uuid/v4';
 import admin from 'firebase-admin';
-import * as functions from 'firebase-functions';
+import transmute from 'transmutation';
 import flame from '@leonardvandriel/flame';
+import * as functions from 'firebase-functions';
 import configureFacebook from './lib/facebook';
 import configureDomain from './domain';
 import configureFlame from './lib/local-db';
@@ -28,10 +29,17 @@ const triggers = configureTriggers({ db, fb, domain });
 exports.channels = functions.https.onRequest(channelRouter);
 
 exports.gameStarted = functions.database.ref('/games/{id}')
-    .onCreate(event => triggers.gameStarted({
+    .onCreate(event => transmute({
         action: 'start',
         game: event.data.val(),
-    }));
+    })
+        .extend(domain)
+        .do(({ unnotifiedPlayers, messages }) => Promise.all(
+            unnotifiedPlayers.map(lead => transmute({ lead, messages })
+                .extend('facebookMessages', fb.transform)
+                .do(({ facebookMessages }) =>
+                    fb.sendMessages(lead.id, facebookMessages)))))
+    );
 
 exports.roundStarted = functions.database.ref('/rounds/{gameId}/{id}')
     .onCreate(event => triggers.roundStarted({

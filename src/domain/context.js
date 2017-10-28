@@ -12,6 +12,9 @@ export default ({ db, uuid }) => {
                 .extend(...get.player)
                 .extend(...get.queue)
                 .extend(...get.allPlayersInQueue),
+            start: transmute()
+                .extend(...get.playersFromGame)
+                .extend(...get.unnotifiedPlayersForGame),
             hand: transmute()
                 .extend(...get.player)
                 .extend(...get.game)
@@ -41,6 +44,11 @@ export default ({ db, uuid }) => {
             'game-started-message': transmute()
                 .do(...save.newGame)
                 .do(...save.removalFromQueue),
+            'notify-game-started-message': transmute()
+                .do(...save.notifiedAllPlayersOfGame)
+                .do(...save.gameForPlayers)
+                .do(...save.handsForPlayers)
+                .do(...save.newRound),
             'card-selected-message': transmute()
                 .do(...save.selectedCandidate)
                 .do(...save.removalOfCandidateFromHand),

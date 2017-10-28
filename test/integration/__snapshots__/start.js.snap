@@ -1,0 +1,263 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`notify all players of new game 1`] = `
+Object {
+  "db": Object {
+    "games": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        "notified_players": Object {
+          "123456": true,
+        },
+        "players": Object {
+          "123456": true,
+          "234567": true,
+          "345678": true,
+          "456789": true,
+          "567890": true,
+        },
+      },
+      "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx": Object {
+        "notified_players": Object {
+          "123456": true,
+          "234567": true,
+          "345678": true,
+          "456789": true,
+          "567890": true,
+        },
+      },
+    },
+    "hands": Object {
+      "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx": Object {
+        "123456": Object {
+          "cards": Object {
+            "166": true,
+            "214": true,
+            "299": true,
+            "329": true,
+            "335": true,
+            "526": true,
+            "595": true,
+            "768": true,
+            "852": true,
+            "896": true,
+          },
+          "game": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+          "player": 123456,
+        },
+        "234567": Object {
+          "cards": Object {
+            "1": true,
+            "409": true,
+            "484": true,
+            "546": true,
+            "567": true,
+            "632": true,
+            "716": true,
+            "94": true,
+            "96": true,
+            "997": true,
+          },
+          "game": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+          "player": 234567,
+        },
+        "345678": Object {
+          "cards": Object {
+            "1026": true,
+            "124": true,
+            "365": true,
+            "386": true,
+            "699": true,
+            "700": true,
+            "751": true,
+            "795": true,
+            "801": true,
+            "973": true,
+          },
+          "game": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+          "player": 345678,
+        },
+        "456789": Object {
+          "cards": Object {
+            "151": true,
+            "185": true,
+            "265": true,
+            "303": true,
+            "371": true,
+            "407": true,
+            "416": true,
+            "5": true,
+            "832": true,
+            "975": true,
+          },
+          "game": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+          "player": 456789,
+        },
+        "567890": Object {
+          "cards": Object {
+            "110": true,
+            "465": true,
+            "517": true,
+            "525": true,
+            "56": true,
+            "705": true,
+            "782": true,
+            "887": true,
+            "889": true,
+            "974": true,
+          },
+          "game": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+          "player": 567890,
+        },
+      },
+    },
+    "players": Object {
+      "facebook": Object {
+        "123456": Object {
+          "first_name": "Ray",
+          "games": Object {
+            "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx": true,
+          },
+          "id": 123456,
+          "platform": "facebook",
+        },
+        "234567": Object {
+          "first_name": "Ray",
+          "games": Object {
+            "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx": true,
+          },
+          "id": 234567,
+          "platform": "facebook",
+        },
+        "345678": Object {
+          "first_name": "Ray",
+          "games": Object {
+            "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx": true,
+          },
+          "id": 345678,
+          "platform": "facebook",
+        },
+        "456789": Object {
+          "first_name": "Ray",
+          "games": Object {
+            "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx": true,
+          },
+          "id": 456789,
+          "platform": "facebook",
+        },
+        "567890": Object {
+          "first_name": "Ray",
+          "games": Object {
+            "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx": true,
+          },
+          "id": 567890,
+          "platform": "facebook",
+        },
+      },
+    },
+    "queue": Object {},
+    "rounds": Object {
+      "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx": Object {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "game": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+          "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        },
+      },
+    },
+  },
+  "results": Object {
+    "action": "start",
+    "game": Object {
+      "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "notified_players": Object {
+        "123456": true,
+      },
+      "players": Object {
+        "123456": true,
+        "234567": true,
+        "345678": true,
+        "456789": true,
+        "567890": true,
+      },
+    },
+    "messages": Array [
+      Object {
+        "payload": Object {
+          "players": Array [
+            Object {
+              "first_name": "Ray",
+              "id": "123456",
+            },
+            Object {
+              "first_name": "Ray",
+              "id": "234567",
+            },
+            Object {
+              "first_name": "Ray",
+              "id": "345678",
+            },
+            Object {
+              "first_name": "Ray",
+              "id": "456789",
+            },
+            Object {
+              "first_name": "Ray",
+              "id": "567890",
+            },
+          ],
+        },
+        "type": "notify-game-started-message",
+      },
+    ],
+    "players": Array [
+      Object {
+        "first_name": "Ray",
+        "id": 123456,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Ray",
+        "id": 234567,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Ray",
+        "id": 345678,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Ray",
+        "id": 456789,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Ray",
+        "id": 567890,
+        "platform": "facebook",
+      },
+    ],
+    "unnotifiedPlayers": Array [
+      Object {
+        "first_name": "Ray",
+        "id": 234567,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Ray",
+        "id": 345678,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Ray",
+        "id": 456789,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Ray",
+        "id": 567890,
+        "platform": "facebook",
+      },
+    ],
+  },
+}
+`;

@@ -1,0 +1,47 @@
+{
+    "games": {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": {
+            "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+            "players": {
+                "123456": true,
+                "234567": true,
+                "345678": true,
+                "456789": true,
+                "567890": true
+            },
+            "notified_players": {
+                "123456": true
+            }
+        }
+    },
+    "players": {
+        "facebook": {
+            "123456": {
+                "platform": "facebook",
+                "id": 123456,
+                "first_name": "Ray"
+            },
+            "234567": {
+                "platform": "facebook",
+                "id": 234567,
+                "first_name": "Ray"
+            },
+            "345678": {
+                "platform": "facebook",
+                "id": 345678,
+                "first_name": "Ray"
+            },
+            "456789": {
+                "platform": "facebook",
+                "id": 456789,
+                "first_name": "Ray"
+            },
+            "567890": {
+                "platform": "facebook",
+                "id": 567890,
+                "first_name": "Ray"
+            }
+        }
+    },
+    "queue": {}
+}

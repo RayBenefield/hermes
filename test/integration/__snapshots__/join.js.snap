@@ -46,13 +46,17 @@ exports[`new game started from full queue 1`] = `
 Object {
   "db": Object {
     "games": Object {
-      "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx": Object {
-        "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
         "notified_players": Object {
           "123456": true,
         },
         "players": Object {
           "123456": true,
+          "234567": true,
+          "345678": true,
+          "456789": true,
+          "567890": true,
         },
       },
     },
@@ -80,12 +84,7 @@ Object {
         },
       },
     },
-    "queue": Object {
-      "234567": true,
-      "345678": true,
-      "456789": true,
-      "567890": true,
-    },
+    "queue": Object {},
   },
   "results": Object {
     "action": "join",
@@ -100,6 +99,22 @@ Object {
             Object {
               "id": 123456,
               "platform": "facebook",
+            },
+            Object {
+              "first_name": undefined,
+              "id": 234567,
+            },
+            Object {
+              "first_name": undefined,
+              "id": 345678,
+            },
+            Object {
+              "first_name": undefined,
+              "id": 456789,
+            },
+            Object {
+              "first_name": undefined,
+              "id": 567890,
             },
           ],
         },
