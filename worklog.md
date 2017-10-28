@@ -1,5 +1,12 @@
 # Work Log
 
+## #82
+
+Started setting up integration tests for all of the join use cases. Also added
+in a save database utility that will make it easier for me to save state. And
+also setup uuid to be mocked since it is time based.
+
+
 ## #81
 
 Tweaked jest to work for my integration test needs. Setup the database system to
