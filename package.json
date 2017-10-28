@@ -78,6 +78,7 @@
         "tape-bdd": "^0.0.1"
     },
     "jest": {
-        "notify": true
+        "notify": true,
+        "testMatch": ["**/test/integration/*.js"]
     }
 }
