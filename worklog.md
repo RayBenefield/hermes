@@ -1,5 +1,13 @@
 # Work Log
 
+## #81
+
+Tweaked jest to work for my integration test needs. Setup the database system to
+properly clear the database at each point as well as setup an initial system
+that will load the database prior to running anything. Looking forward to
+improving this process a bit and then tackling all the use cases I can think of.
+
+
 ## #80
 
 So I finally got a snapshot setup for integration testing working. I think it
