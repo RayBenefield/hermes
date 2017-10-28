@@ -16,3 +16,10 @@
  - Create a has utility function to remove lodash as a dependency
  - Make dev script to update persistent menu
  - Make dev script to update getting started call to action
+
+# Bugs
+
+## 1
+Give: Queue with player already in it
+When: Join the queue again
+Then: Returns message with number of players equal to 1 more than it should have
