@@ -1,5 +1,11 @@
 # Work Log
 
+## #84
+
+The last session was actually a double session due to this ridiculous bug that I
+kept running into probably due to Jest's cache.
+
+
 ## #83
 
 Refactored out the game started trigger and set it up so triggers can go through
