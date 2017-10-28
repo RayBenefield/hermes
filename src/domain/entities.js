@@ -40,7 +40,7 @@ export default ({ db }) => ({
         blackDeck: ['blackDeck', blackDeck],
         pick: ['pick', ({ payload: { pick } }) => whiteDeck[pick]],
         vote: ['vote', ({ payload: { vote } }) => whiteDeck[vote]],
-        votes: ['votes', ({ player, candidates, round: { votes } }) => {
+        playerVotes: ['playerVotes', ({ player, candidates, round: { votes } }) => {
             if (!votes) return [];
             return _.values(votes[player.id])
                 .map(votedFor => candidates[votedFor]);

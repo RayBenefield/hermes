@@ -1,8 +1,8 @@
 /* eslint-disable max-lines */
 import _ from 'lodash';
 
-export default ({ votes, vote, candidates, player, game, round }) => {
-    if (_.isEmpty(votes)) {
+export default ({ playerVotes, vote, candidates, player, game, round }) => {
+    if (_.isEmpty(playerVotes)) {
         return [
             {
                 type: 'show-ranked-list',
@@ -20,9 +20,9 @@ export default ({ votes, vote, candidates, player, game, round }) => {
         ];
     }
 
-    if (votes.length === 2) {
+    if (playerVotes.length === 2) {
         const otherCandidates = _.pickBy(candidates, (c, p) => p !== player.id);
-        const base = [...votes, vote];
+        const base = [...playerVotes, vote];
         const ranked = [...base, ..._.differenceBy(_.values(otherCandidates), base, 'id')];
         return [
             {
@@ -40,7 +40,7 @@ export default ({ votes, vote, candidates, player, game, round }) => {
     }
 
     const otherCandidates = _.pickBy(candidates, (c, p) => p !== player.id);
-    const ranked = [...votes, vote];
+    const ranked = [...playerVotes, vote];
     return [
         {
             type: 'show-ranked-list',

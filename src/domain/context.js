@@ -30,7 +30,7 @@ export default ({ db }) => {
                 .extend(...get.game)
                 .extend(...get.vote)
                 .extend(...get.candidates)
-                .extend(...get.votes),
+                .extend(...get.playerVotes),
         },
         save: {
             'welcome-message': transmute().do(...save.playerInfo),

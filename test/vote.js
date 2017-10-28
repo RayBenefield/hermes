@@ -8,7 +8,7 @@ const game = { id: 0 };
 describe('Vote For', (it) => {
     it('should return a new ranked list with the vote applied', (assert) => {
         // Given
-        const votes = [];
+        const playerVotes = [];
         const vote = { id: 5, contents: 'voted 5' };
         const candidates = {
             0: { id: 1, contents: 'voted' },
@@ -24,7 +24,7 @@ describe('Vote For', (it) => {
         ];
 
         // When
-        const messages = voteFor({ player, vote, votes, candidates, game, round });
+        const messages = voteFor({ player, vote, playerVotes, candidates, game, round });
 
         // Then
         assert.deepEqual(messages, [
@@ -43,7 +43,7 @@ describe('Vote For', (it) => {
 
     it('should return a ranked list with the vote applied after the first', (assert) => {
         // Given
-        const votes = [
+        const playerVotes = [
             { id: 3, contents: 'voted 3' },
         ];
         const vote = { id: 5, contents: 'voted 5' };
@@ -64,7 +64,7 @@ describe('Vote For', (it) => {
         ];
 
         // When
-        const messages = voteFor({ vote, votes, candidates, player, game, round });
+        const messages = voteFor({ vote, playerVotes, candidates, player, game, round });
 
         // Then
         assert.deepEqual(messages, [
@@ -81,9 +81,9 @@ describe('Vote For', (it) => {
         ]);
     });
 
-    it('should return all votes when the last one is added', (assert) => {
+    it('should return all playerVotes when the last one is added', (assert) => {
         // Given
-        const votes = [
+        const playerVotes = [
             { id: 3, contents: 'voted 3' },
             { id: 4, contents: 'voted 4' },
         ];
@@ -103,7 +103,7 @@ describe('Vote For', (it) => {
         ];
 
         // When
-        const messages = voteFor({ vote, votes, candidates, player, game, round });
+        const messages = voteFor({ vote, playerVotes, candidates, player, game, round });
 
         // Then
         assert.deepEqual(messages, [
