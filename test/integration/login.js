@@ -1,6 +1,6 @@
 import flame from '@leonardvandriel/flame';
-import configureDomain from '../../functions/domain'; // eslint-disable-line import/no-extraneous-dependencies
-import configureFlame from '../../functions/lib/local-db';  // eslint-disable-line import/no-extraneous-dependencies
+import configureDomain from '../../src/domain'; // eslint-disable-line import/no-extraneous-dependencies
+import configureFlame from '../../src/lib/local-db';  // eslint-disable-line import/no-extraneous-dependencies
 
 const db = configureFlame(flame);
 const domain = configureDomain({ db });

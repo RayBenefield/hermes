@@ -38,7 +38,6 @@
         "fix": "eslint -c .eslintrc.json src/ --fix",
         "test": "npm-run-all test:unit test:integration",
         "test:unit": "babel-tape-runner test/unit/{,**/}*.js | tap-spec",
-        "pretest:integration": "npm run build",
         "test:integration": "jest test/integration/",
         "sloc": "echo 'Lines of source code: ' && sloc src/ --exclude node_modules -f json | jq '.summary.source'",
         "watch": "nodemon --exec npm-run-all test:unit lint sloc",
@@ -78,7 +77,11 @@
         "tape-bdd": "^0.0.1"
     },
     "jest": {
+        "transform": {
+            "^.+\\.js$": "babel-jest"
+        },
         "notify": true,
+        "watchPathIgnorePatterns": ["dev", "functions"],
         "testMatch": ["**/test/integration/*.js"]
     }
 }
