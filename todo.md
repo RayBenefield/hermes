@@ -1,3 +1,4 @@
+ - Inject a random generator for integration testing sake
  - Added integration testing for each of the domain services
  - Use doEach now to save the context
  - Setup all triggers to use the domain, context, entity system

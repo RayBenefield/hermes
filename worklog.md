@@ -1,5 +1,12 @@
 # Work Log
 
+## #83
+
+Refactored out the game started trigger and set it up so triggers can go through
+the domain just like everything else now. This will be important for the future
+and centralizing logic.
+
+
 ## #82
 
 Started setting up integration tests for all of the join use cases. Also added
