@@ -48,3 +48,13 @@ exports.votingStarted = functions.database.ref('/candidates/{gameId}/{roundId}')
             notified: event.data.val().notified_players,
         },
     }));
+
+exports.winnerDecided = functions.database.ref('/rounds/{gameId}/{roundId}/winner')
+    .onCreate(event => triggers.winnerDecided({
+        action: 'winner',
+        payload: {
+            game: event.params.gameId,
+            round: event.params.roundId,
+            winner: event.data.val(),
+        },
+    }));

@@ -40,6 +40,9 @@ export default ({ db }) => ({
         blackDeck: ['blackDeck', blackDeck],
         pick: ['pick', ({ payload: { pick } }) => whiteDeck[pick]],
         vote: ['vote', ({ payload: { vote } }) => whiteDeck[vote]],
+        winner: ['winner', ({ payload: { winner } }) => whiteDeck[winner]],
+        winningPlayer: ['winningPlayer', ({ players, candidates, winner }) =>
+            _.find(players, { id: _.findKey(candidates, winner) })],
         votes: ['votes', ({ round: { votes } }) => {
             if (!votes) return {};
             return _.mapValues(votes, v => _.values(v));
@@ -58,6 +61,8 @@ export default ({ db }) => ({
             players.filter(({ id }) => !(_.includes(_.keys(notified), id)))],
         unnotifiedPlayersForVoting: ['unnotifiedPlayers', ({ players, payload: { notified } }) =>
             players.filter(({ id }) => !(id in notified))],
+        unnotifiedPlayersForWinner: ['unnotifiedPlayers', ({ players, round: { notified_players: notified } }) =>
+            players.filter(({ id }) => !(_.includes(_.keys(notified), id)))],
         latestRounds: ['rounds', ({ games }) => Promise.all(games
             .map(g => [g.id, _.values(g.rounds)[0]])
             .map(([game, round]) => db.get(`rounds/${game}/${round}`)))],
@@ -89,6 +94,8 @@ export default ({ db }) => ({
         notifiedAllPlayersOfVoting: [({ players, round, game }) =>
             db.set(`candidates/${game.id}/${round.id}/notified_players`, players.reduce((all, curr) =>
                 Object.assign(all, { [curr.id]: true }), {}))],
+        notifiedAllPlayersOfWinner: [({ players, game, round }) =>
+            db.set(`round/${game.id}/${round.id}/notified_players`, players.reduce((a, p) => Object.assign(a, { [p.id]: true }), {}))],
         gameForPlayers: [({ players, game: { id } }) => Promise.all(
             players.map(player =>
                 db.set(`players/facebook/${player.id}/games/${id}`)))],
