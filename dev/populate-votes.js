@@ -38,7 +38,7 @@ const getPlayerIds = ['payload.players', ({ game }) => _.keys(game.players)];
 const getVotesForPlayers = ['votes', ({ players, playerAnswers: { playersToChooseFor } }) => playersToChooseFor
     .map(player => ({
         player: _.find(players, { id: player }),
-        votes: players.sort(() => 0.5 - Math.random()).slice(0, 3).map(p => p.id),
+        votes: players.filter(p => p.id !== player).sort(() => 0.5 - Math.random()).slice(0, 3).map(p => p.id),
     }))];
 
 transmute({
