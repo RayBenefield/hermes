@@ -6,7 +6,7 @@ const player = { id: '0' };
 const round = { id: 0 };
 const game = { id: 0 };
 
-describe.only('Vote For', (it) => {
+describe('Vote For', (it) => {
     it('should return a new ranked list with the vote applied', (assert) => {
         // Given
         const playerVotes = [];
