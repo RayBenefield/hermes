@@ -1,9 +1,11 @@
 import flame from '@leonardvandriel/flame';
-import configureDomain from '../../src/domain'; // eslint-disable-line import/no-extraneous-dependencies
-import configureFlame from '../../src/lib/local-db';  // eslint-disable-line import/no-extraneous-dependencies
+import * as databases from './database'; // eslint-disable-line import/no-unresolved,import/extensions
+import configureDomain from '../../src/domain';
+import configureFlame from '../../src/lib/local-db';
 
 const db = configureFlame(flame);
 const domain = configureDomain({ db });
+beforeEach(() => flame.loadDatabase(undefined));
 
 test('sends back a welcome message and instructions message', () => {
     // Given
@@ -11,6 +13,25 @@ test('sends back a welcome message and instructions message', () => {
         platform: 'facebook',
         id: 123456,
     };
+
+    // When
+    return domain({
+        lead,
+        action: 'login',
+    })
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});
+
+test('welcomes back a player', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 123456,
+    };
+    flame.loadDatabase(databases['existing-player']);
 
     // When
     return domain({

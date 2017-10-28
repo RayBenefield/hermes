@@ -34,3 +34,44 @@ Object {
   },
 }
 `;
+
+exports[`welcomes back a player 1`] = `
+Object {
+  "db": Object {
+    "players": Object {
+      "facebook": Object {
+        "123456": Object {
+          "id": 123456,
+          "platform": "facebook",
+        },
+      },
+    },
+  },
+  "results": Object {
+    "action": "login",
+    "lead": Object {
+      "id": 123456,
+      "platform": "facebook",
+    },
+    "messages": Array [
+      Object {
+        "payload": Object {
+          "lead": Object {
+            "id": 123456,
+            "platform": "facebook",
+          },
+          "player": Object {
+            "id": 123456,
+            "platform": "facebook",
+          },
+        },
+        "type": "welcome-back-message",
+      },
+    ],
+    "player": Object {
+      "id": 123456,
+      "platform": "facebook",
+    },
+  },
+}
+`;

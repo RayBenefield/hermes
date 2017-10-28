@@ -1,0 +1,10 @@
+{
+    "players": {
+        "facebook": {
+            "123456": {
+                "platform": "facebook",
+                "id": 123456
+            }
+        }
+    }
+}
