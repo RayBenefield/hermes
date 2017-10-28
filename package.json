@@ -76,5 +76,8 @@
         "tap-spec": "^4.1.1",
         "tape": "^4.8.0",
         "tape-bdd": "^0.0.1"
+    },
+    "jest": {
+        "notify": true
     }
 }
