@@ -1,5 +1,20 @@
 # Work Log
 
+## #87
+
+Another double session logged for the sake of just trying to push through some
+things. I'm realizing that there needs to be a system where the domain system
+can customize each message based on the player getting it. This is the case for
+voting as we don't want to return the candidate put in by the given player. It
+should just be the other player candidates. In order to do this we need to
+support some kind of player differentiation somewhere in order for the domain to
+work properly and we can integration test it. So we won't be testing the voting
+notification system right now, but perhaps in the future. So I'll put focus on
+the individual voting next to push through the integration tests until I can
+figure out a solid way to refactor the domain to handle multiple players
+uniquely.
+
+
 ## #86
 
 Just logging my double session.

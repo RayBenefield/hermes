@@ -1,3 +1,4 @@
+ - Add case for when trying to re-vote for a card
  - Added integration testing for each of the domain services
  - Use doEach now to save the context
  - Setup all triggers to use the domain, context, entity system
