@@ -117,7 +117,7 @@ Object {
           "platform": "facebook",
         },
         "234567": Object {
-          "first_name": "Ray",
+          "first_name": "Hermon",
           "games": Object {
             "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
           },
@@ -125,7 +125,7 @@ Object {
           "platform": "facebook",
         },
         "345678": Object {
-          "first_name": "Ray",
+          "first_name": "Hermes",
           "games": Object {
             "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
           },
@@ -133,7 +133,7 @@ Object {
           "platform": "facebook",
         },
         "456789": Object {
-          "first_name": "Ray",
+          "first_name": "Hermshire",
           "games": Object {
             "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
           },
@@ -141,7 +141,7 @@ Object {
           "platform": "facebook",
         },
         "567890": Object {
-          "first_name": "Ray",
+          "first_name": "Hermda",
           "games": Object {
             "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
           },
@@ -184,19 +184,19 @@ Object {
               "id": "123456",
             },
             Object {
-              "first_name": "Ray",
+              "first_name": "Hermon",
               "id": "234567",
             },
             Object {
-              "first_name": "Ray",
+              "first_name": "Hermes",
               "id": "345678",
             },
             Object {
-              "first_name": "Ray",
+              "first_name": "Hermshire",
               "id": "456789",
             },
             Object {
-              "first_name": "Ray",
+              "first_name": "Hermda",
               "id": "567890",
             },
           ],
@@ -211,44 +211,44 @@ Object {
         "platform": "facebook",
       },
       Object {
-        "first_name": "Ray",
+        "first_name": "Hermon",
         "id": 234567,
         "platform": "facebook",
       },
       Object {
-        "first_name": "Ray",
+        "first_name": "Hermes",
         "id": 345678,
         "platform": "facebook",
       },
       Object {
-        "first_name": "Ray",
+        "first_name": "Hermshire",
         "id": 456789,
         "platform": "facebook",
       },
       Object {
-        "first_name": "Ray",
+        "first_name": "Hermda",
         "id": 567890,
         "platform": "facebook",
       },
     ],
     "unnotifiedPlayers": Array [
       Object {
-        "first_name": "Ray",
+        "first_name": "Hermon",
         "id": 234567,
         "platform": "facebook",
       },
       Object {
-        "first_name": "Ray",
+        "first_name": "Hermes",
         "id": 345678,
         "platform": "facebook",
       },
       Object {
-        "first_name": "Ray",
+        "first_name": "Hermshire",
         "id": 456789,
         "platform": "facebook",
       },
       Object {
-        "first_name": "Ray",
+        "first_name": "Hermda",
         "id": 567890,
         "platform": "facebook",
       },

@@ -81,6 +81,7 @@ test('new game started from full queue', () => {
         lead,
         action: 'join',
     })
+        .then(save('new-game'))
         .then(results => expect({
             results,
             db: flame.get('/'),

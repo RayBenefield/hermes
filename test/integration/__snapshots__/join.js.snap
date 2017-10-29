@@ -63,22 +63,27 @@ Object {
     "players": Object {
       "facebook": Object {
         "123456": Object {
+          "first_name": "Ray",
           "id": 123456,
           "platform": "facebook",
         },
         "234567": Object {
+          "first_name": "Hermon",
           "id": 234567,
           "platform": "facebook",
         },
         "345678": Object {
+          "first_name": "Hermes",
           "id": 345678,
           "platform": "facebook",
         },
         "456789": Object {
+          "first_name": "Hermshire",
           "id": 456789,
           "platform": "facebook",
         },
         "567890": Object {
+          "first_name": "Hermda",
           "id": 567890,
           "platform": "facebook",
         },
@@ -97,23 +102,24 @@ Object {
         "payload": Object {
           "players": Array [
             Object {
+              "first_name": "Ray",
               "id": 123456,
               "platform": "facebook",
             },
             Object {
-              "first_name": undefined,
+              "first_name": "Hermon",
               "id": 234567,
             },
             Object {
-              "first_name": undefined,
+              "first_name": "Hermes",
               "id": 345678,
             },
             Object {
-              "first_name": undefined,
+              "first_name": "Hermshire",
               "id": 456789,
             },
             Object {
-              "first_name": undefined,
+              "first_name": "Hermda",
               "id": 567890,
             },
           ],
@@ -122,23 +128,28 @@ Object {
       },
     ],
     "player": Object {
+      "first_name": "Ray",
       "id": 123456,
       "platform": "facebook",
     },
     "players": Array [
       Object {
+        "first_name": "Hermon",
         "id": 234567,
         "platform": "facebook",
       },
       Object {
+        "first_name": "Hermes",
         "id": 345678,
         "platform": "facebook",
       },
       Object {
+        "first_name": "Hermshire",
         "id": 456789,
         "platform": "facebook",
       },
       Object {
+        "first_name": "Hermda",
         "id": 567890,
         "platform": "facebook",
       },
