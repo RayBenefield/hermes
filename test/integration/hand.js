@@ -40,7 +40,7 @@ test('show a hand after picking a card', () => {
         platform: 'facebook',
         id: 123456,
     };
-    flame.loadDatabase(databases['picked-card']);
+    flame.loadDatabase(databases['1-picked-card']);
 
     // When
     return domain({

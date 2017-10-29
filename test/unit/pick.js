@@ -7,9 +7,12 @@ describe('Pick Card', (it) => {
         const pick = { id: 0, contents: 'White Card' };
         const game = { id: 0 };
         const round = { id: 0 };
+        const hand = { cards: [
+            { id: 0, contents: 'White Card' },
+        ] };
 
         // When
-        const messages = pickCard({ game, round, pick });
+        const messages = pickCard({ game, round, pick, hand });
 
         // Then
         assert.deepEqual(messages, [
@@ -23,6 +26,33 @@ describe('Pick Card', (it) => {
         ]);
     });
 
+    it('should not let player pick a card they do not have', (assert) => {
+        // Given
+        const pick = { id: 0, contents: 'White Card' };
+        const game = { id: 0 };
+        const round = { id: 0 };
+        const hand = { cards: [
+            { id: 1, contents: 'Winking at old people.' },
+            { id: 2, contents: 'THE KOOL-AID MAN.' },
+            { id: 3, contents: 'Hurricane Katrina.' },
+            { id: 4, contents: 'Powerful thighs.' },
+            { id: 5, contents: 'Vigorous jazz hands.' },
+            { id: 6, contents: 'BEES?' },
+            { id: 7, contents: 'Morgan Freeman\'s voice.' },
+            { id: 8, contents: 'Racism.' },
+            { id: 9, contents: 'Daddy issues.' },
+            { id: 10, contents: 'Being a motherfucking sorcerer.' },
+        ] };
+
+        // When
+        const messages = pickCard({ game, round, pick, hand });
+
+        // Then
+        assert.deepEqual(messages, [
+            { type: 'card-not-in-hand' },
+        ]);
+    });
+
     it('should not let a player add a new candidate', (assert) => {
         // Given
         const player = { id: 123456 };
@@ -30,9 +60,12 @@ describe('Pick Card', (it) => {
         const game = { id: 0 };
         const candidates = { [player.id]: pick };
         const round = { id: 0 };
+        const hand = { cards: [
+            { id: 0, contents: 'White Card' },
+        ] };
 
         // When
-        const messages = pickCard({ candidates, player, game, round, pick });
+        const messages = pickCard({ candidates, player, game, round, pick, hand });
 
         // Then
         assert.deepEqual(messages, [
@@ -62,9 +95,12 @@ describe('Pick Card', (it) => {
         };
         const round = { id: 3 };
         const game = { id: 0 };
+        const hand = { cards: [
+            { id: 0, contents: 'White Card' },
+        ] };
 
         // When
-        const messages = pickCard({ candidates, player: player1, game, round, pick });
+        const messages = pickCard({ candidates, player: player1, game, round, pick, hand });
 
         // Then
         assert.deepEqual(messages, [

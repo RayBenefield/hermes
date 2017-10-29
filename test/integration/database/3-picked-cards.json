@@ -27,7 +27,6 @@
                 "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
                 "player": 123456,
                 "cards": {
-                    "278": true,
                     "279": true,
                     "280": true,
                     "281": true,
@@ -43,7 +42,6 @@
                 "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
                 "player": 234567,
                 "cards": {
-                    "19": true,
                     "20": true,
                     "22": true,
                     "23": true,
@@ -59,7 +57,6 @@
                 "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
                 "player": 345678,
                 "cards": {
-                    "151": true,
                     "152": true,
                     "153": true,
                     "413": true,
@@ -160,7 +157,9 @@
                     "contents": "It's a D&D retroclone with _ added."
                 },
                 "candidates": {
-                    "123456": 0
+                    "123456": 278,
+                    "234567": 19,
+                    "345678": 151
                 }
             }
         }

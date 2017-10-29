@@ -1,7 +1,9 @@
 /* eslint-disable max-lines */
 import _ from 'lodash';
 
-export default ({ candidates, player = {}, pick, round, game }) => {
+export default ({ candidates, player = {}, pick, round, game, hand }) => {
+    if (!_.find(hand.cards, pick)) return [{ type: 'card-not-in-hand' }];
+
     if (!candidates) {
         return [
             {

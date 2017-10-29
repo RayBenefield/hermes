@@ -30,6 +30,7 @@ export default ({ db, uuid, random }) => {
                 .extend(...get.game)
                 .extend(...get.round)
                 .extend(...get.pick)
+                .extend(...get.hand)
                 .extend(...get.candidates),
             candidates: transmute()
                 .extend(...get.game)

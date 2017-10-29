@@ -57,6 +57,7 @@
                 "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
                 "player": 345678,
                 "cards": {
+                    "151": true,
                     "152": true,
                     "153": true,
                     "413": true,
@@ -72,6 +73,7 @@
                 "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
                 "player": 456789,
                 "cards": {
+                    "86": true,
                     "217": true,
                     "348": true,
                     "415": true,
@@ -157,9 +159,7 @@
                 },
                 "candidates": {
                     "123456": 278,
-                    "234567": 19,
-                    "345678": 151,
-                    "456789": 86
+                    "234567": 19
                 }
             }
         }

@@ -4,18 +4,18 @@ import showHand from 'src/domain/services/hand'; // eslint-disable-line import/n
 describe('Show Hand', (it) => {
     it('should show the player their hand to pick a card', (assert) => {
         // Given
-        const hand = { cards: {
-            0: { contents: 'Being a motherfucking sorcerer.' },
-            1: { contents: 'Winking at old people.' },
-            2: { contents: 'THE KOOL-AID MAN.' },
-            3: { contents: 'Hurricane Katrina.' },
-            4: { contents: 'Powerful thighs.' },
-            5: { contents: 'Vigorous jazz hands.' },
-            6: { contents: 'BEES?' },
-            7: { contents: 'Morgan Freeman\'s voice.' },
-            8: { contents: 'Racism.' },
-            9: { contents: 'Daddy issues.' },
-        } };
+        const hand = { cards: [
+            { id: 0, contents: 'Being a motherfucking sorcerer.' },
+            { id: 1, contents: 'Winking at old people.' },
+            { id: 2, contents: 'THE KOOL-AID MAN.' },
+            { id: 3, contents: 'Hurricane Katrina.' },
+            { id: 4, contents: 'Powerful thighs.' },
+            { id: 5, contents: 'Vigorous jazz hands.' },
+            { id: 6, contents: 'BEES?' },
+            { id: 7, contents: 'Morgan Freeman\'s voice.' },
+            { id: 8, contents: 'Racism.' },
+            { id: 9, contents: 'Daddy issues.' },
+        ] };
         const game = { id: 0 };
         const round = { id: 0 };
 
@@ -38,18 +38,18 @@ describe('Show Hand', (it) => {
     it('should show the player their hand without picking a card', (assert) => {
         // Given
         const player = { id: 123456 };
-        const hand = { cards: {
-            0: { contents: 'Being a motherfucking sorcerer.' },
-            1: { contents: 'Winking at old people.' },
-            2: { contents: 'THE KOOL-AID MAN.' },
-            3: { contents: 'Hurricane Katrina.' },
-            4: { contents: 'Powerful thighs.' },
-            5: { contents: 'Vigorous jazz hands.' },
-            6: { contents: 'BEES?' },
-            7: { contents: 'Morgan Freeman\'s voice.' },
-            8: { contents: 'Racism.' },
-            9: { contents: 'Daddy issues.' },
-        } };
+        const hand = { cards: [
+            { id: 0, contents: 'Being a motherfucking sorcerer.' },
+            { id: 1, contents: 'Winking at old people.' },
+            { id: 2, contents: 'THE KOOL-AID MAN.' },
+            { id: 3, contents: 'Hurricane Katrina.' },
+            { id: 4, contents: 'Powerful thighs.' },
+            { id: 5, contents: 'Vigorous jazz hands.' },
+            { id: 6, contents: 'BEES?' },
+            { id: 7, contents: 'Morgan Freeman\'s voice.' },
+            { id: 8, contents: 'Racism.' },
+            { id: 9, contents: 'Daddy issues.' },
+        ] };
         const game = { id: 0 };
         const round = { id: 0 };
         const candidates = { [player.id]: {} };

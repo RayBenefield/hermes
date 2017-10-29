@@ -24,12 +24,12 @@ test('pick a card for the goal', () => {
         lead,
         action: 'pick',
         payload: {
-            pick: 0,
+            pick: 278,
             game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
             round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         },
     })
-        .then(save('picked-card'))
+        .then(save('1-picked-card'))
         .then(results => expect({
             results,
             db: flame.get('/'),
@@ -42,14 +42,14 @@ test('try to pick a card again', () => {
         platform: 'facebook',
         id: 123456,
     };
-    flame.loadDatabase(databases['picked-card']);
+    flame.loadDatabase(databases['1-picked-card']);
 
     // When
     return domain({
         lead,
         action: 'pick',
         payload: {
-            pick: 0,
+            pick: 278,
             game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
             round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         },
@@ -60,11 +60,86 @@ test('try to pick a card again', () => {
         }).toMatchSnapshot());
 });
 
+test('second person picks a card', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 234567,
+    };
+    flame.loadDatabase(databases['1-picked-card']);
+
+    // When
+    return domain({
+        lead,
+        action: 'pick',
+        payload: {
+            pick: 19,
+            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+        },
+    })
+        .then(save('2-picked-cards'))
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});
+
+test('third person picks a card', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 345678,
+    };
+    flame.loadDatabase(databases['2-picked-cards']);
+
+    // When
+    return domain({
+        lead,
+        action: 'pick',
+        payload: {
+            pick: 151,
+            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+        },
+    })
+        .then(save('3-picked-cards'))
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});
+
+test('fourth person picks a card', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 456789,
+    };
+    flame.loadDatabase(databases['3-picked-cards']);
+
+    // When
+    return domain({
+        lead,
+        action: 'pick',
+        payload: {
+            pick: 86,
+            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+        },
+    })
+        .then(save('4-picked-cards'))
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});
+
 test('the last player to pick a card', () => {
     // Given
     const lead = {
         platform: 'facebook',
-        id: 123456,
+        id: 567890,
     };
     flame.loadDatabase(databases['4-picked-cards']);
 
@@ -73,7 +148,7 @@ test('the last player to pick a card', () => {
         lead,
         action: 'pick',
         payload: {
-            pick: 0,
+            pick: 119,
             game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
             round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         },

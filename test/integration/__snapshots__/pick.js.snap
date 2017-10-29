@@ -1,5 +1,308 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`fourth person picks a card 1`] = `
+Object {
+  "db": Object {
+    "games": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        "notified_players": Object {
+          "123456": true,
+          "234567": true,
+          "345678": true,
+          "456789": true,
+          "567890": true,
+        },
+        "players": Object {
+          "123456": true,
+          "234567": true,
+          "345678": true,
+          "456789": true,
+          "567890": true,
+        },
+        "rounds": Object {
+          "--------------------": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        },
+      },
+    },
+    "hands": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "123456": Object {
+          "cards": Object {
+            "279": true,
+            "280": true,
+            "281": true,
+            "282": true,
+            "284": true,
+            "285": true,
+            "286": true,
+            "287": true,
+            "415": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 123456,
+        },
+        "234567": Object {
+          "cards": Object {
+            "20": true,
+            "22": true,
+            "23": true,
+            "415": true,
+            "543": true,
+            "544": true,
+            "545": true,
+            "546": true,
+            "547": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 234567,
+        },
+        "345678": Object {
+          "cards": Object {
+            "152": true,
+            "153": true,
+            "413": true,
+            "414": true,
+            "415": true,
+            "694": true,
+            "695": true,
+            "915": true,
+            "917": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 345678,
+        },
+        "456789": Object {
+          "cards": Object {
+            "217": true,
+            "348": true,
+            "415": true,
+            "479": true,
+            "760": true,
+            "850": true,
+            "851": true,
+            "981": true,
+            "982": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 456789,
+        },
+        "567890": Object {
+          "cards": Object {
+            "1014": true,
+            "119": true,
+            "381": true,
+            "415": true,
+            "512": true,
+            "596": true,
+            "662": true,
+            "727": true,
+            "818": true,
+            "949": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 567890,
+        },
+      },
+    },
+    "players": Object {
+      "facebook": Object {
+        "123456": Object {
+          "first_name": "Ray",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 123456,
+          "platform": "facebook",
+        },
+        "234567": Object {
+          "first_name": "Hermon",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 234567,
+          "platform": "facebook",
+        },
+        "345678": Object {
+          "first_name": "Hermes",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 345678,
+          "platform": "facebook",
+        },
+        "456789": Object {
+          "first_name": "Hermshire",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 456789,
+          "platform": "facebook",
+        },
+        "567890": Object {
+          "first_name": "Hermda",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 567890,
+          "platform": "facebook",
+        },
+      },
+    },
+    "queue": Object {},
+    "rounds": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 278,
+            "234567": 19,
+            "345678": 151,
+            "456789": 86,
+          },
+          "card": Object {
+            "contents": "It's a D&D retroclone with _ added.",
+            "id": 111,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        },
+      },
+    },
+  },
+  "results": Object {
+    "action": "pick",
+    "candidates": Object {
+      "123456": Object {
+        "contents": "Historically black colleges.",
+        "id": 278,
+      },
+      "234567": Object {
+        "contents": "An erection that lasts longer than four hours.",
+        "id": 19,
+      },
+      "345678": Object {
+        "contents": "Horse meat.",
+        "id": 151,
+      },
+    },
+    "game": Object {
+      "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "notified_players": Object {
+        "123456": true,
+        "234567": true,
+        "345678": true,
+        "456789": true,
+        "567890": true,
+      },
+      "players": Object {
+        "123456": true,
+        "234567": true,
+        "345678": true,
+        "456789": true,
+        "567890": true,
+      },
+      "rounds": Object {
+        "--------------------": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      },
+    },
+    "hand": Object {
+      "cards": Array [
+        Object {
+          "contents": "Testicular torsion.",
+          "id": 86,
+        },
+        Object {
+          "contents": "Children on leashes.",
+          "id": 217,
+        },
+        Object {
+          "contents": "Gandhi.",
+          "id": 348,
+        },
+        Object {
+          "contents": "Loose lips.",
+          "id": 415,
+        },
+        Object {
+          "contents": "Coughing into a vagina.",
+          "id": 479,
+        },
+        Object {
+          "contents": "Exchanging Pocky for sexual favors.",
+          "id": 760,
+        },
+        Object {
+          "contents": "Defenestration.",
+          "id": 850,
+        },
+        Object {
+          "contents": "Dungeons and/or dragons.",
+          "id": 851,
+        },
+        Object {
+          "contents": "Eating Tom Selleck's mustache to gain his powers.",
+          "id": 981,
+        },
+        Object {
+          "contents": "Roland the Farter, flatulist to the king.",
+          "id": 982,
+        },
+      ],
+      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "player": 456789,
+    },
+    "lead": Object {
+      "id": 456789,
+      "platform": "facebook",
+    },
+    "messages": Array [
+      Object {
+        "payload": Object {
+          "card": Object {
+            "contents": "Testicular torsion.",
+            "id": 86,
+          },
+        },
+        "type": "card-selected-message",
+      },
+      Object {
+        "type": "wait-for-votes-message",
+      },
+    ],
+    "payload": Object {
+      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "pick": 86,
+      "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+    },
+    "pick": Object {
+      "contents": "Testicular torsion.",
+      "id": 86,
+    },
+    "player": Object {
+      "first_name": "Hermshire",
+      "games": Object {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+      },
+      "id": 456789,
+      "platform": "facebook",
+    },
+    "round": Object {
+      "candidates": Object {
+        "123456": 278,
+        "234567": 19,
+        "345678": 151,
+      },
+      "card": Object {
+        "contents": "It's a D&D retroclone with _ added.",
+        "id": 111,
+      },
+      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+    },
+  },
+}
+`;
+
 exports[`pick a card for the goal 1`] = `
 Object {
   "db": Object {
@@ -29,7 +332,6 @@ Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "123456": Object {
           "cards": Object {
-            "278": true,
             "279": true,
             "280": true,
             "281": true,
@@ -158,7 +460,7 @@ Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
           "candidates": Object {
-            "123456": 0,
+            "123456": 278,
           },
           "card": Object {
             "contents": "It's a D&D retroclone with _ added.",
@@ -193,6 +495,52 @@ Object {
         "--------------------": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       },
     },
+    "hand": Object {
+      "cards": Array [
+        Object {
+          "contents": "Historically black colleges.",
+          "id": 278,
+        },
+        Object {
+          "contents": "Not reciprocating oral sex.",
+          "id": 279,
+        },
+        Object {
+          "contents": "Global warming.",
+          "id": 280,
+        },
+        Object {
+          "contents": "Ghosts.",
+          "id": 281,
+        },
+        Object {
+          "contents": "World peace.",
+          "id": 282,
+        },
+        Object {
+          "contents": "The Dance of the Sugar Plum Fairy.",
+          "id": 284,
+        },
+        Object {
+          "contents": "A zesty breakfast burrito.",
+          "id": 285,
+        },
+        Object {
+          "contents": "Switching to Geico&reg;.",
+          "id": 286,
+        },
+        Object {
+          "contents": "Aaron Burr.",
+          "id": 287,
+        },
+        Object {
+          "contents": "Loose lips.",
+          "id": 415,
+        },
+      ],
+      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "player": 123456,
+    },
     "lead": Object {
       "id": 123456,
       "platform": "facebook",
@@ -201,8 +549,8 @@ Object {
       Object {
         "payload": Object {
           "card": Object {
-            "contents": "Flying sex snakes.",
-            "id": 0,
+            "contents": "Historically black colleges.",
+            "id": 278,
           },
         },
         "type": "card-selected-message",
@@ -213,12 +561,12 @@ Object {
     ],
     "payload": Object {
       "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-      "pick": 0,
+      "pick": 278,
       "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
     },
     "pick": Object {
-      "contents": "Flying sex snakes.",
-      "id": 0,
+      "contents": "Historically black colleges.",
+      "id": 278,
     },
     "player": Object {
       "first_name": "Ray",
@@ -240,6 +588,299 @@ Object {
 }
 `;
 
+exports[`second person picks a card 1`] = `
+Object {
+  "db": Object {
+    "games": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        "notified_players": Object {
+          "123456": true,
+          "234567": true,
+          "345678": true,
+          "456789": true,
+          "567890": true,
+        },
+        "players": Object {
+          "123456": true,
+          "234567": true,
+          "345678": true,
+          "456789": true,
+          "567890": true,
+        },
+        "rounds": Object {
+          "--------------------": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        },
+      },
+    },
+    "hands": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "123456": Object {
+          "cards": Object {
+            "279": true,
+            "280": true,
+            "281": true,
+            "282": true,
+            "284": true,
+            "285": true,
+            "286": true,
+            "287": true,
+            "415": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 123456,
+        },
+        "234567": Object {
+          "cards": Object {
+            "20": true,
+            "22": true,
+            "23": true,
+            "415": true,
+            "543": true,
+            "544": true,
+            "545": true,
+            "546": true,
+            "547": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 234567,
+        },
+        "345678": Object {
+          "cards": Object {
+            "151": true,
+            "152": true,
+            "153": true,
+            "413": true,
+            "414": true,
+            "415": true,
+            "694": true,
+            "695": true,
+            "915": true,
+            "917": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 345678,
+        },
+        "456789": Object {
+          "cards": Object {
+            "217": true,
+            "348": true,
+            "415": true,
+            "479": true,
+            "760": true,
+            "850": true,
+            "851": true,
+            "86": true,
+            "981": true,
+            "982": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 456789,
+        },
+        "567890": Object {
+          "cards": Object {
+            "1014": true,
+            "119": true,
+            "381": true,
+            "415": true,
+            "512": true,
+            "596": true,
+            "662": true,
+            "727": true,
+            "818": true,
+            "949": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 567890,
+        },
+      },
+    },
+    "players": Object {
+      "facebook": Object {
+        "123456": Object {
+          "first_name": "Ray",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 123456,
+          "platform": "facebook",
+        },
+        "234567": Object {
+          "first_name": "Hermon",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 234567,
+          "platform": "facebook",
+        },
+        "345678": Object {
+          "first_name": "Hermes",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 345678,
+          "platform": "facebook",
+        },
+        "456789": Object {
+          "first_name": "Hermshire",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 456789,
+          "platform": "facebook",
+        },
+        "567890": Object {
+          "first_name": "Hermda",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 567890,
+          "platform": "facebook",
+        },
+      },
+    },
+    "queue": Object {},
+    "rounds": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 278,
+            "234567": 19,
+          },
+          "card": Object {
+            "contents": "It's a D&D retroclone with _ added.",
+            "id": 111,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        },
+      },
+    },
+  },
+  "results": Object {
+    "action": "pick",
+    "candidates": Object {
+      "123456": Object {
+        "contents": "Historically black colleges.",
+        "id": 278,
+      },
+    },
+    "game": Object {
+      "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "notified_players": Object {
+        "123456": true,
+        "234567": true,
+        "345678": true,
+        "456789": true,
+        "567890": true,
+      },
+      "players": Object {
+        "123456": true,
+        "234567": true,
+        "345678": true,
+        "456789": true,
+        "567890": true,
+      },
+      "rounds": Object {
+        "--------------------": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      },
+    },
+    "hand": Object {
+      "cards": Array [
+        Object {
+          "contents": "An erection that lasts longer than four hours.",
+          "id": 19,
+        },
+        Object {
+          "contents": "AIDS",
+          "id": 20,
+        },
+        Object {
+          "contents": "Glenn Beck catching his scrotum on a curtain hook.",
+          "id": 22,
+        },
+        Object {
+          "contents": "The Rapture.",
+          "id": 23,
+        },
+        Object {
+          "contents": "Loose lips.",
+          "id": 415,
+        },
+        Object {
+          "contents": "Existing.",
+          "id": 543,
+        },
+        Object {
+          "contents": "A pinata full of scorpions.",
+          "id": 544,
+        },
+        Object {
+          "contents": "Mooing.",
+          "id": 545,
+        },
+        Object {
+          "contents": "Swiftly achieving orgasm.",
+          "id": 546,
+        },
+        Object {
+          "contents": "Daddy's belt.",
+          "id": 547,
+        },
+      ],
+      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "player": 234567,
+    },
+    "lead": Object {
+      "id": 234567,
+      "platform": "facebook",
+    },
+    "messages": Array [
+      Object {
+        "payload": Object {
+          "card": Object {
+            "contents": "An erection that lasts longer than four hours.",
+            "id": 19,
+          },
+        },
+        "type": "card-selected-message",
+      },
+      Object {
+        "type": "wait-for-votes-message",
+      },
+    ],
+    "payload": Object {
+      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "pick": 19,
+      "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+    },
+    "pick": Object {
+      "contents": "An erection that lasts longer than four hours.",
+      "id": 19,
+    },
+    "player": Object {
+      "first_name": "Hermon",
+      "games": Object {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+      },
+      "id": 234567,
+      "platform": "facebook",
+    },
+    "round": Object {
+      "candidates": Object {
+        "123456": 278,
+      },
+      "card": Object {
+        "contents": "It's a D&D retroclone with _ added.",
+        "id": 111,
+      },
+      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+    },
+  },
+}
+`;
+
 exports[`the last player to pick a card 1`] = `
 Object {
   "db": Object {
@@ -247,15 +888,15 @@ Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
           "candidates": Object {
-            "123456": 0,
-            "234567": 262,
-            "345678": 392,
-            "456789": 458,
-            "567890": 294,
+            "123456": 278,
+            "234567": 19,
+            "345678": 151,
+            "456789": 86,
+            "567890": 119,
           },
           "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "notified_players": Object {
-            "123456": true,
+            "567890": true,
           },
           "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
         },
@@ -287,45 +928,43 @@ Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "123456": Object {
           "cards": Object {
-            "519": true,
-            "520": true,
-            "521": true,
-            "522": true,
-            "524": true,
-            "525": true,
-            "526": true,
-            "527": true,
-            "528": true,
+            "279": true,
+            "280": true,
+            "281": true,
+            "282": true,
+            "284": true,
+            "285": true,
+            "286": true,
+            "287": true,
+            "415": true,
           },
           "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "player": 123456,
         },
         "234567": Object {
           "cards": Object {
-            "0": true,
-            "259": true,
-            "260": true,
-            "261": true,
-            "262": true,
-            "263": true,
-            "783": true,
-            "784": true,
-            "786": true,
-            "787": true,
+            "20": true,
+            "22": true,
+            "23": true,
+            "415": true,
+            "543": true,
+            "544": true,
+            "545": true,
+            "546": true,
+            "547": true,
           },
           "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "player": 234567,
         },
         "345678": Object {
           "cards": Object {
-            "0": true,
-            "130": true,
-            "131": true,
-            "392": true,
-            "393": true,
-            "653": true,
-            "654": true,
-            "655": true,
+            "152": true,
+            "153": true,
+            "413": true,
+            "414": true,
+            "415": true,
+            "694": true,
+            "695": true,
             "915": true,
             "917": true,
           },
@@ -334,12 +973,11 @@ Object {
         },
         "456789": Object {
           "cards": Object {
-            "0": true,
-            "196": true,
-            "327": true,
-            "458": true,
-            "589": true,
-            "720": true,
+            "217": true,
+            "348": true,
+            "415": true,
+            "479": true,
+            "760": true,
             "850": true,
             "851": true,
             "981": true,
@@ -350,16 +988,15 @@ Object {
         },
         "567890": Object {
           "cards": Object {
-            "0": true,
             "1014": true,
-            "163": true,
-            "19": true,
-            "294": true,
-            "32": true,
-            "687": true,
+            "381": true,
+            "415": true,
+            "512": true,
+            "596": true,
+            "662": true,
+            "727": true,
             "818": true,
             "949": true,
-            "98": true,
           },
           "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "player": 567890,
@@ -377,7 +1014,7 @@ Object {
           "platform": "facebook",
         },
         "234567": Object {
-          "first_name": "Ray",
+          "first_name": "Hermon",
           "games": Object {
             "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
           },
@@ -385,7 +1022,7 @@ Object {
           "platform": "facebook",
         },
         "345678": Object {
-          "first_name": "Ray",
+          "first_name": "Hermes",
           "games": Object {
             "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
           },
@@ -393,7 +1030,7 @@ Object {
           "platform": "facebook",
         },
         "456789": Object {
-          "first_name": "Ray",
+          "first_name": "Hermshire",
           "games": Object {
             "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
           },
@@ -401,7 +1038,7 @@ Object {
           "platform": "facebook",
         },
         "567890": Object {
-          "first_name": "Ray",
+          "first_name": "Hermda",
           "games": Object {
             "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
           },
@@ -415,11 +1052,11 @@ Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
           "candidates": Object {
-            "123456": 0,
-            "234567": 262,
-            "345678": 392,
-            "456789": 458,
-            "567890": 294,
+            "123456": 278,
+            "234567": 19,
+            "345678": 151,
+            "456789": 86,
+            "567890": 119,
           },
           "card": Object {
             "contents": "It's a D&D retroclone with _ added.",
@@ -434,21 +1071,21 @@ Object {
   "results": Object {
     "action": "pick",
     "candidates": Object {
+      "123456": Object {
+        "contents": "Historically black colleges.",
+        "id": 278,
+      },
       "234567": Object {
-        "contents": "The Holy Bible.",
-        "id": 262,
+        "contents": "An erection that lasts longer than four hours.",
+        "id": 19,
       },
       "345678": Object {
-        "contents": "The homosexual agenda.",
-        "id": 392,
+        "contents": "Horse meat.",
+        "id": 151,
       },
       "456789": Object {
-        "contents": "A big black dick.",
-        "id": 458,
-      },
-      "567890": Object {
-        "contents": "Date rape.",
-        "id": 294,
+        "contents": "Testicular torsion.",
+        "id": 86,
       },
     },
     "game": Object {
@@ -471,16 +1108,62 @@ Object {
         "--------------------": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       },
     },
+    "hand": Object {
+      "cards": Array [
+        Object {
+          "contents": "An icepick lobotomy.",
+          "id": 119,
+        },
+        Object {
+          "contents": "Flying sex snakes.",
+          "id": 381,
+        },
+        Object {
+          "contents": "Loose lips.",
+          "id": 415,
+        },
+        Object {
+          "contents": "Stockholm Syndrome.",
+          "id": 512,
+        },
+        Object {
+          "contents": "The human body.",
+          "id": 596,
+        },
+        Object {
+          "contents": "Role-playing and roll-playing.",
+          "id": 662,
+        },
+        Object {
+          "contents": "Finishing attack.",
+          "id": 727,
+        },
+        Object {
+          "contents": "Sodaj.",
+          "id": 818,
+        },
+        Object {
+          "contents": "Running naked through a mall, pissing and shitting everywhere.",
+          "id": 949,
+        },
+        Object {
+          "contents": "An unusually-attractive transvestite",
+          "id": 1014,
+        },
+      ],
+      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "player": 567890,
+    },
     "lead": Object {
-      "id": 123456,
+      "id": 567890,
       "platform": "facebook",
     },
     "messages": Array [
       Object {
         "payload": Object {
           "card": Object {
-            "contents": "Flying sex snakes.",
-            "id": 0,
+            "contents": "An icepick lobotomy.",
+            "id": 119,
           },
         },
         "type": "card-selected-message",
@@ -489,26 +1172,26 @@ Object {
         "payload": Object {
           "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "pick": Object {
-            "contents": "Flying sex snakes.",
-            "id": 0,
+            "contents": "An icepick lobotomy.",
+            "id": 119,
           },
           "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "unranked": Array [
             Object {
-              "contents": "The Holy Bible.",
-              "id": 262,
+              "contents": "Historically black colleges.",
+              "id": 278,
             },
             Object {
-              "contents": "The homosexual agenda.",
-              "id": 392,
+              "contents": "An erection that lasts longer than four hours.",
+              "id": 19,
             },
             Object {
-              "contents": "A big black dick.",
-              "id": 458,
+              "contents": "Horse meat.",
+              "id": 151,
             },
             Object {
-              "contents": "Date rape.",
-              "id": 294,
+              "contents": "Testicular torsion.",
+              "id": 86,
             },
           ],
         },
@@ -517,27 +1200,325 @@ Object {
     ],
     "payload": Object {
       "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-      "pick": 0,
+      "pick": 119,
       "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
     },
     "pick": Object {
-      "contents": "Flying sex snakes.",
-      "id": 0,
+      "contents": "An icepick lobotomy.",
+      "id": 119,
     },
     "player": Object {
-      "first_name": "Ray",
+      "first_name": "Hermda",
       "games": Object {
         "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
       },
-      "id": 123456,
+      "id": 567890,
       "platform": "facebook",
     },
     "round": Object {
       "candidates": Object {
-        "234567": 262,
-        "345678": 392,
-        "456789": 458,
-        "567890": 294,
+        "123456": 278,
+        "234567": 19,
+        "345678": 151,
+        "456789": 86,
+      },
+      "card": Object {
+        "contents": "It's a D&D retroclone with _ added.",
+        "id": 111,
+      },
+      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+    },
+  },
+}
+`;
+
+exports[`third person picks a card 1`] = `
+Object {
+  "db": Object {
+    "games": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        "notified_players": Object {
+          "123456": true,
+          "234567": true,
+          "345678": true,
+          "456789": true,
+          "567890": true,
+        },
+        "players": Object {
+          "123456": true,
+          "234567": true,
+          "345678": true,
+          "456789": true,
+          "567890": true,
+        },
+        "rounds": Object {
+          "--------------------": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        },
+      },
+    },
+    "hands": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "123456": Object {
+          "cards": Object {
+            "279": true,
+            "280": true,
+            "281": true,
+            "282": true,
+            "284": true,
+            "285": true,
+            "286": true,
+            "287": true,
+            "415": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 123456,
+        },
+        "234567": Object {
+          "cards": Object {
+            "20": true,
+            "22": true,
+            "23": true,
+            "415": true,
+            "543": true,
+            "544": true,
+            "545": true,
+            "546": true,
+            "547": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 234567,
+        },
+        "345678": Object {
+          "cards": Object {
+            "152": true,
+            "153": true,
+            "413": true,
+            "414": true,
+            "415": true,
+            "694": true,
+            "695": true,
+            "915": true,
+            "917": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 345678,
+        },
+        "456789": Object {
+          "cards": Object {
+            "217": true,
+            "348": true,
+            "415": true,
+            "479": true,
+            "760": true,
+            "850": true,
+            "851": true,
+            "86": true,
+            "981": true,
+            "982": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 456789,
+        },
+        "567890": Object {
+          "cards": Object {
+            "1014": true,
+            "119": true,
+            "381": true,
+            "415": true,
+            "512": true,
+            "596": true,
+            "662": true,
+            "727": true,
+            "818": true,
+            "949": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 567890,
+        },
+      },
+    },
+    "players": Object {
+      "facebook": Object {
+        "123456": Object {
+          "first_name": "Ray",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 123456,
+          "platform": "facebook",
+        },
+        "234567": Object {
+          "first_name": "Hermon",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 234567,
+          "platform": "facebook",
+        },
+        "345678": Object {
+          "first_name": "Hermes",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 345678,
+          "platform": "facebook",
+        },
+        "456789": Object {
+          "first_name": "Hermshire",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 456789,
+          "platform": "facebook",
+        },
+        "567890": Object {
+          "first_name": "Hermda",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 567890,
+          "platform": "facebook",
+        },
+      },
+    },
+    "queue": Object {},
+    "rounds": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 278,
+            "234567": 19,
+            "345678": 151,
+          },
+          "card": Object {
+            "contents": "It's a D&D retroclone with _ added.",
+            "id": 111,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        },
+      },
+    },
+  },
+  "results": Object {
+    "action": "pick",
+    "candidates": Object {
+      "123456": Object {
+        "contents": "Historically black colleges.",
+        "id": 278,
+      },
+      "234567": Object {
+        "contents": "An erection that lasts longer than four hours.",
+        "id": 19,
+      },
+    },
+    "game": Object {
+      "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "notified_players": Object {
+        "123456": true,
+        "234567": true,
+        "345678": true,
+        "456789": true,
+        "567890": true,
+      },
+      "players": Object {
+        "123456": true,
+        "234567": true,
+        "345678": true,
+        "456789": true,
+        "567890": true,
+      },
+      "rounds": Object {
+        "--------------------": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      },
+    },
+    "hand": Object {
+      "cards": Array [
+        Object {
+          "contents": "Horse meat.",
+          "id": 151,
+        },
+        Object {
+          "contents": "Sunshine and rainbows.",
+          "id": 152,
+        },
+        Object {
+          "contents": "Expecting a burp and vomiting on the floor.",
+          "id": 153,
+        },
+        Object {
+          "contents": "Waterboarding.",
+          "id": 413,
+        },
+        Object {
+          "contents": "Wifely duties.",
+          "id": 414,
+        },
+        Object {
+          "contents": "Loose lips.",
+          "id": 415,
+        },
+        Object {
+          "contents": "Nude larping.",
+          "id": 694,
+        },
+        Object {
+          "contents": "Portable holes.",
+          "id": 695,
+        },
+        Object {
+          "contents": "Greeting Christmas carollers naked.",
+          "id": 915,
+        },
+        Object {
+          "contents": "Having a drill for a penis.",
+          "id": 917,
+        },
+      ],
+      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "player": 345678,
+    },
+    "lead": Object {
+      "id": 345678,
+      "platform": "facebook",
+    },
+    "messages": Array [
+      Object {
+        "payload": Object {
+          "card": Object {
+            "contents": "Horse meat.",
+            "id": 151,
+          },
+        },
+        "type": "card-selected-message",
+      },
+      Object {
+        "type": "wait-for-votes-message",
+      },
+    ],
+    "payload": Object {
+      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "pick": 151,
+      "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+    },
+    "pick": Object {
+      "contents": "Horse meat.",
+      "id": 151,
+    },
+    "player": Object {
+      "first_name": "Hermes",
+      "games": Object {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+      },
+      "id": 345678,
+      "platform": "facebook",
+    },
+    "round": Object {
+      "candidates": Object {
+        "123456": 278,
+        "234567": 19,
       },
       "card": Object {
         "contents": "It's a D&D retroclone with _ added.",
@@ -579,7 +1560,6 @@ Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "123456": Object {
           "cards": Object {
-            "278": true,
             "279": true,
             "280": true,
             "281": true,
@@ -708,7 +1688,7 @@ Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
           "candidates": Object {
-            "123456": 0,
+            "123456": 278,
           },
           "card": Object {
             "contents": "It's a D&D retroclone with _ added.",
@@ -724,8 +1704,8 @@ Object {
     "action": "pick",
     "candidates": Object {
       "123456": Object {
-        "contents": "Flying sex snakes.",
-        "id": 0,
+        "contents": "Historically black colleges.",
+        "id": 278,
       },
     },
     "game": Object {
@@ -748,32 +1728,65 @@ Object {
         "--------------------": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       },
     },
+    "hand": Object {
+      "cards": Array [
+        Object {
+          "contents": "Not reciprocating oral sex.",
+          "id": 279,
+        },
+        Object {
+          "contents": "Global warming.",
+          "id": 280,
+        },
+        Object {
+          "contents": "Ghosts.",
+          "id": 281,
+        },
+        Object {
+          "contents": "World peace.",
+          "id": 282,
+        },
+        Object {
+          "contents": "The Dance of the Sugar Plum Fairy.",
+          "id": 284,
+        },
+        Object {
+          "contents": "A zesty breakfast burrito.",
+          "id": 285,
+        },
+        Object {
+          "contents": "Switching to Geico&reg;.",
+          "id": 286,
+        },
+        Object {
+          "contents": "Aaron Burr.",
+          "id": 287,
+        },
+        Object {
+          "contents": "Loose lips.",
+          "id": 415,
+        },
+      ],
+      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "player": 123456,
+    },
     "lead": Object {
       "id": 123456,
       "platform": "facebook",
     },
     "messages": Array [
       Object {
-        "payload": Object {
-          "card": Object {
-            "contents": "Flying sex snakes.",
-            "id": 0,
-          },
-        },
-        "type": "card-already-selected-message",
-      },
-      Object {
-        "type": "wait-for-votes-message",
+        "type": "card-not-in-hand",
       },
     ],
     "payload": Object {
       "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-      "pick": 0,
+      "pick": 278,
       "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
     },
     "pick": Object {
-      "contents": "Flying sex snakes.",
-      "id": 0,
+      "contents": "Historically black colleges.",
+      "id": 278,
     },
     "player": Object {
       "first_name": "Ray",
@@ -785,7 +1798,7 @@ Object {
     },
     "round": Object {
       "candidates": Object {
-        "123456": 0,
+        "123456": 278,
       },
       "card": Object {
         "contents": "It's a D&D retroclone with _ added.",
