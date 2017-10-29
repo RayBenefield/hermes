@@ -1,4 +1,5 @@
 /* eslint-disable max-lines */
+import _ from 'lodash';
 import uuid from 'uuid/v4';
 import admin from 'firebase-admin';
 import transmute from 'transmutation';
@@ -54,14 +55,34 @@ exports.roundStarted = functions.database.ref('/rounds/{gameId}/{id}')
                     fb.sendMessages(lead.id, facebookMessages))))));
 
 exports.votingStarted = functions.database.ref('/candidates/{gameId}/{roundId}')
-    .onCreate(event => triggers.voteStarted({
+    .onCreate(event => transmute({
         action: 'candidates',
         payload: {
             game: event.params.gameId,
             round: event.params.roundId,
             notified: event.data.val().notified_players,
         },
-    }));
+    })
+        .extend('game', ({ games, round, payload: { game: gameId } = {} }) => {
+            if (gameId && games) return games.find(g => g.id === gameId);
+            if (round && games) return games.find(g => g.id === round.game);
+            if (gameId) return db.get(`games/${gameId}`);
+            if (round) return db.get(`games/${round.game}`);
+            return undefined;
+        })
+        .extend('players', ({ game: { players } }) => Promise.all(_.keys(players)
+            .map(p => db.get(`players/facebook/${p}`))))
+        .extend('unnotifiedPlayers', ({ players, payload: { notified } }) =>
+            players.filter(({ id }) => !(id in notified)))
+        .doEach('unnotifiedPlayers', (snowball, unnotifiedPlayer) =>
+            transmute(snowball)
+                .extend('lead', unnotifiedPlayer)
+                .extend('player', unnotifiedPlayer)
+                .extend(domain)
+                .extend('facebookMessages', fb.transform)
+                .do(({ lead, facebookMessages }) =>
+                    fb.sendMessages(lead.id, facebookMessages)))
+    );
 
 exports.winnerDecided = functions.database.ref('/rounds/{gameId}/{roundId}/winner')
     .onCreate(event => triggers.winnerDecided({

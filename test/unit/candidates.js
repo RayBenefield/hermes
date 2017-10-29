@@ -27,7 +27,7 @@ describe('Show Candidates', (it) => {
         // Then
         assert.deepEqual(messages, [
             {
-                type: 'candidates-ready-message',
+                type: 'notify-candidates-ready-message',
                 payload: {
                     game: game.id,
                     round: round.id,

@@ -2,7 +2,7 @@ import _ from 'lodash';
 
 export default ({ candidates, player: { id }, game, round }) => [
     {
-        type: 'candidates-ready-message',
+        type: 'notify-candidates-ready-message',
         payload: {
             game: game.id,
             round: round.id,

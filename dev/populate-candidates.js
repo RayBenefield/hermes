@@ -12,7 +12,7 @@ admin.initializeApp({
 });
 const db = configureDb(admin.database());
 const testAccounts = ['1969918279691174', '2062932073720600', '1654450144625528', '1572553382787981'];
-const { get, save } = setupEntities({ db });
+const { get, save } = setupEntities({ db, random: Math.random });
 
 const getChoices = ['choices', ({ rounds }) => rounds
     .map(round => ({

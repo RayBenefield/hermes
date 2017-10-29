@@ -93,6 +93,8 @@ export default ({ db, uuid, random }) => ({
         notifiedAllPlayersOfVoting: [({ players, round, game }) =>
             db.set(`candidates/${game.id}/${round.id}/notified_players`, players.reduce((all, curr) =>
                 Object.assign(all, { [curr.id]: true }), {}))],
+        notifiedPlayerOfVoting: [({ player, round, game }) =>
+            db.set(`candidates/${game.id}/${round.id}/notified_players/${player.id}`)],
         notifiedAllPlayersOfWinner: [({ players, game, round }) =>
             db.set(`rounds/${game.id}/${round.id}/notified_players`, players.reduce((a, p) => Object.assign(a, { [p.id]: true }), {}))],
         gameForPlayers: [({ players, game: { id } }) => Promise.all(
