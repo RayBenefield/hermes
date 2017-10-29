@@ -1,3 +1,5 @@
+ - Remove the use of firebase push since Flame is using Math.Random and Date.Now
+   as side effects and it is screwing with my testing.
  - Add case for when trying to re-vote for a card
  - Added integration testing for each of the domain services
  - Use doEach now to save the context

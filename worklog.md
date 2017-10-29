@@ -1,5 +1,16 @@
 # Work Log
 
+## #90
+
+This was a painful session, I went to go setup the testing for voting, and then
+realized that all of the votes are pushed and since they are pushed they are
+also have randomized keys since the flame local firebase I'm using for
+integration testing is using Math.random and Date.now, which I'm finding
+difficulty mocking. So instead I'm going to remove the use of firebase push
+(which I currently only use in two places) and then move forward from there,
+finishing up the integration tests.
+
+
 ## #89
 
 Added integration tests for populating a bunch of scenarios to be loaded into
