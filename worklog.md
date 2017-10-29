@@ -1,5 +1,10 @@
 # Work Log
 
+## #88
+
+Just logging the double session worklog entry.
+
+
 ## #87
 
 Another double session logged for the sake of just trying to push through some
