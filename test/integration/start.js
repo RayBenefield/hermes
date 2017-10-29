@@ -32,6 +32,7 @@ test('notify all players of new game', () => {
             },
         },
     })
+        .then(save('new-round'))
         .then(results => expect({
             results,
             db: flame.get('/'),
