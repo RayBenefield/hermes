@@ -33,3 +33,26 @@ test('show a hand with pickable cards', () => {
             db: flame.get('/'),
         }).toMatchSnapshot());
 });
+
+test('show a hand after picking a card', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 123456,
+    };
+    flame.loadDatabase(databases['picked-card']);
+
+    // When
+    return domain({
+        lead,
+        action: 'hand',
+        payload: {
+            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+        },
+    })
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});
