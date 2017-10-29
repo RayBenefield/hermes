@@ -11,13 +11,37 @@ const domain = configureDomain({ db, uuid, random });
 const save = configureSave(flame); // eslint-disable-line no-unused-vars
 beforeEach(() => flame.loadDatabase(undefined));
 
-test('show a hand with pickable cards', () => {
+test('pick a card for the goal', () => {
     // Given
     const lead = {
         platform: 'facebook',
         id: 123456,
     };
     flame.loadDatabase(databases['shown-goal']);
+
+    // When
+    return domain({
+        lead,
+        action: 'pick',
+        payload: {
+            pick: 0,
+            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+        },
+    })
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});
+
+test('try to pick a card again', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 123456,
+    };
+    flame.loadDatabase(databases['picked-card']);
 
     // When
     return domain({
