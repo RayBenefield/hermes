@@ -35,14 +35,74 @@ test('add player to the queue', () => {
         platform: 'facebook',
         id: 123456,
     };
-    flame.loadDatabase(databases['existing-player']);
+    flame.loadDatabase(databases['5-existing-players']);
 
     // When
     return domain({
         lead,
         action: 'join',
     })
-        .then(save('player-in-queue'))
+        .then(save('1-player-in-queue'))
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});
+
+test('add second player to the queue', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 234567,
+    };
+    flame.loadDatabase(databases['1-player-in-queue']);
+
+    // When
+    return domain({
+        lead,
+        action: 'join',
+    })
+        .then(save('2-players-in-queue'))
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});
+
+test('add third player to the queue', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 345678,
+    };
+    flame.loadDatabase(databases['2-players-in-queue']);
+
+    // When
+    return domain({
+        lead,
+        action: 'join',
+    })
+        .then(save('3-players-in-queue'))
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});
+
+test('add fourth player to the queue', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 456789,
+    };
+    flame.loadDatabase(databases['3-players-in-queue']);
+
+    // When
+    return domain({
+        lead,
+        action: 'join',
+    })
+        .then(save('4-players-in-queue'))
         .then(results => expect({
             results,
             db: flame.get('/'),
@@ -72,7 +132,7 @@ test('new game started from full queue', () => {
     // Given
     const lead = {
         platform: 'facebook',
-        id: 123456,
+        id: 567890,
     };
     flame.loadDatabase(databases['4-players-in-queue']);
 

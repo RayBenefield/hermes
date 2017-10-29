@@ -1,19 +1,4 @@
 {
-    "games": {
-        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": {
-            "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-            "players": {
-                "123456": true,
-                "234567": true,
-                "345678": true,
-                "456789": true,
-                "567890": true
-            },
-            "notified_players": {
-                "567890": true
-            }
-        }
-    },
     "players": {
         "facebook": {
             "123456": {
@@ -35,13 +20,7 @@
                 "platform": "facebook",
                 "id": 456789,
                 "first_name": "Hermshire"
-            },
-            "567890": {
-                "platform": "facebook",
-                "id": 567890,
-                "first_name": "Hermda"
             }
         }
-    },
-    "queue": {}
+    }
 }

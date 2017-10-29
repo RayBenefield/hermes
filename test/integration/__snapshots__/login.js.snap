@@ -6,6 +6,7 @@ Object {
     "players": Object {
       "facebook": Object {
         "123456": Object {
+          "first_name": "Ray",
           "id": 123456,
           "platform": "facebook",
         },
@@ -15,12 +16,14 @@ Object {
   "results": Object {
     "action": "login",
     "lead": Object {
+      "first_name": "Ray",
       "id": 123456,
       "platform": "facebook",
     },
     "messages": Array [
       Object {
         "payload": Object {
+          "first_name": "Ray",
           "id": 123456,
           "platform": "facebook",
         },
@@ -31,6 +34,208 @@ Object {
       },
     ],
     "player": undefined,
+  },
+}
+`;
+
+exports[`sends back a welcome message to fifth player and instructions message 1`] = `
+Object {
+  "db": Object {
+    "players": Object {
+      "facebook": Object {
+        "123456": Object {
+          "first_name": "Ray",
+          "id": 123456,
+          "platform": "facebook",
+        },
+        "234567": Object {
+          "first_name": "Hermon",
+          "id": 234567,
+          "platform": "facebook",
+        },
+        "345678": Object {
+          "first_name": "Hermes",
+          "id": 345678,
+          "platform": "facebook",
+        },
+        "456789": Object {
+          "first_name": "Hermshire",
+          "id": 456789,
+          "platform": "facebook",
+        },
+        "567890": Object {
+          "first_name": "Hermda",
+          "id": 567890,
+          "platform": "facebook",
+        },
+      },
+    },
+  },
+  "results": Object {
+    "action": "login",
+    "lead": Object {
+      "first_name": "Hermda",
+      "id": 567890,
+      "platform": "facebook",
+    },
+    "messages": Array [
+      Object {
+        "payload": Object {
+          "first_name": "Hermda",
+          "id": 567890,
+          "platform": "facebook",
+        },
+        "type": "welcome-message",
+      },
+      Object {
+        "type": "instructions-message",
+      },
+    ],
+    "player": null,
+  },
+}
+`;
+
+exports[`sends back a welcome message to fourth player and instructions message 1`] = `
+Object {
+  "db": Object {
+    "players": Object {
+      "facebook": Object {
+        "123456": Object {
+          "first_name": "Ray",
+          "id": 123456,
+          "platform": "facebook",
+        },
+        "234567": Object {
+          "first_name": "Hermon",
+          "id": 234567,
+          "platform": "facebook",
+        },
+        "345678": Object {
+          "first_name": "Hermes",
+          "id": 345678,
+          "platform": "facebook",
+        },
+        "456789": Object {
+          "first_name": "Hermshire",
+          "id": 456789,
+          "platform": "facebook",
+        },
+      },
+    },
+  },
+  "results": Object {
+    "action": "login",
+    "lead": Object {
+      "first_name": "Hermshire",
+      "id": 456789,
+      "platform": "facebook",
+    },
+    "messages": Array [
+      Object {
+        "payload": Object {
+          "first_name": "Hermshire",
+          "id": 456789,
+          "platform": "facebook",
+        },
+        "type": "welcome-message",
+      },
+      Object {
+        "type": "instructions-message",
+      },
+    ],
+    "player": null,
+  },
+}
+`;
+
+exports[`sends back a welcome message to second player and instructions message 1`] = `
+Object {
+  "db": Object {
+    "players": Object {
+      "facebook": Object {
+        "123456": Object {
+          "first_name": "Ray",
+          "id": 123456,
+          "platform": "facebook",
+        },
+        "234567": Object {
+          "first_name": "Hermon",
+          "id": 234567,
+          "platform": "facebook",
+        },
+      },
+    },
+  },
+  "results": Object {
+    "action": "login",
+    "lead": Object {
+      "first_name": "Hermon",
+      "id": 234567,
+      "platform": "facebook",
+    },
+    "messages": Array [
+      Object {
+        "payload": Object {
+          "first_name": "Hermon",
+          "id": 234567,
+          "platform": "facebook",
+        },
+        "type": "welcome-message",
+      },
+      Object {
+        "type": "instructions-message",
+      },
+    ],
+    "player": null,
+  },
+}
+`;
+
+exports[`sends back a welcome message to third player and instructions message 1`] = `
+Object {
+  "db": Object {
+    "players": Object {
+      "facebook": Object {
+        "123456": Object {
+          "first_name": "Ray",
+          "id": 123456,
+          "platform": "facebook",
+        },
+        "234567": Object {
+          "first_name": "Hermon",
+          "id": 234567,
+          "platform": "facebook",
+        },
+        "345678": Object {
+          "first_name": "Hermes",
+          "id": 345678,
+          "platform": "facebook",
+        },
+      },
+    },
+  },
+  "results": Object {
+    "action": "login",
+    "lead": Object {
+      "first_name": "Hermes",
+      "id": 345678,
+      "platform": "facebook",
+    },
+    "messages": Array [
+      Object {
+        "payload": Object {
+          "first_name": "Hermes",
+          "id": 345678,
+          "platform": "facebook",
+        },
+        "type": "welcome-message",
+      },
+      Object {
+        "type": "instructions-message",
+      },
+    ],
+    "player": null,
   },
 }
 `;
@@ -61,6 +266,7 @@ Object {
             "platform": "facebook",
           },
           "player": Object {
+            "first_name": "Ray",
             "id": 123456,
             "platform": "facebook",
           },
@@ -69,6 +275,7 @@ Object {
       },
     ],
     "player": Object {
+      "first_name": "Ray",
       "id": 123456,
       "platform": "facebook",
     },

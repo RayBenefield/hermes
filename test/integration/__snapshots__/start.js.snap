@@ -165,7 +165,7 @@ Object {
     "game": Object {
       "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       "notified_players": Object {
-        "123456": true,
+        "567890": true,
       },
       "players": Object {
         "123456": true,
@@ -233,6 +233,11 @@ Object {
     ],
     "unnotifiedPlayers": Array [
       Object {
+        "first_name": "Ray",
+        "id": 123456,
+        "platform": "facebook",
+      },
+      Object {
         "first_name": "Hermon",
         "id": 234567,
         "platform": "facebook",
@@ -245,11 +250,6 @@ Object {
       Object {
         "first_name": "Hermshire",
         "id": 456789,
-        "platform": "facebook",
-      },
-      Object {
-        "first_name": "Hermda",
-        "id": 567890,
         "platform": "facebook",
       },
     ],

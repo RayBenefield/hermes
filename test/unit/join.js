@@ -31,8 +31,15 @@ describe('Join Queue', (it) => {
             '456789',
             '567890',
         ];
-        const player = { id: '123456', first_name: 'First' };
+        const player = { id: '123456', first_name: 'First', platform: 'facebook' };
         const players = [
+            { id: '234567', first_name: 'Second' },
+            { id: '345678', first_name: 'Third' },
+            { id: '456789', first_name: 'Fourth' },
+            { id: '567890', first_name: 'Fifth' },
+        ];
+        const expectedPlayers = [
+            { id: '123456', first_name: 'First' },
             { id: '234567', first_name: 'Second' },
             { id: '345678', first_name: 'Third' },
             { id: '456789', first_name: 'Fourth' },
@@ -47,10 +54,7 @@ describe('Join Queue', (it) => {
             {
                 type: 'game-started-message',
                 payload: {
-                    players: [
-                        player,
-                        ...players,
-                    ],
+                    players: expectedPlayers,
                 },
             },
         ]);

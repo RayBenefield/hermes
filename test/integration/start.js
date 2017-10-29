@@ -28,7 +28,7 @@ test('notify all players of new game', () => {
                 567890: true,
             },
             notified_players: {
-                123456: true,
+                567890: true,
             },
         },
     })

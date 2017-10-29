@@ -37,7 +37,10 @@ export default ({ player, players, queue = [] } = {}) => {
             type: 'game-started-message',
             payload: {
                 players: [
-                    player,
+                    {
+                        id: player.id,
+                        first_name: player.first_name,
+                    },
                     ...playersInGame,
                 ],
             },

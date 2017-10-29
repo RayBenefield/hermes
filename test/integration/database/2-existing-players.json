@@ -5,6 +5,11 @@
                 "platform": "facebook",
                 "id": 123456,
                 "first_name": "Ray"
+            },
+            "234567": {
+                "platform": "facebook",
+                "id": 234567,
+                "first_name": "Hermon"
             }
         }
     }

@@ -15,23 +15,7 @@
                 "platform": "facebook",
                 "id": 345678,
                 "first_name": "Hermes"
-            },
-            "456789": {
-                "platform": "facebook",
-                "id": 456789,
-                "first_name": "Hermshire"
-            },
-            "567890": {
-                "platform": "facebook",
-                "id": 567890,
-                "first_name": "Hermda"
             }
         }
-    },
-    "queue": {
-        "123456": true,
-        "234567": true,
-        "345678": true,
-        "456789": true
     }
 }

@@ -1,12 +1,123 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`add fourth player to the queue 1`] = `
+Object {
+  "db": Object {
+    "players": Object {
+      "facebook": Object {
+        "123456": Object {
+          "first_name": "Ray",
+          "id": 123456,
+          "platform": "facebook",
+        },
+        "234567": Object {
+          "first_name": "Hermon",
+          "id": 234567,
+          "platform": "facebook",
+        },
+        "345678": Object {
+          "first_name": "Hermes",
+          "id": 345678,
+          "platform": "facebook",
+        },
+        "456789": Object {
+          "first_name": "Hermshire",
+          "id": 456789,
+          "platform": "facebook",
+        },
+        "567890": Object {
+          "first_name": "Hermda",
+          "id": 567890,
+          "platform": "facebook",
+        },
+      },
+    },
+    "queue": Object {
+      "123456": true,
+      "234567": true,
+      "345678": true,
+      "456789": true,
+    },
+  },
+  "results": Object {
+    "action": "join",
+    "lead": Object {
+      "id": 456789,
+      "platform": "facebook",
+    },
+    "messages": Array [
+      Object {
+        "payload": Object {
+          "player": 456789,
+          "queue": Array [
+            "123456",
+            "234567",
+            "345678",
+            456789,
+          ],
+        },
+        "type": "queue-joined-message",
+      },
+    ],
+    "player": Object {
+      "first_name": "Hermshire",
+      "id": 456789,
+      "platform": "facebook",
+    },
+    "players": Array [
+      Object {
+        "first_name": "Ray",
+        "id": 123456,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermon",
+        "id": 234567,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermes",
+        "id": 345678,
+        "platform": "facebook",
+      },
+    ],
+    "queue": Array [
+      "123456",
+      "234567",
+      "345678",
+    ],
+  },
+}
+`;
+
 exports[`add player to the queue 1`] = `
 Object {
   "db": Object {
     "players": Object {
       "facebook": Object {
         "123456": Object {
+          "first_name": "Ray",
           "id": 123456,
+          "platform": "facebook",
+        },
+        "234567": Object {
+          "first_name": "Hermon",
+          "id": 234567,
+          "platform": "facebook",
+        },
+        "345678": Object {
+          "first_name": "Hermes",
+          "id": 345678,
+          "platform": "facebook",
+        },
+        "456789": Object {
+          "first_name": "Hermshire",
+          "id": 456789,
+          "platform": "facebook",
+        },
+        "567890": Object {
+          "first_name": "Hermda",
+          "id": 567890,
           "platform": "facebook",
         },
       },
@@ -33,11 +144,168 @@ Object {
       },
     ],
     "player": Object {
+      "first_name": "Ray",
       "id": 123456,
       "platform": "facebook",
     },
     "players": Array [],
     "queue": Array [],
+  },
+}
+`;
+
+exports[`add second player to the queue 1`] = `
+Object {
+  "db": Object {
+    "players": Object {
+      "facebook": Object {
+        "123456": Object {
+          "first_name": "Ray",
+          "id": 123456,
+          "platform": "facebook",
+        },
+        "234567": Object {
+          "first_name": "Hermon",
+          "id": 234567,
+          "platform": "facebook",
+        },
+        "345678": Object {
+          "first_name": "Hermes",
+          "id": 345678,
+          "platform": "facebook",
+        },
+        "456789": Object {
+          "first_name": "Hermshire",
+          "id": 456789,
+          "platform": "facebook",
+        },
+        "567890": Object {
+          "first_name": "Hermda",
+          "id": 567890,
+          "platform": "facebook",
+        },
+      },
+    },
+    "queue": Object {
+      "123456": true,
+      "234567": true,
+    },
+  },
+  "results": Object {
+    "action": "join",
+    "lead": Object {
+      "id": 234567,
+      "platform": "facebook",
+    },
+    "messages": Array [
+      Object {
+        "payload": Object {
+          "player": 234567,
+          "queue": Array [
+            "123456",
+            234567,
+          ],
+        },
+        "type": "queue-joined-message",
+      },
+    ],
+    "player": Object {
+      "first_name": "Hermon",
+      "id": 234567,
+      "platform": "facebook",
+    },
+    "players": Array [
+      Object {
+        "first_name": "Ray",
+        "id": 123456,
+        "platform": "facebook",
+      },
+    ],
+    "queue": Array [
+      "123456",
+    ],
+  },
+}
+`;
+
+exports[`add third player to the queue 1`] = `
+Object {
+  "db": Object {
+    "players": Object {
+      "facebook": Object {
+        "123456": Object {
+          "first_name": "Ray",
+          "id": 123456,
+          "platform": "facebook",
+        },
+        "234567": Object {
+          "first_name": "Hermon",
+          "id": 234567,
+          "platform": "facebook",
+        },
+        "345678": Object {
+          "first_name": "Hermes",
+          "id": 345678,
+          "platform": "facebook",
+        },
+        "456789": Object {
+          "first_name": "Hermshire",
+          "id": 456789,
+          "platform": "facebook",
+        },
+        "567890": Object {
+          "first_name": "Hermda",
+          "id": 567890,
+          "platform": "facebook",
+        },
+      },
+    },
+    "queue": Object {
+      "123456": true,
+      "234567": true,
+      "345678": true,
+    },
+  },
+  "results": Object {
+    "action": "join",
+    "lead": Object {
+      "id": 345678,
+      "platform": "facebook",
+    },
+    "messages": Array [
+      Object {
+        "payload": Object {
+          "player": 345678,
+          "queue": Array [
+            "123456",
+            "234567",
+            345678,
+          ],
+        },
+        "type": "queue-joined-message",
+      },
+    ],
+    "player": Object {
+      "first_name": "Hermes",
+      "id": 345678,
+      "platform": "facebook",
+    },
+    "players": Array [
+      Object {
+        "first_name": "Ray",
+        "id": 123456,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermon",
+        "id": 234567,
+        "platform": "facebook",
+      },
+    ],
+    "queue": Array [
+      "123456",
+      "234567",
+    ],
   },
 }
 `;
@@ -49,7 +317,7 @@ Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
         "notified_players": Object {
-          "123456": true,
+          "567890": true,
         },
         "players": Object {
           "123456": true,
@@ -94,7 +362,7 @@ Object {
   "results": Object {
     "action": "join",
     "lead": Object {
-      "id": 123456,
+      "id": 567890,
       "platform": "facebook",
     },
     "messages": Array [
@@ -102,9 +370,12 @@ Object {
         "payload": Object {
           "players": Array [
             Object {
+              "first_name": "Hermda",
+              "id": 567890,
+            },
+            Object {
               "first_name": "Ray",
               "id": 123456,
-              "platform": "facebook",
             },
             Object {
               "first_name": "Hermon",
@@ -118,21 +389,22 @@ Object {
               "first_name": "Hermshire",
               "id": 456789,
             },
-            Object {
-              "first_name": "Hermda",
-              "id": 567890,
-            },
           ],
         },
         "type": "game-started-message",
       },
     ],
     "player": Object {
-      "first_name": "Ray",
-      "id": 123456,
+      "first_name": "Hermda",
+      "id": 567890,
       "platform": "facebook",
     },
     "players": Array [
+      Object {
+        "first_name": "Ray",
+        "id": 123456,
+        "platform": "facebook",
+      },
       Object {
         "first_name": "Hermon",
         "id": 234567,
@@ -148,17 +420,12 @@ Object {
         "id": 456789,
         "platform": "facebook",
       },
-      Object {
-        "first_name": "Hermda",
-        "id": 567890,
-        "platform": "facebook",
-      },
     ],
     "queue": Array [
+      "123456",
       "234567",
       "345678",
       "456789",
-      "567890",
     ],
   },
 }
