@@ -29,6 +29,7 @@ test('pick a card for the goal', () => {
             round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         },
     })
+        .then(save('picked-card'))
         .then(results => expect({
             results,
             db: flame.get('/'),
