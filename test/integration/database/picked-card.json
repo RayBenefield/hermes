@@ -27,7 +27,6 @@
                 "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
                 "player": 123456,
                 "cards": {
-                    "0": true,
                     "519": true,
                     "520": true,
                     "521": true,
@@ -158,6 +157,9 @@
                 "card": {
                     "id": 111,
                     "contents": "It's a D&D retroclone with _ added."
+                },
+                "candidates": {
+                    "123456": 0
                 }
             }
         }

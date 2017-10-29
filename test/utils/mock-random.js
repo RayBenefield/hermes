@@ -1,7 +1,5 @@
-export default (start) => {
-    let count = start;
-    return () => {
-        count++;
-        return 0.1 * count;
-    };
+let count = 0;
+export default () => {
+    count++;
+    return count * 0.001;
 };

@@ -29,7 +29,6 @@ Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "123456": Object {
           "cards": Object {
-            "0": true,
             "519": true,
             "520": true,
             "521": true,
@@ -157,6 +156,9 @@ Object {
     "rounds": Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 0,
+          },
           "card": Object {
             "contents": "It's a D&D retroclone with _ added.",
             "id": 111,
@@ -168,7 +170,7 @@ Object {
     },
   },
   "results": Object {
-    "action": "hand",
+    "action": "pick",
     "candidates": Object {},
     "game": Object {
       "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
@@ -190,52 +192,6 @@ Object {
         "--------------------": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       },
     },
-    "hand": Object {
-      "cards": Array [
-        Object {
-          "contents": "Flying sex snakes.",
-          "id": 0,
-        },
-        Object {
-          "contents": "Scrotum tickling.",
-          "id": 519,
-        },
-        Object {
-          "contents": "Sexual humiliation.",
-          "id": 520,
-        },
-        Object {
-          "contents": "Sexy Siamese twins.",
-          "id": 521,
-        },
-        Object {
-          "contents": "Saliva.",
-          "id": 522,
-        },
-        Object {
-          "contents": "Statistically validated stereotypes.",
-          "id": 524,
-        },
-        Object {
-          "contents": "Sudden Poop Explosion Disease.",
-          "id": 525,
-        },
-        Object {
-          "contents": "The boners of the elderly.",
-          "id": 526,
-        },
-        Object {
-          "contents": "The economy.",
-          "id": 527,
-        },
-        Object {
-          "contents": "Syphilitic insanity.",
-          "id": 528,
-        },
-      ],
-      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-      "player": 123456,
-    },
     "lead": Object {
       "id": 123456,
       "platform": "facebook",
@@ -243,57 +199,25 @@ Object {
     "messages": Array [
       Object {
         "payload": Object {
-          "cards": Array [
-            Object {
-              "contents": "Flying sex snakes.",
-              "id": 0,
-            },
-            Object {
-              "contents": "Scrotum tickling.",
-              "id": 519,
-            },
-            Object {
-              "contents": "Sexual humiliation.",
-              "id": 520,
-            },
-            Object {
-              "contents": "Sexy Siamese twins.",
-              "id": 521,
-            },
-            Object {
-              "contents": "Saliva.",
-              "id": 522,
-            },
-            Object {
-              "contents": "Statistically validated stereotypes.",
-              "id": 524,
-            },
-            Object {
-              "contents": "Sudden Poop Explosion Disease.",
-              "id": 525,
-            },
-            Object {
-              "contents": "The boners of the elderly.",
-              "id": 526,
-            },
-            Object {
-              "contents": "The economy.",
-              "id": 527,
-            },
-            Object {
-              "contents": "Syphilitic insanity.",
-              "id": 528,
-            },
-          ],
-          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-          "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "card": Object {
+            "contents": "Flying sex snakes.",
+            "id": 0,
+          },
         },
-        "type": "show-hand-for-picking-message",
+        "type": "card-selected-message",
+      },
+      Object {
+        "type": "wait-for-votes-message",
       },
     ],
     "payload": Object {
       "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "pick": 0,
       "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+    },
+    "pick": Object {
+      "contents": "Flying sex snakes.",
+      "id": 0,
     },
     "player": Object {
       "first_name": "Ray",

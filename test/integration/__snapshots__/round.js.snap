@@ -158,8 +158,8 @@ Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
           "card": Object {
-            "contents": "_?  There's an app for that.",
-            "id": 0,
+            "contents": "It's a D&D retroclone with _ added.",
+            "id": 111,
           },
           "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
@@ -170,8 +170,8 @@ Object {
   "results": Object {
     "action": "round",
     "card": Object {
-      "contents": "_?  There's an app for that.",
-      "id": 0,
+      "contents": "It's a D&D retroclone with _ added.",
+      "id": 111,
     },
     "game": Object {
       "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
@@ -194,8 +194,8 @@ Object {
       Object {
         "payload": Object {
           "card": Object {
-            "contents": "_?  There's an app for that.",
-            "id": 0,
+            "contents": "It's a D&D retroclone with _ added.",
+            "id": 111,
           },
           "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
