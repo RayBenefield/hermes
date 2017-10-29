@@ -42,6 +42,7 @@ test('add player to the queue', () => {
         lead,
         action: 'join',
     })
+        .then(save('player-in-queue'))
         .then(results => expect({
             results,
             db: flame.get('/'),
