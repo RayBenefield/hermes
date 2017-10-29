@@ -3,7 +3,7 @@ import _ from 'lodash';
 import whiteDeck from '../data/white-deck.json';
 import blackDeck from '../data/black-deck.json';
 
-export default ({ db, uuid }) => ({
+export default ({ db, uuid, random }) => ({
     get: {
         allGames: ['games', () => db.get('games').then(_.values)],
         allPlayers: ['players', () => db.get('players/facebook').then(_.values)],
@@ -51,7 +51,7 @@ export default ({ db, uuid }) => ({
             return votes[player.id]
                 .map(votedFor => candidates[votedFor]);
         }],
-        card: ['card', () => blackDeck.sort(() => 0.5 - Math.random()).slice(0, 1)[0]],
+        card: ['card', () => blackDeck.sort(() => 0.5 - random()).slice(0, 1)[0]],
         playersFromGame: ['players', ({ game: { players } }) => Promise.all(_.keys(players)
             .map(p => db.get(`players/facebook/${p}`)))],
         playersFromPayload: ['players', ({ payload: { players } }) => Promise.all(players
@@ -68,7 +68,7 @@ export default ({ db, uuid }) => ({
         randomCandidates: ['candidates', ({ hands }) => hands.map(hand => ({
             game: hand.game,
             player: hand.player,
-            card: _.values(hand.cards).sort(() => 0.5 - Math.random()).slice(0, 1)[0],
+            card: _.values(hand.cards).sort(() => 0.5 - random()).slice(0, 1)[0],
         }))],
     },
     save: {
@@ -100,7 +100,7 @@ export default ({ db, uuid }) => ({
                 db.set(`players/facebook/${player.id}/games/${id}`)))],
         handsForPlayers: [({ players, game: { id } }) => Promise.all(players
             .map(p => ({ player: p }))
-            .map(p => ({ ...p, hand: whiteDeck.sort(() => 0.5 - Math.random()).slice(0, 10) }))
+            .map(p => ({ ...p, hand: whiteDeck.sort(() => 0.5 - random()).slice(0, 10) }))
             .map(({ player, hand }) => ({
                 player,
                 hand: hand.reduce((h, c) => Object.assign(h, { [c.id]: true }), {}),

@@ -19,7 +19,7 @@ const db = process.env.NODE_ENV === 'dev-local'
     : configureFirebaseDb(admin.database());
 
 const fb = configureFacebook(config.facebook);
-const domain = configureDomain({ db, uuid });
+const domain = configureDomain({ db, uuid, random: Math.random });
 
 const channelRouter =
     configureChannelRouter({ fb, domain });
