@@ -1,5 +1,12 @@
 # Work Log
 
+## #85
+
+Another double session due to a painful testing hack that I had to figure out.
+But right now the round trigger file is now absent which is awesome. Next is to
+do the show hand integration test.
+
+
 ## #84
 
 The last session was actually a double session due to this ridiculous bug that I
