@@ -23,6 +23,7 @@ test('sends back a welcome message and instructions message', () => {
         lead,
         action: 'login',
     })
+        .then(save('existing-player'))
         .then(results => expect({
             results,
             db: flame.get('/'),
