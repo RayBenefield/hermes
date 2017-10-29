@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`notify all players of new game 1`] = `
+exports[`notify all players of the new round 1`] = `
 Object {
   "db": Object {
     "games": Object {
@@ -20,6 +20,9 @@ Object {
           "456789": true,
           "567890": true,
         },
+        "rounds": Object {
+          "--------------------": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        },
       },
     },
     "hands": Object {
@@ -27,15 +30,15 @@ Object {
         "123456": Object {
           "cards": Object {
             "0": true,
-            "1046": true,
-            "2": true,
-            "3": true,
-            "4": true,
-            "5": true,
-            "6": true,
-            "7": true,
-            "8": true,
-            "9": true,
+            "519": true,
+            "520": true,
+            "521": true,
+            "522": true,
+            "524": true,
+            "525": true,
+            "526": true,
+            "527": true,
+            "528": true,
           },
           "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "player": 123456,
@@ -43,15 +46,15 @@ Object {
         "234567": Object {
           "cards": Object {
             "0": true,
-            "2": true,
-            "3": true,
-            "4": true,
-            "5": true,
-            "6": true,
-            "622": true,
-            "7": true,
-            "8": true,
-            "9": true,
+            "259": true,
+            "260": true,
+            "261": true,
+            "262": true,
+            "263": true,
+            "783": true,
+            "784": true,
+            "786": true,
+            "787": true,
           },
           "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "player": 234567,
@@ -59,15 +62,15 @@ Object {
         "345678": Object {
           "cards": Object {
             "0": true,
-            "1": true,
-            "2": true,
-            "3": true,
-            "4": true,
-            "5": true,
-            "6": true,
-            "7": true,
-            "8": true,
-            "9": true,
+            "130": true,
+            "131": true,
+            "392": true,
+            "393": true,
+            "653": true,
+            "654": true,
+            "655": true,
+            "915": true,
+            "917": true,
           },
           "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "player": 345678,
@@ -75,15 +78,15 @@ Object {
         "456789": Object {
           "cards": Object {
             "0": true,
-            "1046": true,
-            "2": true,
-            "3": true,
-            "4": true,
-            "5": true,
-            "6": true,
-            "7": true,
-            "8": true,
-            "9": true,
+            "196": true,
+            "327": true,
+            "458": true,
+            "589": true,
+            "720": true,
+            "850": true,
+            "851": true,
+            "981": true,
+            "982": true,
           },
           "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "player": 456789,
@@ -91,15 +94,15 @@ Object {
         "567890": Object {
           "cards": Object {
             "0": true,
-            "2": true,
-            "3": true,
-            "4": true,
-            "5": true,
-            "6": true,
-            "622": true,
-            "7": true,
-            "8": true,
-            "9": true,
+            "1014": true,
+            "163": true,
+            "19": true,
+            "294": true,
+            "32": true,
+            "687": true,
+            "818": true,
+            "949": true,
+            "98": true,
           },
           "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "player": 567890,
@@ -154,6 +157,10 @@ Object {
     "rounds": Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "card": Object {
+            "contents": "_?  There's an app for that.",
+            "id": 0,
+          },
           "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
         },
@@ -161,11 +168,19 @@ Object {
     },
   },
   "results": Object {
-    "action": "start",
+    "action": "round",
+    "card": Object {
+      "contents": "_?  There's an app for that.",
+      "id": 0,
+    },
     "game": Object {
       "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       "notified_players": Object {
         "123456": true,
+        "234567": true,
+        "345678": true,
+        "456789": true,
+        "567890": true,
       },
       "players": Object {
         "123456": true,
@@ -178,81 +193,62 @@ Object {
     "messages": Array [
       Object {
         "payload": Object {
-          "players": Array [
-            Object {
-              "first_name": "Ray",
-              "id": "123456",
-            },
-            Object {
-              "first_name": "Ray",
-              "id": "234567",
-            },
-            Object {
-              "first_name": "Ray",
-              "id": "345678",
-            },
-            Object {
-              "first_name": "Ray",
-              "id": "456789",
-            },
-            Object {
-              "first_name": "Ray",
-              "id": "567890",
-            },
-          ],
+          "card": Object {
+            "contents": "_?  There's an app for that.",
+            "id": 0,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
         },
-        "type": "notify-game-started-message",
+        "type": "new-goal-message",
       },
     ],
     "players": Array [
       Object {
         "first_name": "Ray",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
         "id": 123456,
         "platform": "facebook",
       },
       Object {
         "first_name": "Ray",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
         "id": 234567,
         "platform": "facebook",
       },
       Object {
         "first_name": "Ray",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
         "id": 345678,
         "platform": "facebook",
       },
       Object {
         "first_name": "Ray",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
         "id": 456789,
         "platform": "facebook",
       },
       Object {
         "first_name": "Ray",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
         "id": 567890,
         "platform": "facebook",
       },
     ],
-    "unnotifiedPlayers": Array [
-      Object {
-        "first_name": "Ray",
-        "id": 234567,
-        "platform": "facebook",
-      },
-      Object {
-        "first_name": "Ray",
-        "id": 345678,
-        "platform": "facebook",
-      },
-      Object {
-        "first_name": "Ray",
-        "id": 456789,
-        "platform": "facebook",
-      },
-      Object {
-        "first_name": "Ray",
-        "id": 567890,
-        "platform": "facebook",
-      },
-    ],
+    "round": Object {
+      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+    },
   },
 }
 `;

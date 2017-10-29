@@ -15,6 +15,10 @@ export default ({ db, uuid, random }) => {
             start: transmute()
                 .extend(...get.playersFromGame)
                 .extend(...get.unnotifiedPlayersForGame),
+            round: transmute()
+                .extend(...get.game)
+                .extend(...get.card)
+                .extend(...get.playersFromGame),
             hand: transmute()
                 .extend(...get.player)
                 .extend(...get.game)
@@ -49,6 +53,9 @@ export default ({ db, uuid, random }) => {
                 .do(...save.gameForPlayers)
                 .do(...save.handsForPlayers)
                 .do(...save.newRound),
+            'new-goal-message': transmute()
+                .do(...save.roundForGame)
+                .do(...save.goalForRound),
             'card-selected-message': transmute()
                 .do(...save.selectedCandidate)
                 .do(...save.removalOfCandidateFromHand),

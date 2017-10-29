@@ -89,6 +89,9 @@
         ],
         "testMatch": [
             "**/test/integration/*.js"
+        ],
+        "setupFiles": [
+            "<rootDir>/test/utils/math.js"
         ]
     }
 }

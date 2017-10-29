@@ -42,10 +42,16 @@ exports.gameStarted = functions.database.ref('/games/{id}')
     );
 
 exports.roundStarted = functions.database.ref('/rounds/{gameId}/{id}')
-    .onCreate(event => triggers.roundStarted({
+    .onCreate(event => transmute({
         action: 'round',
         round: event.data.val(),
-    }));
+    })
+        .extend(domain)
+        .do(({ players, messages }) => Promise.all(
+            players.map(lead => transmute({ lead, messages })
+                .extend('facebookMessages', fb.transform)
+                .do(({ facebookMessages }) =>
+                    fb.sendMessages(lead.id, facebookMessages))))));
 
 exports.votingStarted = functions.database.ref('/candidates/{gameId}/{roundId}')
     .onCreate(event => triggers.voteStarted({

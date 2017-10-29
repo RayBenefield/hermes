@@ -11,25 +11,16 @@ const domain = configureDomain({ db, uuid, random });
 const save = configureSave(flame); // eslint-disable-line no-unused-vars
 beforeEach(() => flame.loadDatabase(undefined));
 
-test('notify all players of new game', () => {
+test('notify all players of the new round', () => {
     // Given
-    flame.loadDatabase(databases['new-game']);
+    flame.loadDatabase(databases['new-round']);
 
     // When
     return domain({
-        action: 'start',
-        game: {
+        action: 'round',
+        round: {
             id: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            players: {
-                123456: true,
-                234567: true,
-                345678: true,
-                456789: true,
-                567890: true,
-            },
-            notified_players: {
-                123456: true,
-            },
+            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         },
     })
         .then(results => expect({
