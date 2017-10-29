@@ -1,5 +1,11 @@
 # Work Log
 
+## #89
+
+Added integration tests for populating a bunch of scenarios to be loaded into
+the database which will be super useful for other things moving forward.
+
+
 ## #88
 
 Just logging the double session worklog entry.
