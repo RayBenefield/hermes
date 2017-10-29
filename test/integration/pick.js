@@ -58,3 +58,27 @@ test('try to pick a card again', () => {
             db: flame.get('/'),
         }).toMatchSnapshot());
 });
+
+test('the last player to pick a card', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 123456,
+    };
+    flame.loadDatabase(databases['4-picked-cards']);
+
+    // When
+    return domain({
+        lead,
+        action: 'pick',
+        payload: {
+            pick: 0,
+            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+        },
+    })
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});

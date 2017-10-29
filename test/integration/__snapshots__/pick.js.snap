@@ -239,6 +239,316 @@ Object {
 }
 `;
 
+exports[`the last player to pick a card 1`] = `
+Object {
+  "db": Object {
+    "candidates": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 0,
+            "234567": 262,
+            "345678": 392,
+            "456789": 458,
+            "567890": 294,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "notified_players": Object {
+            "123456": true,
+          },
+          "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        },
+      },
+    },
+    "games": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        "notified_players": Object {
+          "123456": true,
+          "234567": true,
+          "345678": true,
+          "456789": true,
+          "567890": true,
+        },
+        "players": Object {
+          "123456": true,
+          "234567": true,
+          "345678": true,
+          "456789": true,
+          "567890": true,
+        },
+        "rounds": Object {
+          "--------------------": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        },
+      },
+    },
+    "hands": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "123456": Object {
+          "cards": Object {
+            "519": true,
+            "520": true,
+            "521": true,
+            "522": true,
+            "524": true,
+            "525": true,
+            "526": true,
+            "527": true,
+            "528": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 123456,
+        },
+        "234567": Object {
+          "cards": Object {
+            "0": true,
+            "259": true,
+            "260": true,
+            "261": true,
+            "262": true,
+            "263": true,
+            "783": true,
+            "784": true,
+            "786": true,
+            "787": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 234567,
+        },
+        "345678": Object {
+          "cards": Object {
+            "0": true,
+            "130": true,
+            "131": true,
+            "392": true,
+            "393": true,
+            "653": true,
+            "654": true,
+            "655": true,
+            "915": true,
+            "917": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 345678,
+        },
+        "456789": Object {
+          "cards": Object {
+            "0": true,
+            "196": true,
+            "327": true,
+            "458": true,
+            "589": true,
+            "720": true,
+            "850": true,
+            "851": true,
+            "981": true,
+            "982": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 456789,
+        },
+        "567890": Object {
+          "cards": Object {
+            "0": true,
+            "1014": true,
+            "163": true,
+            "19": true,
+            "294": true,
+            "32": true,
+            "687": true,
+            "818": true,
+            "949": true,
+            "98": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 567890,
+        },
+      },
+    },
+    "players": Object {
+      "facebook": Object {
+        "123456": Object {
+          "first_name": "Ray",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 123456,
+          "platform": "facebook",
+        },
+        "234567": Object {
+          "first_name": "Ray",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 234567,
+          "platform": "facebook",
+        },
+        "345678": Object {
+          "first_name": "Ray",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 345678,
+          "platform": "facebook",
+        },
+        "456789": Object {
+          "first_name": "Ray",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 456789,
+          "platform": "facebook",
+        },
+        "567890": Object {
+          "first_name": "Ray",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 567890,
+          "platform": "facebook",
+        },
+      },
+    },
+    "queue": Object {},
+    "rounds": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 0,
+            "234567": 262,
+            "345678": 392,
+            "456789": 458,
+            "567890": 294,
+          },
+          "card": Object {
+            "contents": "It's a D&D retroclone with _ added.",
+            "id": 111,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        },
+      },
+    },
+  },
+  "results": Object {
+    "action": "pick",
+    "candidates": Object {
+      "234567": Object {
+        "contents": "The Holy Bible.",
+        "id": 262,
+      },
+      "345678": Object {
+        "contents": "The homosexual agenda.",
+        "id": 392,
+      },
+      "456789": Object {
+        "contents": "A big black dick.",
+        "id": 458,
+      },
+      "567890": Object {
+        "contents": "Date rape.",
+        "id": 294,
+      },
+    },
+    "game": Object {
+      "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "notified_players": Object {
+        "123456": true,
+        "234567": true,
+        "345678": true,
+        "456789": true,
+        "567890": true,
+      },
+      "players": Object {
+        "123456": true,
+        "234567": true,
+        "345678": true,
+        "456789": true,
+        "567890": true,
+      },
+      "rounds": Object {
+        "--------------------": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      },
+    },
+    "lead": Object {
+      "id": 123456,
+      "platform": "facebook",
+    },
+    "messages": Array [
+      Object {
+        "payload": Object {
+          "card": Object {
+            "contents": "Flying sex snakes.",
+            "id": 0,
+          },
+        },
+        "type": "card-selected-message",
+      },
+      Object {
+        "payload": Object {
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "pick": Object {
+            "contents": "Flying sex snakes.",
+            "id": 0,
+          },
+          "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "unranked": Array [
+            Object {
+              "contents": "The Holy Bible.",
+              "id": 262,
+            },
+            Object {
+              "contents": "The homosexual agenda.",
+              "id": 392,
+            },
+            Object {
+              "contents": "A big black dick.",
+              "id": 458,
+            },
+            Object {
+              "contents": "Date rape.",
+              "id": 294,
+            },
+          ],
+        },
+        "type": "candidates-ready-message",
+      },
+    ],
+    "payload": Object {
+      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "pick": 0,
+      "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+    },
+    "pick": Object {
+      "contents": "Flying sex snakes.",
+      "id": 0,
+    },
+    "player": Object {
+      "first_name": "Ray",
+      "games": Object {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+      },
+      "id": 123456,
+      "platform": "facebook",
+    },
+    "round": Object {
+      "candidates": Object {
+        "234567": 262,
+        "345678": 392,
+        "456789": 458,
+        "567890": 294,
+      },
+      "card": Object {
+        "contents": "It's a D&D retroclone with _ added.",
+        "id": 111,
+      },
+      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+    },
+  },
+}
+`;
+
 exports[`try to pick a card again 1`] = `
 Object {
   "db": Object {
