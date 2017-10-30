@@ -1,0 +1,201 @@
+{
+    "candidates": {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": {
+                "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+                "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+                "notified_players": {
+                    "567890": true
+                },
+                "candidates": {
+                    "123456": 268,
+                    "234567": 188,
+                    "345678": 175,
+                    "456789": 117,
+                    "567890": 31
+                }
+            }
+        }
+    },
+    "games": {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": {
+            "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+            "players": {
+                "123456": true,
+                "234567": true,
+                "345678": true,
+                "456789": true,
+                "567890": true
+            },
+            "notified_players": {
+                "123456": true,
+                "234567": true,
+                "345678": true,
+                "456789": true,
+                "567890": true
+            },
+            "rounds": {
+                "0": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"
+            }
+        }
+    },
+    "hands": {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": {
+            "123456": {
+                "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+                "player": 123456,
+                "cards": {
+                    "310": true,
+                    "444": true,
+                    "597": true,
+                    "640": true,
+                    "714": true,
+                    "748": true,
+                    "1015": true,
+                    "1039": true,
+                    "1040": true
+                }
+            },
+            "234567": {
+                "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+                "player": 234567,
+                "cards": {
+                    "218": true,
+                    "370": true,
+                    "429": true,
+                    "485": true,
+                    "624": true,
+                    "629": true,
+                    "725": true,
+                    "779": true,
+                    "951": true
+                }
+            },
+            "345678": {
+                "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+                "player": 345678,
+                "cards": {
+                    "252": true,
+                    "322": true,
+                    "458": true,
+                    "582": true,
+                    "590": true,
+                    "609": true,
+                    "900": true,
+                    "965": true,
+                    "999": true
+                }
+            },
+            "456789": {
+                "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+                "player": 456789,
+                "cards": {
+                    "241": true,
+                    "244": true,
+                    "334": true,
+                    "470": true,
+                    "498": true,
+                    "524": true,
+                    "593": true,
+                    "855": true,
+                    "898": true
+                }
+            },
+            "567890": {
+                "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+                "player": 567890,
+                "cards": {
+                    "32": true,
+                    "36": true,
+                    "125": true,
+                    "227": true,
+                    "530": true,
+                    "597": true,
+                    "604": true,
+                    "605": true,
+                    "729": true
+                }
+            }
+        }
+    },
+    "players": {
+        "facebook": {
+            "123456": {
+                "platform": "facebook",
+                "id": 123456,
+                "first_name": "Ray",
+                "games": {
+                    "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true
+                }
+            },
+            "234567": {
+                "platform": "facebook",
+                "id": 234567,
+                "first_name": "Hermon",
+                "games": {
+                    "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true
+                }
+            },
+            "345678": {
+                "platform": "facebook",
+                "id": 345678,
+                "first_name": "Hermes",
+                "games": {
+                    "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true
+                }
+            },
+            "456789": {
+                "platform": "facebook",
+                "id": 456789,
+                "first_name": "Hermshire",
+                "games": {
+                    "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true
+                }
+            },
+            "567890": {
+                "platform": "facebook",
+                "id": 567890,
+                "first_name": "Hermda",
+                "games": {
+                    "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true
+                }
+            }
+        }
+    },
+    "queue": {},
+    "rounds": {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": {
+                "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+                "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+                "card": {
+                    "id": 189,
+                    "contents": "I can only express myself through _."
+                },
+                "candidates": {
+                    "123456": 268,
+                    "234567": 188,
+                    "345678": 175,
+                    "456789": 117,
+                    "567890": 31
+                },
+                "votes": {
+                    "123456": {
+                        "0": "345678",
+                        "1": "456789",
+                        "2": "567890"
+                    },
+                    "234567": {
+                        "0": "345678",
+                        "1": "456789",
+                        "2": "567890"
+                    },
+                    "345678": {
+                        "0": "123456",
+                        "1": "456789"
+                    }
+                }
+            }
+        }
+    }
+}

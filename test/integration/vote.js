@@ -160,3 +160,78 @@ test('2nd player votes for third card', () => {
             db: flame.get('/'),
         }).toMatchSnapshot());
 });
+
+test('3rd player votes for first card', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 345678,
+    };
+    flame.loadDatabase(databases['6-votes-2-players-card']);
+
+    // When
+    return domain({
+        lead,
+        action: 'vote',
+        payload: {
+            vote: 268,
+            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+        },
+    })
+        .then(save('7-votes-3-players-card'))
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});
+
+test('3rd player votes for second card', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 345678,
+    };
+    flame.loadDatabase(databases['7-votes-3-players-card']);
+
+    // When
+    return domain({
+        lead,
+        action: 'vote',
+        payload: {
+            vote: 117,
+            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+        },
+    })
+        .then(save('8-votes-3-players-card'))
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});
+
+test('3rd player votes for third card', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 345678,
+    };
+    flame.loadDatabase(databases['8-votes-3-players-card']);
+
+    // When
+    return domain({
+        lead,
+        action: 'vote',
+        payload: {
+            vote: 31,
+            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+        },
+    })
+        .then(save('9-votes-3-players-card'))
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});
