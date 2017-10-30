@@ -235,3 +235,78 @@ test('3rd player votes for third card', () => {
             db: flame.get('/'),
         }).toMatchSnapshot());
 });
+
+test('4th player votes for first card', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 456789,
+    };
+    flame.loadDatabase(databases['9-votes-3-players-card']);
+
+    // When
+    return domain({
+        lead,
+        action: 'vote',
+        payload: {
+            vote: 268,
+            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+        },
+    })
+        .then(save('10-votes-4-players-card'))
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});
+
+test('4th player votes for second card', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 456789,
+    };
+    flame.loadDatabase(databases['10-votes-4-players-card']);
+
+    // When
+    return domain({
+        lead,
+        action: 'vote',
+        payload: {
+            vote: 268,
+            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+        },
+    })
+        .then(save('11-votes-4-players-card'))
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});
+
+test('4th player votes for third card', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 456789,
+    };
+    flame.loadDatabase(databases['11-votes-4-players-card']);
+
+    // When
+    return domain({
+        lead,
+        action: 'vote',
+        payload: {
+            vote: 31,
+            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+        },
+    })
+        .then(save('12-votes-4-players-card'))
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});
