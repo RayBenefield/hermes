@@ -1,5 +1,10 @@
 # Work Log
 
+## #94
+
+I apparently missed logging two sessions so just playing a bit of catchup.
+
+
 ## #93
 
 I apparently missed logging two sessions so just playing a bit of catchup.
