@@ -1,5 +1,12 @@
 # Work Log
 
+## #95
+
+Finished the integration tests for winner. The next thing to do is to handle the
+"addressing" of messages now so that way we can work towards pulling the notify
+votes service into the domain system. That might be a dozy.
+
+
 ## #94
 
 I apparently missed logging two sessions so just playing a bit of catchup.
