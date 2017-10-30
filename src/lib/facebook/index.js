@@ -50,10 +50,11 @@ export default ({ verifytoken, accesstoken }) => {
                 return transformers.text({ text: `There's no message setup for [${type}]` });
             }
         )),
-        sendMessages: (recipient, message) => {
-            const messagePromises = message
-                .map(msg => () => sendFbMessage(recipient)(msg));
-            return sequentialPromises(messagePromises).then();
-        },
+        sendMessages: messages => Promise.all(
+            _.map(messages, (msgs, recipient) => {
+                const messagePromises = msgs
+                    .map(msg => () => sendFbMessage(recipient)(msg));
+                return sequentialPromises(messagePromises).then();
+            })),
     };
 };

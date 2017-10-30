@@ -37,7 +37,7 @@ exports.gameStarted = functions.database.ref('/games/{id}')
             unnotifiedPlayers.map(lead => transmute({ lead, messages })
                 .extend('facebookMessages', fb.transform)
                 .do(({ facebookMessages }) =>
-                    fb.sendMessages(lead.id, facebookMessages)))))
+                    fb.sendMessages({ [lead.id]: facebookMessages })))))
     );
 
 exports.roundStarted = functions.database.ref('/rounds/{gameId}/{id}')
@@ -50,7 +50,7 @@ exports.roundStarted = functions.database.ref('/rounds/{gameId}/{id}')
             players.map(lead => transmute({ lead, messages })
                 .extend('facebookMessages', fb.transform)
                 .do(({ facebookMessages }) =>
-                    fb.sendMessages(lead.id, facebookMessages))))));
+                    fb.sendMessages({ [lead.id]: facebookMessages }))))));
 
 exports.votingStarted = functions.database.ref('/candidates/{gameId}/{roundId}')
     .onCreate(event => transmute({
@@ -79,7 +79,7 @@ exports.votingStarted = functions.database.ref('/candidates/{gameId}/{roundId}')
                 .extend(domain)
                 .extend('facebookMessages', fb.transform)
                 .do(({ lead, facebookMessages }) =>
-                    fb.sendMessages(lead.id, facebookMessages)))
+                    fb.sendMessages({ [lead.id]: facebookMessages })))
     );
 
 exports.winnerDecided = functions.database.ref('/rounds/{gameId}/{roundId}/winner')
@@ -96,4 +96,4 @@ exports.winnerDecided = functions.database.ref('/rounds/{gameId}/{roundId}/winne
             players.map(lead => transmute({ lead, messages })
                 .extend('facebookMessages', fb.transform)
                 .do(({ facebookMessages }) =>
-                    fb.sendMessages(lead.id, facebookMessages))))));
+                    fb.sendMessages({ [lead.id]: facebookMessages }))))));
