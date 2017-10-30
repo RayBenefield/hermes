@@ -1,5 +1,15 @@
 # Work Log
 
+## #96
+
+Logged another double session trying to explore how to handle individual
+addressing of messages. I got most of the way however I realized that not only
+do I need to do an action per player, I ALSO need to do an action for the entire
+game, not just per player. So now I have to consider both and figure out how to
+proceed with that. I'll have to think on it. So just stashing all my changes for
+now.
+
+
 ## #95
 
 Finished the integration tests for winner. The next thing to do is to handle the
