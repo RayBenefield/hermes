@@ -60,3 +60,28 @@ test('1st player votes for second card', () => {
             db: flame.get('/'),
         }).toMatchSnapshot());
 });
+
+test('1st player votes for third card', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 123456,
+    };
+    flame.loadDatabase(databases['2-votes-1-player-card']);
+
+    // When
+    return domain({
+        lead,
+        action: 'vote',
+        payload: {
+            vote: 31,
+            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+        },
+    })
+        .then(save('3-votes-1-player-card'))
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});
