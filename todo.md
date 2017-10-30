@@ -6,7 +6,7 @@
  - Added automatic prettification in Vim
  - Change payload to context
  - Refactor out the common prompt steps in all of the dev scripts
- - Refactor the handsForPlayers saving system
+ - Refactor the handsForPlayers saving system, move to the "start" game domain service
  - Refactor facebook to handle messages out to multiple leads
  - Create discard pile for white deck
  - Create discard pile for black deck
