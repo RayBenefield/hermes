@@ -84,7 +84,7 @@ export default ({ db, uuid, random }) => ({
                 notified_players: { [player.id]: true },
             });
         }],
-        roundForGame: [({ game, round }) => db.push(`games/${game.id}/rounds`, round.id)],
+        roundForGame: [({ game, round }) => db.set(`games/${game.id}/rounds/${_.values(game.rounds).length}`, round.id)],
         goalForRound: [({ game, round, card }) => db.set(`rounds/${game.id}/${round.id}/card`, card)],
         removalOfCandidateFromHand: [({ player, game, payload: { card } }) =>
             db.delete([`hands/${game.id}/${player.id}/cards/${card.id}`])],
@@ -140,8 +140,14 @@ export default ({ db, uuid, random }) => ({
                     [player.id]: pick.id,
                 },
             })],
-        vote: [({ player, round, game, payload: { vote } }) =>
-            db.push(`rounds/${game.id}/${round.id}/votes/${player.id}`, vote)],
+        vote: [({ player, round, game, payload: { vote } }) => {
+            if (!round.votes) {
+                return db.set(`rounds/${game.id}/${round.id}/votes/${player.id}/0`, vote);
+            }
+            return db.set(`rounds/${game.id}/${round.id}/votes/${player.id}/${_.values(round.votes[player.id]).length}`, vote);
+        }],
+        votes: [({ player, round, game, votes }) =>
+            db.set(`rounds/${game.id}/${round.id}/votes/${player.id}`, votes.reduce((a, v, i) => Object.assign(a, { [i]: v }), {}))],
         winner: [({ round, game, payload: { winner } }) =>
             db.set(`rounds/${game.id}/${round.id}/winner`, winner.id)],
         notifiedPlayerOfWinner: [({ player, round, game }) =>

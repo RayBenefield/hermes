@@ -68,13 +68,11 @@ transmute({
     .extend(...getPlayerAnswers)
     .extend(...getVotesForPlayers)
     .do(({ game, round, votes }) => Promise.all(
-        votes.map(({ player, votes: playerVotes }) => Promise.all(
-            playerVotes.map(vote => save.vote[0]({
-                player,
-                round,
-                game,
-                payload: { vote },
-            }))
-        ))
+        votes.map(({ player, votes: playerVotes }) => save.votes[0]({
+            player,
+            round,
+            game,
+            votes: playerVotes,
+        }))
     ))
     .then(() => process.exit(0));

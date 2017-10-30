@@ -21,7 +21,7 @@ Object {
           "567890": true,
         },
         "rounds": Object {
-          "--------------------": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "0": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
         },
       },
     },
