@@ -32,7 +32,6 @@ Object {
             "1015": true,
             "1039": true,
             "1040": true,
-            "268": true,
             "310": true,
             "444": true,
             "597": true,
@@ -157,6 +156,9 @@ Object {
     "rounds": Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 268,
+          },
           "card": Object {
             "contents": "I can only express myself through _.",
             "id": 189,
@@ -169,7 +171,12 @@ Object {
   },
   "results": Object {
     "action": "hand",
-    "candidates": Object {},
+    "candidates": Object {
+      "123456": Object {
+        "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+        "id": 268,
+      },
+    },
     "game": Object {
       "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       "notified_players": Object {
@@ -192,10 +199,6 @@ Object {
     },
     "hand": Object {
       "cards": Array [
-        Object {
-          "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-          "id": 268,
-        },
         Object {
           "contents": "Gloryholes.",
           "id": 310,
@@ -245,10 +248,6 @@ Object {
         "payload": Object {
           "cards": Array [
             Object {
-              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-              "id": 268,
-            },
-            Object {
               "contents": "Gloryholes.",
               "id": 310,
             },
@@ -285,10 +284,8 @@ Object {
               "id": 1040,
             },
           ],
-          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-          "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
         },
-        "type": "show-hand-for-picking-message",
+        "type": "show-hand-message",
       },
     ],
     "payload": Object {
@@ -304,6 +301,9 @@ Object {
       "platform": "facebook",
     },
     "round": Object {
+      "candidates": Object {
+        "123456": 268,
+      },
       "card": Object {
         "contents": "I can only express myself through _.",
         "id": 189,

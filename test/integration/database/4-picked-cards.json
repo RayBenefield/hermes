@@ -27,7 +27,6 @@
                 "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
                 "player": 123456,
                 "cards": {
-                    "268": true,
                     "310": true,
                     "444": true,
                     "597": true,
@@ -43,7 +42,6 @@
                 "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
                 "player": 234567,
                 "cards": {
-                    "188": true,
                     "218": true,
                     "370": true,
                     "429": true,
@@ -59,7 +57,6 @@
                 "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
                 "player": 345678,
                 "cards": {
-                    "175": true,
                     "252": true,
                     "322": true,
                     "458": true,
@@ -75,7 +72,6 @@
                 "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
                 "player": 456789,
                 "cards": {
-                    "117": true,
                     "241": true,
                     "244": true,
                     "334": true,
@@ -158,6 +154,12 @@
                 "card": {
                     "id": 189,
                     "contents": "I can only express myself through _."
+                },
+                "candidates": {
+                    "123456": 268,
+                    "234567": 188,
+                    "345678": 175,
+                    "456789": 117
                 }
             }
         }

@@ -3,6 +3,24 @@
 exports[`1st player votes for first card 1`] = `
 Object {
   "db": Object {
+    "candidates": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 268,
+            "234567": 188,
+            "345678": 175,
+            "456789": 117,
+            "567890": 31,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "notified_players": Object {
+            "567890": true,
+          },
+          "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        },
+      },
+    },
     "games": Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
@@ -32,7 +50,6 @@ Object {
             "1015": true,
             "1039": true,
             "1040": true,
-            "268": true,
             "310": true,
             "444": true,
             "597": true,
@@ -45,7 +62,6 @@ Object {
         },
         "234567": Object {
           "cards": Object {
-            "188": true,
             "218": true,
             "370": true,
             "429": true,
@@ -61,7 +77,6 @@ Object {
         },
         "345678": Object {
           "cards": Object {
-            "175": true,
             "252": true,
             "322": true,
             "458": true,
@@ -77,7 +92,6 @@ Object {
         },
         "456789": Object {
           "cards": Object {
-            "117": true,
             "241": true,
             "244": true,
             "334": true,
@@ -95,7 +109,6 @@ Object {
           "cards": Object {
             "125": true,
             "227": true,
-            "31": true,
             "32": true,
             "36": true,
             "530": true,
@@ -157,6 +170,13 @@ Object {
     "rounds": Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 268,
+            "234567": 188,
+            "345678": 175,
+            "456789": 117,
+            "567890": 31,
+          },
           "card": Object {
             "contents": "I can only express myself through _.",
             "id": 189,
@@ -165,7 +185,7 @@ Object {
           "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "votes": Object {
             "123456": Object {
-              "0": true,
+              "0": "345678",
             },
           },
         },
@@ -174,7 +194,28 @@ Object {
   },
   "results": Object {
     "action": "vote",
-    "candidates": Object {},
+    "candidates": Object {
+      "123456": Object {
+        "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+        "id": 268,
+      },
+      "234567": Object {
+        "contents": "Keg stands.",
+        "id": 188,
+      },
+      "345678": Object {
+        "contents": "Skeletor.",
+        "id": 175,
+      },
+      "456789": Object {
+        "contents": "Sniffing glue.",
+        "id": 117,
+      },
+      "567890": Object {
+        "contents": "The forbidden fruit.",
+        "id": 31,
+      },
+    },
     "game": Object {
       "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       "notified_players": Object {
@@ -205,13 +246,30 @@ Object {
           "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "ranked": Array [
             Object {
-              "contents": "Horse meat.",
-              "id": 151,
+              "contents": "Skeletor.",
+              "id": 175,
             },
           ],
           "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-          "unranked": Array [],
-          "vote": undefined,
+          "unranked": Array [
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
+            },
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+          ],
+          "vote": "345678",
         },
         "type": "show-ranked-list",
       },
@@ -219,7 +277,7 @@ Object {
     "payload": Object {
       "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-      "vote": 151,
+      "vote": 175,
     },
     "player": Object {
       "first_name": "Ray",
@@ -273,6 +331,13 @@ Object {
       },
     ],
     "round": Object {
+      "candidates": Object {
+        "123456": 268,
+        "234567": 188,
+        "345678": 175,
+        "456789": 117,
+        "567890": 31,
+      },
       "card": Object {
         "contents": "I can only express myself through _.",
         "id": 189,
@@ -281,8 +346,8 @@ Object {
       "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
     },
     "vote": Object {
-      "contents": "Horse meat.",
-      "id": 151,
+      "contents": "Skeletor.",
+      "id": 175,
     },
     "votes": Object {},
   },
@@ -292,6 +357,24 @@ Object {
 exports[`1st player votes for second card 1`] = `
 Object {
   "db": Object {
+    "candidates": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 268,
+            "234567": 188,
+            "345678": 175,
+            "456789": 117,
+            "567890": 31,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "notified_players": Object {
+            "567890": true,
+          },
+          "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        },
+      },
+    },
     "games": Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
@@ -321,7 +404,6 @@ Object {
             "1015": true,
             "1039": true,
             "1040": true,
-            "268": true,
             "310": true,
             "444": true,
             "597": true,
@@ -334,7 +416,6 @@ Object {
         },
         "234567": Object {
           "cards": Object {
-            "188": true,
             "218": true,
             "370": true,
             "429": true,
@@ -350,7 +431,6 @@ Object {
         },
         "345678": Object {
           "cards": Object {
-            "175": true,
             "252": true,
             "322": true,
             "458": true,
@@ -366,7 +446,6 @@ Object {
         },
         "456789": Object {
           "cards": Object {
-            "117": true,
             "241": true,
             "244": true,
             "334": true,
@@ -384,7 +463,6 @@ Object {
           "cards": Object {
             "125": true,
             "227": true,
-            "31": true,
             "32": true,
             "36": true,
             "530": true,
@@ -446,6 +524,13 @@ Object {
     "rounds": Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 268,
+            "234567": 188,
+            "345678": 175,
+            "456789": 117,
+            "567890": 31,
+          },
           "card": Object {
             "contents": "I can only express myself through _.",
             "id": 189,
@@ -454,8 +539,8 @@ Object {
           "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "votes": Object {
             "123456": Object {
-              "0": true,
-              "1": true,
+              "0": "345678",
+              "1": "456789",
             },
           },
         },
@@ -464,7 +549,28 @@ Object {
   },
   "results": Object {
     "action": "vote",
-    "candidates": Object {},
+    "candidates": Object {
+      "123456": Object {
+        "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+        "id": 268,
+      },
+      "234567": Object {
+        "contents": "Keg stands.",
+        "id": 188,
+      },
+      "345678": Object {
+        "contents": "Skeletor.",
+        "id": 175,
+      },
+      "456789": Object {
+        "contents": "Sniffing glue.",
+        "id": 117,
+      },
+      "567890": Object {
+        "contents": "The forbidden fruit.",
+        "id": 31,
+      },
+    },
     "game": Object {
       "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       "notified_players": Object {
@@ -494,15 +600,31 @@ Object {
         "payload": Object {
           "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "ranked": Array [
-            undefined,
             Object {
-              "contents": "Testicular torsion.",
-              "id": 86,
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
             },
           ],
           "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-          "unranked": Array [],
-          "vote": undefined,
+          "unranked": Array [
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
+            },
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+          ],
+          "vote": "456789",
         },
         "type": "show-ranked-list",
       },
@@ -510,7 +632,7 @@ Object {
     "payload": Object {
       "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-      "vote": 86,
+      "vote": 117,
     },
     "player": Object {
       "first_name": "Ray",
@@ -521,7 +643,10 @@ Object {
       "platform": "facebook",
     },
     "playerVotes": Array [
-      undefined,
+      Object {
+        "contents": "Skeletor.",
+        "id": 175,
+      },
     ],
     "players": Array [
       Object {
@@ -566,6 +691,13 @@ Object {
       },
     ],
     "round": Object {
+      "candidates": Object {
+        "123456": 268,
+        "234567": 188,
+        "345678": 175,
+        "456789": 117,
+        "567890": 31,
+      },
       "card": Object {
         "contents": "I can only express myself through _.",
         "id": 189,
@@ -574,17 +706,17 @@ Object {
       "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       "votes": Object {
         "123456": Object {
-          "0": true,
+          "0": "345678",
         },
       },
     },
     "vote": Object {
-      "contents": "Testicular torsion.",
-      "id": 86,
+      "contents": "Sniffing glue.",
+      "id": 117,
     },
     "votes": Object {
       "123456": Array [
-        true,
+        "345678",
       ],
     },
   },

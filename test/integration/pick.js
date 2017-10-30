@@ -24,7 +24,7 @@ test('pick a card for the goal', () => {
         lead,
         action: 'pick',
         payload: {
-            pick: 278,
+            pick: 268,
             game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
             round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         },
@@ -49,7 +49,7 @@ test('try to pick a card again', () => {
         lead,
         action: 'pick',
         payload: {
-            pick: 278,
+            pick: 268,
             game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
             round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         },
@@ -73,7 +73,7 @@ test('second person picks a card', () => {
         lead,
         action: 'pick',
         payload: {
-            pick: 19,
+            pick: 188,
             game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
             round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         },
@@ -98,7 +98,7 @@ test('third person picks a card', () => {
         lead,
         action: 'pick',
         payload: {
-            pick: 151,
+            pick: 175,
             game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
             round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         },
@@ -123,7 +123,7 @@ test('fourth person picks a card', () => {
         lead,
         action: 'pick',
         payload: {
-            pick: 86,
+            pick: 117,
             game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
             round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         },
@@ -148,7 +148,7 @@ test('the last player to pick a card', () => {
         lead,
         action: 'pick',
         payload: {
-            pick: 119,
+            pick: 31,
             game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
             round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         },

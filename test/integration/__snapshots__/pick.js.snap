@@ -32,7 +32,6 @@ Object {
             "1015": true,
             "1039": true,
             "1040": true,
-            "268": true,
             "310": true,
             "444": true,
             "597": true,
@@ -45,7 +44,6 @@ Object {
         },
         "234567": Object {
           "cards": Object {
-            "188": true,
             "218": true,
             "370": true,
             "429": true,
@@ -61,7 +59,6 @@ Object {
         },
         "345678": Object {
           "cards": Object {
-            "175": true,
             "252": true,
             "322": true,
             "458": true,
@@ -77,7 +74,6 @@ Object {
         },
         "456789": Object {
           "cards": Object {
-            "117": true,
             "241": true,
             "244": true,
             "334": true,
@@ -157,6 +153,12 @@ Object {
     "rounds": Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 268,
+            "234567": 188,
+            "345678": 175,
+            "456789": 117,
+          },
           "card": Object {
             "contents": "I can only express myself through _.",
             "id": 189,
@@ -169,7 +171,20 @@ Object {
   },
   "results": Object {
     "action": "pick",
-    "candidates": Object {},
+    "candidates": Object {
+      "123456": Object {
+        "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+        "id": 268,
+      },
+      "234567": Object {
+        "contents": "Keg stands.",
+        "id": 188,
+      },
+      "345678": Object {
+        "contents": "Skeletor.",
+        "id": 175,
+      },
+    },
     "game": Object {
       "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       "notified_players": Object {
@@ -242,17 +257,26 @@ Object {
     },
     "messages": Array [
       Object {
-        "type": "card-not-in-hand",
+        "payload": Object {
+          "card": Object {
+            "contents": "Sniffing glue.",
+            "id": 117,
+          },
+        },
+        "type": "card-selected-message",
+      },
+      Object {
+        "type": "wait-for-votes-message",
       },
     ],
     "payload": Object {
       "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-      "pick": 86,
+      "pick": 117,
       "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
     },
     "pick": Object {
-      "contents": "Testicular torsion.",
-      "id": 86,
+      "contents": "Sniffing glue.",
+      "id": 117,
     },
     "player": Object {
       "first_name": "Hermshire",
@@ -263,6 +287,11 @@ Object {
       "platform": "facebook",
     },
     "round": Object {
+      "candidates": Object {
+        "123456": 268,
+        "234567": 188,
+        "345678": 175,
+      },
       "card": Object {
         "contents": "I can only express myself through _.",
         "id": 189,
@@ -306,7 +335,6 @@ Object {
             "1015": true,
             "1039": true,
             "1040": true,
-            "268": true,
             "310": true,
             "444": true,
             "597": true,
@@ -431,6 +459,9 @@ Object {
     "rounds": Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 268,
+          },
           "card": Object {
             "contents": "I can only express myself through _.",
             "id": 189,
@@ -516,17 +547,26 @@ Object {
     },
     "messages": Array [
       Object {
-        "type": "card-not-in-hand",
+        "payload": Object {
+          "card": Object {
+            "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+            "id": 268,
+          },
+        },
+        "type": "card-selected-message",
+      },
+      Object {
+        "type": "wait-for-votes-message",
       },
     ],
     "payload": Object {
       "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-      "pick": 278,
+      "pick": 268,
       "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
     },
     "pick": Object {
-      "contents": "Historically black colleges.",
-      "id": 278,
+      "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+      "id": 268,
     },
     "player": Object {
       "first_name": "Ray",
@@ -580,7 +620,6 @@ Object {
             "1015": true,
             "1039": true,
             "1040": true,
-            "268": true,
             "310": true,
             "444": true,
             "597": true,
@@ -593,7 +632,6 @@ Object {
         },
         "234567": Object {
           "cards": Object {
-            "188": true,
             "218": true,
             "370": true,
             "429": true,
@@ -705,6 +743,10 @@ Object {
     "rounds": Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 268,
+            "234567": 188,
+          },
           "card": Object {
             "contents": "I can only express myself through _.",
             "id": 189,
@@ -717,7 +759,12 @@ Object {
   },
   "results": Object {
     "action": "pick",
-    "candidates": Object {},
+    "candidates": Object {
+      "123456": Object {
+        "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+        "id": 268,
+      },
+    },
     "game": Object {
       "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       "notified_players": Object {
@@ -790,17 +837,26 @@ Object {
     },
     "messages": Array [
       Object {
-        "type": "card-not-in-hand",
+        "payload": Object {
+          "card": Object {
+            "contents": "Keg stands.",
+            "id": 188,
+          },
+        },
+        "type": "card-selected-message",
+      },
+      Object {
+        "type": "wait-for-votes-message",
       },
     ],
     "payload": Object {
       "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-      "pick": 19,
+      "pick": 188,
       "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
     },
     "pick": Object {
-      "contents": "An erection that lasts longer than four hours.",
-      "id": 19,
+      "contents": "Keg stands.",
+      "id": 188,
     },
     "player": Object {
       "first_name": "Hermon",
@@ -811,6 +867,9 @@ Object {
       "platform": "facebook",
     },
     "round": Object {
+      "candidates": Object {
+        "123456": 268,
+      },
       "card": Object {
         "contents": "I can only express myself through _.",
         "id": 189,
@@ -825,6 +884,24 @@ Object {
 exports[`the last player to pick a card 1`] = `
 Object {
   "db": Object {
+    "candidates": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 268,
+            "234567": 188,
+            "345678": 175,
+            "456789": 117,
+            "567890": 31,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "notified_players": Object {
+            "567890": true,
+          },
+          "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        },
+      },
+    },
     "games": Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
@@ -854,7 +931,6 @@ Object {
             "1015": true,
             "1039": true,
             "1040": true,
-            "268": true,
             "310": true,
             "444": true,
             "597": true,
@@ -867,7 +943,6 @@ Object {
         },
         "234567": Object {
           "cards": Object {
-            "188": true,
             "218": true,
             "370": true,
             "429": true,
@@ -883,7 +958,6 @@ Object {
         },
         "345678": Object {
           "cards": Object {
-            "175": true,
             "252": true,
             "322": true,
             "458": true,
@@ -899,7 +973,6 @@ Object {
         },
         "456789": Object {
           "cards": Object {
-            "117": true,
             "241": true,
             "244": true,
             "334": true,
@@ -917,7 +990,6 @@ Object {
           "cards": Object {
             "125": true,
             "227": true,
-            "31": true,
             "32": true,
             "36": true,
             "530": true,
@@ -979,6 +1051,13 @@ Object {
     "rounds": Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 268,
+            "234567": 188,
+            "345678": 175,
+            "456789": 117,
+            "567890": 31,
+          },
           "card": Object {
             "contents": "I can only express myself through _.",
             "id": 189,
@@ -991,7 +1070,24 @@ Object {
   },
   "results": Object {
     "action": "pick",
-    "candidates": Object {},
+    "candidates": Object {
+      "123456": Object {
+        "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+        "id": 268,
+      },
+      "234567": Object {
+        "contents": "Keg stands.",
+        "id": 188,
+      },
+      "345678": Object {
+        "contents": "Skeletor.",
+        "id": 175,
+      },
+      "456789": Object {
+        "contents": "Sniffing glue.",
+        "id": 117,
+      },
+    },
     "game": Object {
       "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       "notified_players": Object {
@@ -1064,17 +1160,52 @@ Object {
     },
     "messages": Array [
       Object {
-        "type": "card-not-in-hand",
+        "payload": Object {
+          "card": Object {
+            "contents": "The forbidden fruit.",
+            "id": 31,
+          },
+        },
+        "type": "card-selected-message",
+      },
+      Object {
+        "payload": Object {
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "pick": Object {
+            "contents": "The forbidden fruit.",
+            "id": 31,
+          },
+          "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "unranked": Array [
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
+            },
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+          ],
+        },
+        "type": "candidates-ready-message",
       },
     ],
     "payload": Object {
       "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-      "pick": 119,
+      "pick": 31,
       "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
     },
     "pick": Object {
-      "contents": "An icepick lobotomy.",
-      "id": 119,
+      "contents": "The forbidden fruit.",
+      "id": 31,
     },
     "player": Object {
       "first_name": "Hermda",
@@ -1085,6 +1216,12 @@ Object {
       "platform": "facebook",
     },
     "round": Object {
+      "candidates": Object {
+        "123456": 268,
+        "234567": 188,
+        "345678": 175,
+        "456789": 117,
+      },
       "card": Object {
         "contents": "I can only express myself through _.",
         "id": 189,
@@ -1128,7 +1265,6 @@ Object {
             "1015": true,
             "1039": true,
             "1040": true,
-            "268": true,
             "310": true,
             "444": true,
             "597": true,
@@ -1141,7 +1277,6 @@ Object {
         },
         "234567": Object {
           "cards": Object {
-            "188": true,
             "218": true,
             "370": true,
             "429": true,
@@ -1157,7 +1292,6 @@ Object {
         },
         "345678": Object {
           "cards": Object {
-            "175": true,
             "252": true,
             "322": true,
             "458": true,
@@ -1253,6 +1387,11 @@ Object {
     "rounds": Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 268,
+            "234567": 188,
+            "345678": 175,
+          },
           "card": Object {
             "contents": "I can only express myself through _.",
             "id": 189,
@@ -1265,7 +1404,16 @@ Object {
   },
   "results": Object {
     "action": "pick",
-    "candidates": Object {},
+    "candidates": Object {
+      "123456": Object {
+        "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+        "id": 268,
+      },
+      "234567": Object {
+        "contents": "Keg stands.",
+        "id": 188,
+      },
+    },
     "game": Object {
       "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       "notified_players": Object {
@@ -1338,17 +1486,26 @@ Object {
     },
     "messages": Array [
       Object {
-        "type": "card-not-in-hand",
+        "payload": Object {
+          "card": Object {
+            "contents": "Skeletor.",
+            "id": 175,
+          },
+        },
+        "type": "card-selected-message",
+      },
+      Object {
+        "type": "wait-for-votes-message",
       },
     ],
     "payload": Object {
       "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-      "pick": 151,
+      "pick": 175,
       "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
     },
     "pick": Object {
-      "contents": "Horse meat.",
-      "id": 151,
+      "contents": "Skeletor.",
+      "id": 175,
     },
     "player": Object {
       "first_name": "Hermes",
@@ -1359,6 +1516,10 @@ Object {
       "platform": "facebook",
     },
     "round": Object {
+      "candidates": Object {
+        "123456": 268,
+        "234567": 188,
+      },
       "card": Object {
         "contents": "I can only express myself through _.",
         "id": 189,
@@ -1402,7 +1563,6 @@ Object {
             "1015": true,
             "1039": true,
             "1040": true,
-            "268": true,
             "310": true,
             "444": true,
             "597": true,
@@ -1527,6 +1687,9 @@ Object {
     "rounds": Object {
       "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
         "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 268,
+          },
           "card": Object {
             "contents": "I can only express myself through _.",
             "id": 189,
@@ -1539,7 +1702,12 @@ Object {
   },
   "results": Object {
     "action": "pick",
-    "candidates": Object {},
+    "candidates": Object {
+      "123456": Object {
+        "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+        "id": 268,
+      },
+    },
     "game": Object {
       "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       "notified_players": Object {
@@ -1562,10 +1730,6 @@ Object {
     },
     "hand": Object {
       "cards": Array [
-        Object {
-          "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-          "id": 268,
-        },
         Object {
           "contents": "Gloryholes.",
           "id": 310,
@@ -1617,12 +1781,12 @@ Object {
     ],
     "payload": Object {
       "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-      "pick": 278,
+      "pick": 268,
       "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
     },
     "pick": Object {
-      "contents": "Historically black colleges.",
-      "id": 278,
+      "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+      "id": 268,
     },
     "player": Object {
       "first_name": "Ray",
@@ -1633,6 +1797,9 @@ Object {
       "platform": "facebook",
     },
     "round": Object {
+      "candidates": Object {
+        "123456": 268,
+      },
       "card": Object {
         "contents": "I can only express myself through _.",
         "id": 189,

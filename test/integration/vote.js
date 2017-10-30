@@ -24,7 +24,7 @@ test('1st player votes for first card', () => {
         lead,
         action: 'vote',
         payload: {
-            vote: 151,
+            vote: 175,
             game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
             round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         },
@@ -49,7 +49,7 @@ test('1st player votes for second card', () => {
         lead,
         action: 'vote',
         payload: {
-            vote: 86,
+            vote: 117,
             game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
             round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         },
