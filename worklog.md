@@ -1,5 +1,15 @@
 # Work Log
 
+## #91
+
+Hopefully the last double session. I finished up the integration testing for the
+votes. I just need to refactor out the final trigger which is the winnerDecided
+system. Once that is done then I can add the final integration test and then
+look into updating the domain system to "address" messages to different players.
+This will be important to setup integration testing for the notifying of votes
+to other players. So that will probably be the last block today.
+
+
 ## #90
 
 This was a painful session, I went to go setup the testing for voting, and then
