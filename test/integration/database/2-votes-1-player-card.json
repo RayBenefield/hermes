@@ -158,6 +158,12 @@
                 "card": {
                     "id": 189,
                     "contents": "I can only express myself through _."
+                },
+                "votes": {
+                    "123456": {
+                        "0": true,
+                        "1": true
+                    }
                 }
             }
         }

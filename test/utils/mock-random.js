@@ -1,5 +1,3 @@
-let count = 0;
-export default () => {
-    count++;
-    return count * 0.001;
-};
+import seedRandom from 'seedrandom';
+
+export default seedRandom('testing');

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`show a hand after picking a card 1`] = `
+exports[`1st player votes for first card 1`] = `
 Object {
   "db": Object {
     "games": Object {
@@ -163,12 +163,17 @@ Object {
           },
           "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "votes": Object {
+            "123456": Object {
+              "0": true,
+            },
+          },
         },
       },
     },
   },
   "results": Object {
-    "action": "hand",
+    "action": "vote",
     "candidates": Object {},
     "game": Object {
       "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
@@ -190,52 +195,6 @@ Object {
         "0": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       },
     },
-    "hand": Object {
-      "cards": Array [
-        Object {
-          "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-          "id": 268,
-        },
-        Object {
-          "contents": "Gloryholes.",
-          "id": 310,
-        },
-        Object {
-          "contents": "A robust mongoloid.",
-          "id": 444,
-        },
-        Object {
-          "contents": "Boris the Soviet Love Hammer.",
-          "id": 597,
-        },
-        Object {
-          "contents": "Owlbear's tears.",
-          "id": 640,
-        },
-        Object {
-          "contents": "Asians being racist against each other.",
-          "id": 714,
-        },
-        Object {
-          "contents": "Having sex in the P.E. equipment shed.",
-          "id": 748,
-        },
-        Object {
-          "contents": "Hand-me-down adult diapers",
-          "id": 1015,
-        },
-        Object {
-          "contents": "Vomiting in the shower",
-          "id": 1039,
-        },
-        Object {
-          "contents": "An intellectually superior overlord",
-          "id": 1040,
-        },
-      ],
-      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-      "player": 123456,
-    },
     "lead": Object {
       "id": 123456,
       "platform": "facebook",
@@ -243,57 +202,24 @@ Object {
     "messages": Array [
       Object {
         "payload": Object {
-          "cards": Array [
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "ranked": Array [
             Object {
-              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-              "id": 268,
-            },
-            Object {
-              "contents": "Gloryholes.",
-              "id": 310,
-            },
-            Object {
-              "contents": "A robust mongoloid.",
-              "id": 444,
-            },
-            Object {
-              "contents": "Boris the Soviet Love Hammer.",
-              "id": 597,
-            },
-            Object {
-              "contents": "Owlbear's tears.",
-              "id": 640,
-            },
-            Object {
-              "contents": "Asians being racist against each other.",
-              "id": 714,
-            },
-            Object {
-              "contents": "Having sex in the P.E. equipment shed.",
-              "id": 748,
-            },
-            Object {
-              "contents": "Hand-me-down adult diapers",
-              "id": 1015,
-            },
-            Object {
-              "contents": "Vomiting in the shower",
-              "id": 1039,
-            },
-            Object {
-              "contents": "An intellectually superior overlord",
-              "id": 1040,
+              "contents": "Horse meat.",
+              "id": 151,
             },
           ],
-          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "unranked": Array [],
+          "vote": undefined,
         },
-        "type": "show-hand-for-picking-message",
+        "type": "show-ranked-list",
       },
     ],
     "payload": Object {
       "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "vote": 151,
     },
     "player": Object {
       "first_name": "Ray",
@@ -303,6 +229,49 @@ Object {
       "id": 123456,
       "platform": "facebook",
     },
+    "playerVotes": Array [],
+    "players": Array [
+      Object {
+        "first_name": "Ray",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 123456,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermon",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 234567,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermes",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 345678,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermshire",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 456789,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermda",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 567890,
+        "platform": "facebook",
+      },
+    ],
     "round": Object {
       "card": Object {
         "contents": "I can only express myself through _.",
@@ -311,11 +280,16 @@ Object {
       "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
     },
+    "vote": Object {
+      "contents": "Horse meat.",
+      "id": 151,
+    },
+    "votes": Object {},
   },
 }
 `;
 
-exports[`show a hand with pickable cards 1`] = `
+exports[`1st player votes for second card 1`] = `
 Object {
   "db": Object {
     "games": Object {
@@ -478,12 +452,18 @@ Object {
           },
           "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "votes": Object {
+            "123456": Object {
+              "0": true,
+              "1": true,
+            },
+          },
         },
       },
     },
   },
   "results": Object {
-    "action": "hand",
+    "action": "vote",
     "candidates": Object {},
     "game": Object {
       "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
@@ -505,52 +485,6 @@ Object {
         "0": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       },
     },
-    "hand": Object {
-      "cards": Array [
-        Object {
-          "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-          "id": 268,
-        },
-        Object {
-          "contents": "Gloryholes.",
-          "id": 310,
-        },
-        Object {
-          "contents": "A robust mongoloid.",
-          "id": 444,
-        },
-        Object {
-          "contents": "Boris the Soviet Love Hammer.",
-          "id": 597,
-        },
-        Object {
-          "contents": "Owlbear's tears.",
-          "id": 640,
-        },
-        Object {
-          "contents": "Asians being racist against each other.",
-          "id": 714,
-        },
-        Object {
-          "contents": "Having sex in the P.E. equipment shed.",
-          "id": 748,
-        },
-        Object {
-          "contents": "Hand-me-down adult diapers",
-          "id": 1015,
-        },
-        Object {
-          "contents": "Vomiting in the shower",
-          "id": 1039,
-        },
-        Object {
-          "contents": "An intellectually superior overlord",
-          "id": 1040,
-        },
-      ],
-      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-      "player": 123456,
-    },
     "lead": Object {
       "id": 123456,
       "platform": "facebook",
@@ -558,57 +492,25 @@ Object {
     "messages": Array [
       Object {
         "payload": Object {
-          "cards": Array [
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "ranked": Array [
+            undefined,
             Object {
-              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-              "id": 268,
-            },
-            Object {
-              "contents": "Gloryholes.",
-              "id": 310,
-            },
-            Object {
-              "contents": "A robust mongoloid.",
-              "id": 444,
-            },
-            Object {
-              "contents": "Boris the Soviet Love Hammer.",
-              "id": 597,
-            },
-            Object {
-              "contents": "Owlbear's tears.",
-              "id": 640,
-            },
-            Object {
-              "contents": "Asians being racist against each other.",
-              "id": 714,
-            },
-            Object {
-              "contents": "Having sex in the P.E. equipment shed.",
-              "id": 748,
-            },
-            Object {
-              "contents": "Hand-me-down adult diapers",
-              "id": 1015,
-            },
-            Object {
-              "contents": "Vomiting in the shower",
-              "id": 1039,
-            },
-            Object {
-              "contents": "An intellectually superior overlord",
-              "id": 1040,
+              "contents": "Testicular torsion.",
+              "id": 86,
             },
           ],
-          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "unranked": Array [],
+          "vote": undefined,
         },
-        "type": "show-hand-for-picking-message",
+        "type": "show-ranked-list",
       },
     ],
     "payload": Object {
       "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "vote": 86,
     },
     "player": Object {
       "first_name": "Ray",
@@ -618,6 +520,51 @@ Object {
       "id": 123456,
       "platform": "facebook",
     },
+    "playerVotes": Array [
+      undefined,
+    ],
+    "players": Array [
+      Object {
+        "first_name": "Ray",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 123456,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermon",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 234567,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermes",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 345678,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermshire",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 456789,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermda",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 567890,
+        "platform": "facebook",
+      },
+    ],
     "round": Object {
       "card": Object {
         "contents": "I can only express myself through _.",
@@ -625,6 +572,20 @@ Object {
       },
       "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "votes": Object {
+        "123456": Object {
+          "0": true,
+        },
+      },
+    },
+    "vote": Object {
+      "contents": "Testicular torsion.",
+      "id": 86,
+    },
+    "votes": Object {
+      "123456": Array [
+        true,
+      ],
     },
   },
 }

@@ -153,6 +153,7 @@ test('the last player to pick a card', () => {
             round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         },
     })
+        .then(save('candidates-shown'))
         .then(results => expect({
             results,
             db: flame.get('/'),
