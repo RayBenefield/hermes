@@ -249,7 +249,7 @@ test('4th player votes for first card', () => {
         lead,
         action: 'vote',
         payload: {
-            vote: 268,
+            vote: 175,
             game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
             round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         },
@@ -305,6 +305,81 @@ test('4th player votes for third card', () => {
         },
     })
         .then(save('12-votes-4-players-card'))
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});
+
+test('5th player votes for first card', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 567890,
+    };
+    flame.loadDatabase(databases['12-votes-4-players-card']);
+
+    // When
+    return domain({
+        lead,
+        action: 'vote',
+        payload: {
+            vote: 175,
+            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+        },
+    })
+        .then(save('13-votes-5-players-card'))
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});
+
+test('5th player votes for second card', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 567890,
+    };
+    flame.loadDatabase(databases['13-votes-5-players-card']);
+
+    // When
+    return domain({
+        lead,
+        action: 'vote',
+        payload: {
+            vote: 117,
+            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+        },
+    })
+        .then(save('14-votes-5-players-card'))
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});
+
+test('5th player votes for third card', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 567890,
+    };
+    flame.loadDatabase(databases['14-votes-5-players-card']);
+
+    // When
+    return domain({
+        lead,
+        action: 'vote',
+        payload: {
+            vote: 268,
+            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+        },
+    })
+        .then(save('winner-decided'))
         .then(results => expect({
             results,
             db: flame.get('/'),

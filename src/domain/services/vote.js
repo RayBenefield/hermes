@@ -41,7 +41,7 @@ export default ({ playerVotes, vote, votes = [], candidates, player, players, ga
 
         if (_.keys(votes).length === 5) {
             const election = new Election({
-                candidates: _.map(players, p => p.id),
+                candidates: _.map(players, p => p.id.toString()),
             });
 
             votes[player.id].push(_.findKey(candidates, c => c.id === vote.id));

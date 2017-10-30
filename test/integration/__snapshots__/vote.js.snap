@@ -3632,7 +3632,7 @@ Object {
               "2": "567890",
             },
             "456789": Object {
-              "0": "123456",
+              "0": "345678",
             },
           },
         },
@@ -3693,19 +3693,19 @@ Object {
           "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "ranked": Array [
             Object {
-              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-              "id": 268,
+              "contents": "Skeletor.",
+              "id": 175,
             },
           ],
           "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "unranked": Array [
             Object {
-              "contents": "Keg stands.",
-              "id": 188,
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
             },
             Object {
-              "contents": "Skeletor.",
-              "id": 175,
+              "contents": "Keg stands.",
+              "id": 188,
             },
             Object {
               "contents": "Sniffing glue.",
@@ -3716,7 +3716,7 @@ Object {
               "id": 31,
             },
           ],
-          "vote": "123456",
+          "vote": "345678",
         },
         "type": "show-ranked-list",
       },
@@ -3724,7 +3724,7 @@ Object {
     "payload": Object {
       "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
       "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-      "vote": 268,
+      "vote": 175,
     },
     "player": Object {
       "first_name": "Hermshire",
@@ -3810,8 +3810,8 @@ Object {
       },
     },
     "vote": Object {
-      "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-      "id": 268,
+      "contents": "Skeletor.",
+      "id": 175,
     },
     "votes": Object {
       "123456": Array [
@@ -4034,7 +4034,7 @@ Object {
               "2": "567890",
             },
             "456789": Object {
-              "0": "123456",
+              "0": "345678",
               "1": "123456",
             },
           },
@@ -4096,8 +4096,8 @@ Object {
           "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "ranked": Array [
             Object {
-              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-              "id": 268,
+              "contents": "Skeletor.",
+              "id": 175,
             },
             Object {
               "contents": "Dropping a chandelier on your enemies and riding the rope up.",
@@ -4109,10 +4109,6 @@ Object {
             Object {
               "contents": "Keg stands.",
               "id": 188,
-            },
-            Object {
-              "contents": "Skeletor.",
-              "id": 175,
             },
             Object {
               "contents": "Sniffing glue.",
@@ -4143,8 +4139,8 @@ Object {
     },
     "playerVotes": Array [
       Object {
-        "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-        "id": 268,
+        "contents": "Skeletor.",
+        "id": 175,
       },
     ],
     "players": Array [
@@ -4220,7 +4216,7 @@ Object {
           "2": "567890",
         },
         "456789": Object {
-          "0": "123456",
+          "0": "345678",
         },
       },
     },
@@ -4245,7 +4241,7 @@ Object {
         "567890",
       ],
       "456789": Array [
-        "123456",
+        "345678",
       ],
     },
   },
@@ -4452,7 +4448,7 @@ Object {
               "2": "567890",
             },
             "456789": Object {
-              "0": "123456",
+              "0": "345678",
               "1": "123456",
               "2": "567890",
             },
@@ -4515,8 +4511,8 @@ Object {
           "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
           "ranked": Array [
             Object {
-              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-              "id": 268,
+              "contents": "Skeletor.",
+              "id": 175,
             },
             Object {
               "contents": "Dropping a chandelier on your enemies and riding the rope up.",
@@ -4529,10 +4525,6 @@ Object {
             Object {
               "contents": "Keg stands.",
               "id": 188,
-            },
-            Object {
-              "contents": "Skeletor.",
-              "id": 175,
             },
             Object {
               "contents": "Sniffing glue.",
@@ -4560,8 +4552,8 @@ Object {
     },
     "playerVotes": Array [
       Object {
-        "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-        "id": 268,
+        "contents": "Skeletor.",
+        "id": 175,
       },
       Object {
         "contents": "Dropping a chandelier on your enemies and riding the rope up.",
@@ -4641,7 +4633,7 @@ Object {
           "2": "567890",
         },
         "456789": Object {
-          "0": "123456",
+          "0": "345678",
           "1": "123456",
         },
       },
@@ -4667,7 +4659,1306 @@ Object {
         "567890",
       ],
       "456789": Array [
+        "345678",
         "123456",
+      ],
+    },
+  },
+}
+`;
+
+exports[`5th player votes for first card 1`] = `
+Object {
+  "db": Object {
+    "candidates": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 268,
+            "234567": 188,
+            "345678": 175,
+            "456789": 117,
+            "567890": 31,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "notified_players": Object {
+            "567890": true,
+          },
+          "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        },
+      },
+    },
+    "games": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        "notified_players": Object {
+          "123456": true,
+          "234567": true,
+          "345678": true,
+          "456789": true,
+          "567890": true,
+        },
+        "players": Object {
+          "123456": true,
+          "234567": true,
+          "345678": true,
+          "456789": true,
+          "567890": true,
+        },
+        "rounds": Object {
+          "0": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        },
+      },
+    },
+    "hands": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "123456": Object {
+          "cards": Object {
+            "1015": true,
+            "1039": true,
+            "1040": true,
+            "310": true,
+            "444": true,
+            "597": true,
+            "640": true,
+            "714": true,
+            "748": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 123456,
+        },
+        "234567": Object {
+          "cards": Object {
+            "218": true,
+            "370": true,
+            "429": true,
+            "485": true,
+            "624": true,
+            "629": true,
+            "725": true,
+            "779": true,
+            "951": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 234567,
+        },
+        "345678": Object {
+          "cards": Object {
+            "252": true,
+            "322": true,
+            "458": true,
+            "582": true,
+            "590": true,
+            "609": true,
+            "900": true,
+            "965": true,
+            "999": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 345678,
+        },
+        "456789": Object {
+          "cards": Object {
+            "241": true,
+            "244": true,
+            "334": true,
+            "470": true,
+            "498": true,
+            "524": true,
+            "593": true,
+            "855": true,
+            "898": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 456789,
+        },
+        "567890": Object {
+          "cards": Object {
+            "125": true,
+            "227": true,
+            "32": true,
+            "36": true,
+            "530": true,
+            "597": true,
+            "604": true,
+            "605": true,
+            "729": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 567890,
+        },
+      },
+    },
+    "players": Object {
+      "facebook": Object {
+        "123456": Object {
+          "first_name": "Ray",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 123456,
+          "platform": "facebook",
+        },
+        "234567": Object {
+          "first_name": "Hermon",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 234567,
+          "platform": "facebook",
+        },
+        "345678": Object {
+          "first_name": "Hermes",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 345678,
+          "platform": "facebook",
+        },
+        "456789": Object {
+          "first_name": "Hermshire",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 456789,
+          "platform": "facebook",
+        },
+        "567890": Object {
+          "first_name": "Hermda",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 567890,
+          "platform": "facebook",
+        },
+      },
+    },
+    "queue": Object {},
+    "rounds": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 268,
+            "234567": 188,
+            "345678": 175,
+            "456789": 117,
+            "567890": 31,
+          },
+          "card": Object {
+            "contents": "I can only express myself through _.",
+            "id": 189,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "votes": Object {
+            "123456": Object {
+              "0": "345678",
+              "1": "456789",
+              "2": "567890",
+            },
+            "234567": Object {
+              "0": "345678",
+              "1": "456789",
+              "2": "567890",
+            },
+            "345678": Object {
+              "0": "123456",
+              "1": "456789",
+              "2": "567890",
+            },
+            "456789": Object {
+              "0": "345678",
+              "1": "123456",
+              "2": "567890",
+            },
+            "567890": Object {
+              "0": "345678",
+            },
+          },
+        },
+      },
+    },
+  },
+  "results": Object {
+    "action": "vote",
+    "candidates": Object {
+      "123456": Object {
+        "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+        "id": 268,
+      },
+      "234567": Object {
+        "contents": "Keg stands.",
+        "id": 188,
+      },
+      "345678": Object {
+        "contents": "Skeletor.",
+        "id": 175,
+      },
+      "456789": Object {
+        "contents": "Sniffing glue.",
+        "id": 117,
+      },
+      "567890": Object {
+        "contents": "The forbidden fruit.",
+        "id": 31,
+      },
+    },
+    "game": Object {
+      "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "notified_players": Object {
+        "123456": true,
+        "234567": true,
+        "345678": true,
+        "456789": true,
+        "567890": true,
+      },
+      "players": Object {
+        "123456": true,
+        "234567": true,
+        "345678": true,
+        "456789": true,
+        "567890": true,
+      },
+      "rounds": Object {
+        "0": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      },
+    },
+    "lead": Object {
+      "id": 567890,
+      "platform": "facebook",
+    },
+    "messages": Array [
+      Object {
+        "payload": Object {
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "ranked": Array [
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+          ],
+          "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "unranked": Array [
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
+            },
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+          ],
+          "vote": "345678",
+        },
+        "type": "show-ranked-list",
+      },
+    ],
+    "payload": Object {
+      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "vote": 175,
+    },
+    "player": Object {
+      "first_name": "Hermda",
+      "games": Object {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+      },
+      "id": 567890,
+      "platform": "facebook",
+    },
+    "playerVotes": Array [],
+    "players": Array [
+      Object {
+        "first_name": "Ray",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 123456,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermon",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 234567,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermes",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 345678,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermshire",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 456789,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermda",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 567890,
+        "platform": "facebook",
+      },
+    ],
+    "round": Object {
+      "candidates": Object {
+        "123456": 268,
+        "234567": 188,
+        "345678": 175,
+        "456789": 117,
+        "567890": 31,
+      },
+      "card": Object {
+        "contents": "I can only express myself through _.",
+        "id": 189,
+      },
+      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "votes": Object {
+        "123456": Object {
+          "0": "345678",
+          "1": "456789",
+          "2": "567890",
+        },
+        "234567": Object {
+          "0": "345678",
+          "1": "456789",
+          "2": "567890",
+        },
+        "345678": Object {
+          "0": "123456",
+          "1": "456789",
+          "2": "567890",
+        },
+        "456789": Object {
+          "0": "345678",
+          "1": "123456",
+          "2": "567890",
+        },
+      },
+    },
+    "vote": Object {
+      "contents": "Skeletor.",
+      "id": 175,
+    },
+    "votes": Object {
+      "123456": Array [
+        "345678",
+        "456789",
+        "567890",
+      ],
+      "234567": Array [
+        "345678",
+        "456789",
+        "567890",
+      ],
+      "345678": Array [
+        "123456",
+        "456789",
+        "567890",
+      ],
+      "456789": Array [
+        "345678",
+        "123456",
+        "567890",
+      ],
+    },
+  },
+}
+`;
+
+exports[`5th player votes for second card 1`] = `
+Object {
+  "db": Object {
+    "candidates": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 268,
+            "234567": 188,
+            "345678": 175,
+            "456789": 117,
+            "567890": 31,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "notified_players": Object {
+            "567890": true,
+          },
+          "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        },
+      },
+    },
+    "games": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        "notified_players": Object {
+          "123456": true,
+          "234567": true,
+          "345678": true,
+          "456789": true,
+          "567890": true,
+        },
+        "players": Object {
+          "123456": true,
+          "234567": true,
+          "345678": true,
+          "456789": true,
+          "567890": true,
+        },
+        "rounds": Object {
+          "0": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        },
+      },
+    },
+    "hands": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "123456": Object {
+          "cards": Object {
+            "1015": true,
+            "1039": true,
+            "1040": true,
+            "310": true,
+            "444": true,
+            "597": true,
+            "640": true,
+            "714": true,
+            "748": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 123456,
+        },
+        "234567": Object {
+          "cards": Object {
+            "218": true,
+            "370": true,
+            "429": true,
+            "485": true,
+            "624": true,
+            "629": true,
+            "725": true,
+            "779": true,
+            "951": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 234567,
+        },
+        "345678": Object {
+          "cards": Object {
+            "252": true,
+            "322": true,
+            "458": true,
+            "582": true,
+            "590": true,
+            "609": true,
+            "900": true,
+            "965": true,
+            "999": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 345678,
+        },
+        "456789": Object {
+          "cards": Object {
+            "241": true,
+            "244": true,
+            "334": true,
+            "470": true,
+            "498": true,
+            "524": true,
+            "593": true,
+            "855": true,
+            "898": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 456789,
+        },
+        "567890": Object {
+          "cards": Object {
+            "125": true,
+            "227": true,
+            "32": true,
+            "36": true,
+            "530": true,
+            "597": true,
+            "604": true,
+            "605": true,
+            "729": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 567890,
+        },
+      },
+    },
+    "players": Object {
+      "facebook": Object {
+        "123456": Object {
+          "first_name": "Ray",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 123456,
+          "platform": "facebook",
+        },
+        "234567": Object {
+          "first_name": "Hermon",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 234567,
+          "platform": "facebook",
+        },
+        "345678": Object {
+          "first_name": "Hermes",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 345678,
+          "platform": "facebook",
+        },
+        "456789": Object {
+          "first_name": "Hermshire",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 456789,
+          "platform": "facebook",
+        },
+        "567890": Object {
+          "first_name": "Hermda",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 567890,
+          "platform": "facebook",
+        },
+      },
+    },
+    "queue": Object {},
+    "rounds": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 268,
+            "234567": 188,
+            "345678": 175,
+            "456789": 117,
+            "567890": 31,
+          },
+          "card": Object {
+            "contents": "I can only express myself through _.",
+            "id": 189,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "votes": Object {
+            "123456": Object {
+              "0": "345678",
+              "1": "456789",
+              "2": "567890",
+            },
+            "234567": Object {
+              "0": "345678",
+              "1": "456789",
+              "2": "567890",
+            },
+            "345678": Object {
+              "0": "123456",
+              "1": "456789",
+              "2": "567890",
+            },
+            "456789": Object {
+              "0": "345678",
+              "1": "123456",
+              "2": "567890",
+            },
+            "567890": Object {
+              "0": "345678",
+              "1": "456789",
+            },
+          },
+        },
+      },
+    },
+  },
+  "results": Object {
+    "action": "vote",
+    "candidates": Object {
+      "123456": Object {
+        "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+        "id": 268,
+      },
+      "234567": Object {
+        "contents": "Keg stands.",
+        "id": 188,
+      },
+      "345678": Object {
+        "contents": "Skeletor.",
+        "id": 175,
+      },
+      "456789": Object {
+        "contents": "Sniffing glue.",
+        "id": 117,
+      },
+      "567890": Object {
+        "contents": "The forbidden fruit.",
+        "id": 31,
+      },
+    },
+    "game": Object {
+      "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "notified_players": Object {
+        "123456": true,
+        "234567": true,
+        "345678": true,
+        "456789": true,
+        "567890": true,
+      },
+      "players": Object {
+        "123456": true,
+        "234567": true,
+        "345678": true,
+        "456789": true,
+        "567890": true,
+      },
+      "rounds": Object {
+        "0": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      },
+    },
+    "lead": Object {
+      "id": 567890,
+      "platform": "facebook",
+    },
+    "messages": Array [
+      Object {
+        "payload": Object {
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "ranked": Array [
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+          ],
+          "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "unranked": Array [
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
+            },
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+          ],
+          "vote": "456789",
+        },
+        "type": "show-ranked-list",
+      },
+    ],
+    "payload": Object {
+      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "vote": 117,
+    },
+    "player": Object {
+      "first_name": "Hermda",
+      "games": Object {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+      },
+      "id": 567890,
+      "platform": "facebook",
+    },
+    "playerVotes": Array [
+      Object {
+        "contents": "Skeletor.",
+        "id": 175,
+      },
+    ],
+    "players": Array [
+      Object {
+        "first_name": "Ray",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 123456,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermon",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 234567,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermes",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 345678,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermshire",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 456789,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermda",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 567890,
+        "platform": "facebook",
+      },
+    ],
+    "round": Object {
+      "candidates": Object {
+        "123456": 268,
+        "234567": 188,
+        "345678": 175,
+        "456789": 117,
+        "567890": 31,
+      },
+      "card": Object {
+        "contents": "I can only express myself through _.",
+        "id": 189,
+      },
+      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "votes": Object {
+        "123456": Object {
+          "0": "345678",
+          "1": "456789",
+          "2": "567890",
+        },
+        "234567": Object {
+          "0": "345678",
+          "1": "456789",
+          "2": "567890",
+        },
+        "345678": Object {
+          "0": "123456",
+          "1": "456789",
+          "2": "567890",
+        },
+        "456789": Object {
+          "0": "345678",
+          "1": "123456",
+          "2": "567890",
+        },
+        "567890": Object {
+          "0": "345678",
+        },
+      },
+    },
+    "vote": Object {
+      "contents": "Sniffing glue.",
+      "id": 117,
+    },
+    "votes": Object {
+      "123456": Array [
+        "345678",
+        "456789",
+        "567890",
+      ],
+      "234567": Array [
+        "345678",
+        "456789",
+        "567890",
+      ],
+      "345678": Array [
+        "123456",
+        "456789",
+        "567890",
+      ],
+      "456789": Array [
+        "345678",
+        "123456",
+        "567890",
+      ],
+      "567890": Array [
+        "345678",
+      ],
+    },
+  },
+}
+`;
+
+exports[`5th player votes for third card 1`] = `
+Object {
+  "db": Object {
+    "candidates": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 268,
+            "234567": 188,
+            "345678": 175,
+            "456789": 117,
+            "567890": 31,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "notified_players": Object {
+            "567890": true,
+          },
+          "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        },
+      },
+    },
+    "games": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        "notified_players": Object {
+          "123456": true,
+          "234567": true,
+          "345678": true,
+          "456789": true,
+          "567890": true,
+        },
+        "players": Object {
+          "123456": true,
+          "234567": true,
+          "345678": true,
+          "456789": true,
+          "567890": true,
+        },
+        "rounds": Object {
+          "0": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        },
+      },
+    },
+    "hands": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "123456": Object {
+          "cards": Object {
+            "1015": true,
+            "1039": true,
+            "1040": true,
+            "310": true,
+            "444": true,
+            "597": true,
+            "640": true,
+            "714": true,
+            "748": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 123456,
+        },
+        "234567": Object {
+          "cards": Object {
+            "218": true,
+            "370": true,
+            "429": true,
+            "485": true,
+            "624": true,
+            "629": true,
+            "725": true,
+            "779": true,
+            "951": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 234567,
+        },
+        "345678": Object {
+          "cards": Object {
+            "252": true,
+            "322": true,
+            "458": true,
+            "582": true,
+            "590": true,
+            "609": true,
+            "900": true,
+            "965": true,
+            "999": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 345678,
+        },
+        "456789": Object {
+          "cards": Object {
+            "241": true,
+            "244": true,
+            "334": true,
+            "470": true,
+            "498": true,
+            "524": true,
+            "593": true,
+            "855": true,
+            "898": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 456789,
+        },
+        "567890": Object {
+          "cards": Object {
+            "125": true,
+            "227": true,
+            "32": true,
+            "36": true,
+            "530": true,
+            "597": true,
+            "604": true,
+            "605": true,
+            "729": true,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "player": 567890,
+        },
+      },
+    },
+    "players": Object {
+      "facebook": Object {
+        "123456": Object {
+          "first_name": "Ray",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 123456,
+          "platform": "facebook",
+        },
+        "234567": Object {
+          "first_name": "Hermon",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 234567,
+          "platform": "facebook",
+        },
+        "345678": Object {
+          "first_name": "Hermes",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 345678,
+          "platform": "facebook",
+        },
+        "456789": Object {
+          "first_name": "Hermshire",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 456789,
+          "platform": "facebook",
+        },
+        "567890": Object {
+          "first_name": "Hermda",
+          "games": Object {
+            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+          },
+          "id": 567890,
+          "platform": "facebook",
+        },
+      },
+    },
+    "queue": Object {},
+    "rounds": Object {
+      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+          "candidates": Object {
+            "123456": 268,
+            "234567": 188,
+            "345678": 175,
+            "456789": 117,
+            "567890": 31,
+          },
+          "card": Object {
+            "contents": "I can only express myself through _.",
+            "id": 189,
+          },
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "notified_players": Object {
+            "567890": true,
+          },
+          "votes": Object {
+            "123456": Object {
+              "0": "345678",
+              "1": "456789",
+              "2": "567890",
+            },
+            "234567": Object {
+              "0": "345678",
+              "1": "456789",
+              "2": "567890",
+            },
+            "345678": Object {
+              "0": "123456",
+              "1": "456789",
+              "2": "567890",
+            },
+            "456789": Object {
+              "0": "345678",
+              "1": "123456",
+              "2": "567890",
+            },
+            "567890": Object {
+              "0": "345678",
+              "1": "456789",
+              "2": "123456",
+            },
+          },
+          "winner": 175,
+        },
+      },
+    },
+  },
+  "results": Object {
+    "action": "vote",
+    "candidates": Object {
+      "123456": Object {
+        "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+        "id": 268,
+      },
+      "234567": Object {
+        "contents": "Keg stands.",
+        "id": 188,
+      },
+      "345678": Object {
+        "contents": "Skeletor.",
+        "id": 175,
+      },
+      "456789": Object {
+        "contents": "Sniffing glue.",
+        "id": 117,
+      },
+      "567890": Object {
+        "contents": "The forbidden fruit.",
+        "id": 31,
+      },
+    },
+    "game": Object {
+      "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "notified_players": Object {
+        "123456": true,
+        "234567": true,
+        "345678": true,
+        "456789": true,
+        "567890": true,
+      },
+      "players": Object {
+        "123456": true,
+        "234567": true,
+        "345678": true,
+        "456789": true,
+        "567890": true,
+      },
+      "rounds": Object {
+        "0": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      },
+    },
+    "lead": Object {
+      "id": 567890,
+      "platform": "facebook",
+    },
+    "messages": Array [
+      Object {
+        "payload": Object {
+          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "ranked": Array [
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
+            },
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+          ],
+          "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "vote": "123456",
+        },
+        "type": "show-votes-message",
+      },
+      Object {
+        "payload": Object {
+          "goal": Object {
+            "contents": "I can only express myself through _.",
+            "id": 189,
+          },
+          "player": undefined,
+          "winner": Object {
+            "contents": "Skeletor.",
+            "id": 175,
+          },
+        },
+        "type": "show-winner-message",
+      },
+    ],
+    "payload": Object {
+      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "round": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "vote": 268,
+    },
+    "player": Object {
+      "first_name": "Hermda",
+      "games": Object {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+      },
+      "id": 567890,
+      "platform": "facebook",
+    },
+    "playerVotes": Array [
+      Object {
+        "contents": "Skeletor.",
+        "id": 175,
+      },
+      Object {
+        "contents": "Sniffing glue.",
+        "id": 117,
+      },
+    ],
+    "players": Array [
+      Object {
+        "first_name": "Ray",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 123456,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermon",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 234567,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermes",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 345678,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermshire",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 456789,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermda",
+        "games": Object {
+          "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+        },
+        "id": 567890,
+        "platform": "facebook",
+      },
+    ],
+    "round": Object {
+      "candidates": Object {
+        "123456": 268,
+        "234567": 188,
+        "345678": 175,
+        "456789": 117,
+        "567890": 31,
+      },
+      "card": Object {
+        "contents": "I can only express myself through _.",
+        "id": 189,
+      },
+      "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "votes": Object {
+        "123456": Object {
+          "0": "345678",
+          "1": "456789",
+          "2": "567890",
+        },
+        "234567": Object {
+          "0": "345678",
+          "1": "456789",
+          "2": "567890",
+        },
+        "345678": Object {
+          "0": "123456",
+          "1": "456789",
+          "2": "567890",
+        },
+        "456789": Object {
+          "0": "345678",
+          "1": "123456",
+          "2": "567890",
+        },
+        "567890": Object {
+          "0": "345678",
+          "1": "456789",
+        },
+      },
+    },
+    "vote": Object {
+      "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+      "id": 268,
+    },
+    "votes": Object {
+      "123456": Array [
+        "345678",
+        "456789",
+        "567890",
+      ],
+      "234567": Array [
+        "345678",
+        "456789",
+        "567890",
+      ],
+      "345678": Array [
+        "123456",
+        "456789",
+        "567890",
+      ],
+      "456789": Array [
+        "345678",
+        "123456",
+        "567890",
+      ],
+      "567890": Array [
+        "345678",
+        "456789",
         "123456",
       ],
     },
