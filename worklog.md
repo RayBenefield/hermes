@@ -1,5 +1,10 @@
 # Work Log
 
+## #97
+
+Just logging the double.
+
+
 ## #96
 
 Logged another double session trying to explore how to handle individual
