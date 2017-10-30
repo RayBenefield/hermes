@@ -85,3 +85,78 @@ test('1st player votes for third card', () => {
             db: flame.get('/'),
         }).toMatchSnapshot());
 });
+
+test('2nd player votes for first card', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 234567,
+    };
+    flame.loadDatabase(databases['3-votes-1-player-card']);
+
+    // When
+    return domain({
+        lead,
+        action: 'vote',
+        payload: {
+            vote: 175,
+            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+        },
+    })
+        .then(save('4-votes-2-players-card'))
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});
+
+test('2nd player votes for second card', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 234567,
+    };
+    flame.loadDatabase(databases['4-votes-2-players-card']);
+
+    // When
+    return domain({
+        lead,
+        action: 'vote',
+        payload: {
+            vote: 117,
+            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+        },
+    })
+        .then(save('5-votes-2-players-card'))
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});
+
+test('2nd player votes for third card', () => {
+    // Given
+    const lead = {
+        platform: 'facebook',
+        id: 234567,
+    };
+    flame.loadDatabase(databases['5-votes-2-players-card']);
+
+    // When
+    return domain({
+        lead,
+        action: 'vote',
+        payload: {
+            vote: 31,
+            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+        },
+    })
+        .then(save('6-votes-2-players-card'))
+        .then(results => expect({
+            results,
+            db: flame.get('/'),
+        }).toMatchSnapshot());
+});
