@@ -47,6 +47,13 @@ export default ({ db, uuid, random }) => {
                 .extend(...get.candidates)
                 .extend(...get.votes)
                 .extend(...get.playerVotes),
+            winner: transmute()
+                .extend(...get.game)
+                .extend(...get.round)
+                .extend(...get.candidates)
+                .extend(...get.playersFromGame)
+                .extend(...get.winner)
+                .extend(...get.winningPlayer),
         },
         save: {
             'welcome-message': transmute().do(...save.playerInfo),
@@ -77,6 +84,9 @@ export default ({ db, uuid, random }) => {
             'show-winner-message': transmute()
                 .do(...save.notifiedPlayerOfWinner)
                 .do(...save.winner),
+            'notify-winner-message': transmute()
+                .do(...save.notifiedAllPlayersOfWinner)
+                .do(...save.newRound),
         },
     };
 };

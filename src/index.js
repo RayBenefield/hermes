@@ -10,7 +10,6 @@ import configureDomain from './domain';
 import configureFlame from './lib/local-db';
 import configureFirebaseDb from './lib/db';
 import configureChannelRouter from './routes/channels';
-import configureTriggers from './triggers';
 import './pretty-errors';
 
 const config = functions.config();
@@ -24,7 +23,6 @@ const domain = configureDomain({ db, uuid, random: Math.random });
 
 const channelRouter =
     configureChannelRouter({ fb, domain });
-const triggers = configureTriggers({ db, fb, domain });
 
 // Handle incoming messages
 exports.channels = functions.https.onRequest(channelRouter);
@@ -85,11 +83,17 @@ exports.votingStarted = functions.database.ref('/candidates/{gameId}/{roundId}')
     );
 
 exports.winnerDecided = functions.database.ref('/rounds/{gameId}/{roundId}/winner')
-    .onCreate(event => triggers.winnerDecided({
+    .onCreate(event => transmute({
         action: 'winner',
         payload: {
             game: event.params.gameId,
             round: event.params.roundId,
             winner: event.data.val(),
         },
-    }));
+    })
+        .extend(domain)
+        .do(({ players, messages }) => Promise.all(
+            players.map(lead => transmute({ lead, messages })
+                .extend('facebookMessages', fb.transform)
+                .do(({ facebookMessages }) =>
+                    fb.sendMessages(lead.id, facebookMessages))))));
