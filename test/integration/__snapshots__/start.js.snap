@@ -4,8 +4,8 @@ exports[`notify all players of new game 1`] = `
 Object {
   "db": Object {
     "games": Object {
-      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
-        "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "0-05526803409810505": Object {
+        "id": "0-05526803409810505",
         "notified_players": Object {
           "123456": true,
           "234567": true,
@@ -23,7 +23,7 @@ Object {
       },
     },
     "hands": Object {
-      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
+      "0-05526803409810505": Object {
         "123456": Object {
           "cards": Object {
             "1015": true,
@@ -37,7 +37,7 @@ Object {
             "714": true,
             "748": true,
           },
-          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "game": "0-05526803409810505",
           "player": 123456,
         },
         "234567": Object {
@@ -53,7 +53,7 @@ Object {
             "779": true,
             "951": true,
           },
-          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "game": "0-05526803409810505",
           "player": 234567,
         },
         "345678": Object {
@@ -69,7 +69,7 @@ Object {
             "965": true,
             "999": true,
           },
-          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "game": "0-05526803409810505",
           "player": 345678,
         },
         "456789": Object {
@@ -85,7 +85,7 @@ Object {
             "855": true,
             "898": true,
           },
-          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "game": "0-05526803409810505",
           "player": 456789,
         },
         "567890": Object {
@@ -101,7 +101,7 @@ Object {
             "605": true,
             "729": true,
           },
-          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+          "game": "0-05526803409810505",
           "player": 567890,
         },
       },
@@ -111,7 +111,7 @@ Object {
         "123456": Object {
           "first_name": "Ray",
           "games": Object {
-            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+            "0-05526803409810505": true,
           },
           "id": 123456,
           "platform": "facebook",
@@ -119,7 +119,7 @@ Object {
         "234567": Object {
           "first_name": "Hermon",
           "games": Object {
-            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+            "0-05526803409810505": true,
           },
           "id": 234567,
           "platform": "facebook",
@@ -127,7 +127,7 @@ Object {
         "345678": Object {
           "first_name": "Hermes",
           "games": Object {
-            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+            "0-05526803409810505": true,
           },
           "id": 345678,
           "platform": "facebook",
@@ -135,7 +135,7 @@ Object {
         "456789": Object {
           "first_name": "Hermshire",
           "games": Object {
-            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+            "0-05526803409810505": true,
           },
           "id": 456789,
           "platform": "facebook",
@@ -143,7 +143,7 @@ Object {
         "567890": Object {
           "first_name": "Hermda",
           "games": Object {
-            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true,
+            "0-05526803409810505": true,
           },
           "id": 567890,
           "platform": "facebook",
@@ -152,10 +152,10 @@ Object {
     },
     "queue": Object {},
     "rounds": Object {
-      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
-        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
-          "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-          "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "0-05526803409810505": Object {
+        "0-05526803409810505": Object {
+          "game": "0-05526803409810505",
+          "id": "0-05526803409810505",
         },
       },
     },
@@ -163,7 +163,7 @@ Object {
   "results": Object {
     "action": "start",
     "game": Object {
-      "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "id": "0-05526803409810505",
       "notified_players": Object {
         "567890": true,
       },

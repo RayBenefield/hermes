@@ -1,8 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`notify all players of the new round 1`] = `
+exports[`notify all players of the winner and the new round 1`] = `
 Object {
   "db": Object {
+    "candidates": Object {
+      "0-05526803409810505": Object {
+        "0-05526803409810505": Object {
+          "candidates": Object {
+            "123456": 268,
+            "234567": 188,
+            "345678": 175,
+            "456789": 117,
+            "567890": 31,
+          },
+          "game": "0-05526803409810505",
+          "notified_players": Object {
+            "567890": true,
+          },
+          "round": "0-05526803409810505",
+        },
+      },
+    },
     "games": Object {
       "0-05526803409810505": Object {
         "id": "0-05526803409810505",
@@ -32,7 +50,6 @@ Object {
             "1015": true,
             "1039": true,
             "1040": true,
-            "268": true,
             "310": true,
             "444": true,
             "597": true,
@@ -45,7 +62,6 @@ Object {
         },
         "234567": Object {
           "cards": Object {
-            "188": true,
             "218": true,
             "370": true,
             "429": true,
@@ -61,7 +77,6 @@ Object {
         },
         "345678": Object {
           "cards": Object {
-            "175": true,
             "252": true,
             "322": true,
             "458": true,
@@ -77,7 +92,6 @@ Object {
         },
         "456789": Object {
           "cards": Object {
-            "117": true,
             "241": true,
             "244": true,
             "334": true,
@@ -95,7 +109,6 @@ Object {
           "cards": Object {
             "125": true,
             "227": true,
-            "31": true,
             "32": true,
             "36": true,
             "530": true,
@@ -157,21 +170,85 @@ Object {
     "rounds": Object {
       "0-05526803409810505": Object {
         "0-05526803409810505": Object {
+          "candidates": Object {
+            "123456": 268,
+            "234567": 188,
+            "345678": 175,
+            "456789": 117,
+            "567890": 31,
+          },
           "card": Object {
             "contents": "I can only express myself through _.",
             "id": 189,
           },
           "game": "0-05526803409810505",
           "id": "0-05526803409810505",
+          "notified_players": Object {
+            "123456": true,
+            "234567": true,
+            "345678": true,
+            "456789": true,
+            "567890": true,
+          },
+          "votes": Object {
+            "123456": Object {
+              "0": "345678",
+              "1": "456789",
+              "2": "567890",
+            },
+            "234567": Object {
+              "0": "345678",
+              "1": "456789",
+              "2": "567890",
+            },
+            "345678": Object {
+              "0": "123456",
+              "1": "456789",
+              "2": "567890",
+            },
+            "456789": Object {
+              "0": "345678",
+              "1": "123456",
+              "2": "567890",
+            },
+            "567890": Object {
+              "0": "345678",
+              "1": "456789",
+              "2": "123456",
+            },
+          },
+          "winner": 175,
+        },
+        "0-9057442687334262": Object {
+          "game": "0-05526803409810505",
+          "id": "0-9057442687334262",
         },
       },
     },
   },
   "results": Object {
-    "action": "round",
-    "card": Object {
-      "contents": "I can only express myself through _.",
-      "id": 189,
+    "action": "winner",
+    "candidates": Object {
+      "123456": Object {
+        "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+        "id": 268,
+      },
+      "234567": Object {
+        "contents": "Keg stands.",
+        "id": 188,
+      },
+      "345678": Object {
+        "contents": "Skeletor.",
+        "id": 175,
+      },
+      "456789": Object {
+        "contents": "Sniffing glue.",
+        "id": 117,
+      },
+      "567890": Object {
+        "contents": "The forbidden fruit.",
+        "id": 31,
+      },
     },
     "game": Object {
       "id": "0-05526803409810505",
@@ -189,20 +266,38 @@ Object {
         "456789": true,
         "567890": true,
       },
+      "rounds": Object {
+        "0": "0-05526803409810505",
+      },
     },
     "messages": Array [
       Object {
         "payload": Object {
-          "card": Object {
+          "goal": Object {
             "contents": "I can only express myself through _.",
             "id": 189,
           },
-          "game": "0-05526803409810505",
-          "round": "0-05526803409810505",
+          "player": Object {
+            "first_name": "Hermes",
+            "games": Object {
+              "0-05526803409810505": true,
+            },
+            "id": 345678,
+            "platform": "facebook",
+          },
+          "winner": Object {
+            "contents": "Skeletor.",
+            "id": 175,
+          },
         },
-        "type": "new-goal-message",
+        "type": "notify-winner-message",
       },
     ],
+    "payload": Object {
+      "game": "0-05526803409810505",
+      "round": "0-05526803409810505",
+      "winner": 175,
+    },
     "players": Array [
       Object {
         "first_name": "Ray",
@@ -246,8 +341,62 @@ Object {
       },
     ],
     "round": Object {
+      "candidates": Object {
+        "123456": 268,
+        "234567": 188,
+        "345678": 175,
+        "456789": 117,
+        "567890": 31,
+      },
+      "card": Object {
+        "contents": "I can only express myself through _.",
+        "id": 189,
+      },
       "game": "0-05526803409810505",
       "id": "0-05526803409810505",
+      "notified_players": Object {
+        "567890": true,
+      },
+      "votes": Object {
+        "123456": Object {
+          "0": "345678",
+          "1": "456789",
+          "2": "567890",
+        },
+        "234567": Object {
+          "0": "345678",
+          "1": "456789",
+          "2": "567890",
+        },
+        "345678": Object {
+          "0": "123456",
+          "1": "456789",
+          "2": "567890",
+        },
+        "456789": Object {
+          "0": "345678",
+          "1": "123456",
+          "2": "567890",
+        },
+        "567890": Object {
+          "0": "345678",
+          "1": "456789",
+          "2": "123456",
+        },
+      },
+      "winner": 175,
+    },
+    "winner": Object {
+      "contents": "Skeletor.",
+      "id": 175,
+    },
+    "winningPlayer": Object {
+      "first_name": "Hermes",
+      "games": Object {
+        "0-05526803409810505": true,
+      },
+      "id": 345678,
+      "platform": "facebook",
     },
   },
 }

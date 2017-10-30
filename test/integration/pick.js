@@ -25,8 +25,8 @@ test('pick a card for the goal', () => {
         action: 'pick',
         payload: {
             pick: 268,
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(save('1-picked-card'))
@@ -50,8 +50,8 @@ test('try to pick a card again', () => {
         action: 'pick',
         payload: {
             pick: 268,
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(results => expect({
@@ -74,8 +74,8 @@ test('second person picks a card', () => {
         action: 'pick',
         payload: {
             pick: 188,
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(save('2-picked-cards'))
@@ -99,8 +99,8 @@ test('third person picks a card', () => {
         action: 'pick',
         payload: {
             pick: 175,
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(save('3-picked-cards'))
@@ -124,8 +124,8 @@ test('fourth person picks a card', () => {
         action: 'pick',
         payload: {
             pick: 117,
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(save('4-picked-cards'))
@@ -149,8 +149,8 @@ test('the last player to pick a card', () => {
         action: 'pick',
         payload: {
             pick: 31,
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(save('candidates-shown'))

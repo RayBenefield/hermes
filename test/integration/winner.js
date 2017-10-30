@@ -11,19 +11,21 @@ const domain = configureDomain({ db, uuid, random });
 const save = configureSave(flame); // eslint-disable-line no-unused-vars
 beforeEach(() => flame.loadDatabase(undefined));
 
-test('notify all players of the new round', () => {
+test('notify all players of the winner and the new round', () => {
     // Given
-    flame.loadDatabase(databases['new-round']);
+    flame.loadDatabase(databases['winner-decided']);
+    uuid(); // Needed to trigger the next random generation for the new round
 
     // When
     return domain({
-        action: 'round',
-        round: {
-            id: '0-05526803409810505',
+        action: 'winner',
+        payload: {
             game: '0-05526803409810505',
+            round: '0-05526803409810505',
+            winner: 175,
         },
     })
-        .then(save('shown-goal'))
+        .then(save('winner-then-new-round'))
         .then(results => expect({
             results,
             db: flame.get('/'),

@@ -40,8 +40,10 @@ export default ({ db, uuid, random }) => ({
         pick: ['pick', ({ payload: { pick } }) => whiteDeck[pick]],
         vote: ['vote', ({ payload: { vote } }) => whiteDeck[vote]],
         winner: ['winner', ({ payload: { winner } }) => whiteDeck[winner]],
-        winningPlayer: ['winningPlayer', ({ players, candidates, winner }) =>
-            _.find(players, { id: _.findKey(candidates, winner) })],
+        winningPlayer: ['winningPlayer', ({ players, candidates, winner }) => {
+            const keyedPlayers = _.keyBy(players, 'id');
+            return keyedPlayers[_.findKey(candidates, winner)];
+        }],
         votes: ['votes', ({ round: { votes } }) => {
             if (!votes) return {};
             return _.mapValues(votes, v => _.values(v));

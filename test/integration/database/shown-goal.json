@@ -1,7 +1,7 @@
 {
     "games": {
-        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": {
-            "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        "0-05526803409810505": {
+            "id": "0-05526803409810505",
             "players": {
                 "123456": true,
                 "234567": true,
@@ -17,14 +17,14 @@
                 "567890": true
             },
             "rounds": {
-                "0": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"
+                "0": "0-05526803409810505"
             }
         }
     },
     "hands": {
-        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": {
+        "0-05526803409810505": {
             "123456": {
-                "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+                "game": "0-05526803409810505",
                 "player": 123456,
                 "cards": {
                     "268": true,
@@ -40,7 +40,7 @@
                 }
             },
             "234567": {
-                "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+                "game": "0-05526803409810505",
                 "player": 234567,
                 "cards": {
                     "188": true,
@@ -56,7 +56,7 @@
                 }
             },
             "345678": {
-                "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+                "game": "0-05526803409810505",
                 "player": 345678,
                 "cards": {
                     "175": true,
@@ -72,7 +72,7 @@
                 }
             },
             "456789": {
-                "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+                "game": "0-05526803409810505",
                 "player": 456789,
                 "cards": {
                     "117": true,
@@ -88,7 +88,7 @@
                 }
             },
             "567890": {
-                "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+                "game": "0-05526803409810505",
                 "player": 567890,
                 "cards": {
                     "31": true,
@@ -112,7 +112,7 @@
                 "id": 123456,
                 "first_name": "Ray",
                 "games": {
-                    "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true
+                    "0-05526803409810505": true
                 }
             },
             "234567": {
@@ -120,7 +120,7 @@
                 "id": 234567,
                 "first_name": "Hermon",
                 "games": {
-                    "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true
+                    "0-05526803409810505": true
                 }
             },
             "345678": {
@@ -128,7 +128,7 @@
                 "id": 345678,
                 "first_name": "Hermes",
                 "games": {
-                    "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true
+                    "0-05526803409810505": true
                 }
             },
             "456789": {
@@ -136,7 +136,7 @@
                 "id": 456789,
                 "first_name": "Hermshire",
                 "games": {
-                    "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true
+                    "0-05526803409810505": true
                 }
             },
             "567890": {
@@ -144,17 +144,17 @@
                 "id": 567890,
                 "first_name": "Hermda",
                 "games": {
-                    "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": true
+                    "0-05526803409810505": true
                 }
             }
         }
     },
     "queue": {},
     "rounds": {
-        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": {
-            "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": {
-                "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-                "game": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+        "0-05526803409810505": {
+            "0-05526803409810505": {
+                "id": "0-05526803409810505",
+                "game": "0-05526803409810505",
                 "card": {
                     "id": 189,
                     "contents": "I can only express myself through _."

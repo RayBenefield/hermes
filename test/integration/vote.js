@@ -25,8 +25,8 @@ test('1st player votes for first card', () => {
         action: 'vote',
         payload: {
             vote: 175,
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(save('1-vote-1-player-card'))
@@ -50,8 +50,8 @@ test('1st player votes for second card', () => {
         action: 'vote',
         payload: {
             vote: 117,
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(save('2-votes-1-player-card'))
@@ -75,8 +75,8 @@ test('1st player votes for third card', () => {
         action: 'vote',
         payload: {
             vote: 31,
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(save('3-votes-1-player-card'))
@@ -100,8 +100,8 @@ test('2nd player votes for first card', () => {
         action: 'vote',
         payload: {
             vote: 175,
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(save('4-votes-2-players-card'))
@@ -125,8 +125,8 @@ test('2nd player votes for second card', () => {
         action: 'vote',
         payload: {
             vote: 117,
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(save('5-votes-2-players-card'))
@@ -150,8 +150,8 @@ test('2nd player votes for third card', () => {
         action: 'vote',
         payload: {
             vote: 31,
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(save('6-votes-2-players-card'))
@@ -175,8 +175,8 @@ test('3rd player votes for first card', () => {
         action: 'vote',
         payload: {
             vote: 268,
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(save('7-votes-3-players-card'))
@@ -200,8 +200,8 @@ test('3rd player votes for second card', () => {
         action: 'vote',
         payload: {
             vote: 117,
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(save('8-votes-3-players-card'))
@@ -225,8 +225,8 @@ test('3rd player votes for third card', () => {
         action: 'vote',
         payload: {
             vote: 31,
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(save('9-votes-3-players-card'))
@@ -250,8 +250,8 @@ test('4th player votes for first card', () => {
         action: 'vote',
         payload: {
             vote: 175,
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(save('10-votes-4-players-card'))
@@ -275,8 +275,8 @@ test('4th player votes for second card', () => {
         action: 'vote',
         payload: {
             vote: 268,
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(save('11-votes-4-players-card'))
@@ -300,8 +300,8 @@ test('4th player votes for third card', () => {
         action: 'vote',
         payload: {
             vote: 31,
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(save('12-votes-4-players-card'))
@@ -325,8 +325,8 @@ test('5th player votes for first card', () => {
         action: 'vote',
         payload: {
             vote: 175,
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(save('13-votes-5-players-card'))
@@ -350,8 +350,8 @@ test('5th player votes for second card', () => {
         action: 'vote',
         payload: {
             vote: 117,
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(save('14-votes-5-players-card'))
@@ -375,8 +375,8 @@ test('5th player votes for third card', () => {
         action: 'vote',
         payload: {
             vote: 268,
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(save('winner-decided'))

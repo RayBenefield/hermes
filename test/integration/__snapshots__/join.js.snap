@@ -314,8 +314,8 @@ exports[`new game started from full queue 1`] = `
 Object {
   "db": Object {
     "games": Object {
-      "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": Object {
-        "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "0-05526803409810505": Object {
+        "id": "0-05526803409810505",
         "notified_players": Object {
           "567890": true,
         },

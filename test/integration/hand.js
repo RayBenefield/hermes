@@ -24,8 +24,8 @@ test('show a hand with pickable cards', () => {
         lead,
         action: 'hand',
         payload: {
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(results => expect({
@@ -47,8 +47,8 @@ test('show a hand after picking a card', () => {
         lead,
         action: 'hand',
         payload: {
-            game: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-            round: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            game: '0-05526803409810505',
+            round: '0-05526803409810505',
         },
     })
         .then(results => expect({

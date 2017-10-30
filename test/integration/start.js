@@ -19,7 +19,7 @@ test('notify all players of new game', () => {
     return domain({
         action: 'start',
         game: {
-            id: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+            id: '0-05526803409810505',
             players: {
                 123456: true,
                 234567: true,
