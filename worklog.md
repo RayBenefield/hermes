@@ -1,5 +1,10 @@
 # Work Log
 
+## #99
+
+Just an entry for the second part of my double session.
+
+
 ## #98
 
 Finally finished the work needed to address messages to multiple players. It is
