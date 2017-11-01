@@ -20,7 +20,25 @@ Object {
       "id": 123456,
       "platform": "facebook",
     },
-    "messages": Array [
+    "messages": Object {
+      "123456": Array [
+        Object {
+          "payload": Object {
+            "first_name": "Ray",
+            "id": 123456,
+            "platform": "facebook",
+          },
+          "player": 123456,
+          "type": "welcome-message",
+        },
+        Object {
+          "player": 123456,
+          "type": "instructions-message",
+        },
+      ],
+    },
+    "player": undefined,
+    "unaddressedMessages": Array [
       Object {
         "payload": Object {
           "first_name": "Ray",
@@ -33,7 +51,6 @@ Object {
         "type": "instructions-message",
       },
     ],
-    "player": undefined,
   },
 }
 `;
@@ -78,7 +95,25 @@ Object {
       "id": 567890,
       "platform": "facebook",
     },
-    "messages": Array [
+    "messages": Object {
+      "567890": Array [
+        Object {
+          "payload": Object {
+            "first_name": "Hermda",
+            "id": 567890,
+            "platform": "facebook",
+          },
+          "player": 567890,
+          "type": "welcome-message",
+        },
+        Object {
+          "player": 567890,
+          "type": "instructions-message",
+        },
+      ],
+    },
+    "player": null,
+    "unaddressedMessages": Array [
       Object {
         "payload": Object {
           "first_name": "Hermda",
@@ -91,7 +126,6 @@ Object {
         "type": "instructions-message",
       },
     ],
-    "player": null,
   },
 }
 `;
@@ -131,7 +165,25 @@ Object {
       "id": 456789,
       "platform": "facebook",
     },
-    "messages": Array [
+    "messages": Object {
+      "456789": Array [
+        Object {
+          "payload": Object {
+            "first_name": "Hermshire",
+            "id": 456789,
+            "platform": "facebook",
+          },
+          "player": 456789,
+          "type": "welcome-message",
+        },
+        Object {
+          "player": 456789,
+          "type": "instructions-message",
+        },
+      ],
+    },
+    "player": null,
+    "unaddressedMessages": Array [
       Object {
         "payload": Object {
           "first_name": "Hermshire",
@@ -144,7 +196,6 @@ Object {
         "type": "instructions-message",
       },
     ],
-    "player": null,
   },
 }
 `;
@@ -174,7 +225,25 @@ Object {
       "id": 234567,
       "platform": "facebook",
     },
-    "messages": Array [
+    "messages": Object {
+      "234567": Array [
+        Object {
+          "payload": Object {
+            "first_name": "Hermon",
+            "id": 234567,
+            "platform": "facebook",
+          },
+          "player": 234567,
+          "type": "welcome-message",
+        },
+        Object {
+          "player": 234567,
+          "type": "instructions-message",
+        },
+      ],
+    },
+    "player": null,
+    "unaddressedMessages": Array [
       Object {
         "payload": Object {
           "first_name": "Hermon",
@@ -187,7 +256,6 @@ Object {
         "type": "instructions-message",
       },
     ],
-    "player": null,
   },
 }
 `;
@@ -222,7 +290,25 @@ Object {
       "id": 345678,
       "platform": "facebook",
     },
-    "messages": Array [
+    "messages": Object {
+      "345678": Array [
+        Object {
+          "payload": Object {
+            "first_name": "Hermes",
+            "id": 345678,
+            "platform": "facebook",
+          },
+          "player": 345678,
+          "type": "welcome-message",
+        },
+        Object {
+          "player": 345678,
+          "type": "instructions-message",
+        },
+      ],
+    },
+    "player": null,
+    "unaddressedMessages": Array [
       Object {
         "payload": Object {
           "first_name": "Hermes",
@@ -235,7 +321,6 @@ Object {
         "type": "instructions-message",
       },
     ],
-    "player": null,
   },
 }
 `;
@@ -258,7 +343,31 @@ Object {
       "id": 123456,
       "platform": "facebook",
     },
-    "messages": Array [
+    "messages": Object {
+      "123456": Array [
+        Object {
+          "payload": Object {
+            "lead": Object {
+              "id": 123456,
+              "platform": "facebook",
+            },
+            "player": Object {
+              "first_name": "Ray",
+              "id": 123456,
+              "platform": "facebook",
+            },
+          },
+          "player": 123456,
+          "type": "welcome-back-message",
+        },
+      ],
+    },
+    "player": Object {
+      "first_name": "Ray",
+      "id": 123456,
+      "platform": "facebook",
+    },
+    "unaddressedMessages": Array [
       Object {
         "payload": Object {
           "lead": Object {
@@ -274,11 +383,6 @@ Object {
         "type": "welcome-back-message",
       },
     ],
-    "player": Object {
-      "first_name": "Ray",
-      "id": 123456,
-      "platform": "facebook",
-    },
   },
 }
 `;

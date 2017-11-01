@@ -44,12 +44,11 @@ export default ({ verifytoken, accesstoken }) => {
             }
             return { action: 'unknown' };
         },
-        transform: ({ lead, messages }) => [].concat(...messages.map(
+        transform: ({ messages }) => _.mapValues(messages, (msgs, lead) => [].concat(...msgs.map(
             ({ type, payload }) => {
                 if (type in transformers) return transformers[type]({ ...payload, lead });
                 return transformers.text({ text: `There's no message setup for [${type}]` });
-            }
-        )),
+            }))),
         sendMessages: messages => Promise.all(
             _.map(messages, (msgs, recipient) => {
                 const messagePromises = msgs

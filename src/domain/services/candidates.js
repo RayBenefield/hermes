@@ -1,7 +1,8 @@
 import _ from 'lodash';
 
-export default ({ candidates, player: { id }, game, round }) => [
-    {
+export default ({ candidates, unnotifiedPlayers, game, round }) => unnotifiedPlayers
+    .map(({ id }) => ({
+        player: id,
         type: 'notify-candidates-ready-message',
         payload: {
             game: game.id,
@@ -10,5 +11,4 @@ export default ({ candidates, player: { id }, game, round }) => [
                 _.pickBy(candidates, (card, player) => player !== id)
             ),
         },
-    },
-];
+    }));

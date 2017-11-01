@@ -190,19 +190,78 @@ Object {
         "567890": true,
       },
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "card": Object {
-            "contents": "I can only express myself through _.",
-            "id": 189,
+    "messages": Object {
+      "123456": Array [
+        Object {
+          "payload": Object {
+            "card": Object {
+              "contents": "I can only express myself through _.",
+              "id": 189,
+            },
+            "game": "0-05526803409810505",
+            "round": "0-05526803409810505",
           },
-          "game": "0-05526803409810505",
-          "round": "0-05526803409810505",
+          "player": 123456,
+          "type": "new-goal-message",
         },
-        "type": "new-goal-message",
-      },
-    ],
+      ],
+      "234567": Array [
+        Object {
+          "payload": Object {
+            "card": Object {
+              "contents": "I can only express myself through _.",
+              "id": 189,
+            },
+            "game": "0-05526803409810505",
+            "round": "0-05526803409810505",
+          },
+          "player": 234567,
+          "type": "new-goal-message",
+        },
+      ],
+      "345678": Array [
+        Object {
+          "payload": Object {
+            "card": Object {
+              "contents": "I can only express myself through _.",
+              "id": 189,
+            },
+            "game": "0-05526803409810505",
+            "round": "0-05526803409810505",
+          },
+          "player": 345678,
+          "type": "new-goal-message",
+        },
+      ],
+      "456789": Array [
+        Object {
+          "payload": Object {
+            "card": Object {
+              "contents": "I can only express myself through _.",
+              "id": 189,
+            },
+            "game": "0-05526803409810505",
+            "round": "0-05526803409810505",
+          },
+          "player": 456789,
+          "type": "new-goal-message",
+        },
+      ],
+      "567890": Array [
+        Object {
+          "payload": Object {
+            "card": Object {
+              "contents": "I can only express myself through _.",
+              "id": 189,
+            },
+            "game": "0-05526803409810505",
+            "round": "0-05526803409810505",
+          },
+          "player": 567890,
+          "type": "new-goal-message",
+        },
+      ],
+    },
     "players": Array [
       Object {
         "first_name": "Ray",
@@ -249,6 +308,68 @@ Object {
       "game": "0-05526803409810505",
       "id": "0-05526803409810505",
     },
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "card": Object {
+            "contents": "I can only express myself through _.",
+            "id": 189,
+          },
+          "game": "0-05526803409810505",
+          "round": "0-05526803409810505",
+        },
+        "player": 123456,
+        "type": "new-goal-message",
+      },
+      Object {
+        "payload": Object {
+          "card": Object {
+            "contents": "I can only express myself through _.",
+            "id": 189,
+          },
+          "game": "0-05526803409810505",
+          "round": "0-05526803409810505",
+        },
+        "player": 234567,
+        "type": "new-goal-message",
+      },
+      Object {
+        "payload": Object {
+          "card": Object {
+            "contents": "I can only express myself through _.",
+            "id": 189,
+          },
+          "game": "0-05526803409810505",
+          "round": "0-05526803409810505",
+        },
+        "player": 345678,
+        "type": "new-goal-message",
+      },
+      Object {
+        "payload": Object {
+          "card": Object {
+            "contents": "I can only express myself through _.",
+            "id": 189,
+          },
+          "game": "0-05526803409810505",
+          "round": "0-05526803409810505",
+        },
+        "player": 456789,
+        "type": "new-goal-message",
+      },
+      Object {
+        "payload": Object {
+          "card": Object {
+            "contents": "I can only express myself through _.",
+            "id": 189,
+          },
+          "game": "0-05526803409810505",
+          "round": "0-05526803409810505",
+        },
+        "player": 567890,
+        "type": "new-goal-message",
+      },
+    ],
   },
 }
 `;

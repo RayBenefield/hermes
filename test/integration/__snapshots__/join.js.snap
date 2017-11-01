@@ -45,20 +45,23 @@ Object {
       "id": 456789,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
+    "messages": Object {
+      "456789": Array [
+        Object {
+          "payload": Object {
+            "player": 456789,
+            "queue": Array [
+              "123456",
+              "234567",
+              "345678",
+              456789,
+            ],
+          },
           "player": 456789,
-          "queue": Array [
-            "123456",
-            "234567",
-            "345678",
-            456789,
-          ],
+          "type": "queue-joined-message",
         },
-        "type": "queue-joined-message",
-      },
-    ],
+      ],
+    },
     "player": Object {
       "first_name": "Hermshire",
       "id": 456789,
@@ -85,6 +88,20 @@ Object {
       "123456",
       "234567",
       "345678",
+    ],
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "player": 456789,
+          "queue": Array [
+            "123456",
+            "234567",
+            "345678",
+            456789,
+          ],
+        },
+        "type": "queue-joined-message",
+      },
     ],
   },
 }
@@ -132,7 +149,28 @@ Object {
       "id": 123456,
       "platform": "facebook",
     },
-    "messages": Array [
+    "messages": Object {
+      "123456": Array [
+        Object {
+          "payload": Object {
+            "player": 123456,
+            "queue": Array [
+              123456,
+            ],
+          },
+          "player": 123456,
+          "type": "queue-joined-message",
+        },
+      ],
+    },
+    "player": Object {
+      "first_name": "Ray",
+      "id": 123456,
+      "platform": "facebook",
+    },
+    "players": Array [],
+    "queue": Array [],
+    "unaddressedMessages": Array [
       Object {
         "payload": Object {
           "player": 123456,
@@ -143,13 +181,6 @@ Object {
         "type": "queue-joined-message",
       },
     ],
-    "player": Object {
-      "first_name": "Ray",
-      "id": 123456,
-      "platform": "facebook",
-    },
-    "players": Array [],
-    "queue": Array [],
   },
 }
 `;
@@ -197,18 +228,21 @@ Object {
       "id": 234567,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
+    "messages": Object {
+      "234567": Array [
+        Object {
+          "payload": Object {
+            "player": 234567,
+            "queue": Array [
+              "123456",
+              234567,
+            ],
+          },
           "player": 234567,
-          "queue": Array [
-            "123456",
-            234567,
-          ],
+          "type": "queue-joined-message",
         },
-        "type": "queue-joined-message",
-      },
-    ],
+      ],
+    },
     "player": Object {
       "first_name": "Hermon",
       "id": 234567,
@@ -223,6 +257,18 @@ Object {
     ],
     "queue": Array [
       "123456",
+    ],
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "player": 234567,
+          "queue": Array [
+            "123456",
+            234567,
+          ],
+        },
+        "type": "queue-joined-message",
+      },
     ],
   },
 }
@@ -272,19 +318,22 @@ Object {
       "id": 345678,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
+    "messages": Object {
+      "345678": Array [
+        Object {
+          "payload": Object {
+            "player": 345678,
+            "queue": Array [
+              "123456",
+              "234567",
+              345678,
+            ],
+          },
           "player": 345678,
-          "queue": Array [
-            "123456",
-            "234567",
-            345678,
-          ],
+          "type": "queue-joined-message",
         },
-        "type": "queue-joined-message",
-      },
-    ],
+      ],
+    },
     "player": Object {
       "first_name": "Hermes",
       "id": 345678,
@@ -305,6 +354,19 @@ Object {
     "queue": Array [
       "123456",
       "234567",
+    ],
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "player": 345678,
+          "queue": Array [
+            "123456",
+            "234567",
+            345678,
+          ],
+        },
+        "type": "queue-joined-message",
+      },
     ],
   },
 }
@@ -365,35 +427,38 @@ Object {
       "id": 567890,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "players": Array [
-            Object {
-              "first_name": "Hermda",
-              "id": 567890,
-            },
-            Object {
-              "first_name": "Ray",
-              "id": 123456,
-            },
-            Object {
-              "first_name": "Hermon",
-              "id": 234567,
-            },
-            Object {
-              "first_name": "Hermes",
-              "id": 345678,
-            },
-            Object {
-              "first_name": "Hermshire",
-              "id": 456789,
-            },
-          ],
+    "messages": Object {
+      "567890": Array [
+        Object {
+          "payload": Object {
+            "players": Array [
+              Object {
+                "first_name": "Hermda",
+                "id": 567890,
+              },
+              Object {
+                "first_name": "Ray",
+                "id": 123456,
+              },
+              Object {
+                "first_name": "Hermon",
+                "id": 234567,
+              },
+              Object {
+                "first_name": "Hermes",
+                "id": 345678,
+              },
+              Object {
+                "first_name": "Hermshire",
+                "id": 456789,
+              },
+            ],
+          },
+          "player": 567890,
+          "type": "game-started-message",
         },
-        "type": "game-started-message",
-      },
-    ],
+      ],
+    },
     "player": Object {
       "first_name": "Hermda",
       "id": 567890,
@@ -427,6 +492,35 @@ Object {
       "345678",
       "456789",
     ],
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "players": Array [
+            Object {
+              "first_name": "Hermda",
+              "id": 567890,
+            },
+            Object {
+              "first_name": "Ray",
+              "id": 123456,
+            },
+            Object {
+              "first_name": "Hermon",
+              "id": 234567,
+            },
+            Object {
+              "first_name": "Hermes",
+              "id": 345678,
+            },
+            Object {
+              "first_name": "Hermshire",
+              "id": 456789,
+            },
+          ],
+        },
+        "type": "game-started-message",
+      },
+    ],
   },
 }
 `;
@@ -452,16 +546,19 @@ Object {
       "id": 123456,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "queue": Array [
-            "123456",
-          ],
+    "messages": Object {
+      "123456": Array [
+        Object {
+          "payload": Object {
+            "queue": Array [
+              "123456",
+            ],
+          },
+          "player": 123456,
+          "type": "already-in-queue-message",
         },
-        "type": "already-in-queue-message",
-      },
-    ],
+      ],
+    },
     "player": Object {
       "id": 123456,
       "platform": "facebook",
@@ -474,6 +571,16 @@ Object {
     ],
     "queue": Array [
       "123456",
+    ],
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "queue": Array [
+            "123456",
+          ],
+        },
+        "type": "already-in-queue-message",
+      },
     ],
   },
 }
@@ -488,14 +595,22 @@ Object {
       "id": 123456,
       "platform": "facebook",
     },
-    "messages": Array [
+    "messages": Object {
+      "123456": Array [
+        Object {
+          "player": 123456,
+          "type": "player-does-not-exist-message",
+        },
+      ],
+    },
+    "player": undefined,
+    "players": Array [],
+    "queue": Array [],
+    "unaddressedMessages": Array [
       Object {
         "type": "player-does-not-exist-message",
       },
     ],
-    "player": undefined,
-    "players": Array [],
-    "queue": Array [],
   },
 }
 `;

@@ -1,5 +1,4 @@
 /* eslint-disable max-lines */
-import _ from 'lodash';
 import uuid from 'uuid/v4';
 import admin from 'firebase-admin';
 import transmute from 'transmutation';
@@ -19,10 +18,14 @@ const db = process.env.NODE_ENV === 'dev-local'
     : configureFirebaseDb(admin.database());
 
 const fb = configureFacebook(config.facebook);
-const domain = configureDomain({ db, uuid, random: Math.random });
+const domain = configureDomain({
+    db,
+    uuid,
+    random: Math.random,
+    delay: time => () => new Promise(res => setTimeout(() => res(), time)),
+});
 
-const channelRouter =
-    configureChannelRouter({ fb, domain });
+const channelRouter = configureChannelRouter({ fb, domain });
 
 // Handle incoming messages
 exports.channels = functions.https.onRequest(channelRouter);
@@ -33,12 +36,8 @@ exports.gameStarted = functions.database.ref('/games/{id}')
         game: event.data.val(),
     })
         .extend(domain)
-        .do(({ unnotifiedPlayers, messages }) => Promise.all(
-            unnotifiedPlayers.map(lead => transmute({ lead, messages })
-                .extend('facebookMessages', fb.transform)
-                .do(({ facebookMessages }) =>
-                    fb.sendMessages({ [lead.id]: facebookMessages })))))
-    );
+        .extend('facebookMessages', fb.transform)
+        .do(({ facebookMessages }) => fb.sendMessages(facebookMessages)));
 
 exports.roundStarted = functions.database.ref('/rounds/{gameId}/{id}')
     .onCreate(event => transmute({
@@ -46,11 +45,9 @@ exports.roundStarted = functions.database.ref('/rounds/{gameId}/{id}')
         round: event.data.val(),
     })
         .extend(domain)
-        .do(({ players, messages }) => Promise.all(
-            players.map(lead => transmute({ lead, messages })
-                .extend('facebookMessages', fb.transform)
-                .do(({ facebookMessages }) =>
-                    fb.sendMessages({ [lead.id]: facebookMessages }))))));
+        .extend('facebookMessages', fb.transform)
+        .do(({ facebookMessages }) =>
+            fb.sendMessages(facebookMessages)));
 
 exports.votingStarted = functions.database.ref('/candidates/{gameId}/{roundId}')
     .onCreate(event => transmute({
@@ -61,26 +58,9 @@ exports.votingStarted = functions.database.ref('/candidates/{gameId}/{roundId}')
             notified: event.data.val().notified_players,
         },
     })
-        .extend('game', ({ games, round, payload: { game: gameId } = {} }) => {
-            if (gameId && games) return games.find(g => g.id === gameId);
-            if (round && games) return games.find(g => g.id === round.game);
-            if (gameId) return db.get(`games/${gameId}`);
-            if (round) return db.get(`games/${round.game}`);
-            return undefined;
-        })
-        .extend('players', ({ game: { players } }) => Promise.all(_.keys(players)
-            .map(p => db.get(`players/facebook/${p}`))))
-        .extend('unnotifiedPlayers', ({ players, payload: { notified } }) =>
-            players.filter(({ id }) => !(id in notified)))
-        .doEach('unnotifiedPlayers', (snowball, unnotifiedPlayer) =>
-            transmute(snowball)
-                .extend('lead', unnotifiedPlayer)
-                .extend('player', unnotifiedPlayer)
-                .extend(domain)
-                .extend('facebookMessages', fb.transform)
-                .do(({ lead, facebookMessages }) =>
-                    fb.sendMessages({ [lead.id]: facebookMessages })))
-    );
+        .extend(domain)
+        .extend('facebookMessages', fb.transform)
+        .do(({ facebookMessages }) => fb.sendMessages(facebookMessages)));
 
 exports.winnerDecided = functions.database.ref('/rounds/{gameId}/{roundId}/winner')
     .onCreate(event => transmute({
@@ -92,8 +72,6 @@ exports.winnerDecided = functions.database.ref('/rounds/{gameId}/{roundId}/winne
         },
     })
         .extend(domain)
-        .do(({ players, messages }) => Promise.all(
-            players.map(lead => transmute({ lead, messages })
-                .extend('facebookMessages', fb.transform)
-                .do(({ facebookMessages }) =>
-                    fb.sendMessages({ [lead.id]: facebookMessages }))))));
+        .extend('facebookMessages', fb.transform)
+        .do(({ facebookMessages }) => fb.sendMessages(facebookMessages))
+    );

@@ -12,8 +12,8 @@ export default ({ fb, domain }) => {
         })
         .extend(domain)
         .extend('facebookMessages', fb.transform)
-        .then(({ lead: { id }, facebookMessages }) =>
-            fb.sendMessages({ [id]: facebookMessages }))
+        .then(({ facebookMessages }) =>
+            fb.sendMessages(facebookMessages))
     );
     router.get('/facebook', (req, res) => {
         try { fb.verifyToken(req.query); } // eslint-disable-line brace-style

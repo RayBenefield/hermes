@@ -240,40 +240,43 @@ Object {
       "id": 123456,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "game": "0-05526803409810505",
-          "ranked": Array [
-            Object {
-              "contents": "Skeletor.",
-              "id": 175,
-            },
-          ],
-          "round": "0-05526803409810505",
-          "unranked": Array [
-            Object {
-              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-              "id": 268,
-            },
-            Object {
-              "contents": "Keg stands.",
-              "id": 188,
-            },
-            Object {
-              "contents": "Sniffing glue.",
-              "id": 117,
-            },
-            Object {
-              "contents": "The forbidden fruit.",
-              "id": 31,
-            },
-          ],
-          "vote": "345678",
+    "messages": Object {
+      "123456": Array [
+        Object {
+          "payload": Object {
+            "game": "0-05526803409810505",
+            "ranked": Array [
+              Object {
+                "contents": "Skeletor.",
+                "id": 175,
+              },
+            ],
+            "round": "0-05526803409810505",
+            "unranked": Array [
+              Object {
+                "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+                "id": 268,
+              },
+              Object {
+                "contents": "Keg stands.",
+                "id": 188,
+              },
+              Object {
+                "contents": "Sniffing glue.",
+                "id": 117,
+              },
+              Object {
+                "contents": "The forbidden fruit.",
+                "id": 31,
+              },
+            ],
+            "vote": "345678",
+          },
+          "player": 123456,
+          "type": "show-ranked-list",
         },
-        "type": "show-ranked-list",
-      },
-    ],
+      ],
+    },
     "payload": Object {
       "game": "0-05526803409810505",
       "round": "0-05526803409810505",
@@ -345,6 +348,40 @@ Object {
       "game": "0-05526803409810505",
       "id": "0-05526803409810505",
     },
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "game": "0-05526803409810505",
+          "ranked": Array [
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+          ],
+          "round": "0-05526803409810505",
+          "unranked": Array [
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
+            },
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+          ],
+          "vote": "345678",
+        },
+        "type": "show-ranked-list",
+      },
+    ],
     "vote": Object {
       "contents": "Skeletor.",
       "id": 175,
@@ -595,40 +632,43 @@ Object {
       "id": 123456,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "game": "0-05526803409810505",
-          "ranked": Array [
-            Object {
-              "contents": "Skeletor.",
-              "id": 175,
-            },
-            Object {
-              "contents": "Sniffing glue.",
-              "id": 117,
-            },
-          ],
-          "round": "0-05526803409810505",
-          "unranked": Array [
-            Object {
-              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-              "id": 268,
-            },
-            Object {
-              "contents": "Keg stands.",
-              "id": 188,
-            },
-            Object {
-              "contents": "The forbidden fruit.",
-              "id": 31,
-            },
-          ],
-          "vote": "456789",
+    "messages": Object {
+      "123456": Array [
+        Object {
+          "payload": Object {
+            "game": "0-05526803409810505",
+            "ranked": Array [
+              Object {
+                "contents": "Skeletor.",
+                "id": 175,
+              },
+              Object {
+                "contents": "Sniffing glue.",
+                "id": 117,
+              },
+            ],
+            "round": "0-05526803409810505",
+            "unranked": Array [
+              Object {
+                "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+                "id": 268,
+              },
+              Object {
+                "contents": "Keg stands.",
+                "id": 188,
+              },
+              Object {
+                "contents": "The forbidden fruit.",
+                "id": 31,
+              },
+            ],
+            "vote": "456789",
+          },
+          "player": 123456,
+          "type": "show-ranked-list",
         },
-        "type": "show-ranked-list",
-      },
-    ],
+      ],
+    },
     "payload": Object {
       "game": "0-05526803409810505",
       "round": "0-05526803409810505",
@@ -710,6 +750,40 @@ Object {
         },
       },
     },
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "game": "0-05526803409810505",
+          "ranked": Array [
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+          ],
+          "round": "0-05526803409810505",
+          "unranked": Array [
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
+            },
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+          ],
+          "vote": "456789",
+        },
+        "type": "show-ranked-list",
+      },
+    ],
     "vote": Object {
       "contents": "Sniffing glue.",
       "id": 117,
@@ -965,38 +1039,41 @@ Object {
       "id": 123456,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "game": "0-05526803409810505",
-          "ranked": Array [
-            Object {
-              "contents": "Skeletor.",
-              "id": 175,
-            },
-            Object {
-              "contents": "Sniffing glue.",
-              "id": 117,
-            },
-            Object {
-              "contents": "The forbidden fruit.",
-              "id": 31,
-            },
-            Object {
-              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-              "id": 268,
-            },
-            Object {
-              "contents": "Keg stands.",
-              "id": 188,
-            },
-          ],
-          "round": "0-05526803409810505",
-          "vote": "567890",
+    "messages": Object {
+      "123456": Array [
+        Object {
+          "payload": Object {
+            "game": "0-05526803409810505",
+            "ranked": Array [
+              Object {
+                "contents": "Skeletor.",
+                "id": 175,
+              },
+              Object {
+                "contents": "Sniffing glue.",
+                "id": 117,
+              },
+              Object {
+                "contents": "The forbidden fruit.",
+                "id": 31,
+              },
+              Object {
+                "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+                "id": 268,
+              },
+              Object {
+                "contents": "Keg stands.",
+                "id": 188,
+              },
+            ],
+            "round": "0-05526803409810505",
+            "vote": "567890",
+          },
+          "player": 123456,
+          "type": "show-votes-message",
         },
-        "type": "show-votes-message",
-      },
-    ],
+      ],
+    },
     "payload": Object {
       "game": "0-05526803409810505",
       "round": "0-05526803409810505",
@@ -1083,6 +1160,38 @@ Object {
         },
       },
     },
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "game": "0-05526803409810505",
+          "ranked": Array [
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
+            },
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+          ],
+          "round": "0-05526803409810505",
+          "vote": "567890",
+        },
+        "type": "show-votes-message",
+      },
+    ],
     "vote": Object {
       "contents": "The forbidden fruit.",
       "id": 31,
@@ -1342,40 +1451,43 @@ Object {
       "id": 234567,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "game": "0-05526803409810505",
-          "ranked": Array [
-            Object {
-              "contents": "Skeletor.",
-              "id": 175,
-            },
-          ],
-          "round": "0-05526803409810505",
-          "unranked": Array [
-            Object {
-              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-              "id": 268,
-            },
-            Object {
-              "contents": "Keg stands.",
-              "id": 188,
-            },
-            Object {
-              "contents": "Sniffing glue.",
-              "id": 117,
-            },
-            Object {
-              "contents": "The forbidden fruit.",
-              "id": 31,
-            },
-          ],
-          "vote": "345678",
+    "messages": Object {
+      "234567": Array [
+        Object {
+          "payload": Object {
+            "game": "0-05526803409810505",
+            "ranked": Array [
+              Object {
+                "contents": "Skeletor.",
+                "id": 175,
+              },
+            ],
+            "round": "0-05526803409810505",
+            "unranked": Array [
+              Object {
+                "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+                "id": 268,
+              },
+              Object {
+                "contents": "Keg stands.",
+                "id": 188,
+              },
+              Object {
+                "contents": "Sniffing glue.",
+                "id": 117,
+              },
+              Object {
+                "contents": "The forbidden fruit.",
+                "id": 31,
+              },
+            ],
+            "vote": "345678",
+          },
+          "player": 234567,
+          "type": "show-ranked-list",
         },
-        "type": "show-ranked-list",
-      },
-    ],
+      ],
+    },
     "payload": Object {
       "game": "0-05526803409810505",
       "round": "0-05526803409810505",
@@ -1454,6 +1566,40 @@ Object {
         },
       },
     },
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "game": "0-05526803409810505",
+          "ranked": Array [
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+          ],
+          "round": "0-05526803409810505",
+          "unranked": Array [
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
+            },
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+          ],
+          "vote": "345678",
+        },
+        "type": "show-ranked-list",
+      },
+    ],
     "vote": Object {
       "contents": "Skeletor.",
       "id": 175,
@@ -1715,40 +1861,43 @@ Object {
       "id": 234567,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "game": "0-05526803409810505",
-          "ranked": Array [
-            Object {
-              "contents": "Skeletor.",
-              "id": 175,
-            },
-            Object {
-              "contents": "Sniffing glue.",
-              "id": 117,
-            },
-          ],
-          "round": "0-05526803409810505",
-          "unranked": Array [
-            Object {
-              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-              "id": 268,
-            },
-            Object {
-              "contents": "Keg stands.",
-              "id": 188,
-            },
-            Object {
-              "contents": "The forbidden fruit.",
-              "id": 31,
-            },
-          ],
-          "vote": "456789",
+    "messages": Object {
+      "234567": Array [
+        Object {
+          "payload": Object {
+            "game": "0-05526803409810505",
+            "ranked": Array [
+              Object {
+                "contents": "Skeletor.",
+                "id": 175,
+              },
+              Object {
+                "contents": "Sniffing glue.",
+                "id": 117,
+              },
+            ],
+            "round": "0-05526803409810505",
+            "unranked": Array [
+              Object {
+                "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+                "id": 268,
+              },
+              Object {
+                "contents": "Keg stands.",
+                "id": 188,
+              },
+              Object {
+                "contents": "The forbidden fruit.",
+                "id": 31,
+              },
+            ],
+            "vote": "456789",
+          },
+          "player": 234567,
+          "type": "show-ranked-list",
         },
-        "type": "show-ranked-list",
-      },
-    ],
+      ],
+    },
     "payload": Object {
       "game": "0-05526803409810505",
       "round": "0-05526803409810505",
@@ -1835,6 +1984,40 @@ Object {
         },
       },
     },
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "game": "0-05526803409810505",
+          "ranked": Array [
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+          ],
+          "round": "0-05526803409810505",
+          "unranked": Array [
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
+            },
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+          ],
+          "vote": "456789",
+        },
+        "type": "show-ranked-list",
+      },
+    ],
     "vote": Object {
       "contents": "Sniffing glue.",
       "id": 117,
@@ -2100,38 +2283,41 @@ Object {
       "id": 234567,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "game": "0-05526803409810505",
-          "ranked": Array [
-            Object {
-              "contents": "Skeletor.",
-              "id": 175,
-            },
-            Object {
-              "contents": "Sniffing glue.",
-              "id": 117,
-            },
-            Object {
-              "contents": "The forbidden fruit.",
-              "id": 31,
-            },
-            Object {
-              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-              "id": 268,
-            },
-            Object {
-              "contents": "Keg stands.",
-              "id": 188,
-            },
-          ],
-          "round": "0-05526803409810505",
-          "vote": "567890",
+    "messages": Object {
+      "234567": Array [
+        Object {
+          "payload": Object {
+            "game": "0-05526803409810505",
+            "ranked": Array [
+              Object {
+                "contents": "Skeletor.",
+                "id": 175,
+              },
+              Object {
+                "contents": "Sniffing glue.",
+                "id": 117,
+              },
+              Object {
+                "contents": "The forbidden fruit.",
+                "id": 31,
+              },
+              Object {
+                "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+                "id": 268,
+              },
+              Object {
+                "contents": "Keg stands.",
+                "id": 188,
+              },
+            ],
+            "round": "0-05526803409810505",
+            "vote": "567890",
+          },
+          "player": 234567,
+          "type": "show-votes-message",
         },
-        "type": "show-votes-message",
-      },
-    ],
+      ],
+    },
     "payload": Object {
       "game": "0-05526803409810505",
       "round": "0-05526803409810505",
@@ -2223,6 +2409,38 @@ Object {
         },
       },
     },
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "game": "0-05526803409810505",
+          "ranked": Array [
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
+            },
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+          ],
+          "round": "0-05526803409810505",
+          "vote": "567890",
+        },
+        "type": "show-votes-message",
+      },
+    ],
     "vote": Object {
       "contents": "The forbidden fruit.",
       "id": 31,
@@ -2492,40 +2710,43 @@ Object {
       "id": 345678,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "game": "0-05526803409810505",
-          "ranked": Array [
-            Object {
-              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-              "id": 268,
-            },
-          ],
-          "round": "0-05526803409810505",
-          "unranked": Array [
-            Object {
-              "contents": "Keg stands.",
-              "id": 188,
-            },
-            Object {
-              "contents": "Skeletor.",
-              "id": 175,
-            },
-            Object {
-              "contents": "Sniffing glue.",
-              "id": 117,
-            },
-            Object {
-              "contents": "The forbidden fruit.",
-              "id": 31,
-            },
-          ],
-          "vote": "123456",
+    "messages": Object {
+      "345678": Array [
+        Object {
+          "payload": Object {
+            "game": "0-05526803409810505",
+            "ranked": Array [
+              Object {
+                "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+                "id": 268,
+              },
+            ],
+            "round": "0-05526803409810505",
+            "unranked": Array [
+              Object {
+                "contents": "Keg stands.",
+                "id": 188,
+              },
+              Object {
+                "contents": "Skeletor.",
+                "id": 175,
+              },
+              Object {
+                "contents": "Sniffing glue.",
+                "id": 117,
+              },
+              Object {
+                "contents": "The forbidden fruit.",
+                "id": 31,
+              },
+            ],
+            "vote": "123456",
+          },
+          "player": 345678,
+          "type": "show-ranked-list",
         },
-        "type": "show-ranked-list",
-      },
-    ],
+      ],
+    },
     "payload": Object {
       "game": "0-05526803409810505",
       "round": "0-05526803409810505",
@@ -2609,6 +2830,40 @@ Object {
         },
       },
     },
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "game": "0-05526803409810505",
+          "ranked": Array [
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
+            },
+          ],
+          "round": "0-05526803409810505",
+          "unranked": Array [
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+          ],
+          "vote": "123456",
+        },
+        "type": "show-ranked-list",
+      },
+    ],
     "vote": Object {
       "contents": "Dropping a chandelier on your enemies and riding the rope up.",
       "id": 268,
@@ -2880,40 +3135,43 @@ Object {
       "id": 345678,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "game": "0-05526803409810505",
-          "ranked": Array [
-            Object {
-              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-              "id": 268,
-            },
-            Object {
-              "contents": "Sniffing glue.",
-              "id": 117,
-            },
-          ],
-          "round": "0-05526803409810505",
-          "unranked": Array [
-            Object {
-              "contents": "Keg stands.",
-              "id": 188,
-            },
-            Object {
-              "contents": "Skeletor.",
-              "id": 175,
-            },
-            Object {
-              "contents": "The forbidden fruit.",
-              "id": 31,
-            },
-          ],
-          "vote": "456789",
+    "messages": Object {
+      "345678": Array [
+        Object {
+          "payload": Object {
+            "game": "0-05526803409810505",
+            "ranked": Array [
+              Object {
+                "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+                "id": 268,
+              },
+              Object {
+                "contents": "Sniffing glue.",
+                "id": 117,
+              },
+            ],
+            "round": "0-05526803409810505",
+            "unranked": Array [
+              Object {
+                "contents": "Keg stands.",
+                "id": 188,
+              },
+              Object {
+                "contents": "Skeletor.",
+                "id": 175,
+              },
+              Object {
+                "contents": "The forbidden fruit.",
+                "id": 31,
+              },
+            ],
+            "vote": "456789",
+          },
+          "player": 345678,
+          "type": "show-ranked-list",
         },
-        "type": "show-ranked-list",
-      },
-    ],
+      ],
+    },
     "payload": Object {
       "game": "0-05526803409810505",
       "round": "0-05526803409810505",
@@ -3005,6 +3263,40 @@ Object {
         },
       },
     },
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "game": "0-05526803409810505",
+          "ranked": Array [
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+          ],
+          "round": "0-05526803409810505",
+          "unranked": Array [
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+          ],
+          "vote": "456789",
+        },
+        "type": "show-ranked-list",
+      },
+    ],
     "vote": Object {
       "contents": "Sniffing glue.",
       "id": 117,
@@ -3280,38 +3572,41 @@ Object {
       "id": 345678,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "game": "0-05526803409810505",
-          "ranked": Array [
-            Object {
-              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-              "id": 268,
-            },
-            Object {
-              "contents": "Sniffing glue.",
-              "id": 117,
-            },
-            Object {
-              "contents": "The forbidden fruit.",
-              "id": 31,
-            },
-            Object {
-              "contents": "Keg stands.",
-              "id": 188,
-            },
-            Object {
-              "contents": "Skeletor.",
-              "id": 175,
-            },
-          ],
-          "round": "0-05526803409810505",
-          "vote": "567890",
+    "messages": Object {
+      "345678": Array [
+        Object {
+          "payload": Object {
+            "game": "0-05526803409810505",
+            "ranked": Array [
+              Object {
+                "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+                "id": 268,
+              },
+              Object {
+                "contents": "Sniffing glue.",
+                "id": 117,
+              },
+              Object {
+                "contents": "The forbidden fruit.",
+                "id": 31,
+              },
+              Object {
+                "contents": "Keg stands.",
+                "id": 188,
+              },
+              Object {
+                "contents": "Skeletor.",
+                "id": 175,
+              },
+            ],
+            "round": "0-05526803409810505",
+            "vote": "567890",
+          },
+          "player": 345678,
+          "type": "show-votes-message",
         },
-        "type": "show-votes-message",
-      },
-    ],
+      ],
+    },
     "payload": Object {
       "game": "0-05526803409810505",
       "round": "0-05526803409810505",
@@ -3408,6 +3703,38 @@ Object {
         },
       },
     },
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "game": "0-05526803409810505",
+          "ranked": Array [
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+          ],
+          "round": "0-05526803409810505",
+          "vote": "567890",
+        },
+        "type": "show-votes-message",
+      },
+    ],
     "vote": Object {
       "contents": "The forbidden fruit.",
       "id": 31,
@@ -3687,40 +4014,43 @@ Object {
       "id": 456789,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "game": "0-05526803409810505",
-          "ranked": Array [
-            Object {
-              "contents": "Skeletor.",
-              "id": 175,
-            },
-          ],
-          "round": "0-05526803409810505",
-          "unranked": Array [
-            Object {
-              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-              "id": 268,
-            },
-            Object {
-              "contents": "Keg stands.",
-              "id": 188,
-            },
-            Object {
-              "contents": "Sniffing glue.",
-              "id": 117,
-            },
-            Object {
-              "contents": "The forbidden fruit.",
-              "id": 31,
-            },
-          ],
-          "vote": "345678",
+    "messages": Object {
+      "456789": Array [
+        Object {
+          "payload": Object {
+            "game": "0-05526803409810505",
+            "ranked": Array [
+              Object {
+                "contents": "Skeletor.",
+                "id": 175,
+              },
+            ],
+            "round": "0-05526803409810505",
+            "unranked": Array [
+              Object {
+                "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+                "id": 268,
+              },
+              Object {
+                "contents": "Keg stands.",
+                "id": 188,
+              },
+              Object {
+                "contents": "Sniffing glue.",
+                "id": 117,
+              },
+              Object {
+                "contents": "The forbidden fruit.",
+                "id": 31,
+              },
+            ],
+            "vote": "345678",
+          },
+          "player": 456789,
+          "type": "show-ranked-list",
         },
-        "type": "show-ranked-list",
-      },
-    ],
+      ],
+    },
     "payload": Object {
       "game": "0-05526803409810505",
       "round": "0-05526803409810505",
@@ -3809,6 +4139,40 @@ Object {
         },
       },
     },
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "game": "0-05526803409810505",
+          "ranked": Array [
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+          ],
+          "round": "0-05526803409810505",
+          "unranked": Array [
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
+            },
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+          ],
+          "vote": "345678",
+        },
+        "type": "show-ranked-list",
+      },
+    ],
     "vote": Object {
       "contents": "Skeletor.",
       "id": 175,
@@ -4090,40 +4454,43 @@ Object {
       "id": 456789,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "game": "0-05526803409810505",
-          "ranked": Array [
-            Object {
-              "contents": "Skeletor.",
-              "id": 175,
-            },
-            Object {
-              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-              "id": 268,
-            },
-          ],
-          "round": "0-05526803409810505",
-          "unranked": Array [
-            Object {
-              "contents": "Keg stands.",
-              "id": 188,
-            },
-            Object {
-              "contents": "Sniffing glue.",
-              "id": 117,
-            },
-            Object {
-              "contents": "The forbidden fruit.",
-              "id": 31,
-            },
-          ],
-          "vote": "123456",
+    "messages": Object {
+      "456789": Array [
+        Object {
+          "payload": Object {
+            "game": "0-05526803409810505",
+            "ranked": Array [
+              Object {
+                "contents": "Skeletor.",
+                "id": 175,
+              },
+              Object {
+                "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+                "id": 268,
+              },
+            ],
+            "round": "0-05526803409810505",
+            "unranked": Array [
+              Object {
+                "contents": "Keg stands.",
+                "id": 188,
+              },
+              Object {
+                "contents": "Sniffing glue.",
+                "id": 117,
+              },
+              Object {
+                "contents": "The forbidden fruit.",
+                "id": 31,
+              },
+            ],
+            "vote": "123456",
+          },
+          "player": 456789,
+          "type": "show-ranked-list",
         },
-        "type": "show-ranked-list",
-      },
-    ],
+      ],
+    },
     "payload": Object {
       "game": "0-05526803409810505",
       "round": "0-05526803409810505",
@@ -4220,6 +4587,40 @@ Object {
         },
       },
     },
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "game": "0-05526803409810505",
+          "ranked": Array [
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
+            },
+          ],
+          "round": "0-05526803409810505",
+          "unranked": Array [
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+          ],
+          "vote": "123456",
+        },
+        "type": "show-ranked-list",
+      },
+    ],
     "vote": Object {
       "contents": "Dropping a chandelier on your enemies and riding the rope up.",
       "id": 268,
@@ -4505,38 +4906,41 @@ Object {
       "id": 456789,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "game": "0-05526803409810505",
-          "ranked": Array [
-            Object {
-              "contents": "Skeletor.",
-              "id": 175,
-            },
-            Object {
-              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-              "id": 268,
-            },
-            Object {
-              "contents": "The forbidden fruit.",
-              "id": 31,
-            },
-            Object {
-              "contents": "Keg stands.",
-              "id": 188,
-            },
-            Object {
-              "contents": "Sniffing glue.",
-              "id": 117,
-            },
-          ],
-          "round": "0-05526803409810505",
-          "vote": "567890",
+    "messages": Object {
+      "456789": Array [
+        Object {
+          "payload": Object {
+            "game": "0-05526803409810505",
+            "ranked": Array [
+              Object {
+                "contents": "Skeletor.",
+                "id": 175,
+              },
+              Object {
+                "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+                "id": 268,
+              },
+              Object {
+                "contents": "The forbidden fruit.",
+                "id": 31,
+              },
+              Object {
+                "contents": "Keg stands.",
+                "id": 188,
+              },
+              Object {
+                "contents": "Sniffing glue.",
+                "id": 117,
+              },
+            ],
+            "round": "0-05526803409810505",
+            "vote": "567890",
+          },
+          "player": 456789,
+          "type": "show-votes-message",
         },
-        "type": "show-votes-message",
-      },
-    ],
+      ],
+    },
     "payload": Object {
       "game": "0-05526803409810505",
       "round": "0-05526803409810505",
@@ -4638,6 +5042,38 @@ Object {
         },
       },
     },
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "game": "0-05526803409810505",
+          "ranked": Array [
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+          ],
+          "round": "0-05526803409810505",
+          "vote": "567890",
+        },
+        "type": "show-votes-message",
+      },
+    ],
     "vote": Object {
       "contents": "The forbidden fruit.",
       "id": 31,
@@ -4927,40 +5363,43 @@ Object {
       "id": 567890,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "game": "0-05526803409810505",
-          "ranked": Array [
-            Object {
-              "contents": "Skeletor.",
-              "id": 175,
-            },
-          ],
-          "round": "0-05526803409810505",
-          "unranked": Array [
-            Object {
-              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-              "id": 268,
-            },
-            Object {
-              "contents": "Keg stands.",
-              "id": 188,
-            },
-            Object {
-              "contents": "Sniffing glue.",
-              "id": 117,
-            },
-            Object {
-              "contents": "The forbidden fruit.",
-              "id": 31,
-            },
-          ],
-          "vote": "345678",
+    "messages": Object {
+      "567890": Array [
+        Object {
+          "payload": Object {
+            "game": "0-05526803409810505",
+            "ranked": Array [
+              Object {
+                "contents": "Skeletor.",
+                "id": 175,
+              },
+            ],
+            "round": "0-05526803409810505",
+            "unranked": Array [
+              Object {
+                "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+                "id": 268,
+              },
+              Object {
+                "contents": "Keg stands.",
+                "id": 188,
+              },
+              Object {
+                "contents": "Sniffing glue.",
+                "id": 117,
+              },
+              Object {
+                "contents": "The forbidden fruit.",
+                "id": 31,
+              },
+            ],
+            "vote": "345678",
+          },
+          "player": 567890,
+          "type": "show-ranked-list",
         },
-        "type": "show-ranked-list",
-      },
-    ],
+      ],
+    },
     "payload": Object {
       "game": "0-05526803409810505",
       "round": "0-05526803409810505",
@@ -5054,6 +5493,40 @@ Object {
         },
       },
     },
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "game": "0-05526803409810505",
+          "ranked": Array [
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+          ],
+          "round": "0-05526803409810505",
+          "unranked": Array [
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
+            },
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+          ],
+          "vote": "345678",
+        },
+        "type": "show-ranked-list",
+      },
+    ],
     "vote": Object {
       "contents": "Skeletor.",
       "id": 175,
@@ -5345,40 +5818,43 @@ Object {
       "id": 567890,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "game": "0-05526803409810505",
-          "ranked": Array [
-            Object {
-              "contents": "Skeletor.",
-              "id": 175,
-            },
-            Object {
-              "contents": "Sniffing glue.",
-              "id": 117,
-            },
-          ],
-          "round": "0-05526803409810505",
-          "unranked": Array [
-            Object {
-              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-              "id": 268,
-            },
-            Object {
-              "contents": "Keg stands.",
-              "id": 188,
-            },
-            Object {
-              "contents": "The forbidden fruit.",
-              "id": 31,
-            },
-          ],
-          "vote": "456789",
+    "messages": Object {
+      "567890": Array [
+        Object {
+          "payload": Object {
+            "game": "0-05526803409810505",
+            "ranked": Array [
+              Object {
+                "contents": "Skeletor.",
+                "id": 175,
+              },
+              Object {
+                "contents": "Sniffing glue.",
+                "id": 117,
+              },
+            ],
+            "round": "0-05526803409810505",
+            "unranked": Array [
+              Object {
+                "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+                "id": 268,
+              },
+              Object {
+                "contents": "Keg stands.",
+                "id": 188,
+              },
+              Object {
+                "contents": "The forbidden fruit.",
+                "id": 31,
+              },
+            ],
+            "vote": "456789",
+          },
+          "player": 567890,
+          "type": "show-ranked-list",
         },
-        "type": "show-ranked-list",
-      },
-    ],
+      ],
+    },
     "payload": Object {
       "game": "0-05526803409810505",
       "round": "0-05526803409810505",
@@ -5480,6 +5956,40 @@ Object {
         },
       },
     },
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "game": "0-05526803409810505",
+          "ranked": Array [
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+          ],
+          "round": "0-05526803409810505",
+          "unranked": Array [
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
+            },
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+          ],
+          "vote": "456789",
+        },
+        "type": "show-ranked-list",
+      },
+    ],
     "vote": Object {
       "contents": "Sniffing glue.",
       "id": 117,
@@ -5779,52 +6289,56 @@ Object {
       "id": 567890,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "game": "0-05526803409810505",
-          "ranked": Array [
-            Object {
+    "messages": Object {
+      "567890": Array [
+        Object {
+          "payload": Object {
+            "game": "0-05526803409810505",
+            "ranked": Array [
+              Object {
+                "contents": "Skeletor.",
+                "id": 175,
+              },
+              Object {
+                "contents": "Sniffing glue.",
+                "id": 117,
+              },
+              Object {
+                "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+                "id": 268,
+              },
+              Object {
+                "contents": "Keg stands.",
+                "id": 188,
+              },
+              Object {
+                "contents": "The forbidden fruit.",
+                "id": 31,
+              },
+            ],
+            "round": "0-05526803409810505",
+            "vote": "123456",
+          },
+          "player": 567890,
+          "type": "show-votes-message",
+        },
+        Object {
+          "payload": Object {
+            "goal": Object {
+              "contents": "I can only express myself through _.",
+              "id": 189,
+            },
+            "player": undefined,
+            "winner": Object {
               "contents": "Skeletor.",
               "id": 175,
             },
-            Object {
-              "contents": "Sniffing glue.",
-              "id": 117,
-            },
-            Object {
-              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-              "id": 268,
-            },
-            Object {
-              "contents": "Keg stands.",
-              "id": 188,
-            },
-            Object {
-              "contents": "The forbidden fruit.",
-              "id": 31,
-            },
-          ],
-          "round": "0-05526803409810505",
-          "vote": "123456",
-        },
-        "type": "show-votes-message",
-      },
-      Object {
-        "payload": Object {
-          "goal": Object {
-            "contents": "I can only express myself through _.",
-            "id": 189,
           },
-          "player": undefined,
-          "winner": Object {
-            "contents": "Skeletor.",
-            "id": 175,
-          },
+          "player": 567890,
+          "type": "show-winner-message",
         },
-        "type": "show-winner-message",
-      },
-    ],
+      ],
+    },
     "payload": Object {
       "game": "0-05526803409810505",
       "round": "0-05526803409810505",
@@ -5931,6 +6445,52 @@ Object {
         },
       },
     },
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "game": "0-05526803409810505",
+          "ranked": Array [
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
+            },
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+          ],
+          "round": "0-05526803409810505",
+          "vote": "123456",
+        },
+        "type": "show-votes-message",
+      },
+      Object {
+        "payload": Object {
+          "goal": Object {
+            "contents": "I can only express myself through _.",
+            "id": 189,
+          },
+          "player": undefined,
+          "winner": Object {
+            "contents": "Skeletor.",
+            "id": 175,
+          },
+        },
+        "type": "show-winner-message",
+      },
+    ],
     "vote": Object {
       "contents": "Dropping a chandelier on your enemies and riding the rope up.",
       "id": 268,

@@ -175,35 +175,128 @@ Object {
         "567890": true,
       },
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "players": Array [
-            Object {
-              "first_name": "Ray",
-              "id": "123456",
-            },
-            Object {
-              "first_name": "Hermon",
-              "id": "234567",
-            },
-            Object {
-              "first_name": "Hermes",
-              "id": "345678",
-            },
-            Object {
-              "first_name": "Hermshire",
-              "id": "456789",
-            },
-            Object {
-              "first_name": "Hermda",
-              "id": "567890",
-            },
-          ],
+    "messages": Object {
+      "123456": Array [
+        Object {
+          "payload": Object {
+            "players": Array [
+              Object {
+                "first_name": "Ray",
+                "id": "123456",
+              },
+              Object {
+                "first_name": "Hermon",
+                "id": "234567",
+              },
+              Object {
+                "first_name": "Hermes",
+                "id": "345678",
+              },
+              Object {
+                "first_name": "Hermshire",
+                "id": "456789",
+              },
+              Object {
+                "first_name": "Hermda",
+                "id": "567890",
+              },
+            ],
+          },
+          "player": 123456,
+          "type": "notify-game-started-message",
         },
-        "type": "notify-game-started-message",
-      },
-    ],
+      ],
+      "234567": Array [
+        Object {
+          "payload": Object {
+            "players": Array [
+              Object {
+                "first_name": "Ray",
+                "id": "123456",
+              },
+              Object {
+                "first_name": "Hermon",
+                "id": "234567",
+              },
+              Object {
+                "first_name": "Hermes",
+                "id": "345678",
+              },
+              Object {
+                "first_name": "Hermshire",
+                "id": "456789",
+              },
+              Object {
+                "first_name": "Hermda",
+                "id": "567890",
+              },
+            ],
+          },
+          "player": 234567,
+          "type": "notify-game-started-message",
+        },
+      ],
+      "345678": Array [
+        Object {
+          "payload": Object {
+            "players": Array [
+              Object {
+                "first_name": "Ray",
+                "id": "123456",
+              },
+              Object {
+                "first_name": "Hermon",
+                "id": "234567",
+              },
+              Object {
+                "first_name": "Hermes",
+                "id": "345678",
+              },
+              Object {
+                "first_name": "Hermshire",
+                "id": "456789",
+              },
+              Object {
+                "first_name": "Hermda",
+                "id": "567890",
+              },
+            ],
+          },
+          "player": 345678,
+          "type": "notify-game-started-message",
+        },
+      ],
+      "456789": Array [
+        Object {
+          "payload": Object {
+            "players": Array [
+              Object {
+                "first_name": "Ray",
+                "id": "123456",
+              },
+              Object {
+                "first_name": "Hermon",
+                "id": "234567",
+              },
+              Object {
+                "first_name": "Hermes",
+                "id": "345678",
+              },
+              Object {
+                "first_name": "Hermshire",
+                "id": "456789",
+              },
+              Object {
+                "first_name": "Hermda",
+                "id": "567890",
+              },
+            ],
+          },
+          "player": 456789,
+          "type": "notify-game-started-message",
+        },
+      ],
+    },
     "players": Array [
       Object {
         "first_name": "Ray",
@@ -229,6 +322,120 @@ Object {
         "first_name": "Hermda",
         "id": 567890,
         "platform": "facebook",
+      },
+    ],
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "players": Array [
+            Object {
+              "first_name": "Ray",
+              "id": "123456",
+            },
+            Object {
+              "first_name": "Hermon",
+              "id": "234567",
+            },
+            Object {
+              "first_name": "Hermes",
+              "id": "345678",
+            },
+            Object {
+              "first_name": "Hermshire",
+              "id": "456789",
+            },
+            Object {
+              "first_name": "Hermda",
+              "id": "567890",
+            },
+          ],
+        },
+        "player": 123456,
+        "type": "notify-game-started-message",
+      },
+      Object {
+        "payload": Object {
+          "players": Array [
+            Object {
+              "first_name": "Ray",
+              "id": "123456",
+            },
+            Object {
+              "first_name": "Hermon",
+              "id": "234567",
+            },
+            Object {
+              "first_name": "Hermes",
+              "id": "345678",
+            },
+            Object {
+              "first_name": "Hermshire",
+              "id": "456789",
+            },
+            Object {
+              "first_name": "Hermda",
+              "id": "567890",
+            },
+          ],
+        },
+        "player": 234567,
+        "type": "notify-game-started-message",
+      },
+      Object {
+        "payload": Object {
+          "players": Array [
+            Object {
+              "first_name": "Ray",
+              "id": "123456",
+            },
+            Object {
+              "first_name": "Hermon",
+              "id": "234567",
+            },
+            Object {
+              "first_name": "Hermes",
+              "id": "345678",
+            },
+            Object {
+              "first_name": "Hermshire",
+              "id": "456789",
+            },
+            Object {
+              "first_name": "Hermda",
+              "id": "567890",
+            },
+          ],
+        },
+        "player": 345678,
+        "type": "notify-game-started-message",
+      },
+      Object {
+        "payload": Object {
+          "players": Array [
+            Object {
+              "first_name": "Ray",
+              "id": "123456",
+            },
+            Object {
+              "first_name": "Hermon",
+              "id": "234567",
+            },
+            Object {
+              "first_name": "Hermes",
+              "id": "345678",
+            },
+            Object {
+              "first_name": "Hermshire",
+              "id": "456789",
+            },
+            Object {
+              "first_name": "Hermda",
+              "id": "567890",
+            },
+          ],
+        },
+        "player": 456789,
+        "type": "notify-game-started-message",
       },
     ],
     "unnotifiedPlayers": Array [

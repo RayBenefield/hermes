@@ -255,20 +255,24 @@ Object {
       "id": 456789,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "card": Object {
-            "contents": "Sniffing glue.",
-            "id": 117,
+    "messages": Object {
+      "456789": Array [
+        Object {
+          "payload": Object {
+            "card": Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
           },
+          "player": 456789,
+          "type": "card-selected-message",
         },
-        "type": "card-selected-message",
-      },
-      Object {
-        "type": "wait-for-votes-message",
-      },
-    ],
+        Object {
+          "player": 456789,
+          "type": "wait-for-votes-message",
+        },
+      ],
+    },
     "payload": Object {
       "game": "0-05526803409810505",
       "pick": 117,
@@ -299,6 +303,20 @@ Object {
       "game": "0-05526803409810505",
       "id": "0-05526803409810505",
     },
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "card": Object {
+            "contents": "Sniffing glue.",
+            "id": 117,
+          },
+        },
+        "type": "card-selected-message",
+      },
+      Object {
+        "type": "wait-for-votes-message",
+      },
+    ],
   },
 }
 `;
@@ -545,20 +563,24 @@ Object {
       "id": 123456,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "card": Object {
-            "contents": "Dropping a chandelier on your enemies and riding the rope up.",
-            "id": 268,
+    "messages": Object {
+      "123456": Array [
+        Object {
+          "payload": Object {
+            "card": Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
+            },
           },
+          "player": 123456,
+          "type": "card-selected-message",
         },
-        "type": "card-selected-message",
-      },
-      Object {
-        "type": "wait-for-votes-message",
-      },
-    ],
+        Object {
+          "player": 123456,
+          "type": "wait-for-votes-message",
+        },
+      ],
+    },
     "payload": Object {
       "game": "0-05526803409810505",
       "pick": 268,
@@ -584,6 +606,20 @@ Object {
       "game": "0-05526803409810505",
       "id": "0-05526803409810505",
     },
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "card": Object {
+            "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+            "id": 268,
+          },
+        },
+        "type": "card-selected-message",
+      },
+      Object {
+        "type": "wait-for-votes-message",
+      },
+    ],
   },
 }
 `;
@@ -835,20 +871,24 @@ Object {
       "id": 234567,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "card": Object {
-            "contents": "Keg stands.",
-            "id": 188,
+    "messages": Object {
+      "234567": Array [
+        Object {
+          "payload": Object {
+            "card": Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
           },
+          "player": 234567,
+          "type": "card-selected-message",
         },
-        "type": "card-selected-message",
-      },
-      Object {
-        "type": "wait-for-votes-message",
-      },
-    ],
+        Object {
+          "player": 234567,
+          "type": "wait-for-votes-message",
+        },
+      ],
+    },
     "payload": Object {
       "game": "0-05526803409810505",
       "pick": 188,
@@ -877,6 +917,20 @@ Object {
       "game": "0-05526803409810505",
       "id": "0-05526803409810505",
     },
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "card": Object {
+            "contents": "Keg stands.",
+            "id": 188,
+          },
+        },
+        "type": "card-selected-message",
+      },
+      Object {
+        "type": "wait-for-votes-message",
+      },
+    ],
   },
 }
 `;
@@ -1158,7 +1212,82 @@ Object {
       "id": 567890,
       "platform": "facebook",
     },
-    "messages": Array [
+    "messages": Object {
+      "567890": Array [
+        Object {
+          "payload": Object {
+            "card": Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+          },
+          "player": 567890,
+          "type": "card-selected-message",
+        },
+        Object {
+          "payload": Object {
+            "game": "0-05526803409810505",
+            "pick": Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+            "round": "0-05526803409810505",
+            "unranked": Array [
+              Object {
+                "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+                "id": 268,
+              },
+              Object {
+                "contents": "Keg stands.",
+                "id": 188,
+              },
+              Object {
+                "contents": "Skeletor.",
+                "id": 175,
+              },
+              Object {
+                "contents": "Sniffing glue.",
+                "id": 117,
+              },
+            ],
+          },
+          "player": 567890,
+          "type": "candidates-ready-message",
+        },
+      ],
+    },
+    "payload": Object {
+      "game": "0-05526803409810505",
+      "pick": 31,
+      "round": "0-05526803409810505",
+    },
+    "pick": Object {
+      "contents": "The forbidden fruit.",
+      "id": 31,
+    },
+    "player": Object {
+      "first_name": "Hermda",
+      "games": Object {
+        "0-05526803409810505": true,
+      },
+      "id": 567890,
+      "platform": "facebook",
+    },
+    "round": Object {
+      "candidates": Object {
+        "123456": 268,
+        "234567": 188,
+        "345678": 175,
+        "456789": 117,
+      },
+      "card": Object {
+        "contents": "I can only express myself through _.",
+        "id": 189,
+      },
+      "game": "0-05526803409810505",
+      "id": "0-05526803409810505",
+    },
+    "unaddressedMessages": Array [
       Object {
         "payload": Object {
           "card": Object {
@@ -1198,37 +1327,6 @@ Object {
         "type": "candidates-ready-message",
       },
     ],
-    "payload": Object {
-      "game": "0-05526803409810505",
-      "pick": 31,
-      "round": "0-05526803409810505",
-    },
-    "pick": Object {
-      "contents": "The forbidden fruit.",
-      "id": 31,
-    },
-    "player": Object {
-      "first_name": "Hermda",
-      "games": Object {
-        "0-05526803409810505": true,
-      },
-      "id": 567890,
-      "platform": "facebook",
-    },
-    "round": Object {
-      "candidates": Object {
-        "123456": 268,
-        "234567": 188,
-        "345678": 175,
-        "456789": 117,
-      },
-      "card": Object {
-        "contents": "I can only express myself through _.",
-        "id": 189,
-      },
-      "game": "0-05526803409810505",
-      "id": "0-05526803409810505",
-    },
   },
 }
 `;
@@ -1484,20 +1582,24 @@ Object {
       "id": 345678,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "card": Object {
-            "contents": "Skeletor.",
-            "id": 175,
+    "messages": Object {
+      "345678": Array [
+        Object {
+          "payload": Object {
+            "card": Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
           },
+          "player": 345678,
+          "type": "card-selected-message",
         },
-        "type": "card-selected-message",
-      },
-      Object {
-        "type": "wait-for-votes-message",
-      },
-    ],
+        Object {
+          "player": 345678,
+          "type": "wait-for-votes-message",
+        },
+      ],
+    },
     "payload": Object {
       "game": "0-05526803409810505",
       "pick": 175,
@@ -1527,6 +1629,20 @@ Object {
       "game": "0-05526803409810505",
       "id": "0-05526803409810505",
     },
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "card": Object {
+            "contents": "Skeletor.",
+            "id": 175,
+          },
+        },
+        "type": "card-selected-message",
+      },
+      Object {
+        "type": "wait-for-votes-message",
+      },
+    ],
   },
 }
 `;
@@ -1774,11 +1890,14 @@ Object {
       "id": 123456,
       "platform": "facebook",
     },
-    "messages": Array [
-      Object {
-        "type": "card-not-in-hand",
-      },
-    ],
+    "messages": Object {
+      "123456": Array [
+        Object {
+          "player": 123456,
+          "type": "card-not-in-hand",
+        },
+      ],
+    },
     "payload": Object {
       "game": "0-05526803409810505",
       "pick": 268,
@@ -1807,6 +1926,11 @@ Object {
       "game": "0-05526803409810505",
       "id": "0-05526803409810505",
     },
+    "unaddressedMessages": Array [
+      Object {
+        "type": "card-not-in-hand",
+      },
+    ],
   },
 }
 `;

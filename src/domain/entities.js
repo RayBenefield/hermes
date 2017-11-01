@@ -65,7 +65,7 @@ export default ({ db, uuid, random }) => ({
         unnotifiedPlayersForWinner: ['unnotifiedPlayers', ({ players, round: { notified_players: notified } }) =>
             players.filter(({ id }) => !(_.includes(_.keys(notified), id)))],
         latestRounds: ['rounds', ({ games }) => Promise.all(games
-            .map(g => [g.id, _.values(g.rounds)[0]])
+            .map(g => [g.id, _.values(g.rounds)[g.rounds.length - 1]])
             .map(([game, round]) => db.get(`rounds/${game}/${round}`)))],
         randomCandidates: ['candidates', ({ hands }) => hands.map(hand => ({
             game: hand.game,

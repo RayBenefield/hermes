@@ -243,7 +243,78 @@ Object {
       "id": 123456,
       "platform": "facebook",
     },
-    "messages": Array [
+    "messages": Object {
+      "123456": Array [
+        Object {
+          "payload": Object {
+            "cards": Array [
+              Object {
+                "contents": "Gloryholes.",
+                "id": 310,
+              },
+              Object {
+                "contents": "A robust mongoloid.",
+                "id": 444,
+              },
+              Object {
+                "contents": "Boris the Soviet Love Hammer.",
+                "id": 597,
+              },
+              Object {
+                "contents": "Owlbear's tears.",
+                "id": 640,
+              },
+              Object {
+                "contents": "Asians being racist against each other.",
+                "id": 714,
+              },
+              Object {
+                "contents": "Having sex in the P.E. equipment shed.",
+                "id": 748,
+              },
+              Object {
+                "contents": "Hand-me-down adult diapers",
+                "id": 1015,
+              },
+              Object {
+                "contents": "Vomiting in the shower",
+                "id": 1039,
+              },
+              Object {
+                "contents": "An intellectually superior overlord",
+                "id": 1040,
+              },
+            ],
+          },
+          "player": 123456,
+          "type": "show-hand-message",
+        },
+      ],
+    },
+    "payload": Object {
+      "game": "0-05526803409810505",
+      "round": "0-05526803409810505",
+    },
+    "player": Object {
+      "first_name": "Ray",
+      "games": Object {
+        "0-05526803409810505": true,
+      },
+      "id": 123456,
+      "platform": "facebook",
+    },
+    "round": Object {
+      "candidates": Object {
+        "123456": 268,
+      },
+      "card": Object {
+        "contents": "I can only express myself through _.",
+        "id": 189,
+      },
+      "game": "0-05526803409810505",
+      "id": "0-05526803409810505",
+    },
+    "unaddressedMessages": Array [
       Object {
         "payload": Object {
           "cards": Array [
@@ -288,29 +359,6 @@ Object {
         "type": "show-hand-message",
       },
     ],
-    "payload": Object {
-      "game": "0-05526803409810505",
-      "round": "0-05526803409810505",
-    },
-    "player": Object {
-      "first_name": "Ray",
-      "games": Object {
-        "0-05526803409810505": true,
-      },
-      "id": 123456,
-      "platform": "facebook",
-    },
-    "round": Object {
-      "candidates": Object {
-        "123456": 268,
-      },
-      "card": Object {
-        "contents": "I can only express myself through _.",
-        "id": 189,
-      },
-      "game": "0-05526803409810505",
-      "id": "0-05526803409810505",
-    },
   },
 }
 `;
@@ -555,7 +603,81 @@ Object {
       "id": 123456,
       "platform": "facebook",
     },
-    "messages": Array [
+    "messages": Object {
+      "123456": Array [
+        Object {
+          "payload": Object {
+            "cards": Array [
+              Object {
+                "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+                "id": 268,
+              },
+              Object {
+                "contents": "Gloryholes.",
+                "id": 310,
+              },
+              Object {
+                "contents": "A robust mongoloid.",
+                "id": 444,
+              },
+              Object {
+                "contents": "Boris the Soviet Love Hammer.",
+                "id": 597,
+              },
+              Object {
+                "contents": "Owlbear's tears.",
+                "id": 640,
+              },
+              Object {
+                "contents": "Asians being racist against each other.",
+                "id": 714,
+              },
+              Object {
+                "contents": "Having sex in the P.E. equipment shed.",
+                "id": 748,
+              },
+              Object {
+                "contents": "Hand-me-down adult diapers",
+                "id": 1015,
+              },
+              Object {
+                "contents": "Vomiting in the shower",
+                "id": 1039,
+              },
+              Object {
+                "contents": "An intellectually superior overlord",
+                "id": 1040,
+              },
+            ],
+            "game": "0-05526803409810505",
+            "round": "0-05526803409810505",
+          },
+          "player": 123456,
+          "type": "show-hand-for-picking-message",
+        },
+      ],
+    },
+    "payload": Object {
+      "game": "0-05526803409810505",
+      "round": "0-05526803409810505",
+    },
+    "player": Object {
+      "first_name": "Ray",
+      "games": Object {
+        "0-05526803409810505": true,
+      },
+      "id": 123456,
+      "platform": "facebook",
+    },
+    "round": Object {
+      "card": Object {
+        "contents": "I can only express myself through _.",
+        "id": 189,
+      },
+      "game": "0-05526803409810505",
+      "id": "0-05526803409810505",
+    },
+    "unaddressedMessages": Array [
       Object {
         "payload": Object {
           "cards": Array [
@@ -606,26 +728,6 @@ Object {
         "type": "show-hand-for-picking-message",
       },
     ],
-    "payload": Object {
-      "game": "0-05526803409810505",
-      "round": "0-05526803409810505",
-    },
-    "player": Object {
-      "first_name": "Ray",
-      "games": Object {
-        "0-05526803409810505": true,
-      },
-      "id": 123456,
-      "platform": "facebook",
-    },
-    "round": Object {
-      "card": Object {
-        "contents": "I can only express myself through _.",
-        "id": 189,
-      },
-      "game": "0-05526803409810505",
-      "id": "0-05526803409810505",
-    },
   },
 }
 `;

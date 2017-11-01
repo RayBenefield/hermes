@@ -270,29 +270,128 @@ Object {
         "0": "0-05526803409810505",
       },
     },
-    "messages": Array [
-      Object {
-        "payload": Object {
-          "goal": Object {
-            "contents": "I can only express myself through _.",
-            "id": 189,
-          },
-          "player": Object {
-            "first_name": "Hermes",
-            "games": Object {
-              "0-05526803409810505": true,
+    "messages": Object {
+      "123456": Array [
+        Object {
+          "payload": Object {
+            "goal": Object {
+              "contents": "I can only express myself through _.",
+              "id": 189,
             },
-            "id": 345678,
-            "platform": "facebook",
+            "player": Object {
+              "first_name": "Hermes",
+              "games": Object {
+                "0-05526803409810505": true,
+              },
+              "id": 345678,
+              "platform": "facebook",
+            },
+            "winner": Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
           },
-          "winner": Object {
-            "contents": "Skeletor.",
-            "id": 175,
-          },
+          "player": 123456,
+          "type": "notify-winner-message",
         },
-        "type": "notify-winner-message",
-      },
-    ],
+      ],
+      "234567": Array [
+        Object {
+          "payload": Object {
+            "goal": Object {
+              "contents": "I can only express myself through _.",
+              "id": 189,
+            },
+            "player": Object {
+              "first_name": "Hermes",
+              "games": Object {
+                "0-05526803409810505": true,
+              },
+              "id": 345678,
+              "platform": "facebook",
+            },
+            "winner": Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+          },
+          "player": 234567,
+          "type": "notify-winner-message",
+        },
+      ],
+      "345678": Array [
+        Object {
+          "payload": Object {
+            "goal": Object {
+              "contents": "I can only express myself through _.",
+              "id": 189,
+            },
+            "player": Object {
+              "first_name": "Hermes",
+              "games": Object {
+                "0-05526803409810505": true,
+              },
+              "id": 345678,
+              "platform": "facebook",
+            },
+            "winner": Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+          },
+          "player": 345678,
+          "type": "notify-winner-message",
+        },
+      ],
+      "456789": Array [
+        Object {
+          "payload": Object {
+            "goal": Object {
+              "contents": "I can only express myself through _.",
+              "id": 189,
+            },
+            "player": Object {
+              "first_name": "Hermes",
+              "games": Object {
+                "0-05526803409810505": true,
+              },
+              "id": 345678,
+              "platform": "facebook",
+            },
+            "winner": Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+          },
+          "player": 456789,
+          "type": "notify-winner-message",
+        },
+      ],
+      "567890": Array [
+        Object {
+          "payload": Object {
+            "goal": Object {
+              "contents": "I can only express myself through _.",
+              "id": 189,
+            },
+            "player": Object {
+              "first_name": "Hermes",
+              "games": Object {
+                "0-05526803409810505": true,
+              },
+              "id": 345678,
+              "platform": "facebook",
+            },
+            "winner": Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+          },
+          "player": 567890,
+          "type": "notify-winner-message",
+        },
+      ],
+    },
     "payload": Object {
       "game": "0-05526803409810505",
       "round": "0-05526803409810505",
@@ -386,6 +485,160 @@ Object {
       },
       "winner": 175,
     },
+    "unaddressedMessages": Array [
+      Object {
+        "payload": Object {
+          "goal": Object {
+            "contents": "I can only express myself through _.",
+            "id": 189,
+          },
+          "player": Object {
+            "first_name": "Hermes",
+            "games": Object {
+              "0-05526803409810505": true,
+            },
+            "id": 345678,
+            "platform": "facebook",
+          },
+          "winner": Object {
+            "contents": "Skeletor.",
+            "id": 175,
+          },
+        },
+        "player": 123456,
+        "type": "notify-winner-message",
+      },
+      Object {
+        "payload": Object {
+          "goal": Object {
+            "contents": "I can only express myself through _.",
+            "id": 189,
+          },
+          "player": Object {
+            "first_name": "Hermes",
+            "games": Object {
+              "0-05526803409810505": true,
+            },
+            "id": 345678,
+            "platform": "facebook",
+          },
+          "winner": Object {
+            "contents": "Skeletor.",
+            "id": 175,
+          },
+        },
+        "player": 234567,
+        "type": "notify-winner-message",
+      },
+      Object {
+        "payload": Object {
+          "goal": Object {
+            "contents": "I can only express myself through _.",
+            "id": 189,
+          },
+          "player": Object {
+            "first_name": "Hermes",
+            "games": Object {
+              "0-05526803409810505": true,
+            },
+            "id": 345678,
+            "platform": "facebook",
+          },
+          "winner": Object {
+            "contents": "Skeletor.",
+            "id": 175,
+          },
+        },
+        "player": 345678,
+        "type": "notify-winner-message",
+      },
+      Object {
+        "payload": Object {
+          "goal": Object {
+            "contents": "I can only express myself through _.",
+            "id": 189,
+          },
+          "player": Object {
+            "first_name": "Hermes",
+            "games": Object {
+              "0-05526803409810505": true,
+            },
+            "id": 345678,
+            "platform": "facebook",
+          },
+          "winner": Object {
+            "contents": "Skeletor.",
+            "id": 175,
+          },
+        },
+        "player": 456789,
+        "type": "notify-winner-message",
+      },
+      Object {
+        "payload": Object {
+          "goal": Object {
+            "contents": "I can only express myself through _.",
+            "id": 189,
+          },
+          "player": Object {
+            "first_name": "Hermes",
+            "games": Object {
+              "0-05526803409810505": true,
+            },
+            "id": 345678,
+            "platform": "facebook",
+          },
+          "winner": Object {
+            "contents": "Skeletor.",
+            "id": 175,
+          },
+        },
+        "player": 567890,
+        "type": "notify-winner-message",
+      },
+    ],
+    "unnotifiedPlayers": Array [
+      Object {
+        "first_name": "Ray",
+        "games": Object {
+          "0-05526803409810505": true,
+        },
+        "id": 123456,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermon",
+        "games": Object {
+          "0-05526803409810505": true,
+        },
+        "id": 234567,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermes",
+        "games": Object {
+          "0-05526803409810505": true,
+        },
+        "id": 345678,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermshire",
+        "games": Object {
+          "0-05526803409810505": true,
+        },
+        "id": 456789,
+        "platform": "facebook",
+      },
+      Object {
+        "first_name": "Hermda",
+        "games": Object {
+          "0-05526803409810505": true,
+        },
+        "id": 567890,
+        "platform": "facebook",
+      },
+    ],
     "winner": Object {
       "contents": "Skeletor.",
       "id": 175,

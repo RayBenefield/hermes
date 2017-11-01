@@ -2,7 +2,7 @@
 import transmute from 'transmutation';
 import configureEntites from './entities';
 
-export default ({ db, uuid, random }) => {
+export default ({ db, uuid, random, delay }) => {
     const { get, save } = configureEntites({ db, uuid, random });
 
     return {
@@ -53,7 +53,18 @@ export default ({ db, uuid, random }) => {
                 .extend(...get.candidates)
                 .extend(...get.playersFromGame)
                 .extend(...get.winner)
-                .extend(...get.winningPlayer),
+                .extend(...get.winningPlayer)
+                .extend(...get.unnotifiedPlayersForWinner),
+        },
+        saveByAction: {
+            start: transmute()
+                .do(...save.notifiedAllPlayersOfGame)
+                .do(...save.gameForPlayers)
+                .do(...save.handsForPlayers)
+                .do(...save.newRound),
+            winner: transmute()
+                .do(...save.notifiedAllPlayersOfWinner)
+                .do(...save.newRound),
         },
         save: {
             'welcome-message': transmute().do(...save.playerInfo),
@@ -62,14 +73,10 @@ export default ({ db, uuid, random }) => {
             'game-started-message': transmute()
                 .do(...save.newGame)
                 .do(...save.removalFromQueue),
-            'notify-game-started-message': transmute()
-                .do(...save.notifiedAllPlayersOfGame)
-                .do(...save.gameForPlayers)
-                .do(...save.handsForPlayers)
-                .do(...save.newRound),
             'new-goal-message': transmute()
                 .do(...save.roundForGame)
-                .do(...save.goalForRound),
+                .do(...save.goalForRound)
+                .do(delay(5000)),
             'card-selected-message': transmute()
                 .do(...save.selectedCandidate)
                 .do(...save.removalOfCandidateFromHand),
@@ -84,9 +91,6 @@ export default ({ db, uuid, random }) => {
             'show-winner-message': transmute()
                 .do(...save.notifiedPlayerOfWinner)
                 .do(...save.winner),
-            'notify-winner-message': transmute()
-                .do(...save.notifiedAllPlayersOfWinner)
-                .do(...save.newRound),
         },
     };
 };

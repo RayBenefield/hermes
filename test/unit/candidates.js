@@ -4,7 +4,6 @@ import showCandidates from 'src/domain/services/candidates'; // eslint-disable-l
 describe('Show Candidates', (it) => {
     it('should show the player the candidates', (assert) => {
         // Given
-        const player = { id: '0' };
         const game = { id: 0 };
         const round = { id: 0 };
         const candidates = {
@@ -20,13 +19,17 @@ describe('Show Candidates', (it) => {
             { id: 4, contents: 'fourth' },
             { id: 5, contents: 'fifth' },
         ];
+        const unnotifiedPlayers = [
+            { id: '0' },
+        ];
 
         // When
-        const messages = showCandidates({ player, game, round, candidates });
+        const messages = showCandidates({ unnotifiedPlayers, game, round, candidates });
 
         // Then
         assert.deepEqual(messages, [
             {
+                player: '0',
                 type: 'notify-candidates-ready-message',
                 payload: {
                     game: game.id,

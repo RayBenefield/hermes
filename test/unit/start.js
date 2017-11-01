@@ -11,13 +11,17 @@ describe('Start Game', (it) => {
             { id: '456789', first_name: 'Hermda' },
             { id: '567890', first_name: 'Hermshire' },
         ];
+        const unnotifiedPlayers = [
+            { id: '567890', first_name: 'Hermshire' },
+        ];
 
         // When
-        const messages = start({ players });
+        const messages = start({ unnotifiedPlayers, players });
 
         // Then
         assert.deepEqual(messages, [
             {
+                player: '567890',
                 type: 'notify-game-started-message',
                 payload: {
                     players,
