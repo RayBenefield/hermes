@@ -1,4 +1,3 @@
- - Setup the domain to handle "addressing" messages
  - Add case for when trying to re-vote for a card
  - Use doEach now to save the context
  - Set the environment variable to determine how to log (colors are printed

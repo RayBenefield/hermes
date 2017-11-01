@@ -1,5 +1,16 @@
 # Work Log
 
+## #98
+
+Finally finished the work needed to address messages to multiple players. It is
+a bit sloppy right now, but it is working and I'll probably put some focus into
+refactoring soon. I think the next thing I really need to focus on is trying to
+get this deployed to QA cleanly. So I'll be doing that next. I think this single
+"shallow" block was enough for now and I'll take a lunch break and then after
+the lunch break I'll focus on deployment. Cuz I'm starving. However this was
+exactly what I needed and was stuck on. Now to log my double session.
+
+
 ## #97
 
 Just logging the double.
