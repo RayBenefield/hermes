@@ -46,8 +46,7 @@ exports.roundStarted = functions.database.ref('/rounds/{gameId}/{id}')
     })
         .extend(domain)
         .extend('facebookMessages', fb.transform)
-        .do(({ facebookMessages }) =>
-            fb.sendMessages(facebookMessages)));
+        .do(({ facebookMessages }) => fb.sendMessages(facebookMessages)));
 
 exports.votingStarted = functions.database.ref('/candidates/{gameId}/{roundId}')
     .onCreate(event => transmute({
@@ -73,5 +72,4 @@ exports.winnerDecided = functions.database.ref('/rounds/{gameId}/{roundId}/winne
     })
         .extend(domain)
         .extend('facebookMessages', fb.transform)
-        .do(({ facebookMessages }) => fb.sendMessages(facebookMessages))
-    );
+        .do(({ facebookMessages }) => fb.sendMessages(facebookMessages)));
