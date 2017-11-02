@@ -1,5 +1,19 @@
 # Work Log
 
+## #101
+
+Spent SOOO much time trying to figure out how to compensate UX wise for the slow
+function calls. And when I couldn't get that working, looked into ways to speed
+up the function calls. What I'm realizing is that I am fetching SOOO much from
+the database that doesn't need to be fetch. It is wasting a lot of function call
+time and I need to make my persistance layer more intelligent on how it handles
+things. Also I need to introduce a "context" system into the domain for when I
+only really need to know WHAT entity I'm working with, not the contents of said
+entity. This is the case when I'm dealing with the games object a lot. There is
+a lot to consider, and I'm going to take a break from this project to focus on
+the Product Hunt hackathon. Which will allow me to focus on Dex for a bit.
+
+
 ## #100
 
 Setup the missing integration test for when candidates are shown to players who
