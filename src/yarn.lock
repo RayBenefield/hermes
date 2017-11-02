@@ -906,9 +906,9 @@ tough-cookie@>=2.3.3, tough-cookie@~2.3.3:
   dependencies:
     punycode "^1.4.1"
 
-transmutation@^0.0.17:
-  version "0.0.17"
-  resolved "https://registry.yarnpkg.com/transmutation/-/transmutation-0.0.17.tgz#199ad4e16d06ebefacd07f8c539fab303264fa49"
+transmutation@^0.0.19:
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/transmutation/-/transmutation-0.0.19.tgz#a7dcc4de4765913254c48789b78c650bc1e482ac"
   dependencies:
     babel-plugin-transform-object-rest-spread "^6.26.0"
     lodash "^4.17.4"
