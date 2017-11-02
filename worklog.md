@@ -1,5 +1,12 @@
 # Work Log
 
+## #100
+
+Setup the missing integration test for when candidates are shown to players who
+didn't kick start the round. Next is to work on deploying to Firebase directly
+instead of depending on Ngrok.
+
+
 ## #99
 
 Just an entry for the second part of my double session.
