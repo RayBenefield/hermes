@@ -1,5 +1,10 @@
 # Work Log
 
+## #104
+
+Logging my quadruple session... it was painful.
+
+
 ## #103
 
 Logging my quadruple session... it was painful.
