@@ -1,5 +1,10 @@
 # Work Log
 
+## #102
+
+Logging my quadruple session... it was painful.
+
+
 ## #101
 
 Spent SOOO much time trying to figure out how to compensate UX wise for the slow
