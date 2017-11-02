@@ -62,6 +62,8 @@ export default ({ db, uuid, random, delay }) => {
                 .do(...save.gameForPlayers)
                 .do(...save.handsForPlayers)
                 .do(...save.newRound),
+            candidates: transmute()
+                .do(...save.notifiedAllPlayersOfVoting),
             winner: transmute()
                 .do(...save.notifiedAllPlayersOfWinner)
                 .do(...save.newRound),
@@ -82,8 +84,6 @@ export default ({ db, uuid, random, delay }) => {
                 .do(...save.removalOfCandidateFromHand),
             'candidates-ready-message': transmute()
                 .do(...save.candidateList),
-            'notify-candidates-ready-message': transmute()
-                .do(...save.notifiedPlayerOfVoting),
             'show-ranked-list': transmute()
                 .do(...save.vote),
             'show-votes-message': transmute()

@@ -18,7 +18,7 @@ test('1st player votes for first card', () => {
         platform: 'facebook',
         id: 123456,
     };
-    flame.loadDatabase(databases['candidates-shown']);
+    flame.loadDatabase(databases['vote-started']);
 
     // When
     return domain({

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`notify all players of the winner and the new round 1`] = `
+exports[`notify all players of vote starting 1`] = `
 Object {
   "db": Object {
     "candidates": Object {
@@ -187,51 +187,12 @@ Object {
           },
           "game": "0-05526803409810505",
           "id": "0-05526803409810505",
-          "notified_players": Object {
-            "123456": true,
-            "234567": true,
-            "345678": true,
-            "456789": true,
-            "567890": true,
-          },
-          "votes": Object {
-            "123456": Object {
-              "0": "345678",
-              "1": "456789",
-              "2": "567890",
-            },
-            "234567": Object {
-              "0": "345678",
-              "1": "456789",
-              "2": "567890",
-            },
-            "345678": Object {
-              "0": "123456",
-              "1": "456789",
-              "2": "567890",
-            },
-            "456789": Object {
-              "0": "345678",
-              "1": "123456",
-              "2": "567890",
-            },
-            "567890": Object {
-              "0": "345678",
-              "1": "456789",
-              "2": "123456",
-            },
-          },
-          "winner": 175,
-        },
-        "0-9057442687334262": Object {
-          "game": "0-05526803409810505",
-          "id": "0-9057442687334262",
         },
       },
     },
   },
   "results": Object {
-    "action": "winner",
+    "action": "candidates",
     "candidates": Object {
       "123456": Object {
         "contents": "Dropping a chandelier on your enemies and riding the rope up.",
@@ -278,128 +239,138 @@ Object {
       "123456": Array [
         Object {
           "payload": Object {
-            "goal": Object {
-              "contents": "I can only express myself through _.",
-              "id": 189,
-            },
-            "player": Object {
-              "first_name": "Hermes",
-              "games": Object {
-                "0-05526803409810505": true,
+            "game": "0-05526803409810505",
+            "round": "0-05526803409810505",
+            "unranked": Array [
+              Object {
+                "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+                "id": 268,
               },
-              "id": 345678,
-              "platform": "facebook",
-            },
-            "winner": Object {
-              "contents": "Skeletor.",
-              "id": 175,
-            },
+              Object {
+                "contents": "Keg stands.",
+                "id": 188,
+              },
+              Object {
+                "contents": "Skeletor.",
+                "id": 175,
+              },
+              Object {
+                "contents": "Sniffing glue.",
+                "id": 117,
+              },
+              Object {
+                "contents": "The forbidden fruit.",
+                "id": 31,
+              },
+            ],
           },
-          "player": 123456,
-          "type": "notify-winner-message",
+          "player": "123456",
+          "type": "notify-candidates-ready-message",
         },
       ],
       "234567": Array [
         Object {
           "payload": Object {
-            "goal": Object {
-              "contents": "I can only express myself through _.",
-              "id": 189,
-            },
-            "player": Object {
-              "first_name": "Hermes",
-              "games": Object {
-                "0-05526803409810505": true,
+            "game": "0-05526803409810505",
+            "round": "0-05526803409810505",
+            "unranked": Array [
+              Object {
+                "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+                "id": 268,
               },
-              "id": 345678,
-              "platform": "facebook",
-            },
-            "winner": Object {
-              "contents": "Skeletor.",
-              "id": 175,
-            },
+              Object {
+                "contents": "Keg stands.",
+                "id": 188,
+              },
+              Object {
+                "contents": "Skeletor.",
+                "id": 175,
+              },
+              Object {
+                "contents": "Sniffing glue.",
+                "id": 117,
+              },
+              Object {
+                "contents": "The forbidden fruit.",
+                "id": 31,
+              },
+            ],
           },
-          "player": 234567,
-          "type": "notify-winner-message",
+          "player": "234567",
+          "type": "notify-candidates-ready-message",
         },
       ],
       "345678": Array [
         Object {
           "payload": Object {
-            "goal": Object {
-              "contents": "I can only express myself through _.",
-              "id": 189,
-            },
-            "player": Object {
-              "first_name": "Hermes",
-              "games": Object {
-                "0-05526803409810505": true,
+            "game": "0-05526803409810505",
+            "round": "0-05526803409810505",
+            "unranked": Array [
+              Object {
+                "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+                "id": 268,
               },
-              "id": 345678,
-              "platform": "facebook",
-            },
-            "winner": Object {
-              "contents": "Skeletor.",
-              "id": 175,
-            },
+              Object {
+                "contents": "Keg stands.",
+                "id": 188,
+              },
+              Object {
+                "contents": "Skeletor.",
+                "id": 175,
+              },
+              Object {
+                "contents": "Sniffing glue.",
+                "id": 117,
+              },
+              Object {
+                "contents": "The forbidden fruit.",
+                "id": 31,
+              },
+            ],
           },
-          "player": 345678,
-          "type": "notify-winner-message",
+          "player": "345678",
+          "type": "notify-candidates-ready-message",
         },
       ],
       "456789": Array [
         Object {
           "payload": Object {
-            "goal": Object {
-              "contents": "I can only express myself through _.",
-              "id": 189,
-            },
-            "player": Object {
-              "first_name": "Hermes",
-              "games": Object {
-                "0-05526803409810505": true,
+            "game": "0-05526803409810505",
+            "round": "0-05526803409810505",
+            "unranked": Array [
+              Object {
+                "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+                "id": 268,
               },
-              "id": 345678,
-              "platform": "facebook",
-            },
-            "winner": Object {
-              "contents": "Skeletor.",
-              "id": 175,
-            },
-          },
-          "player": 456789,
-          "type": "notify-winner-message",
-        },
-      ],
-      "567890": Array [
-        Object {
-          "payload": Object {
-            "goal": Object {
-              "contents": "I can only express myself through _.",
-              "id": 189,
-            },
-            "player": Object {
-              "first_name": "Hermes",
-              "games": Object {
-                "0-05526803409810505": true,
+              Object {
+                "contents": "Keg stands.",
+                "id": 188,
               },
-              "id": 345678,
-              "platform": "facebook",
-            },
-            "winner": Object {
-              "contents": "Skeletor.",
-              "id": 175,
-            },
+              Object {
+                "contents": "Skeletor.",
+                "id": 175,
+              },
+              Object {
+                "contents": "Sniffing glue.",
+                "id": 117,
+              },
+              Object {
+                "contents": "The forbidden fruit.",
+                "id": 31,
+              },
+            ],
           },
-          "player": 567890,
-          "type": "notify-winner-message",
+          "player": "456789",
+          "type": "notify-candidates-ready-message",
         },
       ],
     },
     "payload": Object {
       "game": "0-05526803409810505",
+      "notified": Object {
+        "567890": true,
+      },
       "round": "0-05526803409810505",
-      "winner": 175,
     },
     "players": Array [
       Object {
@@ -457,148 +428,127 @@ Object {
       },
       "game": "0-05526803409810505",
       "id": "0-05526803409810505",
-      "notified_players": Object {
-        "567890": true,
-      },
-      "votes": Object {
-        "123456": Object {
-          "0": "345678",
-          "1": "456789",
-          "2": "567890",
-        },
-        "234567": Object {
-          "0": "345678",
-          "1": "456789",
-          "2": "567890",
-        },
-        "345678": Object {
-          "0": "123456",
-          "1": "456789",
-          "2": "567890",
-        },
-        "456789": Object {
-          "0": "345678",
-          "1": "123456",
-          "2": "567890",
-        },
-        "567890": Object {
-          "0": "345678",
-          "1": "456789",
-          "2": "123456",
-        },
-      },
-      "winner": 175,
     },
     "unaddressedMessages": Array [
       Object {
         "payload": Object {
-          "goal": Object {
-            "contents": "I can only express myself through _.",
-            "id": 189,
-          },
-          "player": Object {
-            "first_name": "Hermes",
-            "games": Object {
-              "0-05526803409810505": true,
+          "game": "0-05526803409810505",
+          "round": "0-05526803409810505",
+          "unranked": Array [
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
             },
-            "id": 345678,
-            "platform": "facebook",
-          },
-          "winner": Object {
-            "contents": "Skeletor.",
-            "id": 175,
-          },
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+          ],
         },
-        "player": 123456,
-        "type": "notify-winner-message",
+        "player": "123456",
+        "type": "notify-candidates-ready-message",
       },
       Object {
         "payload": Object {
-          "goal": Object {
-            "contents": "I can only express myself through _.",
-            "id": 189,
-          },
-          "player": Object {
-            "first_name": "Hermes",
-            "games": Object {
-              "0-05526803409810505": true,
+          "game": "0-05526803409810505",
+          "round": "0-05526803409810505",
+          "unranked": Array [
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
             },
-            "id": 345678,
-            "platform": "facebook",
-          },
-          "winner": Object {
-            "contents": "Skeletor.",
-            "id": 175,
-          },
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+          ],
         },
-        "player": 234567,
-        "type": "notify-winner-message",
+        "player": "234567",
+        "type": "notify-candidates-ready-message",
       },
       Object {
         "payload": Object {
-          "goal": Object {
-            "contents": "I can only express myself through _.",
-            "id": 189,
-          },
-          "player": Object {
-            "first_name": "Hermes",
-            "games": Object {
-              "0-05526803409810505": true,
+          "game": "0-05526803409810505",
+          "round": "0-05526803409810505",
+          "unranked": Array [
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
             },
-            "id": 345678,
-            "platform": "facebook",
-          },
-          "winner": Object {
-            "contents": "Skeletor.",
-            "id": 175,
-          },
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
+            },
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+          ],
         },
-        "player": 345678,
-        "type": "notify-winner-message",
+        "player": "345678",
+        "type": "notify-candidates-ready-message",
       },
       Object {
         "payload": Object {
-          "goal": Object {
-            "contents": "I can only express myself through _.",
-            "id": 189,
-          },
-          "player": Object {
-            "first_name": "Hermes",
-            "games": Object {
-              "0-05526803409810505": true,
+          "game": "0-05526803409810505",
+          "round": "0-05526803409810505",
+          "unranked": Array [
+            Object {
+              "contents": "Dropping a chandelier on your enemies and riding the rope up.",
+              "id": 268,
             },
-            "id": 345678,
-            "platform": "facebook",
-          },
-          "winner": Object {
-            "contents": "Skeletor.",
-            "id": 175,
-          },
-        },
-        "player": 456789,
-        "type": "notify-winner-message",
-      },
-      Object {
-        "payload": Object {
-          "goal": Object {
-            "contents": "I can only express myself through _.",
-            "id": 189,
-          },
-          "player": Object {
-            "first_name": "Hermes",
-            "games": Object {
-              "0-05526803409810505": true,
+            Object {
+              "contents": "Keg stands.",
+              "id": 188,
             },
-            "id": 345678,
-            "platform": "facebook",
-          },
-          "winner": Object {
-            "contents": "Skeletor.",
-            "id": 175,
-          },
+            Object {
+              "contents": "Skeletor.",
+              "id": 175,
+            },
+            Object {
+              "contents": "Sniffing glue.",
+              "id": 117,
+            },
+            Object {
+              "contents": "The forbidden fruit.",
+              "id": 31,
+            },
+          ],
         },
-        "player": 567890,
-        "type": "notify-winner-message",
+        "player": "456789",
+        "type": "notify-candidates-ready-message",
       },
     ],
     "unnotifiedPlayers": Array [
@@ -634,27 +584,7 @@ Object {
         "id": 456789,
         "platform": "facebook",
       },
-      Object {
-        "first_name": "Hermda",
-        "games": Object {
-          "0-05526803409810505": true,
-        },
-        "id": 567890,
-        "platform": "facebook",
-      },
     ],
-    "winner": Object {
-      "contents": "Skeletor.",
-      "id": 175,
-    },
-    "winningPlayer": Object {
-      "first_name": "Hermes",
-      "games": Object {
-        "0-05526803409810505": true,
-      },
-      "id": 345678,
-      "platform": "facebook",
-    },
   },
 }
 `;
