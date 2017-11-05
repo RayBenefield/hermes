@@ -1,5 +1,14 @@
 # Work Log
 
+## #105
+
+Started exploring how to get results from the Firebase REST API. Turns out I
+need to use a service account and authenticate with the google APIs, luckily
+their sample code is always spot on. Now I just need to figure out the best way
+to handle it. Break time and then exploration on the best way to configure
+things.
+
+
 ## #104
 
 Logging my quadruple session... it was painful.
