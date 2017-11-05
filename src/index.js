@@ -7,8 +7,8 @@ import * as functions from 'firebase-functions';
 import configureFacebook from './lib/facebook';
 import configureDomain from './domain';
 import configureFlame from './lib/local-db';
-import configureFirebaseRest from './lib/rest-db';
-// import configureFirebaseDb from './lib/db';
+// import configureFirebaseDb from './lib/rest-db';
+import configureFirebaseDb from './lib/db';
 import configureChannelRouter from './routes/channels';
 import './pretty-errors';
 
@@ -16,11 +16,11 @@ const config = functions.config();
 admin.initializeApp(config.firebase);
 const db = process.env.NODE_ENV === 'dev-local'
     ? configureFlame(flame)
-    : configureFirebaseRest({
-        ...config.private,
-        host: 'https://hermes-dev-1fc82.firebaseio.com',
-    });
-    // : configureFirebaseDb(admin.database());
+    // : configureFirebaseDb({
+    //     ...config.private,
+    //     host: 'https://hermes-dev-1fc82.firebaseio.com',
+    // });
+    : configureFirebaseDb(admin.database());
 
 const fb = configureFacebook(config.facebook);
 const domain = configureDomain({
