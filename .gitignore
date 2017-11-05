@@ -6,3 +6,4 @@ temp
 *.log
 functions/
 **/private-key*
+.urls
