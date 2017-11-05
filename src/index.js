@@ -1,7 +1,4 @@
 /* eslint-disable max-lines */
-import google from 'googleapis';
-import fs from 'fs';
-import promisify from 'es6-promisify';
 import uuid from 'uuid/v4';
 import admin from 'firebase-admin';
 import transmute from 'transmutation';
@@ -19,35 +16,11 @@ const config = functions.config();
 admin.initializeApp(config.firebase);
 const db = process.env.NODE_ENV === 'dev-local'
     ? configureFlame(flame)
-    : configureFirebaseRest('https://hermes-dev-1fc82.firebaseio.com');
+    : configureFirebaseRest({
+        ...config.private,
+        host: 'https://hermes-dev-1fc82.firebaseio.com',
+    });
     // : configureFirebaseDb(admin.database());
-
-// Define the required scopes.
-const scopes = [
-    'https://www.googleapis.com/auth/userinfo.email',
-    'https://www.googleapis.com/auth/firebase.database',
-];
-
-// Authenticate a JWT client with the service account.
-const jwtClient = new google.auth.JWT(
-    config.private.client_email,
-    null,
-    config.private.private_key.replace(/\\n/g, '\n'),
-    scopes
-);
-
-// Use the JWT client to generate an access token.
-const authorize = promisify(jwtClient.authorize, jwtClient);
-const write = promisify(fs.writeFile);
-authorize()
-    .then(({ access_token: accessToken }) => {
-        if (accessToken === null) {
-            throw new Error('Provided service account does not have permission to generate access tokens');
-        }
-        return write('/tmp/access-token', accessToken);
-    })
-    // eslint-disable-next-line no-console
-    .catch(error => console.log('Error making request to generate access token:', error));
 
 const fb = configureFacebook(config.facebook);
 const domain = configureDomain({
