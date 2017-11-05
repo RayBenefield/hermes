@@ -1,5 +1,13 @@
 # Work Log
 
+## #107
+
+Figured out that the websocket calls are about as slow as the rest calls, so now
+I can focus on exploring changing the domain model a bit and optimizing database
+calls. And that should make a HUGE difference moving forward. For now I need to
+stop working cuz I'm exhausted.
+
+
 ## #106
 
 Started working with a modified database adapter to support the rest version of

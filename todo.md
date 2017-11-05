@@ -1,6 +1,5 @@
- - Explore speed differences between the REST API for Firebase vs the admin SDK
+ - Optimize the domain model to require less database calls as a whole
  - Add context to domain which specifically only holds IDs to track context
- - Implement caching layer for cloud functions using local /tmp folder
  - Add case for when trying to re-vote for a card
  - Use doEach now to save the context
  - Set the environment variable to determine how to log (colors are printed
