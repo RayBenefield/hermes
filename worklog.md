@@ -1,5 +1,14 @@
 # Work Log
 
+## #106
+
+Started working with a modified database adapter to support the rest version of
+Firebase. Handling the access token with a temporary file probably wasn't the
+best choice, but I'll have to keep exploring different solutions. Next I'll try
+generating an access token every single time and caching it in memory may be an
+option. I'll think on it during my break.
+
+
 ## #105
 
 Started exploring how to get results from the Firebase REST API. Turns out I
